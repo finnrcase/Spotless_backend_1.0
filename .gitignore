@@ -83,6 +83,12 @@ desktop.ini
 !/reports/modeling/*.csv
 !/reports/modeling/test_r2.svg
 !/reports/modeling/calibration.svg
+!/reports/modeling/temporal_v2_audit/
+/reports/modeling/temporal_v2_audit/*
+!/reports/modeling/temporal_v2_audit/*.md
+!/reports/modeling/temporal_v2_audit/*.json
+!/reports/modeling/temporal_v2_audit/*.csv
+/reports/modeling/temporal_v2_tuning.json
 !/reports/service/
 /reports/service/*
 !/reports/service/*.md

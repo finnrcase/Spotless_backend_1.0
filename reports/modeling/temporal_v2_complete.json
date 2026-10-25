@@ -1,0 +1,130 @@
+{
+  "completed_at_utc": "2026-10-25T21:49:02.285463+00:00",
+  "new_holdout_opened": false,
+  "unmetered_labels": 0,
+  "models_promoted_to_service": false,
+  "test_status": "previously inspected legacy benchmark",
+  "selection": "chronological validation MSE; probability Brier separate",
+  "horizon_partitions": [
+    [
+      "reports/modeling",
+      [
+        0,
+        15,
+        30
+      ]
+    ],
+    [
+      "reports/modeling/temporal_v2_workers/h60",
+      [
+        60
+      ]
+    ],
+    [
+      "reports/modeling/temporal_v2_workers/h120",
+      [
+        120
+      ]
+    ]
+  ],
+  "run_protocols": [
+    {
+      "registered_before_fits_utc": "2026-10-25T21:08:02.871270+00:00",
+      "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+      "variants": [
+        "rmse_original_grid",
+        "pooled_face_patterns",
+        "causal_temporal",
+        "consecutive_history",
+        "broader_tuning",
+        "asof_context",
+        "without_housing",
+        "without_jobs"
+      ],
+      "selection": "pooled chronological squared error; binary Brier separately",
+      "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+      "source_sha256": "5bc4b4b9a55cc46ec39253d5dca1aecbe1aafb72c44c6a3c7511d83c831a58a0",
+      "new_holdout_opened": false,
+      "prior_run": {
+        "registered_before_fits_utc": "2026-10-25T21:07:41.033877+00:00",
+        "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+        "variants": [
+          "rmse_original_grid",
+          "pooled_face_patterns",
+          "causal_temporal",
+          "consecutive_history",
+          "broader_tuning",
+          "asof_context",
+          "without_housing",
+          "without_jobs"
+        ],
+        "selection": "pooled chronological squared error; binary Brier separately",
+        "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+        "source_sha256": "a8456a66535e3a6cd8c6c6f371d4d6accde36b3f2a790d4537e257386796bd22",
+        "new_holdout_opened": false,
+        "prior_run": {
+          "registered_before_fits_utc": "2026-10-25T20:50:38.439605+00:00",
+          "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+          "variants": [
+            "rmse_original_grid",
+            "pooled_face_patterns",
+            "causal_temporal",
+            "consecutive_history",
+            "broader_tuning",
+            "asof_context",
+            "without_housing",
+            "without_jobs"
+          ],
+          "selection": "pooled chronological squared error; binary Brier separately",
+          "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+          "source_sha256": "9445404c8f9f76148451ade1cd5a6b9af3191fd360f5c2d7e206786db6d81a2b",
+          "new_holdout_opened": false
+        },
+        "continuation": "Read one horizon and required columns at a time; trim unused pattern source columns. No feature, split, candidate or objective changes. Prior completed horizon retained."
+      },
+      "continuation": "Read one horizon and required columns at a time; trim unused pattern source columns. No feature, split, candidate or objective changes. Prior completed horizon retained."
+    },
+    {
+      "registered_before_fits_utc": "2026-10-25T21:14:41.359384+00:00",
+      "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+      "variants": [
+        "rmse_original_grid",
+        "pooled_face_patterns",
+        "causal_temporal",
+        "consecutive_history",
+        "broader_tuning",
+        "asof_context",
+        "without_housing",
+        "without_jobs"
+      ],
+      "selection": "pooled chronological squared error; binary Brier separately",
+      "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+      "source_sha256": "9429fa444c4ef5fda4618c3c55dced92bbcb1d6a195f10d50021964a590f4ca9",
+      "new_holdout_opened": false
+    },
+    {
+      "registered_before_fits_utc": "2026-10-25T21:27:37.989911+00:00",
+      "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+      "variants": [
+        "rmse_original_grid",
+        "pooled_face_patterns",
+        "causal_temporal",
+        "consecutive_history",
+        "broader_tuning",
+        "asof_context",
+        "without_housing",
+        "without_jobs"
+      ],
+      "selection": "pooled chronological squared error; binary Brier separately",
+      "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+      "source_sha256": "a12e9001e036d28bbf89556e4ef72b18c75d246dba50c909c95c5eb13b0b3286",
+      "new_holdout_opened": false
+    }
+  ],
+  "code_sha256": {
+    "src\\la_parking\\temporal_acquisition.py": "7ba11b4f91ccea816496f10584a734ad3d7ed9b16b7f214b09d9be9b7c6ea9d2",
+    "src\\la_parking\\temporal_experiment.py": "a85f12d1c3fcc83f19900659abdbd23c3ee273858c156a13bd07cb6cf874263e",
+    "src\\la_parking\\temporal_features.py": "f27304e4df9983359c1c1229e4c10a7798570fe2ad0e85a541fd95219c7665e1",
+    "src\\la_parking\\temporal_predictors.py": "53202fbeebe59410835b6aa5d9fc37420f263b6f5c5564f77718b04aad1a9778"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-25T05:49:01.719901+00:00",
+  "generated_at_utc": "2026-10-25T20:59:06.115416+00:00",
   "sources": [
     {
       "id": "meters",
@@ -2744,6 +2744,143 @@
       "geometry_rows": 187,
       "matched_rows": 148,
       "occupancy_labels": false
+    },
+    {
+      "id": "temporal_v2_b08201",
+      "owner": "US Census Bureau",
+      "verified_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b08201.dat",
+      "status": "verified/downloaded and joined",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T20:48:50.621316+00:00",
+      "source_version": "ACS 2019-2023 / 2020 Census geography",
+      "feature_available_at_utc": "2024-12-13T00:00:00Z",
+      "cost": "Free public export; no credentials",
+      "occupancy_labels": false,
+      "current_legal_coverage_verified": false,
+      "notes": {
+        "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b08201.dat",
+        "bytes": 64905879,
+        "sha256": "71e502d0d2b456cb49af97cf9ff2d43fcbd9a7f9c2ee737fdb41721f9ad87a8b",
+        "tracts_matched": 53,
+        "retrieved_at_utc": "2026-10-25T20:48:50.621316+00:00",
+        "last_modified": "Thu, 31 Oct 2024 14:49:58 GMT",
+        "survey_period": "2019-2023",
+        "public_release": "2024-12-12",
+        "MOE": "Retained in staged table. Tract survey estimates are contextual predictors, not occupancy truth."
+      }
+    },
+    {
+      "id": "temporal_v2_b25001",
+      "owner": "US Census Bureau",
+      "verified_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b25001.dat",
+      "status": "verified/downloaded and joined",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T20:48:55.532840+00:00",
+      "source_version": "ACS 2019-2023 / 2020 Census geography",
+      "feature_available_at_utc": "2024-12-13T00:00:00Z",
+      "cost": "Free public export; no credentials",
+      "occupancy_labels": false,
+      "current_legal_coverage_verified": false,
+      "notes": {
+        "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b25001.dat",
+        "bytes": 17781864,
+        "sha256": "dc6f4a1cceb6f1f05d8ef61c0805e820c957bf41fb011851850779b693b67eaf",
+        "tracts_matched": 53,
+        "retrieved_at_utc": "2026-10-25T20:48:55.532840+00:00",
+        "last_modified": "Thu, 31 Oct 2024 14:53:59 GMT",
+        "survey_period": "2019-2023",
+        "public_release": "2024-12-12",
+        "MOE": "Retained in staged table. Tract survey estimates are contextual predictors, not occupancy truth."
+      }
+    },
+    {
+      "id": "temporal_v2_blocks",
+      "owner": "US Census Bureau",
+      "verified_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/10",
+      "status": "verified/downloaded and joined",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T20:59:06.115416+00:00",
+      "source_version": "ACS 2019-2023 / 2020 Census geography",
+      "feature_available_at_utc": "2024-12-13T00:00:00Z",
+      "cost": "Free public export; no credentials",
+      "occupancy_labels": false,
+      "current_legal_coverage_verified": false,
+      "notes": {
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/10",
+        "rows": 897,
+        "bbox": [
+          -118.473,
+          34.038,
+          -118.417,
+          34.087
+        ],
+        "complete_id_pages": true,
+        "vintage": "2020-01-01; full intersecting polygons, not clipped"
+      }
+    },
+    {
+      "id": "temporal_v2_tracts",
+      "owner": "US Census Bureau",
+      "verified_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/6",
+      "status": "verified/downloaded and joined",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T20:59:06.115416+00:00",
+      "source_version": "ACS 2019-2023 / 2020 Census geography",
+      "feature_available_at_utc": "2021-09-01T00:00:00Z",
+      "cost": "Free public export; no credentials",
+      "occupancy_labels": false,
+      "current_legal_coverage_verified": false,
+      "notes": {
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/6",
+        "rows": 53,
+        "bbox": [
+          -118.473,
+          34.038,
+          -118.417,
+          34.087
+        ],
+        "complete_id_pages": true,
+        "vintage": "2020-01-01; full intersecting polygons, not clipped"
+      }
+    },
+    {
+      "id": "temporal_v2_lodes_asof",
+      "owner": "US Census Bureau / LEHD",
+      "verified_url": "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/",
+      "status": "verified/joined with availability gate",
+      "category": "C demand predictor",
+      "priority": 1,
+      "source_version": "LODES8 2023 WAC S000 JT00",
+      "feature_available_at_utc": "2025-12-19T00:00:00Z",
+      "source_modified_date": "2025-12-03",
+      "retrieved_at_utc": "2026-10-25T20:59:06.115416+00:00",
+      "cost": "Free public data, previously cached",
+      "occupancy_labels": false,
+      "notes": {
+        "year": 2023,
+        "source_file_modified": "2025-12-03 (official directory)",
+        "conservative_available": "2025-12-13",
+        "September_2025_values_masked": true,
+        "matched_blocks": 777,
+        "geographic_blocks": 897
+      },
+      "public_release_date": "2025-12-18",
+      "release_source": "https://www.census.gov/programs-surveys/ces/news-and-updates/updates/12182025.html"
+    },
+    {
+      "id": "temporal_v2_consecutive_sensor_history",
+      "owner": "LADOT",
+      "verified_url": "https://data.lacity.org/api/views/cj8s-ivry.json",
+      "status": "June/July 2026 downloaded, normalized, roster-audited",
+      "category": "A direct parking",
+      "priority": 1,
+      "cost": "Free public archives",
+      "retrieved_at_utc": "2026-10-25T20:59:06.115416+00:00",
+      "notes": "Two cached files: 407667493 bytes total; 239087 pilot events, no local/UTC mismatches or rejects. Current meter mapping is retrospective. Event-time replay assumes immediate delivery; archive publication lags two months and does not establish actual historical delivery. Reserved September outcomes not requested."
     }
   ]
 }

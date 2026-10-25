@@ -6,6 +6,8 @@ The actual manual observation store currently contains **zero records**. Consequ
 
 ## Ground truth and predictor preparation
 
+The [temporal-v2 Census joins](temporal_v2.md) now provide real housing, vehicle ownership and employment predictors at stable physical block IDs. Reuse `temporal_predictors.manual_demand_predictors(requests, context, context_available_at)` with the cached `data/modeling/temporal_v2/context_asof.parquet`. Requests need only existing observation IDs, block IDs and timezone-aware forecast issue times. The helper reads no count/capacity/rule labels, retains unknown blocks, applies public-release gates and respects the actual local snapshot availability timestamp. It returns independent rows compatible with `prepare_table`; declare the numeric demand columns in the comparison manifest and keep supply/rules explicitly unavailable until independently verified. Do not backdate the snapshot or call missing context zero demand. Real reviewed occupancy labels and frozen splits are still required.
+
 Use the existing [phone collector](phone_collection.md) and randomized/repeat visit plan. Collect complete reconciled face counts, metered/unmetered identification, capacity basis, intended stay, vehicle/permit profile and the applicable restrictions. Preserve partial or uncertain observations for review; do not promote them automatically to training labels. Unmarked spaces require an explicit capacity estimate and review; record these as `estimated_positions`, separately from `marked_spaces`. A physical curb-length conversion is an estimate, not a verified capacity or occupancy label.
 
 Import observations through the existing intake, then supply an independent review CSV with these columns:
@@ -70,7 +72,7 @@ Each axis compares six strategies on the **identical complete unmetered test row
 5. Gradient boosting trained on unmetered observations only.
 6. The same learner trained on unmetered plus compatible direct metered observations.
 
-Mixed training tests positive auxiliary weights of 0.25 and 1.0; domain balancing makes the total metered weight that fraction of total unmetered weight. Metered rows cannot overwhelm the unmetered target through volume. Leaf count and weight selection use only unmetered validation MAE/Brier. Binary logistic calibration uses the separate unmetered calibration set when both classes exist; otherwise the report explicitly records no fitted calibration. All preprocessing fits training rows. No final test outcomes select parameters, weights or calibrators.
+Mixed training tests positive auxiliary weights of 0.25 and 1.0; domain balancing makes the total metered weight that fraction of total unmetered weight. Metered rows cannot overwhelm the unmetered target through volume. Leaf count and weight selection use only unmetered validation squared error for regression, with RMSE and MAE both reported; probability selection uses Brier separately. Binary logistic calibration uses the separate unmetered calibration set when both classes exist; otherwise the report explicitly records no fitted calibration. All preprocessing fits training rows. No final test outcomes select parameters, weights or calibrators. This objective correction precedes any real unmetered fitting: no such labels have yet been acquired.
 
 ```powershell
 .\.venv\Scripts\la-parking.exe compare-unmetered

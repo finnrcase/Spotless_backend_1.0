@@ -1,5 +1,7 @@
 # Los Angeles parking data foundation
 
+The [temporal improvement experiment](docs/temporal_v2.md) audits sensor semantics, adds causal block patterns and consecutive history, and compares models on fixed legacy targets using chronological validation RMSE. The [experiment table](reports/modeling/TEMPORAL_V2.md) separates known/unseen blocks and keeps unmetered accuracy unsupported. New September and prospective manual holdouts are reserved unopened.
+
 Project repository: [finnrcase/Spotless_backend_1.0](https://github.com/finnrcase/Spotless_backend_1.0). This folder is the Git root. See [repository layout and local-data exclusions](docs/repository.md).
 
 Local data foundation for arrival-time and duration-specific street-parking prediction within the **City of Los Angeles**. Westwood/UCLA is the first inspection pilot; street coverage is citywide. This is separate from the read-only ECON 430 [Spotless reference](https://github.com/finnrcase/Spotless/tree/4fc449ac2d8302fc7d8856345867bc0483e35ca8).

@@ -1,0 +1,2892 @@
+[
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.25822021149063146,
+      "mae": 0.22787541948241877,
+      "rmse": 0.27872378488805905,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.11444877026524836,
+      "mae": 0.25042724998535854,
+      "rmse": 0.30453932313381865,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.3272893281620163,
+      "mae": 0.21358929238187388,
+      "rmse": 0.2654304183579591,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.338065635878968,
+      "mae": 0.2102142122993947,
+      "rmse": 0.26329583966161263,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.36569105592051865,
+      "mae": 0.20485978550068315,
+      "rmse": 0.2577430423304493,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.36607723399611614,
+      "mae": 0.20502261486432427,
+      "rmse": 0.25766457121063074,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.3658589329081601,
+      "mae": 0.20492377587082627,
+      "rmse": 0.25770893277765977,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5510,
+      "r2": 0.36514259348352596,
+      "mae": 0.20521506083338736,
+      "rmse": 0.2578544484788184,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "r2": 0.7337737126741699,
+      "mae": 0.21577848318965814,
+      "rmse": 0.3713589244205844,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "known_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "positive_rate": 0.42441054091539526,
+      "brier_score": 0.06191524575245275,
+      "log_loss": 0.20261690075980585,
+      "ece": 0.02929786164406176,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 289,
+          "mean_probability": 0.021496920206602994,
+          "observed_frequency": 0.0034602076124567475
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 42,
+          "mean_probability": 0.1485226374805904,
+          "observed_frequency": 0.09523809523809523
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 29,
+          "mean_probability": 0.24885510390470836,
+          "observed_frequency": 0.1724137931034483
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 27,
+          "mean_probability": 0.34880831765142556,
+          "observed_frequency": 0.3333333333333333
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 22,
+          "mean_probability": 0.4504812053392857,
+          "observed_frequency": 0.36363636363636365
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 27,
+          "mean_probability": 0.5569483453719495,
+          "observed_frequency": 0.5925925925925926
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 27,
+          "mean_probability": 0.6553186634450043,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 44,
+          "mean_probability": 0.7557497074511939,
+          "observed_frequency": 0.8409090909090909
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 36,
+          "mean_probability": 0.8425119657201473,
+          "observed_frequency": 0.8611111111111112
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 178,
+          "mean_probability": 0.9750414856403273,
+          "observed_frequency": 0.9943820224719101
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.16763990728408928,
+      "mae": 0.23409790845090345,
+      "rmse": 0.2886477609313519,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": -0.005123937470886908,
+      "mae": 0.2660624675653444,
+      "rmse": 0.31719211009410714,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.1686372064874292,
+      "mae": 0.23425313283655824,
+      "rmse": 0.28847478623917494,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.17367718042220404,
+      "mae": 0.23415527660789953,
+      "rmse": 0.28759904605478687,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.17290307226236123,
+      "mae": 0.2328443993457443,
+      "rmse": 0.2877337274687892,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.2785942071831444,
+      "mae": 0.2136264857707289,
+      "rmse": 0.26872147873540014,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.2718454264631778,
+      "mae": 0.21575166598370793,
+      "rmse": 0.2699755029172364,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4400,
+      "r2": 0.2775106551987314,
+      "mae": 0.21484648970979214,
+      "rmse": 0.26892321293319876,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 552,
+      "r2": 0.39759871086644805,
+      "mae": 0.42298687669242097,
+      "rmse": 0.5360888598109814,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 0,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 552,
+      "positive_rate": 0.375,
+      "brier_score": 0.17648426807418036,
+      "log_loss": 0.52981019139093,
+      "ece": 0.04607839162717137,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 65,
+          "mean_probability": 0.0722881869800806,
+          "observed_frequency": 0.09230769230769231
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 88,
+          "mean_probability": 0.1511735518323398,
+          "observed_frequency": 0.10227272727272728
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 85,
+          "mean_probability": 0.24734385409028187,
+          "observed_frequency": 0.21176470588235294
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 66,
+          "mean_probability": 0.3526504724312475,
+          "observed_frequency": 0.3181818181818182
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 63,
+          "mean_probability": 0.4475196774742539,
+          "observed_frequency": 0.42857142857142855
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 65,
+          "mean_probability": 0.5502671688110485,
+          "observed_frequency": 0.6461538461538462
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 56,
+          "mean_probability": 0.6469238028341032,
+          "observed_frequency": 0.6607142857142857
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 31,
+          "mean_probability": 0.7352898753089623,
+          "observed_frequency": 0.5806451612903226
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 26,
+          "mean_probability": 0.843463141753431,
+          "observed_frequency": 0.8846153846153846
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 7,
+          "mean_probability": 0.9241411134404222,
+          "observed_frequency": 0.8571428571428571
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.20039048718137709,
+      "mae": 0.23628911525232205,
+      "rmse": 0.2897000349833089,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.11449636317112188,
+      "mae": 0.25063634926489997,
+      "rmse": 0.30486301907023927,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.260472784918125,
+      "mae": 0.22381364315624638,
+      "rmse": 0.2786035538893374,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.26967008630526945,
+      "mae": 0.22222329669360133,
+      "rmse": 0.2768656748072175,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.27839853596710484,
+      "mae": 0.2206371296370362,
+      "rmse": 0.2752062384468331,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2770578299031595,
+      "mae": 0.22106492305254882,
+      "rmse": 0.2754617807835787,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2784989431468585,
+      "mae": 0.2210155409988686,
+      "rmse": 0.27518709100538924,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2812200142215905,
+      "mae": 0.2205454717575711,
+      "rmse": 0.27466768013907966,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "r2": 0.3956177734757864,
+      "mae": 0.4542934455848925,
+      "rmse": 0.5609256974992357,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "known_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "positive_rate": 0.42579750346740636,
+      "brier_score": 0.1782396066546141,
+      "log_loss": 0.535911545669698,
+      "ece": 0.027533882885379137,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 33,
+          "mean_probability": 0.08209968207509401,
+          "observed_frequency": 0.12121212121212122
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 131,
+          "mean_probability": 0.14852156560367366,
+          "observed_frequency": 0.13740458015267176
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 112,
+          "mean_probability": 0.24838204522508128,
+          "observed_frequency": 0.23214285714285715
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 76,
+          "mean_probability": 0.35357123376608546,
+          "observed_frequency": 0.27631578947368424
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 76,
+          "mean_probability": 0.4486817537583018,
+          "observed_frequency": 0.4473684210526316
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 83,
+          "mean_probability": 0.5495208655120912,
+          "observed_frequency": 0.5060240963855421
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 73,
+          "mean_probability": 0.6560723455363602,
+          "observed_frequency": 0.6438356164383562
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 62,
+          "mean_probability": 0.7476710914359552,
+          "observed_frequency": 0.8064516129032258
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 67,
+          "mean_probability": 0.8423718570541084,
+          "observed_frequency": 0.8507462686567164
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 8,
+          "mean_probability": 0.9242641390388376,
+          "observed_frequency": 1.0
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.1772359820273881,
+      "mae": 0.2336151400158336,
+      "rmse": 0.28747696366439224,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": -0.00593322064286439,
+      "mae": 0.2664514936697098,
+      "rmse": 0.31787032020852396,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.17723923842641565,
+      "mae": 0.23343417226047297,
+      "rmse": 0.2874763947645554,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.1818723344980997,
+      "mae": 0.23423719548816382,
+      "rmse": 0.28666583952262226,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.18359594243179833,
+      "mae": 0.23368418199678326,
+      "rmse": 0.2863637106194343,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.28297260073618047,
+      "mae": 0.21385031834274507,
+      "rmse": 0.2683695757782151,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.2756228969087975,
+      "mae": 0.21582326787834505,
+      "rmse": 0.2697414955624817,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4406,
+      "r2": 0.28115139431197533,
+      "mae": 0.21372384017994678,
+      "rmse": 0.26871018091863913,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 554,
+      "r2": 0.38780868881648667,
+      "mae": 0.4355698197769418,
+      "rmse": 0.5421404768085709,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 15,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 554,
+      "positive_rate": 0.37725631768953066,
+      "brier_score": 0.17800045610931764,
+      "log_loss": 0.5341083210984456,
+      "ece": 0.06028106687723634,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 49,
+          "mean_probability": 0.08381762893787133,
+          "observed_frequency": 0.12244897959183673
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 73,
+          "mean_probability": 0.14870577608791163,
+          "observed_frequency": 0.0958904109589041
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 86,
+          "mean_probability": 0.24720259769557273,
+          "observed_frequency": 0.16279069767441862
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 85,
+          "mean_probability": 0.3433904950390161,
+          "observed_frequency": 0.35294117647058826
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 70,
+          "mean_probability": 0.4514693621967375,
+          "observed_frequency": 0.3
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 71,
+          "mean_probability": 0.550948706779027,
+          "observed_frequency": 0.5915492957746479
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 55,
+          "mean_probability": 0.6421973882635691,
+          "observed_frequency": 0.6727272727272727
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 36,
+          "mean_probability": 0.7434340274657436,
+          "observed_frequency": 0.6944444444444444
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 22,
+          "mean_probability": 0.8567499825333271,
+          "observed_frequency": 0.9545454545454546
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 7,
+          "mean_probability": 0.9280365284323147,
+          "observed_frequency": 0.8571428571428571
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.19354954524222234,
+      "mae": 0.23749608636264288,
+      "rmse": 0.29105022888165494,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.11401972008538463,
+      "mae": 0.25078750698479885,
+      "rmse": 0.3050641172322023,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2548716854145079,
+      "mae": 0.2241168845414783,
+      "rmse": 0.2797658063884471,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2610292940522575,
+      "mae": 0.2238513223014735,
+      "rmse": 0.27860744071370086,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2665067873588569,
+      "mae": 0.22292107515626094,
+      "rmse": 0.2775729552851405,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.26531576232790854,
+      "mae": 0.22314701087084962,
+      "rmse": 0.2777982213391555,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.26594702342604093,
+      "mae": 0.22306277125636131,
+      "rmse": 0.2776788497188765,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5513,
+      "r2": 0.2673316035426958,
+      "mae": 0.22276691065490856,
+      "rmse": 0.277416845411966,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.04,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 724,
+      "r2": 0.37822735199058066,
+      "mae": 0.4673190872794062,
+      "rmse": 0.5710831729774388,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "known_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.04,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 724,
+      "positive_rate": 0.42955801104972374,
+      "brier_score": 0.18676995596394186,
+      "log_loss": 0.5549099077127919,
+      "ece": 0.04148521695726402,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "mean_probability": null,
+          "observed_frequency": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 93,
+          "mean_probability": 0.16335602945462896,
+          "observed_frequency": 0.08602150537634409
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 120,
+          "mean_probability": 0.2497621596565672,
+          "observed_frequency": 0.2
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 90,
+          "mean_probability": 0.349245773228601,
+          "observed_frequency": 0.24444444444444444
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 119,
+          "mean_probability": 0.45212809201601073,
+          "observed_frequency": 0.4369747899159664
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 101,
+          "mean_probability": 0.5495935619166418,
+          "observed_frequency": 0.5544554455445545
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 93,
+          "mean_probability": 0.6448077831608007,
+          "observed_frequency": 0.6451612903225806
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 71,
+          "mean_probability": 0.7472168316749155,
+          "observed_frequency": 0.7605633802816901
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 36,
+          "mean_probability": 0.8312200724307451,
+          "observed_frequency": 0.9444444444444444
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 1,
+          "mean_probability": 0.9112441175276642,
+          "observed_frequency": 1.0
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.17722438706054477,
+      "mae": 0.2340957411349818,
+      "rmse": 0.2877126552373485,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": -0.006121656536167253,
+      "mae": 0.2666903509741614,
+      "rmse": 0.3181584837620068,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.17507415900350398,
+      "mae": 0.23349677766102123,
+      "rmse": 0.28808836165733187,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.17839076764606432,
+      "mae": 0.23453150204302406,
+      "rmse": 0.28750864975504603,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.1809982780795104,
+      "mae": 0.23367664648167513,
+      "rmse": 0.2870520594871925,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.283412552744723,
+      "mae": 0.21377294380062994,
+      "rmse": 0.26850529700917625,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.27541517256963277,
+      "mae": 0.21566352983689888,
+      "rmse": 0.2699994488219205,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4408,
+      "r2": 0.2806149155906632,
+      "mae": 0.21436678082395516,
+      "rmse": 0.2690289237155837,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "r2": 0.3822375272702644,
+      "mae": 0.42994065506685825,
+      "rmse": 0.5441945781494635,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 30,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "positive_rate": 0.37949640287769787,
+      "brier_score": 0.17788178238107438,
+      "log_loss": 0.5346023979966856,
+      "ece": 0.03315323004108294,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 49,
+          "mean_probability": 0.07753301211533234,
+          "observed_frequency": 0.10204081632653061
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 93,
+          "mean_probability": 0.1486967182109266,
+          "observed_frequency": 0.10752688172043011
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 75,
+          "mean_probability": 0.25166575286674414,
+          "observed_frequency": 0.17333333333333334
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 86,
+          "mean_probability": 0.3527495109390173,
+          "observed_frequency": 0.3372093023255814
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 70,
+          "mean_probability": 0.4506302482656512,
+          "observed_frequency": 0.42857142857142855
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 62,
+          "mean_probability": 0.5494492395076306,
+          "observed_frequency": 0.5806451612903226
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 52,
+          "mean_probability": 0.6370922526338381,
+          "observed_frequency": 0.6538461538461539
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 33,
+          "mean_probability": 0.7495730458058436,
+          "observed_frequency": 0.7272727272727273
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 28,
+          "mean_probability": 0.847492777742479,
+          "observed_frequency": 0.8214285714285714
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 8,
+          "mean_probability": 0.9221192020713456,
+          "observed_frequency": 0.875
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.18984883362484317,
+      "mae": 0.2380733787028193,
+      "rmse": 0.2916117648681877,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.11370688212446034,
+      "mae": 0.25069027133398264,
+      "rmse": 0.30500762670454185,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.2542764914775223,
+      "mae": 0.2263622882173764,
+      "rmse": 0.279776303355217,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.26225985740832547,
+      "mae": 0.22392045137990924,
+      "rmse": 0.2782746967618648,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.2655347011821232,
+      "mae": 0.22336047241441867,
+      "rmse": 0.2776563762428565,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.2649074471343078,
+      "mae": 0.22259881134389994,
+      "rmse": 0.2777749141216591,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.2649692294097601,
+      "mae": 0.22304191717664243,
+      "rmse": 0.2777632408114069,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5509,
+      "r2": 0.264105683575967,
+      "mae": 0.22266952304243934,
+      "rmse": 0.2779263570308128,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 723,
+      "r2": 0.3777199600329323,
+      "mae": 0.4637655380645646,
+      "rmse": 0.5729941583991487,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "known_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 723,
+      "positive_rate": 0.4287690179806362,
+      "brier_score": 0.1857351651840152,
+      "log_loss": 0.5512813534658548,
+      "ece": 0.045440644430287405,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 10,
+          "mean_probability": 0.08631806123137356,
+          "observed_frequency": 0.0
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 115,
+          "mean_probability": 0.14935738872017032,
+          "observed_frequency": 0.13043478260869565
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 104,
+          "mean_probability": 0.24836207132639743,
+          "observed_frequency": 0.20192307692307693
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 89,
+          "mean_probability": 0.3487659715332534,
+          "observed_frequency": 0.30337078651685395
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 100,
+          "mean_probability": 0.44799995261703346,
+          "observed_frequency": 0.42
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 106,
+          "mean_probability": 0.5528658726368145,
+          "observed_frequency": 0.4811320754716981
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 90,
+          "mean_probability": 0.6472679838691044,
+          "observed_frequency": 0.7333333333333333
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 68,
+          "mean_probability": 0.7458577303623006,
+          "observed_frequency": 0.7647058823529411
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 38,
+          "mean_probability": 0.8340857572549427,
+          "observed_frequency": 0.868421052631579
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 3,
+          "mean_probability": 0.9305320163674732,
+          "observed_frequency": 1.0
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.17739894538966783,
+      "mae": 0.2334189899541269,
+      "rmse": 0.2875852792642051,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": -0.006229056518298748,
+      "mae": 0.26653609887174073,
+      "rmse": 0.3180683441565667,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.17708667651432008,
+      "mae": 0.23308113516303222,
+      "rmse": 0.2876398594341329,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.18075699394654643,
+      "mae": 0.23379939145678647,
+      "rmse": 0.2869976840245702,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.18499870512496452,
+      "mae": 0.2327559832620682,
+      "rmse": 0.2862537404571689,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.2850408863509464,
+      "mae": 0.21412105927872768,
+      "rmse": 0.2681097601689968,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.27727906726075835,
+      "mae": 0.21611349286714146,
+      "rmse": 0.2695611731366222,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.28228788614585354,
+      "mae": 0.2146031327091534,
+      "rmse": 0.26862545193577375,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.04,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "r2": 0.36803534626456935,
+      "mae": 0.45122443899918857,
+      "rmse": 0.5525330010049492,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 60,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "positive_rate": 0.37949640287769787,
+      "brier_score": 0.17737261640211863,
+      "log_loss": 0.5314069662727473,
+      "ece": 0.04154013249139653,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 50,
+          "mean_probability": 0.07407983341658177,
+          "observed_frequency": 0.1
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 113,
+          "mean_probability": 0.1468290417481397,
+          "observed_frequency": 0.10619469026548672
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 68,
+          "mean_probability": 0.2477419964889385,
+          "observed_frequency": 0.23529411764705882
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 64,
+          "mean_probability": 0.34945993979550266,
+          "observed_frequency": 0.3125
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 68,
+          "mean_probability": 0.44660672348761693,
+          "observed_frequency": 0.47058823529411764
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 63,
+          "mean_probability": 0.5517095459006041,
+          "observed_frequency": 0.4603174603174603
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 52,
+          "mean_probability": 0.639229665082109,
+          "observed_frequency": 0.7115384615384616
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 41,
+          "mean_probability": 0.7529167045754963,
+          "observed_frequency": 0.7073170731707317
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 26,
+          "mean_probability": 0.842068110805515,
+          "observed_frequency": 0.8076923076923077
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 11,
+          "mean_probability": 0.9168067574087821,
+          "observed_frequency": 0.9090909090909091
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.18498710098740467,
+      "mae": 0.2387045150037975,
+      "rmse": 0.29216619870103183,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.11389899028231354,
+      "mae": 0.25031056931725953,
+      "rmse": 0.3046416961179935,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.25317708965424757,
+      "mae": 0.22541406282056203,
+      "rmse": 0.27967686650051515,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.26029939435157856,
+      "mae": 0.22395391257822514,
+      "rmse": 0.2783400597358116,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.2611914158922348,
+      "mae": 0.22413519776853896,
+      "rmse": 0.2781721808498178,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.26287089061029323,
+      "mae": 0.22379721230640887,
+      "rmse": 0.27785582762936156,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.26385671177309955,
+      "mae": 0.22377759517666693,
+      "rmse": 0.2776699661599585,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.04,
+        "max_iter": 350,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 5504,
+      "r2": 0.262867175967464,
+      "mae": 0.22396693682251614,
+      "rmse": 0.27785652773321323,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "r2": 0.381838305761272,
+      "mae": 0.4704264161537853,
+      "rmse": 0.5701297851979221,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "known_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "learning_rate": 0.04,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 721,
+      "positive_rate": 0.42718446601941745,
+      "brier_score": 0.18579885063058024,
+      "log_loss": 0.5542026407854543,
+      "ece": 0.05888907119092401,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "mean_probability": null,
+          "observed_frequency": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 84,
+          "mean_probability": 0.16205727234682965,
+          "observed_frequency": 0.09523809523809523
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 122,
+          "mean_probability": 0.2486886928537922,
+          "observed_frequency": 0.22131147540983606
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 106,
+          "mean_probability": 0.3526583958936211,
+          "observed_frequency": 0.2169811320754717
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 110,
+          "mean_probability": 0.449249205584547,
+          "observed_frequency": 0.39090909090909093
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 94,
+          "mean_probability": 0.5456657899612789,
+          "observed_frequency": 0.5319148936170213
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 109,
+          "mean_probability": 0.6491189607726752,
+          "observed_frequency": 0.7064220183486238
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 57,
+          "mean_probability": 0.7448980905553493,
+          "observed_frequency": 0.8245614035087719
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 38,
+          "mean_probability": 0.8280232633008471,
+          "observed_frequency": 0.8421052631578947
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 1,
+          "mean_probability": 0.9075560207156609,
+          "observed_frequency": 1.0
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "rmse_original_grid",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.17559537348402188,
+      "mae": 0.23412773426706252,
+      "rmse": 0.28760726608242465,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "pooled_face_patterns",
+    "selection": [
+      "pattern",
+      {
+        "strength": 10
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": -0.006022602131752652,
+      "mae": 0.26618937054071895,
+      "rmse": 0.3177119226063332,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "causal_temporal",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.17491429881635834,
+      "mae": 0.2342133231917341,
+      "rmse": 0.28772604366870547,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "consecutive_history",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 100,
+        "l2_regularization": 10,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.17814401032649396,
+      "mae": 0.23432624335135632,
+      "rmse": 0.28716235478011065,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "broader_tuning",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.18153203813991337,
+      "mae": 0.23396575192421576,
+      "rmse": 0.2865698429428369,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "asof_context",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.28348035658058734,
+      "mae": 0.21439526170465584,
+      "rmse": 0.2681289417998099,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "without_housing",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.2776693929214573,
+      "mae": 0.21662145755572432,
+      "rmse": 0.2692140071428014,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "without_jobs",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 50,
+        "min_samples_leaf": 80
+      }
+    ],
+    "validation": {
+      "n": 4402,
+      "r2": 0.2829578000577335,
+      "mae": 0.21467519217413883,
+      "rmse": 0.26822669696405815,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_available_count",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "r2": 0.3773131563585711,
+      "mae": 0.4310430036831552,
+      "rmse": 0.5484621639152939,
+      "r2_note": null
+    }
+  },
+  {
+    "horizon": 120,
+    "axis": "unseen_blocks",
+    "variant": "auxiliary_any_panel_vacant",
+    "selection": [
+      "boosted",
+      {
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.06,
+        "max_iter": 200,
+        "l2_regularization": 20,
+        "min_samples_leaf": 40
+      }
+    ],
+    "validation": {
+      "n": 556,
+      "positive_rate": 0.37949640287769787,
+      "brier_score": 0.1735089078714476,
+      "log_loss": 0.5265382243833973,
+      "ece": 0.060613814235995024,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 43,
+          "mean_probability": 0.08488873721665961,
+          "observed_frequency": 0.11627906976744186
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 87,
+          "mean_probability": 0.14491455470079645,
+          "observed_frequency": 0.12643678160919541
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 97,
+          "mean_probability": 0.2565099543205415,
+          "observed_frequency": 0.14432989690721648
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 76,
+          "mean_probability": 0.3432894332683008,
+          "observed_frequency": 0.3157894736842105
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 69,
+          "mean_probability": 0.43960806212114883,
+          "observed_frequency": 0.34782608695652173
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 49,
+          "mean_probability": 0.5529139400240198,
+          "observed_frequency": 0.673469387755102
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 56,
+          "mean_probability": 0.6421360757498134,
+          "observed_frequency": 0.6964285714285714
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 43,
+          "mean_probability": 0.7431317304297035,
+          "observed_frequency": 0.6976744186046512
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 27,
+          "mean_probability": 0.845408929255616,
+          "observed_frequency": 0.8518518518518519
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 9,
+          "mean_probability": 0.9292545952565052,
+          "observed_frequency": 0.8888888888888888
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination."
+    }
+  }
+]

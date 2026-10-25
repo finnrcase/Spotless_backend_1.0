@@ -1,0 +1,56 @@
+{
+  "registered_before_fits_utc": "2026-10-25T21:08:02.871270+00:00",
+  "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+  "variants": [
+    "rmse_original_grid",
+    "pooled_face_patterns",
+    "causal_temporal",
+    "consecutive_history",
+    "broader_tuning",
+    "asof_context",
+    "without_housing",
+    "without_jobs"
+  ],
+  "selection": "pooled chronological squared error; binary Brier separately",
+  "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+  "source_sha256": "5bc4b4b9a55cc46ec39253d5dca1aecbe1aafb72c44c6a3c7511d83c831a58a0",
+  "new_holdout_opened": false,
+  "prior_run": {
+    "registered_before_fits_utc": "2026-10-25T21:07:41.033877+00:00",
+    "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+    "variants": [
+      "rmse_original_grid",
+      "pooled_face_patterns",
+      "causal_temporal",
+      "consecutive_history",
+      "broader_tuning",
+      "asof_context",
+      "without_housing",
+      "without_jobs"
+    ],
+    "selection": "pooled chronological squared error; binary Brier separately",
+    "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+    "source_sha256": "a8456a66535e3a6cd8c6c6f371d4d6accde36b3f2a790d4537e257386796bd22",
+    "new_holdout_opened": false,
+    "prior_run": {
+      "registered_before_fits_utc": "2026-10-25T20:50:38.439605+00:00",
+      "protocol_sha256": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+      "variants": [
+        "rmse_original_grid",
+        "pooled_face_patterns",
+        "causal_temporal",
+        "consecutive_history",
+        "broader_tuning",
+        "asof_context",
+        "without_housing",
+        "without_jobs"
+      ],
+      "selection": "pooled chronological squared error; binary Brier separately",
+      "unseen_validation": "chronological folds restricted to south training geography; north never used for tuning. Unseen-block validation not independently estimated.",
+      "source_sha256": "9445404c8f9f76148451ade1cd5a6b9af3191fd360f5c2d7e206786db6d81a2b",
+      "new_holdout_opened": false
+    },
+    "continuation": "Read one horizon and required columns at a time; trim unused pattern source columns. No feature, split, candidate or objective changes. Prior completed horizon retained."
+  },
+  "continuation": "Read one horizon and required columns at a time; trim unused pattern source columns. No feature, split, candidate or objective changes. Prior completed horizon retained."
+}

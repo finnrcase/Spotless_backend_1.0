@@ -95,6 +95,12 @@ def build(output='reports',dates=('2026-10-27','2026-10-29','2026-11-01'),seed=4
             'Five-minute slots are a workload draft. Record actual times and skips; do not backfill planned times as observed.',
             'Repeat both sides at t, t+15, t+30 and t+60. If a round exceeds 15 minutes, reduce to one face and log the missed visit.',
             'Human review/label availability must precede later training origins. This pilot alone does not guarantee adequate independent train/validation/calibration/test evidence.']}
+    first_session=f'westwood-{dates[0]}-changes'
+    plan['smallest_initial_batch']={'session_id':first_session,'planned_snapshots':8,'physical_blocks':1,'faces':2,'offset_minutes':[0,15,30,60],
+        'purpose':'Unmetered candidate reconnaissance, count-quality and change-workflow check; insufficient for model validation.',
+        'parking_type':'Must verify unmetered/public access in person; no meter links is not proof.',
+        'holdout_status':'Development only; preserve reserved physical blocks and November 7-14 prospective sessions untouched.',
+        'assignment_ids':[a['assignment_id'] for a in assignments if a['survey_session_id']==first_session]}
     (out/'field_route.json').write_text(json.dumps(plan,indent=2),encoding='utf8')
     template=Path('web/field_route.html').read_text(encoding='utf8')
     (out/'field_route.html').write_text(template.replace('/*__DATA__*/',json.dumps(plan,separators=(',',':')).replace('<','\\u003c')),encoding='utf8')

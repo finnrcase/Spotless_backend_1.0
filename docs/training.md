@@ -1,5 +1,7 @@
 # Run the time-specific modeling pipeline
 
+For new performance work, use the [versioned temporal-v2 experiment](temporal_v2.md) and its [fixed-target comparison table](../reports/modeling/TEMPORAL_V2.md). The commands below reproduce v1, including its legacy MAE-based tuner, and overwrite its generated artifacts. V2 keeps those artifacts intact, selects occupancy/count models on chronological squared error, and reserves later outcomes before selection.
+
 The commands below reproduce the auxiliary **metered sensor-panel** experiment. For the core unmetered target, use the [review, predictor preparation and held-out comparison workflow](unmetered_modeling.md). Meter-panel scores are not unmetered scores.
 
 Run from this project folder. The preserved acquired data are the inputs; no API access, paid services or deployment is needed for training.

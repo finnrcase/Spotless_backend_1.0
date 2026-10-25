@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "legacy_fingerprints_unchanged": true,
+  "frozen_v1_metrics_reproduced": true,
+  "identical_target_row_hashes_all_variants": true,
+  "rate_predictions_bounded": true,
+  "saved_bundle_inference_reproduced": [
+    "occupancy_rate",
+    "available_count",
+    "any_panel_vacant"
+  ],
+  "new_holdout_opened": false,
+  "unmetered_validation_claimed": false,
+  "result_rows": 240
+}

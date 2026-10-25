@@ -8,6 +8,13 @@ import pytest
 from la_parking import unmetered as u
 
 
+def test_regression_selection_prefers_squared_error_over_lower_mae():
+    a=u._score(np.zeros(20),np.r_[np.zeros(19),1.],'occupancy_rate')
+    b=u._score(np.zeros(20),np.full(20,.15),'occupancy_rate')
+    assert a['mae']<b['mae'] and u.validation_objective(a,'occupancy_rate')>u.validation_objective(b,'occupancy_rate')
+    assert u.validation_objective({'brier_score':.2},'at_least_one')==.2
+
+
 def experiment():
     rows=[];ids={}
     for partition,n,day in [('train',40,1),('validation',10,3),('calibration',10,5),('future',12,7),('unseen',12,7)]:

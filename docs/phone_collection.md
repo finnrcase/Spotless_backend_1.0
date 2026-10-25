@@ -1,5 +1,7 @@
 # Phone collection workflow
 
+For the smallest useful first batch, open `reports/field_route.html` and tap **Start smallest batch: 8 counts over 1 hour**. It fills two sides of one development block at 0/15/30/60 minutes. Verify actual unmetered status; no linked meter is not proof. Record actual times and skip reasons, export JSONL, then import/review before training. This checks collection quality and changes only, and cannot validate prediction accuracy. See [the temporal experiment and prospective holdout](temporal_v2.md).
+
 The collector is a self-contained local HTML file built from the existing real Westwood/UCLA inventory. It loads 1,962 pilot faces, source-side diagrams and snapshot evidence support. It has no external scripts, analytics, account, fetch calls or automatic uploads. No website has been published.
 
 ## Prepare on the computer

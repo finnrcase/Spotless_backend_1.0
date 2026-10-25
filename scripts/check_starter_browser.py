@@ -28,6 +28,10 @@ const checks=[],ok=(v,name)=>{if(!v)throw Error(name);checks.push(name)},get=id=
 try{
 const route=get('route').contentWindow,rd=route.document;
 ok(rd.getElementById('visits').children.length===20,'route displays 20 selectable faces');
+rd.getElementById('small-batch').click();
+ok(rd.getElementById('visits').children.length===8,'small batch displays eight prefilled repeated visits');
+ok(new Set([...rd.querySelectorAll('#visits a')].map(a=>new URLSearchParams(a.hash.slice(1)).get('face'))).size===2,'small batch repeats two real faces');
+rd.getElementById('session').selectedIndex=0;rd.getElementById('session').dispatchEvent(new Event('change'));
 ok(rd.querySelector('#visits a').getAttribute('href').includes('assignment='),'route links carry stable assignment IDs');
 ok(rd.documentElement.scrollWidth<=route.innerWidth,'route fits 390px viewport');
 const win=get('collector').contentWindow,d=win.document,$=id=>d.getElementById(id);

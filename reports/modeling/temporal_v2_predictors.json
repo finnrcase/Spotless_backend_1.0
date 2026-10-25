@@ -1,0 +1,100 @@
+{
+  "sources": {
+    "blocks": {
+      "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/10",
+      "rows": 897,
+      "bbox": [
+        -118.473,
+        34.038,
+        -118.417,
+        34.087
+      ],
+      "complete_id_pages": true,
+      "vintage": "2020-01-01; full intersecting polygons, not clipped"
+    },
+    "tracts": {
+      "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/6",
+      "rows": 53,
+      "bbox": [
+        -118.473,
+        34.038,
+        -118.417,
+        34.087
+      ],
+      "complete_id_pages": true,
+      "vintage": "2020-01-01; full intersecting polygons, not clipped"
+    },
+    "b08201": {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b08201.dat",
+      "bytes": 64905879,
+      "sha256": "71e502d0d2b456cb49af97cf9ff2d43fcbd9a7f9c2ee737fdb41721f9ad87a8b",
+      "tracts_matched": 53,
+      "retrieved_at_utc": "2026-10-25T20:48:50.621316+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:49:58 GMT",
+      "survey_period": "2019-2023",
+      "public_release": "2024-12-12",
+      "MOE": "Retained in staged table. Tract survey estimates are contextual predictors, not occupancy truth."
+    },
+    "b25001": {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b25001.dat",
+      "bytes": 17781864,
+      "sha256": "dc6f4a1cceb6f1f05d8ef61c0805e820c957bf41fb011851850779b693b67eaf",
+      "tracts_matched": 53,
+      "retrieved_at_utc": "2026-10-25T20:48:55.532840+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:53:59 GMT",
+      "survey_period": "2019-2023",
+      "public_release": "2024-12-12",
+      "MOE": "Retained in staged table. Tract survey estimates are contextual predictors, not occupancy truth."
+    }
+  },
+  "availability": {
+    "census_population_600": "2024-12-13T00:00Z",
+    "census_housing_600": "2024-12-13T00:00Z",
+    "acs_housing_density": "2024-12-13T00:00Z",
+    "acs_no_vehicle_fraction": "2024-12-13T00:00Z",
+    "acs_households_density": "2024-12-13T00:00Z",
+    "lodes_jobs_known_600": "2025-12-19T00:00Z",
+    "lodes_block_match_fraction_600": "2025-12-19T00:00Z"
+  },
+  "unavailable": {
+    "verified_curb_supply_restrictions": "No historically versioned sign-complete legal supply; historic curb polygons are not stalls.",
+    "business_activity": "October 2026 account snapshot cannot reconstruct closures or issued historical hours. Excluded.",
+    "events": "No pre-issue archived attendance/calendar versions for evaluation periods. Excluded.",
+    "weather_transit": "Current snapshots do not provide historical issued forecasts/schedules. Excluded."
+  },
+  "rows": 981,
+  "feature_nonmissing": {
+    "census_population_600": 980,
+    "census_housing_600": 980,
+    "acs_housing_density": 981,
+    "acs_no_vehicle_fraction": 964,
+    "acs_households_density": 981,
+    "lodes_jobs_known_600": 980,
+    "lodes_block_match_fraction_600": 980
+  },
+  "aggregation": "600m from street center to full block representative point; approximate demand context, not supply. Missing workplace blocks are not zero jobs.",
+  "lodes": {
+    "year": 2023,
+    "source_file_modified": "2025-12-03 (official directory)",
+    "conservative_available": "2025-12-19",
+    "September_2025_values_masked": true,
+    "matched_blocks": 777,
+    "geographic_blocks": 897,
+    "public_release": "2025-12-18",
+    "release_source": "https://www.census.gov/programs-surveys/ces/news-and-updates/updates/12182025.html",
+    "geography": "2020 block identifiers; published geometry TIGER 2024, local Census2020 fallback approximate. Unmatched IDs stay missing."
+  },
+  "sources_references": [
+    "https://www.census.gov/programs-surveys/acs/news/data-releases/2023/release-schedule.html",
+    "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/"
+  ],
+  "source_date_correction": "Provider Last-Modified is not public release. Confirmed Dec 18 release, availability gate moved to Dec 19. No experiment rows lie between the previous and corrected dates; every feature value is identical.",
+  "spatial_query_coverage": {
+    "full_600m_neighborhoods": 980,
+    "incomplete_neighborhoods": 1,
+    "incomplete_block_ids": [
+      "la:boe:asset:4891:oid:4791:part:0"
+    ],
+    "handling": "Local counts/match fractions missing when the 600m circle leaves the bounded query; full-tract ACS estimates retained. This block has no legacy or added-history sensor labels, so no model input or evaluated prediction changed."
+  }
+}

@@ -1,5 +1,7 @@
 # Source registry
 
+The temporal-v2 continuation adds [vintage-gated Census/LODES joins](../reports/modeling/temporal_v2_predictors.json) and [bounded June/July sensor acquisition](../reports/modeling/temporal_v2_acquisition.json). These supersede the earlier unavailable ACS and unfinished employment-join statuses for this version only. Historical v1 artifacts remain intact. ACS tables are free static exports (2019–2023 survey, December 12, 2024 release); 2023 employment is masked before its late-2025 publication. Missing workplace blocks stay missing. [Sensor semantics and label coverage](../reports/modeling/temporal_v2_audit/audit.md) remain uncertain; archive publication does not certify historical live-feed delivery.
+
 Machine-readable source details: `config/source_registry.json`. Supplemental checks and their exact request evidence: `reports/starter/source_checks.json`. Original and new raw responses remain in the acquisition manifest.
 
 | Source | Status | Priority | Coverage / limitation |

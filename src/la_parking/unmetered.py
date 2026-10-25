@@ -231,6 +231,11 @@ def _predict(bundle,frame,target,features):
 def _score(y,p,target):return probability_metrics(y,p) if target=='at_least_one' else regression_metrics(y,p)
 
 
+def validation_objective(metric,target):
+    """Select on unmetered validation MSE; calibration has its own Brier objective."""
+    return metric['brier_score'] if target=='at_least_one' else metric['rmse']**2
+
+
 def compare(frame,manifest,cfg=None):
     cfg=cfg or config();features=manifest['features'];f=validate_experiment(frame,manifest,features,cfg)
     report={'version':cfg['version'],'status':'evaluated_on_held_out_unmetered_only','comparisons':{},'paired_transfer_differences':{},'selection':{},
@@ -280,15 +285,15 @@ def compare(frame,manifest,cfg=None):
                     for leaf in cfg['parameter_candidates']:
                         bundle=_fit(fitted,target,features,leaf,cfg['seed'],balanced=weight>0,meter_weight=weight)
                         pred=_predict(bundle,val,target,features);metric=_score(val[target],pred,target)
-                        loss=metric['brier_score'] if target=='at_least_one' else metric['mae']
-                        choices.append({'metered_weight':weight,'leaf_nodes':leaf,'validation_loss':loss})
+                        loss=validation_objective(metric,target)
+                        choices.append({'metered_weight':weight,'leaf_nodes':leaf,'validation_loss':loss,'validation_rmse':metric.get('rmse'),'validation_mae':metric.get('mae'),'objective':'brier' if target=='at_least_one' else 'mse'})
                         if best is None or loss<best[0]:best=(loss,bundle,weight,leaf)
                 _,bundle,weight,leaf=best
                 if target=='at_least_one' and cal[target].nunique()==2:
                     p=_predict(bundle,cal,target,features);z=np.log(np.clip(p,1e-6,1-1e-6)/(1-np.clip(p,1e-6,1-1e-6))).reshape(-1,1)
                     calibrator=LogisticRegression(C=1,max_iter=200).fit(z,cal[target]);bundle=(bundle[0],bundle[1],calibrator)
                 predictions[name]=_predict(bundle,test,target,features)
-                selections.setdefault(name,{})[target]={'metered_weight':weight,'leaf_nodes':leaf,'unmetered_validation_choices':choices,'uses_metered_labels':weight>0,
+                selections.setdefault(name,{})[target]={'metered_weight':weight,'leaf_nodes':leaf,'unmetered_validation_choices':choices,'uses_metered_labels':weight>0,'selection_objective':'brier' if target=='at_least_one' else 'mse',
                     'calibration':'logistic_on_separate_unmetered_calibration' if target=='at_least_one' and cal[target].nunique()==2 else 'not_fitted'}
             for name,pred in predictions.items():
                 quality={}

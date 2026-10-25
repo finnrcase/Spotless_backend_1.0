@@ -1,0 +1,264 @@
+{
+  "scope": "Westwood subset only; centroid bounding boxes, not continuous evidence coverage",
+  "citywide_accuracy_validated": false,
+  "unmetered_accuracy_validated": false,
+  "metered_sensor_truth_independently_validated": false,
+  "rows": [
+    {
+      "axis": "future_time_known",
+      "horizon": 0,
+      "candidate_face_bins": 21472,
+      "rate_labels": 6428,
+      "complete_count_labels": 839,
+      "blocks": 23,
+      "faces": 32,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.059478507142984,
+        -118.44175206505173,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "unseen_block",
+      "horizon": 0,
+      "candidate_face_bins": 23276,
+      "rate_labels": 3721,
+      "complete_count_labels": 180,
+      "blocks": 5,
+      "faces": 9,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44177818866922,
+        34.06394407535138
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_unseen",
+      "horizon": 0,
+      "candidate_face_bins": 2684,
+      "rate_labels": 479,
+      "complete_count_labels": 39,
+      "blocks": 3,
+      "faces": 4,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44390184480582,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_known",
+      "horizon": 15,
+      "candidate_face_bins": 21440,
+      "rate_labels": 6425,
+      "complete_count_labels": 839,
+      "blocks": 23,
+      "faces": 32,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.059478507142984,
+        -118.44175206505173,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "unseen_block",
+      "horizon": 15,
+      "candidate_face_bins": 23272,
+      "rate_labels": 3714,
+      "complete_count_labels": 180,
+      "blocks": 5,
+      "faces": 9,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44177818866922,
+        34.06394407535138
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_unseen",
+      "horizon": 15,
+      "candidate_face_bins": 2680,
+      "rate_labels": 478,
+      "complete_count_labels": 39,
+      "blocks": 3,
+      "faces": 4,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44390184480582,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_known",
+      "horizon": 30,
+      "candidate_face_bins": 21408,
+      "rate_labels": 6423,
+      "complete_count_labels": 838,
+      "blocks": 23,
+      "faces": 32,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.059478507142984,
+        -118.44175206505173,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "unseen_block",
+      "horizon": 30,
+      "candidate_face_bins": 23268,
+      "rate_labels": 3712,
+      "complete_count_labels": 179,
+      "blocks": 5,
+      "faces": 9,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44177818866922,
+        34.06394407535138
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_unseen",
+      "horizon": 30,
+      "candidate_face_bins": 2676,
+      "rate_labels": 478,
+      "complete_count_labels": 39,
+      "blocks": 3,
+      "faces": 4,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44390184480582,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_known",
+      "horizon": 60,
+      "candidate_face_bins": 21344,
+      "rate_labels": 6421,
+      "complete_count_labels": 838,
+      "blocks": 23,
+      "faces": 32,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.059478507142984,
+        -118.44175206505173,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "unseen_block",
+      "horizon": 60,
+      "candidate_face_bins": 23260,
+      "rate_labels": 3705,
+      "complete_count_labels": 179,
+      "blocks": 5,
+      "faces": 9,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44177818866922,
+        34.06394407535138
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_unseen",
+      "horizon": 60,
+      "candidate_face_bins": 2668,
+      "rate_labels": 478,
+      "complete_count_labels": 39,
+      "blocks": 3,
+      "faces": 4,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44390184480582,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_known",
+      "horizon": 120,
+      "candidate_face_bins": 21216,
+      "rate_labels": 6414,
+      "complete_count_labels": 836,
+      "blocks": 23,
+      "faces": 32,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.059478507142984,
+        -118.44175206505173,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "unseen_block",
+      "horizon": 120,
+      "candidate_face_bins": 23244,
+      "rate_labels": 3701,
+      "complete_count_labels": 179,
+      "blocks": 5,
+      "faces": 9,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44177818866922,
+        34.06394407535138
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    },
+    {
+      "axis": "future_time_unseen",
+      "horizon": 120,
+      "candidate_face_bins": 2652,
+      "rate_labels": 478,
+      "complete_count_labels": 39,
+      "blocks": 3,
+      "faces": 4,
+      "longitude_latitude_bbox": [
+        -118.44870355189433,
+        34.06363764988237,
+        -118.44390184480582,
+        34.06369797126179
+      ],
+      "parking_population": "metered sensor panel proxy",
+      "unmetered_labels": 0
+    }
+  ],
+  "unsupported": "Other LA neighborhoods, unmetered streets, and full-curb suitable-space counts/probabilities. Lack of labels is never zero occupancy."
+}
