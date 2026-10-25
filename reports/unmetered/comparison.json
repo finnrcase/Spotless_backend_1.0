@@ -1,0 +1,96 @@
+{
+  "version": "unmetered-comparison-v1",
+  "status": "awaiting_direct_unmetered_labels_and_frozen_splits",
+  "accepted_manual_records": 0,
+  "field_identified_unmetered_records": 0,
+  "reviewed_unmetered_test_labels": 0,
+  "unmetered_is_core_target": true,
+  "metered_training_improves_unmetered": "not_evaluated",
+  "reason": "No reviewed unmetered train/validation/test labels and as-of predictor table have been supplied. Existing metered proxy scores cannot answer this question.",
+  "comparisons": {
+    "future_time": {
+      "unmetered_mean": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_time_week": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_face_mean": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_persistence_with_mean_fallback": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_only": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_plus_metered": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      }
+    },
+    "unseen_block": {
+      "unmetered_mean": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_time_week": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_face_mean": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_persistence_with_mean_fallback": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_only": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      },
+      "unmetered_plus_metered": {
+        "test_r2": null,
+        "mae": null,
+        "brier_score": null,
+        "test_population": "directly observed unmetered only"
+      }
+    }
+  },
+  "predictor_families": [
+    "demand",
+    "curb_supply",
+    "time_dependent_restrictions",
+    "causal_observation_history"
+  ],
+  "predictors_substitute_for_labels": false,
+  "production_transfer_authorized": false
+}

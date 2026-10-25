@@ -1,0 +1,15 @@
+{
+  "host": "127.0.0.1",
+  "port": 8765,
+  "forecast_cache_seconds": 60,
+  "maximum_cache_entries": 128,
+  "snapshot_check_seconds": 10,
+  "source_poll_seconds": 120,
+  "source_poll_enabled": false,
+  "recent_evidence_minutes": 15,
+  "maximum_candidates": 120,
+  "source_record": "city_current_occupancy.parquet",
+  "restrictions_path": "data/service/restrictions.json",
+  "model_version": "sensor-panel-v1",
+  "replay_issue_utc": "2026-08-25T17:00:00Z"
+}

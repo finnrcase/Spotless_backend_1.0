@@ -1,0 +1,139 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "observation_id": {
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "space_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Space Id"
+    },
+    "block_face_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Block Face Id"
+    },
+    "observed_at_utc": {
+      "format": "date-time",
+      "title": "Observed At Utc",
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "OCCUPIED",
+        "VACANT",
+        "UNKNOWN",
+        "NO_OBSERVATION"
+      ],
+      "title": "State",
+      "type": "string"
+    },
+    "evidence_type": {
+      "enum": [
+        "sensor",
+        "manual",
+        "survey",
+        "partner"
+      ],
+      "title": "Evidence Type",
+      "type": "string"
+    },
+    "available_spaces": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Available Spaces"
+    },
+    "stale": {
+      "title": "Stale",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "observation_id",
+    "observed_at_utc",
+    "state",
+    "evidence_type",
+    "stale"
+  ],
+  "title": "OccupancyObservation",
+  "type": "object"
+}

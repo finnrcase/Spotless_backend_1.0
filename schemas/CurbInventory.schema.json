@@ -1,0 +1,164 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "valid_from_utc": {
+      "format": "date-time",
+      "title": "Valid From Utc",
+      "type": "string"
+    },
+    "valid_to_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Valid To Utc"
+    },
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "physical_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Capacity"
+    },
+    "eligible_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligible Capacity"
+    },
+    "capacity_lower": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Capacity Lower"
+    },
+    "capacity_upper": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Capacity Upper"
+    },
+    "capacity_method": {
+      "enum": [
+        "field_survey",
+        "marked_spaces",
+        "exclusion_adjusted_estimate",
+        "unavailable"
+      ],
+      "title": "Capacity Method",
+      "type": "string"
+    },
+    "exclusions_complete": {
+      "title": "Exclusions Complete",
+      "type": "boolean"
+    },
+    "restriction_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Restriction Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "valid_from_utc",
+    "block_face_id",
+    "capacity_method",
+    "exclusions_complete"
+  ],
+  "title": "CurbInventory",
+  "type": "object"
+}

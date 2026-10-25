@@ -1,0 +1,500 @@
+[
+  {
+    "id": "starter_curbs",
+    "owner": "City of Los Angeles / source agency",
+    "verified_url": "https://services5.arcgis.com/7nsPwEMP38bSkCjy/arcgis/rest/services/Sidewalks_Mapped_Areas/FeatureServer/3",
+    "status": "verified/imported historic prior",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T04:14:18Z",
+    "notes": "6402 source assets, exact ID/page reconciliation; 84 outside exact requested box retained with a mask. Historic geometry, never stalls or current legal capacity.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "useful_fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "sqlType": "sqlTypeOther",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CURB_ID",
+        "type": "esriFieldTypeInteger",
+        "alias": "Curb ID",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "ASSETID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ASSETID",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "PIND",
+        "type": "esriFieldTypeString",
+        "alias": "PIND",
+        "sqlType": "sqlTypeOther",
+        "length": 14,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CALC_WIDTH",
+        "type": "esriFieldTypeDouble",
+        "alias": "CALC_WIDTH",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CALC_LENGTH",
+        "type": "esriFieldTypeDouble",
+        "alias": "CALC_LENGTH",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NOTES",
+        "type": "esriFieldTypeString",
+        "alias": "Notes",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CRTN_DT",
+        "type": "esriFieldTypeDate",
+        "alias": "Create Date",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "USER_ID",
+        "type": "esriFieldTypeString",
+        "alias": "User ID",
+        "sqlType": "sqlTypeOther",
+        "length": 20,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "LST_MODF_DT",
+        "type": "esriFieldTypeDate",
+        "alias": "Modified Date",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Area",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Length",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "geographic_coverage": [
+      -118.456,
+      34.05,
+      -118.435,
+      34.075
+    ],
+    "source_imagery_year": 2014,
+    "inventory_created_year": 2017,
+    "license_terms": "Public query access; package is not a license grant. Verify City terms before redistribution."
+  },
+  {
+    "id": "starter_driveways",
+    "owner": "City of Los Angeles / source agency",
+    "verified_url": "https://services5.arcgis.com/7nsPwEMP38bSkCjy/arcgis/rest/services/Sidewalks_Mapped_Areas/FeatureServer/4",
+    "status": "verified/imported historic prior",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T04:14:30Z",
+    "notes": "1803 source assets, exact ID/page reconciliation; 19 outside exact requested box retained with a mask. Historic geometry, never stalls or current legal capacity.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "useful_fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "sqlType": "sqlTypeOther",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "DRIVEWAY_ID",
+        "type": "esriFieldTypeInteger",
+        "alias": "Driveway ID",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "ASSETID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ASSETID",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "PIND",
+        "type": "esriFieldTypeString",
+        "alias": "PIND",
+        "sqlType": "sqlTypeOther",
+        "length": 14,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "ISSHAREDDRIVEWAY",
+        "type": "esriFieldTypeString",
+        "alias": "Is Shared Driveway",
+        "sqlType": "sqlTypeOther",
+        "length": 3,
+        "nullable": true,
+        "editable": true,
+        "domain": {
+          "type": "codedValue",
+          "name": "YesNo",
+          "mergePolicy": "esriMPTDefaultValue",
+          "splitPolicy": "esriSPTDuplicate",
+          "description": "General Use Flag",
+          "codedValues": [
+            {
+              "name": "No",
+              "code": "No"
+            },
+            {
+              "name": "Yes",
+              "code": "Yes"
+            }
+          ]
+        },
+        "defaultValue": "No"
+      },
+      {
+        "name": "CALC_WIDTH",
+        "type": "esriFieldTypeDouble",
+        "alias": "CALC_WIDTH",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CALC_LENGTH",
+        "type": "esriFieldTypeDouble",
+        "alias": "CALC_LENGTH",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NOTES",
+        "type": "esriFieldTypeString",
+        "alias": "Notes",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CRTN_DT",
+        "type": "esriFieldTypeDate",
+        "alias": "Create Date",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "USER_ID",
+        "type": "esriFieldTypeString",
+        "alias": "User ID",
+        "sqlType": "sqlTypeOther",
+        "length": 20,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "LST_MODF_DT",
+        "type": "esriFieldTypeDate",
+        "alias": "Modified Date",
+        "sqlType": "sqlTypeOther",
+        "length": 8,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null,
+        "precision": 1
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Area",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Length",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "geographic_coverage": [
+      -118.456,
+      34.05,
+      -118.435,
+      34.075
+    ],
+    "source_imagery_year": 2014,
+    "inventory_created_year": 2017,
+    "license_terms": "Public query access; package is not a license grant. Verify City terms before redistribution."
+  },
+  {
+    "id": "naip_pinned_2022",
+    "owner": "USGS / USDA",
+    "verified_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/17317/info",
+    "status": "verified/bounded imagery acquired",
+    "category": "Imagery feasibility",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:01:27.519536+00:00",
+    "notes": "Native source pixelSizeX/Y = 0.6 in EPSG:26911 metres, confirmed from raster info. Category 1 primary raster. Date 2022-05-11; time of day unknown. 12 small 360 m tiles for 24-face review, plus included JPEG. No detector metrics measured.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "capture_date": "2022-05-11",
+    "capture_time_utc": null,
+    "capture_time_precision": "date_only",
+    "native_pixel_size_m": [
+      0.6,
+      0.6
+    ],
+    "license_terms": "Public domain NAIP; official USDA catalog rights link verified",
+    "rights_url": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
+    "time_specific_occupancy_truth": false
+  },
+  {
+    "id": "code_the_curb_cds",
+    "owner": "ArcGIS account zackary.d.campos_ladot; agency association inferred",
+    "verified_url": "https://gisserver.dot4la.org/server/rest/services/Sandbox_Environment/Curb_Data_Specification/FeatureServer",
+    "status": "public item verified; API unavailable",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:05:19.383995+00:00",
+    "notes": "Public ArcGIS item owned by zackary.d.campos_ladot; LADOT association inferred from its public metadata. Actual endpoint returns API error 500: No Layers. A program page and catalog item do not establish a functioning current public feed.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "actual_check": {
+      "status": "unavailable",
+      "checked_at_utc": "2026-10-25T05:05:44.988017+00:00",
+      "error": "API error: {'error': {'code': 500, 'message': 'Error handling service request :0x80004005 - No Layer or Table was initialized. in \\'\"esriCarto.GraphicFeatureServer\"\\'', 'details': []}}"
+    },
+    "geographic_coverage": "Not established from usable records"
+  },
+  {
+    "id": "code_the_curb_corridor",
+    "owner": "City of Los Angeles / source agency",
+    "verified_url": "https://services1.arcgis.com/tp9wqSVX1AitKgjd/arcgis/rest/services/Code_the_Curb_Corridor_Analysis/FeatureServer",
+    "status": "verified API; limited DTLA geometry",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:22:33.460727+00:00",
+    "notes": "Query/schema verified. Two records intentionally sampled (exceededTransferLimit=true); not a complete export. Westwood spatial count is zero. April 2024 layer edit, curb lines/BOE links, no complete current sign/permit/time rules or occupancy.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "sample_complete": false,
+    "westwood_query_count": 0,
+    "source_layer_edit_utc": "2024-04-18T20:30:13.809000+00:00",
+    "geographic_coverage": "DTLA SMART corridor study; not citywide or Westwood",
+    "license_terms": "Public query; redistribution/production rights not independently established"
+  },
+  {
+    "id": "venice_2021_survey",
+    "owner": "Los Angeles City Planning / Fehr & Peers",
+    "verified_url": "https://planning.lacity.gov/odocument/23ddbbd5-632b-4b58-a3d0-29846fcc3c84/Fehr_%26_Peers_Parking_Utilization_and_Transpor.pdf",
+    "status": "verified/historic aggregates recovered",
+    "category": "A direct parking (historic aggregate)",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:03:33.755855+00:00",
+    "notes": "Downloaded 206-page November 2021 report. Extracted 48 zone/time-band occupancy cells from PDF page 34, attributed to Fehr & Peers 2019. Values 49\u2013106% preserved. No independent raw repeated block-face table or exact survey timestamps recovered; mixed parking types cannot validate unmetered forecasts.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "publication_date": "2021-11",
+    "table_source_attribution_year": 2019,
+    "source_sha256": "913defea495ace0b396ab8e46a02e481a3846606d1b6260b160d2fe189d5614c",
+    "exact_observation_timestamps_available": false,
+    "full_face_training_ready": false,
+    "license_terms": "Official report accessed for research; source attribution retained. No report redistribution license asserted."
+  },
+  {
+    "id": "permit_legacy_blank",
+    "owner": "City of Los Angeles / source agency",
+    "verified_url": "https://data.lacity.org/d/2ckn-xmjp",
+    "status": "unusable legacy export",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": null,
+    "notes": "Metadata has no data columns. Count reports 155, but JSON rows are empty objects and GeoJSON contains 155 null geometries. This is not usable district coverage. Old ladotparking.org permit paths return 404; official LADOT online services/FAQ remain readable.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "reported_rows": 155,
+    "usable_geometries": 0
+  },
+  {
+    "id": "permit_district_geometry",
+    "owner": "City of Los Angeles / source agency",
+    "verified_url": "https://maps.lacity.org/arcgis/rest/services/Permits/BOE_Permits_Geocoder/MapServer/403",
+    "status": "verified/bounded geometry; rules unknown",
+    "category": "B supply/rules",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:27:24.242500+00:00",
+    "notes": "Six district polygons acquired with exact ID reconciliation in the starter box. PPDNAME and linked plan PDFs are leads; source effective date/currentness and complete curb/stay/vehicle eligibility remain unverified. Nonintersection does not prove unrestricted parking.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "useful_fields": [
+      {
+        "name": "ObjectID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "Id",
+        "type": "esriFieldTypeInteger",
+        "alias": "Id",
+        "domain": null
+      },
+      {
+        "name": "PPDNAME",
+        "type": "esriFieldTypeString",
+        "alias": "PPDNAME",
+        "length": 50,
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "TOOLTIP",
+        "type": "esriFieldTypeString",
+        "alias": "TOOLTIP",
+        "length": 40,
+        "domain": null
+      },
+      {
+        "name": "NLA_URL",
+        "type": "esriFieldTypeString",
+        "alias": "NLA_URL",
+        "length": 68,
+        "domain": null
+      }
+    ],
+    "features": 6,
+    "geographic_coverage": "Starter Westwood spatial query",
+    "source_geometry_vintage": "unverified"
+  },
+  {
+    "id": "pilot_workplace_geography",
+    "owner": "US Census Bureau / LEHD",
+    "verified_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/10",
+    "status": "verified/joined predictor context",
+    "category": "C demand predictor",
+    "priority": 1,
+    "retrieved_at_utc": "2026-10-25T05:05:56.528442+00:00",
+    "notes": "187 Census 2020 block geometries acquired by bounded query; 148 join to the acquired 2023 LODES workplace records. The remaining 39 stay missing, not zero. Publication/availability date still needs verification before historical as-of use; no backtest features or labels overwritten.",
+    "access_requirements": "Anonymous public requests tested; no purchases",
+    "cost": "Free requests used",
+    "current_legal_coverage_verified": false,
+    "geometry_vintage": 2020,
+    "workplace_vintage": 2023,
+    "geometry_rows": 187,
+    "matched_rows": 148,
+    "occupancy_labels": false
+  }
+]

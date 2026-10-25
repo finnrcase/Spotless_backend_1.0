@@ -1,0 +1,123 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "valid_from_utc": {
+      "format": "date-time",
+      "title": "Valid From Utc",
+      "type": "string"
+    },
+    "valid_to_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Valid To Utc"
+    },
+    "entity_id": {
+      "title": "Entity Id",
+      "type": "string"
+    },
+    "feature_name": {
+      "title": "Feature Name",
+      "type": "string"
+    },
+    "feature_kind": {
+      "enum": [
+        "static",
+        "dynamic"
+      ],
+      "title": "Feature Kind",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value"
+    },
+    "available_at_utc": {
+      "format": "date-time",
+      "title": "Available At Utc",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "valid_from_utc",
+    "entity_id",
+    "feature_name",
+    "feature_kind",
+    "value",
+    "available_at_utc"
+  ],
+  "title": "Feature",
+  "type": "object"
+}

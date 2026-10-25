@@ -1,0 +1,13 @@
+# Collecting unmetered evidence
+
+Use the [phone collection workflow](phone_collection.md) for the practical form, standalone-file access, export/import and review flags. The collector now records explicit field-observed parking type, capacity basis, intended duration and rule-check status.
+
+No verified unmetered occupancy training labels have been acquired. A 2013 Westwood study is mentioned in a later planning report, but that summary does not provide contemporary, block-face/time-stamped raw observations. No outreach has been sent. Potential partners: LADOT/LA Express Park operations, UCLA Transportation, Westwood Village Improvement Association and permitted curb-survey teams. Seek anonymized counts with legal capacity, timestamps, selection protocol and reuse permission; payment/vendor data is not automatically occupancy.
+
+1. Select pilot faces from `pilot_block_faces.parquet`. Stratify metered/unmetered, residential/commercial/campus edges, weekday/weekend, arrival hours, sweeping/permit periods and event days. Record sampling probabilities and missed visits; convenient-only surveys bias evaluation.
+2. Verify the actual curb side and limits on foot, including signs, curb cuts, hydrants, intersections, loading and temporary restrictions. Survey physical capacity separately from vehicle suitability and eligible capacity. Photograph signs only if permitted; this schema does not collect plates, faces or precise observer identity.
+3. Count occupied, vacant legal and unsuitable positions during a short complete-face sweep. Record start/end UTC, GPS accuracy, permit class and completeness. Unknown/partial coverage uses null counts, never zero. Use a pseudonymous observer ID. Zero vacant is valid only after a complete count.
+4. Enter JSONL following `schemas/ManualObservation.schema.json`. Required provenance includes each count and coordinate, and a source version identifies the survey protocol. `la-parking observations path/to/surveys.jsonl` checks the contract, count reconciliation, duration, duplicate ID, GPS accuracy, existing face ID and spatial distance, then appends accepted records locally. Rejected rows receive reasons.
+5. Double-count a random 10% with independent observers and reconcile side/capacity disagreements. Repeat 5/15/30-minute visits to measure turnover and sensor persistence errors; use held-out days/faces for evaluation. Never turn every unsurveyed face into a zero label.
+
+The collected unit is a short time-window count, not guaranteed individual-space occupancy or duration suitability. A later model needs separate observed capacity and verified rules. Forecasts should abstain outside supported geography/time/eligibility, with calibrated uncertainty and independent prospective validation.

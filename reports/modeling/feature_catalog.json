@@ -1,0 +1,195 @@
+{
+  "features": [
+    {
+      "feature": "hour_sin",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "hour_cos",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "weekday_sin",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "weekday_cos",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "weekend",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "month_sin",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "month_cos",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "holiday",
+      "family": "calendar",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "deterministic at issue time"
+    },
+    {
+      "feature": "lag_rate_15",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "lag_rate_30",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "lag_rate_60",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "lag_coverage",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "arrivals_60",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "departures_60",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "occupancy_week_ago",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "neighbor_rate_300",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "neighbor_rate_600",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "hour_x_lag",
+      "family": "causal_sensor_history",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "events <= issue time; immediate-delivery assumption"
+    },
+    {
+      "feature": "buildings_100",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "buildings_300",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "buildings_600",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "business_100",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "business_300",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "business_600",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "food_retail_300",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "hydrants_100",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "driveways_100",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "context_x_weekend",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "current_price_midpoint",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    },
+    {
+      "feature": "current_time_limit_hours",
+      "family": "current_spatial_context",
+      "event_effective_time": "origin history / requested arrival / source snapshot",
+      "availability": "2026-10 snapshot; retrospective tier only"
+    }
+  ],
+  "excluded_families": {
+    "housing_vehicle_ownership": "ACS blocked; no historical tract match",
+    "workplace_employment": "LODES acquired, no verified block-geography join",
+    "business_hours": "unverified/unavailable",
+    "events_attendance": "no supported attendance; calendar retrieved after backtest dates",
+    "restrictions_capacity": "unverified; unavailable",
+    "weather": "no historical issued forecasts for target periods",
+    "transit": "only October 2026 schedule snapshot",
+    "closures": "historical effective/availability timestamps unverified"
+  },
+  "geometry_vintage": "October 2026; all spatial assignment is retrospective"
+}

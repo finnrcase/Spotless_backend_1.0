@@ -1,0 +1,4786 @@
+{
+  "request": {
+    "destination": {
+      "latitude": 34.0608,
+      "longitude": -118.4465,
+      "label": null
+    },
+    "arrival_time": "2026-10-25T05:07:46.858083Z",
+    "intended_stay_minutes": 60,
+    "maximum_walking_distance_m": 400,
+    "eligibility": {
+      "permit_class": null,
+      "vehicle_class": "standard_passenger"
+    },
+    "maximum_price_per_hour": null,
+    "prefer_lower_price": false,
+    "include_experimental": false,
+    "mode": "live",
+    "replay_issue_time": null
+  },
+  "forecast_issued_at": "2026-10-25T04:37:46.862441Z",
+  "computed_at": "2026-10-25T04:37:46.862441Z",
+  "response_at": "2026-10-25T04:37:46.862441Z",
+  "arrival_time": "2026-10-25T05:07:46.858083Z",
+  "intended_stay_end": "2026-10-25T06:07:46.858083Z",
+  "model_version": "sensor-panel-v1",
+  "cache_hit": false,
+  "cache_key": "d9e416de1b283a31b53dab31cd0e981b661d6c1dda87c8fa92cb99e3b30625e8",
+  "data_revision": "deb6a8cf1201be0977a8",
+  "mode_label": "LIVE REQUEST \u2014 evidence may be old or missing",
+  "blocks": [
+    {
+      "block_face_id": "la:boe:asset:74959:oid:71133:part:0:left",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44791835142654,
+            34.06200833664964
+          ],
+          [
+            -118.44642001178256,
+            34.060269517253964
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 28.2867550954499,
+      "walking_distance_m": 44.28675509472283,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 1,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 240.33104068333333,
+        "last_observed_at": "2026-10-25T00:37:27+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 2.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 2.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:74959:oid:71133:part:0:right",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4480592155588,
+            34.06192425709134
+          ],
+          [
+            -118.44656087464533,
+            34.06018543942664
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 44.28675509505326,
+      "walking_distance_m": 44.28675509506686,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 2,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 143.64770735,
+        "last_observed_at": "2026-10-25T02:14:08+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:66454:oid:63888:part:0:left",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44698354579491,
+            34.06002168766873
+          ],
+          [
+            -118.44654098336215,
+            34.06028607942727
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 57.120977802273146,
+      "walking_distance_m": 96.39835526093628,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 3,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 217.79770735,
+        "last_observed_at": "2026-10-25T00:59:59+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:74935:oid:71112:part:0:left",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44641997999503,
+            34.0602694803391
+          ],
+          [
+            -118.44565637298052,
+            34.059382101679276
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 59.29826687256675,
+      "walking_distance_m": 96.39835526135629,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 4,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 134.38104068333334,
+        "last_observed_at": "2026-10-25T02:23:24+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 3.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:66454:oid:63888:part:0:right",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44688246537082,
+            34.05990448587736
+          ],
+          [
+            -118.44643990320637,
+            34.06016887726904
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 70.21316706668156,
+      "walking_distance_m": 96.39835526183356,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 5,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:74935:oid:71112:part:0:right",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4465609064329,
+            34.06018547634145
+          ],
+          [
+            -118.44579729876808,
+            34.05929809856422
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 68.38428533330884,
+      "walking_distance_m": 96.39835526241357,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 6,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:17306:oid:17941:part:0:right",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44643996360156,
+            34.060168841221184
+          ],
+          [
+            -118.44556770119732,
+            34.06068898813832
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 60.12745061514618,
+      "walking_distance_m": 132.66233683586904,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 7,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 288.69770735000003,
+        "last_observed_at": "2026-10-24T23:49:05+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:17306:oid:17941:part:0:left",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44654092296693,
+            34.06028611547519
+          ],
+          [
+            -118.44566866003126,
+            34.0608062631146
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 44.12745061503139,
+      "walking_distance_m": 132.6623368362372,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 8,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 120.38104068333334,
+        "last_observed_at": "2026-10-25T02:37:24+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:17307:oid:17942:part:0:left",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44566866044778,
+            34.060806262866215
+          ],
+          [
+            -118.44556473829476,
+            34.06086381591046
+          ],
+          [
+            -118.44547067184608,
+            34.06086646596069
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 76.73765495167139,
+      "walking_distance_m": 195.4432394120385,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 9,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:17307:oid:17942:part:0:right",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44556770078076,
+            34.060688988386715
+          ],
+          [
+            -118.44551134747297,
+            34.0607225929462
+          ],
+          [
+            -118.44547275599761,
+            34.060722206752054
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 86.92961511814988,
+      "walking_distance_m": 195.4432394125866,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 10,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:71091:oid:69052:part:0:right",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4455583458866,
+            34.060792150099175
+          ],
+          [
+            -118.44554718639884,
+            34.06053140673448
+          ],
+          [
+            -118.44553752814927,
+            34.060470447952014
+          ],
+          [
+            -118.44551225272703,
+            34.06039474766473
+          ],
+          [
+            -118.44492255826735,
+            34.059679739641204
+          ],
+          [
+            -118.44473657035799,
+            34.05955916533644
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 86.92115937097654,
+      "walking_distance_m": 210.65108294147302,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 11,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 139.83104068333333,
+        "last_observed_at": "2026-10-25T02:17:57+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:76100:oid:75704:part:0:left",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44555837662692,
+            34.060795380342725
+          ],
+          [
+            -118.44552738431912,
+            34.06257750973635
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 86.91547048030964,
+      "walking_distance_m": 210.65108294179458,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 12,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 2.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 2.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:76100:oid:75704:part:0:right",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44538505121612,
+            34.06079329230963
+          ],
+          [
+            -118.44535405527617,
+            34.062575421753856
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 102.9149738641572,
+      "walking_distance_m": 210.65108294180789,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 13,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:42052:oid:39883:part:0:right",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44547295570784,
+            34.06072220894218
+          ],
+          [
+            -118.44534090741448,
+            34.06072063411083
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 95.19030464111955,
+      "walking_distance_m": 210.65108294214176,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 14,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:42052:oid:39883:part:0:left",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44547047213551,
+            34.060866463770594
+          ],
+          [
+            -118.44533842361818,
+            34.060864888942376
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 95.31315101581677,
+      "walking_distance_m": 210.65108294259895,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 15,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:71091:oid:69052:part:0:left",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44538508194985,
+            34.06079652255337
+          ],
+          [
+            -118.44537471678798,
+            34.06054613624549
+          ],
+          [
+            -118.4453543964257,
+            34.06045654285438
+          ],
+          [
+            -118.44478793345148,
+            34.05977138311033
+          ],
+          [
+            -118.44463268990172,
+            34.05967465859367
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 102.91016911929079,
+      "walking_distance_m": 210.65108294283968,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 16,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:57568:oid:55010:part:0:right",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44579729840899,
+            34.05929809814692
+          ],
+          [
+            -118.44569529585661,
+            34.05917956237487
+          ],
+          [
+            -118.44558956392812,
+            34.05834538925112
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 178.74922115629738,
+      "walking_distance_m": 217.44836795227482,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 17,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:57568:oid:55010:part:0:left",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44565637333963,
+            34.05938210209657
+          ],
+          [
+            -118.44554104288615,
+            34.05924807787379
+          ],
+          [
+            -118.4455267102702,
+            34.059220999397446
+          ],
+          [
+            -118.44541718187173,
+            34.05836052462963
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 175.47398269494724,
+      "walking_distance_m": 217.44836795273753,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 18,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:30571:oid:30802:part:0:right",
+      "street_name": "W LINDBROOK DR",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44570048625799,
+            34.05927137980865
+          ],
+          [
+            -118.44465828125246,
+            34.05954819140283
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 184.89524989326753,
+      "walking_distance_m": 217.44836795356406,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 19,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 91.03104068333333,
+        "last_observed_at": "2026-10-25T03:06:45+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:30571:oid:30802:part:0:left",
+      "street_name": "W LINDBROOK DR",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44575318560533,
+            34.05940882046624
+          ],
+          [
+            -118.44471097912151,
+            34.05968563254045
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 168.9856480116874,
+      "walking_distance_m": 217.44836795441552,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 20,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 98.59770735000001,
+        "last_observed_at": "2026-10-25T02:59:11+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:68552:oid:65600:part:0:left",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44525309687427,
+            34.060796279712356
+          ],
+          [
+            -118.44523438013086,
+            34.06053258078357
+          ],
+          [
+            -118.44464671402184,
+            34.05979213905602
+          ],
+          [
+            -118.44460009814661,
+            34.05963283746778
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 115.09270354659564,
+      "walking_distance_m": 222.84069806937484,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 21,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 85.04770735000001,
+        "last_observed_at": "2026-10-25T03:12:44+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 2.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:59210:oid:58097:part:0:left",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4453384411853,
+            34.060864889150416
+          ],
+          [
+            -118.4444640615658,
+            34.060854605142424
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 107.45569769093997,
+      "walking_distance_m": 222.84069806974043,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 22,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 180.58104068333333,
+        "last_observed_at": "2026-10-25T01:37:12+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 3.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:68552:oid:65600:part:0:right",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44542623414878,
+            34.06078924328083
+          ],
+          [
+            -118.44541197995382,
+            34.06054629749707
+          ],
+          [
+            -118.445395208654,
+            34.060477583728186
+          ],
+          [
+            -118.44480396881647,
+            34.059728964108395
+          ],
+          [
+            -118.44476916214927,
+            34.05960098642561
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 99.11819001165782,
+      "walking_distance_m": 222.84069807067078,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 23,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:73634:oid:72445:part:0:right",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44525300277117,
+            34.060791719650716
+          ],
+          [
+            -118.44522207369396,
+            34.06257371086897
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 115.10431631013259,
+      "walking_distance_m": 222.8406980707467,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 24,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 154.83104068333333,
+        "last_observed_at": "2026-10-25T02:02:57+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:73634:oid:72445:part:0:left",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44542632826115,
+            34.060793803342094
+          ],
+          [
+            -118.44539540281582,
+            34.06257579450965
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 99.10470406498625,
+      "walking_distance_m": 222.84069807132855,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 25,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:59210:oid:58097:part:0:right",
+      "street_name": "W KINROSS AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.44432679705277,
+              34.06054402475193
+            ],
+            [
+              -118.44448904267452,
+              34.060688151264436
+            ],
+            [
+              -118.44453247143156,
+              34.060707703109564
+            ],
+            [
+              -118.44521315511439,
+              34.060716254843264
+            ],
+            [
+              -118.44525779978333,
+              34.06069616863261
+            ],
+            [
+              -118.4452812381775,
+              34.060652323013294
+            ],
+            [
+              -118.4452589984486,
+              34.06069710897481
+            ],
+            [
+              -118.44521339987617,
+              34.060717631111196
+            ],
+            [
+              -118.44453219185105,
+              34.060709059023495
+            ],
+            [
+              -118.44448783803374,
+              34.060689090450666
+            ],
+            [
+              -118.44432679705277,
+              34.06054402475193
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 113.68051690607594,
+      "walking_distance_m": 227.66055830767513,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 26,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 212.51437401666666,
+        "last_observed_at": "2026-10-25T01:05:16+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:14203:oid:15264:part:0:left",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4484819709631,
+            34.06176065356776
+          ],
+          [
+            -118.4480393004178,
+            34.06202491238594
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 196.57349325545954,
+      "walking_distance_m": 229.4819262551024,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 27,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:40414:oid:39957:part:0:left",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44827201181602,
+            34.06289649758548
+          ],
+          [
+            -118.44790660433328,
+            34.06198922233543
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 185.07028637204021,
+      "walking_distance_m": 229.4819262555197,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 28,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:14203:oid:15264:part:0:right",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44838093698463,
+            34.06164342291936
+          ],
+          [
+            -118.44793826670819,
+            34.06190768137077
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 180.87239087797104,
+      "walking_distance_m": 229.4819262555675,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 29,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:40414:oid:39957:part:0:right",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4484363716779,
+            34.06285064611804
+          ],
+          [
+            -118.44807096267628,
+            34.061943371390484
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 192.62644972645148,
+      "walking_distance_m": 229.4819262555876,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 30,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:25660:oid:24387:part:0:right",
+      "street_name": "S BROXTON AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44712857725303,
+            34.0625293914001
+          ],
+          [
+            -118.44712554335479,
+            34.06238829524354
+          ],
+          [
+            -118.44710988461121,
+            34.062354630566375
+          ],
+          [
+            -118.44568860766748,
+            34.06070558117715
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 54.75277275153377,
+      "walking_distance_m": 247.60455024588498,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 31,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:25660:oid:24387:part:0:left",
+      "street_name": "S BROXTON AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44695525046676,
+            34.062531595669284
+          ],
+          [
+            -118.4469532083492,
+            34.062420365273944
+          ],
+          [
+            -118.44554775342047,
+            34.06078967005998
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 70.75277275139395,
+      "walking_distance_m": 247.60455024599554,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 32,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:30596:oid:30826:part:0:left",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4480392389624,
+            34.06202494903868
+          ],
+          [
+            -118.44709236900766,
+            34.062589146105864
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 193.1656756182897,
+      "walking_distance_m": 265.91889359630187,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 33,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 2.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 2.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:30596:oid:30826:part:0:right",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44793832816357,
+            34.06190764471808
+          ],
+          [
+            -118.44699145878691,
+            34.06247184100153
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 177.16567561836618,
+      "walking_distance_m": 265.91889359669375,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 34,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 2.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:1634:oid:1645:part:0:right",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.45015464298082,
+            34.06169016000285
+          ],
+          [
+            -118.44989097338963,
+            34.061760324048336
+          ],
+          [
+            -118.44980132028472,
+            34.06176546625861
+          ],
+          [
+            -118.44946256068972,
+            34.06172306731456
+          ],
+          [
+            -118.44885142622886,
+            34.06160339701683
+          ],
+          [
+            -118.4486560676728,
+            34.06157928718915
+          ],
+          [
+            -118.44850698393758,
+            34.06159075760941
+          ],
+          [
+            -118.44839232254996,
+            34.061637673963546
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 197.83428352987926,
+      "walking_distance_m": 279.76484295468975,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 35,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:1634:oid:1645:part:0:left",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.45021359913304,
+            34.061825828978975
+          ],
+          [
+            -118.44992889941237,
+            34.0619012881043
+          ],
+          [
+            -118.44979226313306,
+            34.061910069661664
+          ],
+          [
+            -118.4494280081899,
+            34.06186445851823
+          ],
+          [
+            -118.44881566889376,
+            34.0617445952785
+          ],
+          [
+            -118.44864147493941,
+            34.06172331960427
+          ],
+          [
+            -118.4485559862882,
+            34.061730438467215
+          ],
+          [
+            -118.44847058538801,
+            34.06176640253206
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 211.1171182003704,
+      "walking_distance_m": 279.76484295603746,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 36,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:47726:oid:45759:part:0:right",
+      "street_name": "S GLENDON AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44438037059679,
+            34.060768031698046
+          ],
+          [
+            -118.44394671517699,
+            34.062533735243434
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 195.67869073387163,
+      "walking_distance_m": 303.55588040088315,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 37,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 285.6810406833334,
+        "last_observed_at": "2026-10-24T23:52:06+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 2.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 2.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:20627:oid:20950:part:0:left",
+      "street_name": "S GLENDON AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.4434812412736,
+              34.060031374449295
+            ],
+            [
+              -118.44344839722231,
+              34.06003114192249
+            ],
+            [
+              -118.44341916104618,
+              34.060046109613765
+            ],
+            [
+              -118.44339267851467,
+              34.06009699099806
+            ],
+            [
+              -118.44340258838466,
+              34.06006317035159
+            ],
+            [
+              -118.44341484280511,
+              34.06004672428974
+            ],
+            [
+              -118.44343156540089,
+              34.06003485000822
+            ],
+            [
+              -118.4434511315629,
+              34.06002870109974
+            ],
+            [
+              -118.44347164042814,
+              34.06002887493406
+            ],
+            [
+              -118.44349286869739,
+              34.06003425491885
+            ],
+            [
+              -118.44351146813457,
+              34.060045815394126
+            ],
+            [
+              -118.44438044533985,
+              34.060817752169264
+            ],
+            [
+              -118.44439650984957,
+              34.060834217376005
+            ],
+            [
+              -118.44440971290567,
+              34.06085305486033
+            ],
+            [
+              -118.44441970980259,
+              34.06087377281289
+            ],
+            [
+              -118.44442434607508,
+              34.06088887616413
+            ],
+            [
+              -118.44442765360466,
+              34.06092023488189
+            ],
+            [
+              -118.44441798144398,
+              34.060873778766506
+            ],
+            [
+              -118.44437923980072,
+              34.06081869135404
+            ],
+            [
+              -118.44351026259547,
+              34.060046754587546
+            ],
+            [
+              -118.4434812412736,
+              34.060031374449295
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 191.69193900128903,
+      "walking_distance_m": 304.1011361923651,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 38,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 606.1477073499999,
+        "last_observed_at": "2026-10-24T18:31:38+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:20627:oid:20950:part:0:right",
+      "street_name": "S GLENDON AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.44373369883388,
+              34.060010938671766
+            ],
+            [
+              -118.44373055225736,
+              34.05999438622525
+            ],
+            [
+              -118.44373607080757,
+              34.05996986739545
+            ],
+            [
+              -118.4437524999213,
+              34.05995084867749
+            ],
+            [
+              -118.44377595640874,
+              34.05994182534067
+            ],
+            [
+              -118.44374725657501,
+              34.059957206674675
+            ],
+            [
+              -118.44373447402286,
+              34.05997811212218
+            ],
+            [
+              -118.44373525684446,
+              34.060010518482834
+            ],
+            [
+              -118.44374903389968,
+              34.06003078234535
+            ],
+            [
+              -118.4444987483214,
+              34.06069530459262
+            ],
+            [
+              -118.44454449927028,
+              34.06070854023624
+            ],
+            [
+              -118.44487770147714,
+              34.06071379134268
+            ],
+            [
+              -118.4445444759141,
+              34.060709914037666
+            ],
+            [
+              -118.44449775040145,
+              34.06069639621696
+            ],
+            [
+              -118.4437478292589,
+              34.060031722283085
+            ],
+            [
+              -118.44373369883388,
+              34.060010938671766
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 150.04678136058448,
+      "walking_distance_m": 305.3118933015794,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 39,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 695.3977073499999,
+        "last_observed_at": "2026-10-24T17:02:23+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:47726:oid:45759:part:0:left",
+      "street_name": "S GLENDON AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.44451587625039,
+              34.06091383622779
+            ],
+            [
+              -118.44453518531901,
+              34.06088361534245
+            ],
+            [
+              -118.44455516350804,
+              34.06087023552982
+            ],
+            [
+              -118.44456652478252,
+              34.06086618031817
+            ],
+            [
+              -118.44459045977517,
+              34.06086388607542
+            ],
+            [
+              -118.44454560705972,
+              34.060877205959514
+            ],
+            [
+              -118.4445174941162,
+              34.06091411158278
+            ],
+            [
+              -118.44414748344057,
+              34.062420692542425
+            ],
+            [
+              -118.44415128920727,
+              34.06245436225999
+            ],
+            [
+              -118.44416262228754,
+              34.06247404991826
+            ],
+            [
+              -118.44418982658156,
+              34.06249425041646
+            ],
+            [
+              -118.44422332191179,
+              34.06250058793642
+            ],
+            [
+              -118.4442001768038,
+              34.06249908047781
+            ],
+            [
+              -118.44417874957617,
+              34.06249020115515
+            ],
+            [
+              -118.44416132230238,
+              34.06247489564688
+            ],
+            [
+              -118.4441497510471,
+              34.062454794042296
+            ],
+            [
+              -118.44414586557474,
+              34.06242041644813
+            ],
+            [
+              -118.44451587625039,
+              34.06091383622779
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 176.39712103897003,
+      "walking_distance_m": 308.2614593891677,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 40,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:28037:oid:27161:part:0:left",
+      "street_name": "W LINDBROOK DR",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.4447110048767,
+            34.05968562569627
+          ],
+          [
+            -118.44353247072218,
+            34.059998971114126
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 206.2563427300724,
+      "walking_distance_m": 318.4274634900909,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 41,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 91.01437401666666,
+        "last_observed_at": "2026-10-25T03:06:46+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 2.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 2.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:43760:oid:43476:part:0:left",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44461319825385,
+            34.05965776430242
+          ],
+          [
+            -118.44390485132635,
+            34.05879979121187
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 215.35554465240523,
+      "walking_distance_m": 318.42746349021724,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 42,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:43760:oid:43476:part:0:right",
+      "street_name": "S WESTWOOD BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44475606200632,
+            34.05957605960833
+          ],
+          [
+            -118.44404771438008,
+            34.05871808734999
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 210.56269000988127,
+      "walking_distance_m": 318.4274634906047,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 43,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:28037:oid:27161:part:0:right",
+      "street_name": "W LINDBROOK DR",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44465825549733,
+            34.05954819824699
+          ],
+          [
+            -118.4434797230139,
+            34.059861543121556
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 219.48343472952538,
+      "walking_distance_m": 318.42746349124127,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 44,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:54233:oid:51869:part:0:left",
+      "street_name": "S MIDVALE AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44541703049343,
+            34.058359216121346
+          ],
+          [
+            -118.44539766196999,
+            34.05817413243457
+          ],
+          [
+            -118.44492537966667,
+            34.05738587558486
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 288.55881661968334,
+      "walking_distance_m": 330.86987335364967,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 45,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 1.5,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 1.5
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:7168:oid:7463:part:0:left",
+      "street_name": "W WILSHIRE BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44552974488701,
+            34.058421671308835
+          ],
+          [
+            -118.44400265378356,
+            34.058827653991315
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 278.5543489256343,
+      "walking_distance_m": 330.8698733538026,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 46,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:7168:oid:7463:part:0:right",
+      "street_name": "W WILSHIRE BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44547700097485,
+            34.05828424262449
+          ],
+          [
+            -118.44394991203667,
+            34.05869022460305
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 294.5518614291437,
+      "walking_distance_m": 330.86987335437203,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 47,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:54233:oid:51869:part:0:right",
+      "street_name": "S MIDVALE AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44558971530904,
+            34.05834669775913
+          ],
+          [
+            -118.44556342041982,
+            34.058128217352575
+          ],
+          [
+            -118.44508049894132,
+            34.05732149341229
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 284.75802662579946,
+      "walking_distance_m": 330.8698733547623,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 48,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:7376:oid:8273:part:0:right",
+      "street_name": "W WILSHIRE BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44769963473014,
+            34.05765749291173
+          ],
+          [
+            -118.44547556342361,
+            34.05828463635794
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 294.55306656234404,
+      "walking_distance_m": 330.91711999452656,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 49,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:7376:oid:8273:part:0:left",
+      "street_name": "W WILSHIRE BLVD",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44775525683227,
+            34.057794133053456
+          ],
+          [
+            -118.44553118244025,
+            34.058421277574716
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 278.5530665602607,
+      "walking_distance_m": 330.91711999540104,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 50,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:59771:oid:56971:part:0:left",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44844015255057,
+            34.06288280566488
+          ],
+          [
+            -118.44832074440816,
+            34.063652765463466
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 292.276691935767,
+      "walking_distance_m": 335.6041540719452,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 51,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:69614:oid:66412:part:0:right",
+      "street_name": "S LEVERING AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44923680805212,
+            34.06358356858386
+          ],
+          [
+            -118.44841867892569,
+            34.06282537463493
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 286.03811413313684,
+      "walking_distance_m": 335.60415407209945,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 52,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:69614:oid:66412:part:0:left",
+      "street_name": "S LEVERING AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44910783350927,
+            34.06367996389218
+          ],
+          [
+            -118.44828970454101,
+            34.062921769090174
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 287.5063628424272,
+      "walking_distance_m": 335.6041540726265,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 53,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:59771:oid:56971:part:0:right",
+      "street_name": "S GAYLEY AVE",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -118.44826823100588,
+              34.0628643380319
+            ],
+            [
+              -118.44821286496179,
+              34.06322134032838
+            ]
+          ],
+          [
+            [
+              -118.44821286496179,
+              34.06322134032838
+            ],
+            [
+              -118.44814882128756,
+              34.063634297923144
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 281.1619582420314,
+      "walking_distance_m": 335.60415407289264,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 54,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": null,
+        "maximum_published_hourly": null,
+        "preference_status": "unknown",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": null
+      },
+      "unavailable_reason": "No usable source/history at this issue time; no stale state extension"
+    },
+    {
+      "block_face_id": "la:boe:asset:17953:oid:16999:part:0:left",
+      "street_name": "S BROXTON AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44697595557572,
+            34.063659442153664
+          ],
+          [
+            -118.44695525045752,
+            34.06253159516572
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 196.58344325864888,
+      "walking_distance_m": 336.96854863517603,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 55,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:29266:oid:77653:part:0:left",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -118.44709238828291,
+            34.06258913461744
+          ],
+          [
+            -118.44697720900824,
+            34.06265730514506
+          ],
+          [
+            -118.44694239327906,
+            34.062666380879904
+          ],
+          [
+            -118.44543945864203,
+            34.06264859293743
+          ]
+        ]
+      },
+      "geometry_method": "approximate_centerline_offset",
+      "straight_line_distance_m": 205.8172020363988,
+      "walking_distance_m": 336.9685486361947,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 56,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 0.5,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:29266:oid:77653:part:0:right",
+      "street_name": "W WEYBURN AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.44552135702052,
+              34.06245940799605
+            ],
+            [
+              -118.44554593583447,
+              34.062489267409916
+            ],
+            [
+              -118.44558210977873,
+              34.06250294763102
+            ],
+            [
+              -118.44688520484824,
+              34.062519984292685
+            ],
+            [
+              -118.4469217819695,
+              34.062511069439736
+            ],
+            [
+              -118.44694941301832,
+              34.06248549825395
+            ],
+            [
+              -118.44696112930107,
+              34.06244971992083
+            ],
+            [
+              -118.44694890301031,
+              34.062401030311555
+            ],
+            [
+              -118.44696272535309,
+              34.06244980628077
+            ],
+            [
+              -118.44695682332109,
+              34.06247483556197
+            ],
+            [
+              -118.44695080239357,
+              34.06248624882796
+            ],
+            [
+              -118.44693347600237,
+              34.06250525132954
+            ],
+            [
+              -118.44691082285945,
+              34.06251742236131
+            ],
+            [
+              -118.44688541361143,
+              34.062521380771784
+            ],
+            [
+              -118.44558182258143,
+              34.06250431834613
+            ],
+            [
+              -118.44555634437471,
+              34.06249713534808
+            ],
+            [
+              -118.445534827952,
+              34.0624817152951
+            ],
+            [
+              -118.44551983860083,
+              34.06245989663724
+            ],
+            [
+              -118.44551316342093,
+              34.062434280695875
+            ],
+            [
+              -118.44552135702052,
+              34.06245940799605
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 182.3302367438023,
+      "walking_distance_m": 338.7050508760951,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 57,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "stale",
+        "observation_age_minutes": 99.38104068333334,
+        "last_observed_at": "2026-10-25T02:58:24+00:00",
+        "scope": "last-known transactions; no heartbeat guarantee",
+        "does_not_label_full_block": true,
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 1.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    },
+    {
+      "block_face_id": "la:boe:asset:17953:oid:16999:part:0:right",
+      "street_name": "S BROXTON AVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.44714383734045,
+              34.0625895370034
+            ],
+            [
+              -118.44715889976501,
+              34.06256465139611
+            ],
+            [
+              -118.44718432629342,
+              34.06254698585754
+            ],
+            [
+              -118.44715404328517,
+              34.06257287612143
+            ],
+            [
+              -118.44714227346006,
+              34.06260873560412
+            ],
+            [
+              -118.44715898931084,
+              34.06351740111111
+            ],
+            [
+              -118.4471661289898,
+              34.06354129556909
+            ],
+            [
+              -118.44719063791781,
+              34.06356925050462
+            ],
+            [
+              -118.44721339319662,
+              34.06357945429923
+            ],
+            [
+              -118.44725116903543,
+              34.06358260983982
+            ],
+            [
+              -118.44721289260586,
+              34.06358078712589
+            ],
+            [
+              -118.44718965611041,
+              34.06357036766492
+            ],
+            [
+              -118.44716462886522,
+              34.06354182166529
+            ],
+            [
+              -118.44715733820738,
+              34.06351742194817
+            ],
+            [
+              -118.44714062235654,
+              34.062608755697184
+            ],
+            [
+              -118.44714383734045,
+              34.0625895370034
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "authoritative_curb",
+      "straight_line_distance_m": 203.7831334415796,
+      "walking_distance_m": 340.17421773787305,
+      "walking_distance_method": "centerline_network_estimate; pedestrian crossings/accessibility unverified",
+      "rank": 58,
+      "rank_reason": "Eligible availability is unsupported; ranked by estimated walking distance and optional indicative price",
+      "visual_status": "insufficient_data",
+      "eligibility": {
+        "status": "unknown",
+        "reason": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "checked_from": "2026-10-25T05:07:46.858083Z",
+        "checked_to": "2026-10-25T06:07:46.858083Z",
+        "official_coverage_complete": false,
+        "posted_sign_coverage_complete": false,
+        "restrictions": [],
+        "upcoming": []
+      },
+      "expected_available_eligible_spaces": null,
+      "probability_at_least_one_suitable": null,
+      "availability_changes": {
+        "15m": null,
+        "30m": null,
+        "60m": null
+      },
+      "panel_estimate": null,
+      "experimental_activity_rank": null,
+      "evidence": {
+        "status": "missing",
+        "observation_age_minutes": null,
+        "last_observed_at": null,
+        "scope": "current source snapshot",
+        "fresh_computation_at": "2026-10-25T04:37:46.862441+00:00",
+        "feature_origin_at": null,
+        "inference_status": "insufficient_data",
+        "model_mode": null,
+        "historical_geometry_verified": false,
+        "mode": "live"
+      },
+      "uncertainty": {
+        "rules": "Complete current rule coverage is unavailable; missing signs do not mean unrestricted parking",
+        "capacity": "Total physical and eligible capacity unknown",
+        "model": {
+          "status": "unavailable or unvalidated"
+        },
+        "posted_sign_verification_is_independent": true
+      },
+      "price": {
+        "minimum_published_hourly": 3.0,
+        "maximum_published_hourly": 3.0,
+        "preference_status": "possibly_within_preference",
+        "source": "October 2026 meter-policy snapshot; not a verified arrival-time quote",
+        "historical_vintage_matches": false,
+        "ranking_price": 3.0
+      },
+      "unavailable_reason": "Current snapshot lacks a reconstructed recent feature window; a successful poll alone cannot activate this historical model"
+    }
+  ],
+  "coverage": {
+    "inside_city": true,
+    "nearby_faces_returned": 58,
+    "candidate_limit_reached": false,
+    "known_rule_prohibitions": 0,
+    "unknown_or_conflicting_eligibility": 58,
+    "numerical_suitable_space_estimates": 0,
+    "all_city_predictions_validated": false,
+    "outside_city_reason": null
+  },
+  "refresh": {
+    "source": {
+      "current_feed_present": true,
+      "last_poll_attempt": null,
+      "last_poll_success": null,
+      "last_poll_error": null,
+      "latest_source_observation": "2026-10-25T03:15:44+00:00",
+      "source_snapshot_retrieved_at": "2026-10-25T03:16:46.251235+00:00",
+      "newest_manual_observation": null
+    },
+    "snapshot_checked_at": "2026-10-25T04:37:40.515488+00:00",
+    "feature_updates": "File revisions reload independently; current transaction polls do not rebuild historical feature windows",
+    "forecast_cache_seconds": 60,
+    "client_refresh": "Client may request refreshed results; that does not make the source evidence fresh"
+  },
+  "limitations": [
+    "Experimental panel counts/probabilities do not describe full-curb or legally suitable parking.",
+    "Unknown rules remain unknown throughout the requested stay. Verify posted signs separately.",
+    "Walking distances use centerlines; pedestrian access, crossings and accessibility are unverified.",
+    "Price ranges come from a later snapshot, not an arrival-time quote. No validated search-time model exists."
+  ]
+}

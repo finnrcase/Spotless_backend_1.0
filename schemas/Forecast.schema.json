@@ -1,0 +1,172 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "forecast_id": {
+      "title": "Forecast Id",
+      "type": "string"
+    },
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "issued_at_utc": {
+      "format": "date-time",
+      "title": "Issued At Utc",
+      "type": "string"
+    },
+    "arrival_at_utc": {
+      "format": "date-time",
+      "title": "Arrival At Utc",
+      "type": "string"
+    },
+    "duration_minutes": {
+      "exclusiveMinimum": 0,
+      "title": "Duration Minutes",
+      "type": "integer"
+    },
+    "permit_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Permit Class"
+    },
+    "probability_suitable_space": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Probability Suitable Space"
+    },
+    "expected_available": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Available"
+    },
+    "lower": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lower"
+    },
+    "upper": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Upper"
+    },
+    "model_version": {
+      "title": "Model Version",
+      "type": "string"
+    },
+    "support": {
+      "enum": [
+        "validated",
+        "experimental",
+        "unsupported"
+      ],
+      "title": "Support",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "forecast_id",
+    "block_face_id",
+    "issued_at_utc",
+    "arrival_at_utc",
+    "duration_minutes",
+    "model_version",
+    "support"
+  ],
+  "title": "Forecast",
+  "type": "object"
+}

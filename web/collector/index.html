@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#153c36"><meta name="description" content="Collect local Los Angeles block-face parking observations.">
+  <title>Spotless · Field notes</title>
+  <style>/*__CSS__*/</style>
+</head>
+<body>
+<header><div class="brand"><span class="brand-icon" aria-hidden="true">S</span><div><strong>Spotless</strong><span class="eyebrow">FIELD NOTES / LOS ANGELES</span></div></div><span id="connection" class="pill">On this device</span></header>
+<main>
+  <section class="intro"><span class="eyebrow">WESTWOOD / UCLA PILOT</span><h1>Walk a block.<br>Record what’s there.</h1><p>Short observations, one street side at a time. Your counts stay on this device until you export them.</p><div class="coverage"><span class="dot"></span> Collection area available <span>·</span> Accuracy unvalidated</div></section>
+  <div class="steps" aria-label="Observation steps"><span>01 <b>Choose a side</b></span><span>02 <b>Count</b></span><span>03 <b>Save & export</b></span></div>
+  <p id="message" role="status" aria-live="polite" hidden></p>
+  <p id="assignment-note" class="coverage" hidden></p>
+  <section class="card" aria-labelledby="where-title"><div class="section-title"><span class="number">01</span><h2 id="where-title">Choose a block face</h2></div>
+    <label for="search">Find a street</label><input id="search" type="search" placeholder="Try Westwood or Wilshire" autocomplete="off">
+    <div class="row"><button id="locate" type="button" class="secondary">Use my location</button><span id="location-status" class="small">Location optional</span></div>
+    <label for="face">Street side <span id="face-count" class="small"></span></label><select id="face"><option value="">Choose a street side…</option></select>
+    <div id="face-detail" hidden><div class="map-wrap"><svg id="map" viewBox="0 0 320 170" role="img" aria-label="Selected block and curb side diagram"></svg><span>Approximate side diagram · north ↑</span></div><p id="face-name" class="face-name"></p><p id="face-evidence" class="small"></p>
+      <label class="check"><input id="side-confirmed" type="checkbox"><span>I checked the side and both ends of this block in person.</span></label>
+      <button id="use-pin" type="button" class="text-button">Confirm this face’s map pin as my location</button><p class="small">A confirmed map pin is an estimate, flagged for review. It is never recorded as GPS.</p>
+    </div>
+    <div class="grid"><div><label for="parking-type">Parking observed on this face</label><select id="parking-type"><option value="unknown">Not verified</option><option value="unmetered">Unmetered</option><option value="metered">Metered</option><option value="mixed">Mixed</option></select></div><div><label for="observer">Observer nickname</label><input id="observer" autocomplete="off" maxlength="60" placeholder="e.g. Finn"></div></div>
+  </section>
+  <section class="card" aria-labelledby="count-title"><div class="section-title"><span class="number">02</span><h2 id="count-title">Take a short snapshot</h2></div>
+    <div class="timer-row"><div><b id="timer">Not started</b><span class="small block">Keep the whole sweep under 15 minutes.</span></div><button id="start" type="button">Start observation</button></div>
+    <label class="check"><input id="complete" type="checkbox" checked><span>I can inspect the complete block face.</span></label>
+    <p class="small">Count vehicle-sized curb positions consistently. The third category is <strong>empty</strong> positions unsuitable for this visit. Leave an unknown count blank; enter 0 only after checking.</p>
+    <div class="counter" data-field="occupied"><label for="occupied">Occupied positions<span>Positions occupied by a vehicle</span></label><button type="button" data-step="-1" aria-label="Decrease occupied">−</button><input id="occupied" inputmode="numeric" type="number" min="0" step="1" placeholder="—"><button type="button" data-step="1" aria-label="Increase occupied">+</button></div>
+    <div class="counter" data-field="vacant_legal"><label for="vacant_legal">Empty & suitable<span>Vacant and legal for the intended stay</span></label><button type="button" data-step="-1" aria-label="Decrease suitable vacancies">−</button><input id="vacant_legal" inputmode="numeric" type="number" min="0" step="1" placeholder="—"><button type="button" data-step="1" aria-label="Increase suitable vacancies">+</button></div>
+    <div class="counter" data-field="unsuitable"><label for="unsuitable">Empty & unsuitable<span>Present but unavailable for this visit</span></label><button type="button" data-step="-1" aria-label="Decrease unsuitable">−</button><input id="unsuitable" inputmode="numeric" type="number" min="0" step="1" placeholder="—"><button type="button" data-step="1" aria-label="Increase unsuitable">+</button></div>
+    <div class="grid total"><div><label for="surveyed_capacity">Total positions inspected</label><input id="surveyed_capacity" inputmode="numeric" type="number" min="0" step="1" placeholder="Verify independently"></div><div><label for="capacity-basis">How were positions counted?</label><select id="capacity-basis"><option value="unknown">Not verified</option><option value="marked_spaces">Marked parking spaces</option><option value="estimated_positions">Estimated vehicle-sized positions</option></select></div></div><p id="reconcile" class="small">Complete counts must add up to the total.</p>
+    <details><summary>Visit conditions & field notes</summary><div class="grid"><div><label for="duration">Intended stay (minutes)</label><input id="duration" type="number" inputmode="numeric" min="1" value="60"></div><div><label for="permit">Permit class, if any</label><input id="permit" maxlength="100" placeholder="None / district / visitor"></div></div>
+    <label for="vehicle">Vehicle class</label><select id="vehicle"><option value="standard_passenger">Standard passenger vehicle</option><option value="accessible">Accessible parking eligibility</option><option value="commercial">Commercial vehicle</option><option value="other">Other — explain in notes</option></select>
+    <label class="check"><input id="rules-checked" type="checkbox"><span>I checked posted and temporary restrictions for the intended stay and eligibility.</span></label><p class="small">If rules are uncertain, leave this unchecked. The observation is saved for review.</p>
+    <label for="stratum">Sampling visit / stratum</label><input id="stratum" maxlength="100" placeholder="e.g. weekday afternoon, planned route A">
+    <div class="grid"><div><label for="sampling-method">How was this visit selected?</label><select id="sampling-method"><option value="unspecified">Not recorded</option><option value="randomized">Randomized assignment</option><option value="repeat_visit">Planned repeat visit</option><option value="convenience">Convenience / user report</option></select></div><div><label for="observer-confidence">Confidence in this count</label><select id="observer-confidence"><option value="">Not rated</option><option value="0.9">High</option><option value="0.6">Moderate</option><option value="0.3">Low</option></select></div></div>
+    <label for="restrictions-text">Posted / temporary restrictions observed</label><textarea id="restrictions-text" rows="2" maxlength="2000" placeholder="Sign text, hours, permit details, arrows, curb exclusions…"></textarea>
+    <label for="curb-length">Measured usable curb length, if available (metres)</label><input id="curb-length" type="number" min="0" step="0.1" placeholder="Leave blank if not measured"><label for="measurement-method">Measurement method</label><input id="measurement-method" placeholder="e.g. tape measure; excluded curb sections noted">
+    <label for="gap-lengths">Raw empty gap lengths (metres, separated by commas)</label><input id="gap-lengths" inputmode="decimal" placeholder="e.g. 4.5, 9.2; blank if unmeasured; 0 if checked and none"><p class="small">A gap can fit more than one vehicle. Raw lengths never become exact stalls automatically.</p>
+    <label for="counting-convention">Counting convention / vehicle size assumption</label><input id="counting-convention" maxlength="500" placeholder="e.g. estimated passenger-car positions; raw gaps retained">
+    <label for="obstructed-length">Unseen / obstructed curb length (metres)</label><input id="obstructed-length" type="number" min="0" step="0.1" placeholder="Unknown stays blank"><label for="exclusions-text">Driveways / loading / red curb / other exclusions</label><textarea id="exclusions-text" maxlength="2000" rows="2"></textarea>
+    <label for="survey-session">Survey session</label><input id="survey-session" maxlength="120" placeholder="Filled from route or generated at start"><input id="assignment-id" type="hidden">
+    <label for="notes">Notes</label><textarea id="notes" rows="3" maxlength="2000" placeholder="Blocked view, temporary signs, uncertain capacity…"></textarea></details>
+    <button id="save" type="button" class="primary wide">Save observation on this device</button><p id="draft-status" class="small center">Drafts save automatically when browser storage is available.</p>
+  </section>
+  <section class="card" aria-labelledby="saved-title"><div class="section-title"><span class="number">03</span><h2 id="saved-title">Saved observations <span id="saved-count" class="badge">0</span></h2></div><p>Export a backup after every walk, then import it into the project for validation.</p><div class="row"><button id="export" type="button">Export JSONL</button><button id="share" type="button" class="secondary">Share file</button></div><p class="small">Saved records remain here after export. Browser storage can be cleared by your device.</p><div id="saved-list"></div><details><summary>Restore an exported backup</summary><label for="restore">JSONL file from this collector</label><input id="restore" type="file" accept=".jsonl,.json,text/plain,application/json"><p class="small">New IDs are merged without replacing records. Conflicting IDs stop the import.</p></details></section>
+  <aside><b>Evidence, not a forecast.</b><p id="support-note">This pilot has no validated citywide accuracy. Meter locations do not establish unmetered occupancy. Areas outside this inventory are unsupported.</p><p>All times export in UTC. On-screen times use America/Los_Angeles. No accounts, analytics or automatic uploads.</p></aside>
+</main><footer>Spotless / local field collection <span id="version"></span></footer>
+<script id="inventory" type="application/json">/*__DATA__*/</script><script>/*__MODEL__*/
+/*__APP__*/</script>
+</body></html>

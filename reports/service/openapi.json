@@ -1,0 +1,1696 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Spotless local parking API",
+    "description": "Local City of Los Angeles discovery, full-stay rule checks and experimental sensor-panel forecasts. Unsupported suitability values stay null. Observation imports validate each record and return per-line accepted/rejected results. Example responses in reports/service are from real local datasets; synthetic fixtures stay in temporary tests.",
+    "version": "0.2.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/config": {
+      "get": {
+        "summary": "Configuration",
+        "operationId": "configuration_api_config_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/destinations": {
+      "get": {
+        "summary": "Destinations",
+        "operationId": "destinations_api_destinations_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "title": "Q"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/time/resolve": {
+      "get": {
+        "summary": "Resolve",
+        "operationId": "resolve_api_time_resolve_get",
+        "parameters": [
+          {
+            "name": "local_time",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Local Time"
+            }
+          },
+          {
+            "name": "fold",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Fold"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/predictions": {
+      "post": {
+        "summary": "Predict",
+        "operationId": "predict_api_predictions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PredictionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/streets": {
+      "get": {
+        "summary": "Streets",
+        "operationId": "streets_api_streets_get",
+        "parameters": [
+          {
+            "name": "latitude",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "Latitude"
+            }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "Longitude"
+            }
+          },
+          {
+            "name": "radius_m",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 3000,
+              "minimum": 100,
+              "default": 900,
+              "title": "Radius M"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/observations/template": {
+      "get": {
+        "summary": "Observation Template",
+        "operationId": "observation_template_api_observations_template_get",
+        "parameters": [
+          {
+            "name": "face_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Face Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/observations": {
+      "post": {
+        "summary": "Observations",
+        "operationId": "observations_api_observations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObservationBatch"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/refresh": {
+      "post": {
+        "summary": "Refresh",
+        "operationId": "refresh_api_refresh_post",
+        "parameters": [
+          {
+            "name": "poll_source",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Poll Source"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RefreshResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BlockForecast": {
+        "properties": {
+          "block_face_id": {
+            "type": "string",
+            "title": "Block Face Id"
+          },
+          "street_name": {
+            "type": "string",
+            "title": "Street Name"
+          },
+          "geometry": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Geometry"
+          },
+          "geometry_method": {
+            "type": "string",
+            "title": "Geometry Method"
+          },
+          "straight_line_distance_m": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Straight Line Distance M"
+          },
+          "walking_distance_m": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Walking Distance M"
+          },
+          "walking_distance_method": {
+            "type": "string",
+            "title": "Walking Distance Method",
+            "default": "centerline_network_estimate; pedestrian crossings/accessibility unverified"
+          },
+          "rank": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank"
+          },
+          "rank_reason": {
+            "type": "string",
+            "title": "Rank Reason"
+          },
+          "visual_status": {
+            "type": "string",
+            "enum": [
+              "observed_recent",
+              "model_estimate",
+              "experimental_extrapolation",
+              "insufficient_data",
+              "known_restriction"
+            ],
+            "title": "Visual Status"
+          },
+          "eligibility": {
+            "$ref": "#/components/schemas/EligibilityResult"
+          },
+          "expected_available_eligible_spaces": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Available Eligible Spaces"
+          },
+          "probability_at_least_one_suitable": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Probability At Least One Suitable"
+          },
+          "availability_changes": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Availability Changes"
+          },
+          "panel_estimate": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PanelEstimate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "experimental_activity_rank": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Experimental Activity Rank"
+          },
+          "evidence": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Evidence"
+          },
+          "uncertainty": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Uncertainty"
+          },
+          "price": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Price"
+          },
+          "unavailable_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unavailable Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "block_face_id",
+          "street_name",
+          "geometry",
+          "geometry_method",
+          "straight_line_distance_m",
+          "rank_reason",
+          "visual_status",
+          "eligibility",
+          "evidence",
+          "uncertainty",
+          "price"
+        ],
+        "title": "BlockForecast"
+      },
+      "EligibilityProfile": {
+        "properties": {
+          "permit_class": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permit Class"
+          },
+          "vehicle_class": {
+            "type": "string",
+            "enum": [
+              "standard_passenger",
+              "accessible",
+              "commercial",
+              "motorcycle",
+              "other"
+            ],
+            "title": "Vehicle Class",
+            "default": "standard_passenger"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "EligibilityProfile"
+      },
+      "EligibilityResult": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "allowed",
+              "prohibited",
+              "conflict"
+            ],
+            "title": "Status"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "checked_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Checked From"
+          },
+          "checked_to": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Checked To"
+          },
+          "official_coverage_complete": {
+            "type": "boolean",
+            "title": "Official Coverage Complete",
+            "default": false
+          },
+          "posted_sign_coverage_complete": {
+            "type": "boolean",
+            "title": "Posted Sign Coverage Complete",
+            "default": false
+          },
+          "restrictions": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Restrictions"
+          },
+          "upcoming": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Upcoming"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "reason",
+          "checked_from",
+          "checked_to"
+        ],
+        "title": "EligibilityResult"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Location": {
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 160
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "title": "Location"
+      },
+      "ObservationBatch": {
+        "properties": {
+          "records": {
+            "items": {
+              "$ref": "#/components/schemas/ManualObservation"
+            },
+            "type": "array",
+            "maxItems": 500,
+            "minItems": 1,
+            "title": "Records"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "records"
+        ],
+        "title": "ObservationBatch"
+      },
+      "PanelEstimate": {
+        "properties": {
+          "occupancy_rate": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Occupancy Rate"
+          },
+          "expected_vacant_count": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Vacant Count"
+          },
+          "probability_any_panel_vacant": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Probability Any Panel Vacant"
+          },
+          "panel_sensor_count": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Panel Sensor Count"
+          },
+          "count_range": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Count Range"
+          },
+          "net_change_15m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Net Change 15M"
+          },
+          "net_change_30m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Net Change 30M"
+          },
+          "net_change_60m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Net Change 60M"
+          },
+          "modeled_horizon_minutes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Modeled Horizon Minutes"
+          },
+          "interpretation": {
+            "type": "string",
+            "title": "Interpretation",
+            "default": "Experimental metered sensor-panel proxy; not full-curb eligible parking"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "PanelEstimate"
+      },
+      "PredictionRequest": {
+        "properties": {
+          "destination": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "arrival_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Arrival Time"
+          },
+          "intended_stay_minutes": {
+            "type": "integer",
+            "maximum": 1440.0,
+            "minimum": 1.0,
+            "title": "Intended Stay Minutes",
+            "default": 60
+          },
+          "maximum_walking_distance_m": {
+            "type": "integer",
+            "maximum": 2000.0,
+            "minimum": 25.0,
+            "title": "Maximum Walking Distance M",
+            "default": 400
+          },
+          "eligibility": {
+            "$ref": "#/components/schemas/EligibilityProfile"
+          },
+          "maximum_price_per_hour": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maximum Price Per Hour"
+          },
+          "prefer_lower_price": {
+            "type": "boolean",
+            "title": "Prefer Lower Price",
+            "default": false
+          },
+          "include_experimental": {
+            "type": "boolean",
+            "title": "Include Experimental",
+            "default": false
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "live",
+              "historical_replay"
+            ],
+            "title": "Mode",
+            "default": "live"
+          },
+          "replay_issue_time": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replay Issue Time"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "destination",
+          "arrival_time"
+        ],
+        "title": "PredictionRequest"
+      },
+      "PredictionResponse": {
+        "properties": {
+          "request": {
+            "$ref": "#/components/schemas/PredictionRequest"
+          },
+          "forecast_issued_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Forecast Issued At"
+          },
+          "computed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Computed At"
+          },
+          "response_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response At"
+          },
+          "arrival_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Arrival Time"
+          },
+          "intended_stay_end": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Intended Stay End"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "cache_hit": {
+            "type": "boolean",
+            "title": "Cache Hit"
+          },
+          "cache_key": {
+            "type": "string",
+            "title": "Cache Key"
+          },
+          "data_revision": {
+            "type": "string",
+            "title": "Data Revision"
+          },
+          "mode_label": {
+            "type": "string",
+            "title": "Mode Label"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/BlockForecast"
+            },
+            "type": "array",
+            "title": "Blocks"
+          },
+          "coverage": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Coverage"
+          },
+          "refresh": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Refresh"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request",
+          "forecast_issued_at",
+          "computed_at",
+          "response_at",
+          "arrival_time",
+          "intended_stay_end",
+          "model_version",
+          "cache_hit",
+          "cache_key",
+          "data_revision",
+          "mode_label",
+          "blocks",
+          "coverage",
+          "refresh",
+          "limitations"
+        ],
+        "title": "PredictionResponse"
+      },
+      "RefreshResponse": {
+        "properties": {
+          "checked_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Checked At"
+          },
+          "changed": {
+            "type": "boolean",
+            "title": "Changed"
+          },
+          "data_revision": {
+            "type": "string",
+            "title": "Data Revision"
+          },
+          "cache_entries_cleared": {
+            "type": "integer",
+            "title": "Cache Entries Cleared"
+          },
+          "source_poll_performed": {
+            "type": "boolean",
+            "title": "Source Poll Performed",
+            "default": false
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "checked_at",
+          "changed",
+          "data_revision",
+          "cache_entries_cleared",
+          "message"
+        ],
+        "title": "RefreshResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Provenance": {
+        "enum": [
+          "observed",
+          "derived",
+          "assumed",
+          "imputed",
+          "unavailable"
+        ],
+        "title": "Provenance",
+        "type": "string"
+      },
+      "ManualObservation": {
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "source_id": {
+            "title": "Source Id",
+            "type": "string"
+          },
+          "source_record_id": {
+            "title": "Source Record Id",
+            "type": "string"
+          },
+          "source_version": {
+            "title": "Source Version",
+            "type": "string"
+          },
+          "retrieved_at_utc": {
+            "format": "date-time",
+            "title": "Retrieved At Utc",
+            "type": "string"
+          },
+          "field_provenance": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Provenance"
+            },
+            "title": "Field Provenance",
+            "type": "object"
+          },
+          "confidence": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "observation_id": {
+            "title": "Observation Id",
+            "type": "string"
+          },
+          "block_face_id": {
+            "title": "Block Face Id",
+            "type": "string"
+          },
+          "observer_pseudonym": {
+            "title": "Observer Pseudonym",
+            "type": "string"
+          },
+          "survey_session_id": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Survey Session Id"
+          },
+          "assignment_id": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Assignment Id"
+          },
+          "survey_start_utc": {
+            "format": "date-time",
+            "title": "Survey Start Utc",
+            "type": "string"
+          },
+          "survey_end_utc": {
+            "format": "date-time",
+            "title": "Survey End Utc",
+            "type": "string"
+          },
+          "occupied": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Occupied"
+          },
+          "vacant_legal": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Vacant Legal"
+          },
+          "unsuitable": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Unsuitable"
+          },
+          "surveyed_capacity": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Surveyed Capacity"
+          },
+          "complete_face": {
+            "title": "Complete Face",
+            "type": "boolean"
+          },
+          "permit_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Permit Class"
+          },
+          "location_method": {
+            "default": "gps",
+            "enum": [
+              "gps",
+              "confirmed_map_pin"
+            ],
+            "title": "Location Method",
+            "type": "string"
+          },
+          "gps_accuracy_m": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Gps Accuracy M"
+          },
+          "parking_type": {
+            "default": "unknown",
+            "enum": [
+              "metered",
+              "unmetered",
+              "mixed",
+              "unknown"
+            ],
+            "title": "Parking Type",
+            "type": "string"
+          },
+          "rules_checked": {
+            "default": false,
+            "title": "Rules Checked",
+            "type": "boolean"
+          },
+          "intended_duration_minutes": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Intended Duration Minutes"
+          },
+          "vehicle_class": {
+            "default": "standard_passenger",
+            "title": "Vehicle Class",
+            "type": "string"
+          },
+          "capacity_basis": {
+            "default": "unknown",
+            "enum": [
+              "marked_spaces",
+              "estimated_positions",
+              "unknown"
+            ],
+            "title": "Capacity Basis",
+            "type": "string"
+          },
+          "sampling_stratum": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Sampling Stratum"
+          },
+          "sampling_method": {
+            "default": "unspecified",
+            "enum": [
+              "randomized",
+              "repeat_visit",
+              "convenience",
+              "unspecified"
+            ],
+            "title": "Sampling Method",
+            "type": "string"
+          },
+          "sampling_probability": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0,
+                "maximum": 1,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Sampling Probability"
+          },
+          "observer_confidence": {
+            "anyOf": [
+              {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Observer Confidence"
+          },
+          "restrictions_text": {
+            "default": "",
+            "title": "Restrictions Text",
+            "type": "string"
+          },
+          "curb_usable_length_m": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Curb Usable Length M"
+          },
+          "measurement_method": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Measurement Method"
+          },
+          "gap_lengths_m": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Gap Lengths M"
+          },
+          "obstructed_curb_length_m": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Obstructed Curb Length M"
+          },
+          "counting_convention": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Counting Convention"
+          },
+          "exclusions_text": {
+            "default": "",
+            "maxLength": 2000,
+            "title": "Exclusions Text",
+            "type": "string"
+          },
+          "latitude": {
+            "maximum": 90,
+            "minimum": -90,
+            "title": "Latitude",
+            "type": "number"
+          },
+          "longitude": {
+            "maximum": 180,
+            "minimum": -180,
+            "title": "Longitude",
+            "type": "number"
+          },
+          "notes": {
+            "default": "",
+            "title": "Notes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_id",
+          "source_record_id",
+          "source_version",
+          "retrieved_at_utc",
+          "field_provenance",
+          "confidence",
+          "observation_id",
+          "block_face_id",
+          "observer_pseudonym",
+          "survey_start_utc",
+          "survey_end_utc",
+          "complete_face",
+          "latitude",
+          "longitude"
+        ],
+        "title": "ManualObservation",
+        "type": "object"
+      },
+      "RestrictionRecord": {
+        "additionalProperties": false,
+        "properties": {
+          "restriction_id": {
+            "title": "Restriction Id",
+            "type": "string"
+          },
+          "block_face_id": {
+            "title": "Block Face Id",
+            "type": "string"
+          },
+          "rule_type": {
+            "enum": [
+              "no_parking",
+              "permit",
+              "vehicle_only",
+              "max_duration",
+              "allow"
+            ],
+            "title": "Rule Type",
+            "type": "string"
+          },
+          "effective_from": {
+            "format": "date-time",
+            "title": "Effective From",
+            "type": "string"
+          },
+          "effective_to": {
+            "format": "date-time",
+            "title": "Effective To",
+            "type": "string"
+          },
+          "available_at": {
+            "format": "date-time",
+            "title": "Available At",
+            "type": "string"
+          },
+          "source_kind": {
+            "enum": [
+              "official",
+              "posted_sign_review"
+            ],
+            "title": "Source Kind",
+            "type": "string"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Source Url"
+          },
+          "raw_text": {
+            "title": "Raw Text",
+            "type": "string"
+          },
+          "verification": {
+            "default": "needs_review",
+            "enum": [
+              "verified",
+              "needs_review"
+            ],
+            "title": "Verification",
+            "type": "string"
+          },
+          "verified_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Verified At"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Expires At"
+          },
+          "allowed_permits": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Allowed Permits",
+            "type": "array"
+          },
+          "allowed_vehicles": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Allowed Vehicles",
+            "type": "array"
+          },
+          "maximum_stay_minutes": {
+            "anyOf": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Maximum Stay Minutes"
+          },
+          "weekdays": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Weekdays"
+          },
+          "local_start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Local Start"
+          },
+          "local_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Local End"
+          }
+        },
+        "required": [
+          "restriction_id",
+          "block_face_id",
+          "rule_type",
+          "effective_from",
+          "effective_to",
+          "available_at",
+          "source_kind",
+          "raw_text"
+        ],
+        "title": "RestrictionRecord",
+        "type": "object"
+      },
+      "RuleCoverage": {
+        "additionalProperties": false,
+        "properties": {
+          "block_face_id": {
+            "title": "Block Face Id",
+            "type": "string"
+          },
+          "effective_from": {
+            "format": "date-time",
+            "title": "Effective From",
+            "type": "string"
+          },
+          "effective_to": {
+            "format": "date-time",
+            "title": "Effective To",
+            "type": "string"
+          },
+          "available_at": {
+            "format": "date-time",
+            "title": "Available At",
+            "type": "string"
+          },
+          "source_kind": {
+            "enum": [
+              "official",
+              "posted_sign_review"
+            ],
+            "title": "Source Kind",
+            "type": "string"
+          },
+          "complete": {
+            "default": false,
+            "title": "Complete",
+            "type": "boolean"
+          },
+          "verified_at": {
+            "format": "date-time",
+            "title": "Verified At",
+            "type": "string"
+          },
+          "expires_at": {
+            "format": "date-time",
+            "title": "Expires At",
+            "type": "string"
+          },
+          "notes": {
+            "default": "",
+            "title": "Notes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "block_face_id",
+          "effective_from",
+          "effective_to",
+          "available_at",
+          "source_kind",
+          "verified_at",
+          "expires_at"
+        ],
+        "title": "RuleCoverage",
+        "type": "object"
+      }
+    }
+  }
+}

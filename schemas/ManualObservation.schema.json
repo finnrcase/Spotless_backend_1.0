@@ -1,0 +1,399 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "observation_id": {
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "observer_pseudonym": {
+      "title": "Observer Pseudonym",
+      "type": "string"
+    },
+    "survey_session_id": {
+      "anyOf": [
+        {
+          "maxLength": 120,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Survey Session Id"
+    },
+    "assignment_id": {
+      "anyOf": [
+        {
+          "maxLength": 120,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Assignment Id"
+    },
+    "survey_start_utc": {
+      "format": "date-time",
+      "title": "Survey Start Utc",
+      "type": "string"
+    },
+    "survey_end_utc": {
+      "format": "date-time",
+      "title": "Survey End Utc",
+      "type": "string"
+    },
+    "occupied": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Occupied"
+    },
+    "vacant_legal": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Vacant Legal"
+    },
+    "unsuitable": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Unsuitable"
+    },
+    "surveyed_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Surveyed Capacity"
+    },
+    "complete_face": {
+      "title": "Complete Face",
+      "type": "boolean"
+    },
+    "permit_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Permit Class"
+    },
+    "location_method": {
+      "default": "gps",
+      "enum": [
+        "gps",
+        "confirmed_map_pin"
+      ],
+      "title": "Location Method",
+      "type": "string"
+    },
+    "gps_accuracy_m": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Gps Accuracy M"
+    },
+    "parking_type": {
+      "default": "unknown",
+      "enum": [
+        "metered",
+        "unmetered",
+        "mixed",
+        "unknown"
+      ],
+      "title": "Parking Type",
+      "type": "string"
+    },
+    "rules_checked": {
+      "default": false,
+      "title": "Rules Checked",
+      "type": "boolean"
+    },
+    "intended_duration_minutes": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Intended Duration Minutes"
+    },
+    "vehicle_class": {
+      "default": "standard_passenger",
+      "title": "Vehicle Class",
+      "type": "string"
+    },
+    "capacity_basis": {
+      "default": "unknown",
+      "enum": [
+        "marked_spaces",
+        "estimated_positions",
+        "unknown"
+      ],
+      "title": "Capacity Basis",
+      "type": "string"
+    },
+    "sampling_stratum": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sampling Stratum"
+    },
+    "sampling_method": {
+      "default": "unspecified",
+      "enum": [
+        "randomized",
+        "repeat_visit",
+        "convenience",
+        "unspecified"
+      ],
+      "title": "Sampling Method",
+      "type": "string"
+    },
+    "sampling_probability": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sampling Probability"
+    },
+    "observer_confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observer Confidence"
+    },
+    "restrictions_text": {
+      "default": "",
+      "title": "Restrictions Text",
+      "type": "string"
+    },
+    "curb_usable_length_m": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Curb Usable Length M"
+    },
+    "measurement_method": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Measurement Method"
+    },
+    "gap_lengths_m": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Gap Lengths M"
+    },
+    "obstructed_curb_length_m": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Obstructed Curb Length M"
+    },
+    "counting_convention": {
+      "anyOf": [
+        {
+          "maxLength": 500,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Counting Convention"
+    },
+    "exclusions_text": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Exclusions Text",
+      "type": "string"
+    },
+    "latitude": {
+      "maximum": 90,
+      "minimum": -90,
+      "title": "Latitude",
+      "type": "number"
+    },
+    "longitude": {
+      "maximum": 180,
+      "minimum": -180,
+      "title": "Longitude",
+      "type": "number"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "observation_id",
+    "block_face_id",
+    "observer_pseudonym",
+    "survey_start_utc",
+    "survey_end_utc",
+    "complete_face",
+    "latitude",
+    "longitude"
+  ],
+  "title": "ManualObservation",
+  "type": "object"
+}

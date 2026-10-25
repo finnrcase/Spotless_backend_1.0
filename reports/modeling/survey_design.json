@@ -1,0 +1,10 @@
+{
+  "seed": 430,
+  "selected_blocks": 24,
+  "assignments": 288,
+  "dates": "14 local days",
+  "replacement_policy": "record missed visits; do not replace with convenient successes",
+  "parking_types": "verify and stratify metered/unmetered after reconnaissance; absence of a meter is not a verified label",
+  "initial_precision": "With 24 independent blocks, repeats do not make 288 independent units. Worst-case binomial independent-n planning gives n\u22481.96\u00b2*0.25/e\u00b2: ~97 independent units for \u00b110 percentage points; inflate for block/day correlation and nonresponse. Estimate ICC/variability first, then expand blocks and times.",
+  "aspiration": "0.50 unmetered test R\u00b2 is not a sampling or reporting acceptance rule"
+}

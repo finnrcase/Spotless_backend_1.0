@@ -1,0 +1,30 @@
+{
+  "jurisdiction": "City of Los Angeles",
+  "core_prediction_populations": ["unmetered", "metered"],
+  "unmetered_strategy": {
+    "direct_occupancy_ground_truth_required": true,
+    "feature_families": ["demand", "curb_supply", "time_dependent_restrictions", "direct_observation_history"],
+    "predictor_datasets_are_not_occupancy_labels": true,
+    "metered_transfer_is_an_empirical_question": true,
+    "required_comparison": ["unmetered_only", "unmetered_plus_metered", "unmetered_baselines"],
+    "comparison_test_population": "identical held-out direct unmetered observations",
+    "deploy_transfer_only_after_unmetered_validation": true
+  },
+  "pilot": "Westwood/UCLA, explicitly limited evidence",
+  "manual_collection": {"authorized": true, "priority": "early", "interface": "phone-friendly; local export/import"},
+  "acquisition": {"free_public_first": true, "paid_investigation": "later, only with demonstrated material value", "purchases_authorized": false},
+  "evaluation": {
+    "regression_targets": ["occupancy_rate", "occupied_count", "available_count"],
+    "regression_metrics": ["held_out_test_r2", "mae", "rmse", "training_only_baseline_comparison"],
+    "probability_target": "at least one observed suitable vacant space for the recorded eligibility/duration",
+    "probability_metrics": ["brier_score", "log_loss", "reliability_bins", "expected_calibration_error"],
+    "separate_axes": ["future_time", "unseen_block"],
+    "separate_parking_types": ["metered", "unmetered", "mixed", "unknown"],
+    "unmetered_test_r2_aspiration": null,
+    "fixed_r2_target": null,
+    "earlier_rough_r2_ranges": "speculative, not measured benchmarks; superseded by no fixed target",
+    "aspiration_is_acceptance_criterion": false,
+    "no_test_set_tuning": true,
+    "no_citywide_claim_from_meter_only_or_pilot": true
+  }
+}

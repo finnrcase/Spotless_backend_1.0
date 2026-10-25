@@ -1,0 +1,15 @@
+{
+  "source_fingerprint_matched": true,
+  "event_feature_asof_checks_passed": true,
+  "historical_geometry_verified": false,
+  "event_delivery_latency_verified": false,
+  "retrospective_only": true,
+  "spatial_overlap_blocks": 0,
+  "full_curb_labels": 0,
+  "model_files": 122,
+  "forecast_examples": 74,
+  "user_facing_suitability_values": 0,
+  "population": "metered sensor panels only",
+  "unmetered_test_r2": null,
+  "rate_results_unchanged_after_count_correction": true
+}

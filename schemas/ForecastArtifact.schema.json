@@ -1,0 +1,255 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "title": "Issued At",
+      "type": "string"
+    },
+    "arrival_time": {
+      "format": "date-time",
+      "title": "Arrival Time",
+      "type": "string"
+    },
+    "horizon_minutes": {
+      "minimum": 0,
+      "title": "Horizon Minutes",
+      "type": "integer"
+    },
+    "intended_stay_minutes": {
+      "exclusiveMinimum": 0,
+      "title": "Intended Stay Minutes",
+      "type": "integer"
+    },
+    "eligibility_profile": {
+      "additionalProperties": true,
+      "title": "Eligibility Profile",
+      "type": "object"
+    },
+    "forecast_mode": {
+      "enum": [
+        "nowcast",
+        "forecast",
+        "typical_pattern",
+        "experimental_transfer",
+        "insufficient_data"
+      ],
+      "title": "Forecast Mode",
+      "type": "string"
+    },
+    "physical_capacity": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Capacity"
+    },
+    "eligible_capacity_estimate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligible Capacity Estimate"
+    },
+    "eligible_capacity_range": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligible Capacity Range"
+    },
+    "expected_available_spaces": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Available Spaces"
+    },
+    "expected_available_spaces_range": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Available Spaces Range"
+    },
+    "probability_at_least_one": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Probability At Least One"
+    },
+    "expected_net_change_15m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Net Change 15M"
+    },
+    "expected_net_change_30m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Net Change 30M"
+    },
+    "expected_net_change_60m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Net Change 60M"
+    },
+    "restriction_status": {
+      "default": "unknown",
+      "enum": [
+        "unknown",
+        "verified_allowed",
+        "verified_prohibited"
+      ],
+      "title": "Restriction Status",
+      "type": "string"
+    },
+    "evidence_class": {
+      "title": "Evidence Class",
+      "type": "string"
+    },
+    "observation_age_minutes": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observation Age Minutes"
+    },
+    "rule_uncertainty": {
+      "default": "unresolved full-duration restrictions and eligibility",
+      "title": "Rule Uncertainty",
+      "type": "string"
+    },
+    "capacity_uncertainty": {
+      "default": "physical/eligible capacity unverified",
+      "title": "Capacity Uncertainty",
+      "type": "string"
+    },
+    "model_uncertainty": {
+      "additionalProperties": true,
+      "title": "Model Uncertainty",
+      "type": "object"
+    },
+    "support": {
+      "enum": [
+        "experimental_sensor_panel",
+        "experimental_unmetered_prior",
+        "insufficient_data"
+      ],
+      "title": "Support",
+      "type": "string"
+    },
+    "model_version": {
+      "default": "sensor-panel-v1",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "unavailable_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Unavailable Reason"
+    },
+    "sensor_panel_diagnostics": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sensor Panel Diagnostics"
+    }
+  },
+  "required": [
+    "block_face_id",
+    "issued_at",
+    "arrival_time",
+    "horizon_minutes",
+    "intended_stay_minutes",
+    "eligibility_profile",
+    "forecast_mode",
+    "evidence_class",
+    "model_uncertainty",
+    "support"
+  ],
+  "title": "ForecastArtifact",
+  "type": "object"
+}

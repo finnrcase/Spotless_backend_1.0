@@ -1,0 +1,15 @@
+{
+  "destination": {
+    "latitude": 34.0608,
+    "longitude": -118.4465
+  },
+  "arrival_time": "2026-10-25T05:07:46.858083+00:00",
+  "intended_stay_minutes": 60,
+  "maximum_walking_distance_m": 400,
+  "eligibility": {
+    "vehicle_class": "standard_passenger",
+    "permit_class": null
+  },
+  "mode": "live",
+  "include_experimental": false
+}

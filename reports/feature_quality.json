@@ -1,0 +1,75 @@
+{
+  "driveways": {
+    "rows": 5965,
+    "valid_rows": 5965,
+    "unique_matched_source_rows": 5965,
+    "unmatched_segment_buffers": 93
+  },
+  "hydrants": {
+    "rows": 763,
+    "valid_rows": 763,
+    "unique_matched_source_rows": 762,
+    "unmatched_segment_buffers": 3
+  },
+  "buildings": {
+    "rows": 10447,
+    "valid_rows": 10447,
+    "unique_matched_source_rows": 10276,
+    "unmatched_segment_buffers": 0
+  },
+  "regulatory_signs": {
+    "rows": 907,
+    "valid_rows": 907,
+    "unique_matched_source_rows": 907,
+    "unmatched_segment_buffers": 331
+  },
+  "ucla_calendar": {
+    "normalized": 179,
+    "unparsed": [
+      {
+        "uid": "DAC58BFD-DC43-4900-B4C3-4936163C0160",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "DC1EBA9F-9950-45E7-B2C5-1715282EC7E2",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "1F762C38-EE27-4CBE-B3D6-4B0E526631F9",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "696620A2-F683-41B3-B8E6-26E1B581F1D0",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "83CE1AE8-42CD-449D-B2B2-E3C27E8C53FC",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "60068044-0625-4297-8CE7-81857F2CDF94",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "8FD61655-4EC5-429A-8F4E-656BACD248D4",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "99A0F1A7-D5D4-443F-9AEC-BD3A911AF628",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "84496B0B-ED53-4760-87B0-1EE714247634",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "DD576AB1-8211-443B-826C-02632B6A02F8",
+        "error": "Unsupported recurrence/time format"
+      },
+      {
+        "uid": "CBAEFBE5-616B-4EB2-819D-465B1C538DBA",
+        "error": "Unsupported recurrence/time format"
+      }
+    ]
+  }
+}

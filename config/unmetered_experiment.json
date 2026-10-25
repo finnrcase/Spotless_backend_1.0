@@ -1,0 +1,28 @@
+{
+  "version": "unmetered-comparison-v1",
+  "core_target": "directly observed unmetered block faces",
+  "seed": 430,
+  "bootstrap_replicates": 300,
+  "minimum_training_rows": 20,
+  "minimum_validation_rows": 10,
+  "minimum_calibration_rows": 10,
+  "minimum_test_rows": 10,
+  "minimum_unseen_test_blocks": 3,
+  "embargo_minutes": 180,
+  "persistence_max_age_minutes": 15,
+  "parameter_candidates": [7, 15],
+  "auxiliary_metered_weights": [0.25, 1.0],
+  "feature_families": {
+    "calendar": ["hour_sin", "hour_cos", "weekday_sin", "weekday_cos", "weekend"],
+    "demand": ["business_density_300m", "workplace_jobs_600m"],
+    "curb_supply": ["physical_capacity", "eligible_capacity"],
+    "time_dependent_restrictions": ["restriction_minutes_during_stay", "permit_required"],
+    "observation_history": ["lagged_observed_occupancy", "lagged_observed_available_count", "lagged_observed_at_least_one", "lag_age_minutes"]
+  },
+  "outcomes": ["occupancy_rate", "available_count", "at_least_one"],
+  "test_rows_must_be_direct_reviewed_unmetered_observations": true,
+  "metered_sensor_panel_counts_are_not_full_curb_labels": true,
+  "include_current_panel_proxies_as_training_labels": false,
+  "unmetered_r2_aspiration": null,
+  "aspiration_is_acceptance_criterion": false
+}

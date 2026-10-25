@@ -1,0 +1,17 @@
+{
+  "status": "unavailable_no_reviewed_reference_prediction_pairs",
+  "evaluation_target": "Historical visible curbside vehicle candidates; not legal vacancy, full-curb occupancy or time-specific truth",
+  "total_tasks": 24,
+  "human_reviewed_complete_tasks": 0,
+  "eligible_visible_reference_faces": 0,
+  "prediction_coverage_among_eligible_reviewed_faces": null,
+  "paired_faces": 0,
+  "count_mae": null,
+  "true_positives": null,
+  "false_positives": null,
+  "false_negatives": null,
+  "precision": null,
+  "recall": null,
+  "iou_threshold": 0.5,
+  "rows": []
+}

@@ -1,0 +1,64 @@
+{
+  "status": "experimental_metered_sensor_panel_models_available",
+  "accepted_manual_observations": 0,
+  "field_identified_unmetered_observations": 0,
+  "reviewed_unmetered_test_labels": "not established",
+  "axes": {
+    "future_time": {
+      "metered": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "unmetered": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "mixed": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "unknown": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      }
+    },
+    "unseen_block": {
+      "metered": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "unmetered": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "mixed": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      },
+      "unknown": {
+        "test_r2": null,
+        "mae": null,
+        "probability_calibration": null,
+        "reason": "No verified full-curb suitability labels; experimental sensor-panel metrics are separate"
+      }
+    }
+  },
+  "aspirational_unmetered_test_r2": 0.5,
+  "aspiration_is_acceptance_criterion": false,
+  "validated_citywide_accuracy": false,
+  "experimental_sensor_panel_metrics": "reports/modeling/results.json"
+}

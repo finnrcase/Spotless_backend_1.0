@@ -1,0 +1,79 @@
+{
+  "review_status": "assistant_visual_review_unverified",
+  "image_sha256": "400318a8b740514f1cac4af69609043ccfa213347509c33b6c629e754beff80b",
+  "reference_ground_truth": false,
+  "annotations": [
+    {
+      "class": "tree_occlusion_example",
+      "points": [
+        [
+          185,
+          175
+        ],
+        [
+          250,
+          175
+        ],
+        [
+          270,
+          205
+        ],
+        [
+          255,
+          235
+        ],
+        [
+          190,
+          225
+        ]
+      ],
+      "note": "Tree canopy obscures potential curb/road evidence; visibility is unknown."
+    },
+    {
+      "class": "shadow_occlusion_example",
+      "points": [
+        [
+          350,
+          250
+        ],
+        [
+          425,
+          250
+        ],
+        [
+          400,
+          375
+        ],
+        [
+          345,
+          375
+        ]
+      ],
+      "note": "Canopy/shadow region: do not interpret dark pixels as zero vehicles."
+    },
+    {
+      "class": "visible_road_patch_example",
+      "points": [
+        [
+          375,
+          100
+        ],
+        [
+          415,
+          105
+        ],
+        [
+          407,
+          160
+        ],
+        [
+          372,
+          170
+        ]
+      ],
+      "note": "Visible road patch: travel-lane location and parking eligibility remain unverified."
+    }
+  ],
+  "curbside_vehicle_count": null,
+  "capture_time_utc": null
+}

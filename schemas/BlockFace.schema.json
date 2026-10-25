@@ -1,0 +1,111 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "segment_id": {
+      "title": "Segment Id",
+      "type": "string"
+    },
+    "side": {
+      "enum": [
+        "left",
+        "right"
+      ],
+      "title": "Side",
+      "type": "string"
+    },
+    "geometry_wkt": {
+      "title": "Geometry Wkt",
+      "type": "string"
+    },
+    "geometry_method": {
+      "enum": [
+        "authoritative_curb",
+        "approximate_centerline_offset"
+      ],
+      "title": "Geometry Method",
+      "type": "string"
+    },
+    "orientation": {
+      "const": "canonical_endpoint_order",
+      "default": "canonical_endpoint_order",
+      "title": "Orientation",
+      "type": "string"
+    },
+    "curb_source_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Curb Source Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "block_face_id",
+    "segment_id",
+    "side",
+    "geometry_wkt",
+    "geometry_method"
+  ],
+  "title": "BlockFace",
+  "type": "object"
+}

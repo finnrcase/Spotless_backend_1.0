@@ -1,0 +1,23 @@
+{
+  "pdf_pages": 206,
+  "pdf_sha256": "913defea495ace0b396ab8e46a02e481a3846606d1b6260b160d2fe189d5614c",
+  "publication_date": "2021-11",
+  "table9_rows_extracted": 48,
+  "source_pdf_page": 34,
+  "occupancy_percent_range": [
+    49,
+    106
+  ],
+  "embedded_attachment_names": [],
+  "full_face_observations_recovered": 0,
+  "exact_survey_timestamps_recovered": false,
+  "status": "historic_aggregate_evidence_recovered_not_training_ready",
+  "limitations": [
+    "Zone aggregates mix metered and unmetered supply; they cannot validate separate unmetered forecasts.",
+    "Unmarked capacity uses an assumed 20-foot position; values above 100 percent are preserved, not clipped.",
+    "Maps/aggregate tables are not machine-readable repeated block-face counts. No raw independently timestamped block-face table recovered.",
+    "November 2021 publication and source-attribution year 2019 do not establish exact observation times or current conditions."
+  ],
+  "source_url": "https://planning.lacity.gov/odocument/23ddbbd5-632b-4b58-a3d0-29846fcc3c84/Fehr_%26_Peers_Parking_Utilization_and_Transpor.pdf",
+  "csv_path": "data\\staged\\starter\\venice_table9_aggregates.csv"
+}

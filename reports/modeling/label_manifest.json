@@ -1,0 +1,166 @@
+{
+  "config": {
+    "version": "sensor-panel-v1",
+    "seed": 430,
+    "interval_minutes": 15,
+    "horizons_minutes": [
+      0,
+      15,
+      30,
+      60,
+      120
+    ],
+    "persistence_caps_minutes": [
+      5,
+      15,
+      60
+    ],
+    "primary_persistence_minutes": 15,
+    "minimum_known_sensor_time_fraction": 0.25,
+    "roster_discovery_days": 7,
+    "label_window_minutes": 15,
+    "embargo_minutes": 180,
+    "rolling_origins_local": [
+      "2026-08-09",
+      "2026-08-13"
+    ],
+    "rolling_validation_days": 3,
+    "final_training_end_local": "2026-08-17",
+    "calibration_start_local": "2026-08-18",
+    "calibration_end_local": "2026-08-24",
+    "final_test_start_local": "2026-08-25",
+    "final_test_end_local": "2026-09-01",
+    "spatial_holdout_latitude_gte": 34.0635,
+    "spatial_buffer_m": 150,
+    "prediction_interval_nominal_coverage": 0.9,
+    "context_scales_m": [
+      100,
+      300,
+      600
+    ],
+    "hyperparameters": {
+      "ridge_alpha": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "boosted_max_leaf_nodes": [
+        7,
+        15
+      ]
+    },
+    "strict_historical_feature_families": [
+      "calendar",
+      "causal_sensor_history"
+    ],
+    "retrospective_feature_families": [
+      "current_spatial_context",
+      "current_meter_policy"
+    ],
+    "true_suitable_space_labels": "unavailable",
+    "unmetered_labels": "unavailable"
+  },
+  "source_hashes": {
+    "data\\processed\\pilot_history_2025_09.parquet": "2fd5c2a4df3dcd57803d56d6986672064aaec1ff7b5f0d1ac93611512f89b7e8",
+    "data\\processed\\pilot_history_2026_08.parquet": "3acaed8587d7d22c32690294946c5b8732119d0fd41f3c5ad89ba02ec211657e"
+  },
+  "mapping_sha256": "da5c073ee9e9428119bb07f9b5224d8132e6a3f5630a5108fd68b6e8370c70c5",
+  "evidence_class": "retrospective_sensor_panel_proxy",
+  "assumed_event_delivery": "event timestamp treated as immediate availability; historical ingestion timestamps unavailable",
+  "quality": [
+    {
+      "events": 245830,
+      "mapped_roster_sensors": 313,
+      "roster_faces": 55,
+      "all_face_intervals": 121440,
+      "known_sensor_time_fraction": 0.05957802620477124,
+      "complete_panel_points": 881,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2025-09-08T00:00:00-07:00",
+      "label_start_utc": "2025-09-08T00:00:00-07:00",
+      "label_end_utc": "2025-10-01T00:00:00-07:00",
+      "month": "2025_09",
+      "persistence_minutes": 5
+    },
+    {
+      "events": 245830,
+      "mapped_roster_sensors": 313,
+      "roster_faces": 55,
+      "all_face_intervals": 121440,
+      "known_sensor_time_fraction": 0.1362225897501196,
+      "complete_panel_points": 2353,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2025-09-08T00:00:00-07:00",
+      "label_start_utc": "2025-09-08T00:00:00-07:00",
+      "label_end_utc": "2025-10-01T00:00:00-07:00",
+      "month": "2025_09",
+      "persistence_minutes": 15
+    },
+    {
+      "events": 245830,
+      "mapped_roster_sensors": 313,
+      "roster_faces": 55,
+      "all_face_intervals": 121440,
+      "known_sensor_time_fraction": 0.3351880758901699,
+      "complete_panel_points": 9313,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2025-09-08T00:00:00-07:00",
+      "label_start_utc": "2025-09-08T00:00:00-07:00",
+      "label_end_utc": "2025-10-01T00:00:00-07:00",
+      "month": "2025_09",
+      "persistence_minutes": 60
+    },
+    {
+      "events": 126313,
+      "mapped_roster_sensors": 134,
+      "roster_faces": 32,
+      "all_face_intervals": 73728,
+      "known_sensor_time_fraction": 0.07380157588792151,
+      "complete_panel_points": 1050,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2026-08-08T00:00:00-07:00",
+      "label_start_utc": "2026-08-08T00:00:00-07:00",
+      "label_end_utc": "2026-09-01T00:00:00-07:00",
+      "month": "2026_08",
+      "persistence_minutes": 5
+    },
+    {
+      "events": 126313,
+      "mapped_roster_sensors": 134,
+      "roster_faces": 32,
+      "all_face_intervals": 73728,
+      "known_sensor_time_fraction": 0.16926288695411829,
+      "complete_panel_points": 2963,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2026-08-08T00:00:00-07:00",
+      "label_start_utc": "2026-08-08T00:00:00-07:00",
+      "label_end_utc": "2026-09-01T00:00:00-07:00",
+      "month": "2026_08",
+      "persistence_minutes": 15
+    },
+    {
+      "events": 126313,
+      "mapped_roster_sensors": 134,
+      "roster_faces": 32,
+      "all_face_intervals": 73728,
+      "known_sensor_time_fraction": 0.40130320979016953,
+      "complete_panel_points": 10698,
+      "unknown_events": 0,
+      "conflicting_event_rows": 0,
+      "roster_end_utc": "2026-08-08T00:00:00-07:00",
+      "label_start_utc": "2026-08-08T00:00:00-07:00",
+      "label_end_utc": "2026-09-01T00:00:00-07:00",
+      "month": "2026_08",
+      "persistence_minutes": 60
+    }
+  ],
+  "eligible_capacity": "unknown",
+  "physical_capacity": "unknown",
+  "true_suitable_space_labels": 0,
+  "unmetered_labels": 0
+}

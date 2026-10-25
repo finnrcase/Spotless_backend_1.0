@@ -1,0 +1,152 @@
+[
+  {
+    "horizon_minutes": 0,
+    "persistence_minutes": 5,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1991,
+    "r2": -0.03353659075307269,
+    "mae": 0.20529538932209648,
+    "rmse": 0.25941747267326654,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 0,
+    "persistence_minutes": 15,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1991,
+    "r2": 0.12996256765437386,
+    "mae": 0.2073362199389061,
+    "rmse": 0.2597853257609643,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 0,
+    "persistence_minutes": 60,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1991,
+    "r2": 0.22567047427502063,
+    "mae": 0.19430637217979,
+    "rmse": 0.2438302266189512,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 15,
+    "persistence_minutes": 5,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": -0.03137322506121598,
+    "mae": 0.20358097833468206,
+    "rmse": 0.2589018508505667,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 15,
+    "persistence_minutes": 15,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.09400118468602248,
+    "mae": 0.2093150570961844,
+    "rmse": 0.26487423512511776,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 15,
+    "persistence_minutes": 60,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.18289429433042237,
+    "mae": 0.1977545780802188,
+    "rmse": 0.25045754185620556,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 30,
+    "persistence_minutes": 5,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": -0.04589762261323749,
+    "mae": 0.2054126022482737,
+    "rmse": 0.2607184807150976,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 30,
+    "persistence_minutes": 15,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.08294464661592282,
+    "mae": 0.20912331602268894,
+    "rmse": 0.266485556910138,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 30,
+    "persistence_minutes": 60,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.1752304266008936,
+    "mae": 0.19726986748036085,
+    "rmse": 0.25162935697219324,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 60,
+    "persistence_minutes": 5,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": -0.056383062324215416,
+    "mae": 0.20558461141035375,
+    "rmse": 0.2620221123140176,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 60,
+    "persistence_minutes": 15,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.06719120909897913,
+    "mae": 0.21144037009812672,
+    "rmse": 0.26876469299610334,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 60,
+    "persistence_minutes": 60,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1990,
+    "r2": 0.1509139630644868,
+    "mae": 0.2012366219382525,
+    "rmse": 0.25531177314704356,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 120,
+    "persistence_minutes": 5,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1988,
+    "r2": -0.08940156886832318,
+    "mae": 0.20801119686760774,
+    "rmse": 0.2656977475783199,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 120,
+    "persistence_minutes": 15,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1988,
+    "r2": 0.03301314515992004,
+    "mae": 0.2149256459043303,
+    "rmse": 0.27354684775002314,
+    "r2_note": null
+  },
+  {
+    "horizon_minutes": 120,
+    "persistence_minutes": 60,
+    "scope": "common labeled test rows; fixed primary model, no retuning",
+    "n": 1988,
+    "r2": 0.12104328413178067,
+    "mae": 0.20509929648496683,
+    "rmse": 0.25975733672842355,
+    "r2_note": null
+  }
+]

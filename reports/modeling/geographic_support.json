@@ -1,0 +1,8 @@
+{
+  "city_faces": 162630,
+  "faces_with_experimental_panel_labels": 55,
+  "faces_without_occupancy_labels": 162575,
+  "validated_suitable_space_faces": 0,
+  "unmetered_test_labels": 0,
+  "citywide_numerical_suitability_abstention_rate": 1.0
+}

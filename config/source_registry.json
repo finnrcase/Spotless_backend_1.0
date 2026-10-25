@@ -1,0 +1,2749 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-25T05:49:01.719901+00:00",
+  "sources": [
+    {
+      "id": "meters",
+      "owner": "LADOT Parking Meters Division",
+      "verified_url": "https://data.lacity.org/d/s49e-q6j2",
+      "endpoint_url": "https://data.lacity.org/resource/s49e-q6j2.json",
+      "category": "A direct parking",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "name": "Public Domain"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:44.757610+00:00",
+      "refresh_cadence": "provider-dependent; timestamps recorded",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "spaceid",
+          "type": "text",
+          "description": "Unique metered parking space identifier, as seen on meter body or curb."
+        },
+        {
+          "name": "blockface",
+          "type": "text",
+          "description": "Block number and street of metered space."
+        },
+        {
+          "name": "metertype",
+          "type": "text",
+          "description": "Single-space or multi-space meter."
+        },
+        {
+          "name": "ratetype",
+          "type": "text",
+          "description": "Hourly rate type - FLAT, JUMP, SEASONAL, Time-of-Day (TOD)"
+        },
+        {
+          "name": "raterange",
+          "type": "text",
+          "description": "JUMP: $X.XX/hr-$X.XX/max; SEASONAL: Fall/Winter & Spring/Summer; TOD: Min-Max hourly rate range"
+        },
+        {
+          "name": "timelimit",
+          "type": "text",
+          "description": "Maximum parking time limit during metered hours."
+        },
+        {
+          "name": "latlng",
+          "type": "location",
+          "description": "Location (Lat/Lng)"
+        },
+        {
+          "name": ":@computed_region_qz3q_ghft",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'Zip Codes' (qz3q-ghft) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        },
+        {
+          "name": ":@computed_region_k96s_3jcv",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'Census Tracts' (k96s-3jcv) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        },
+        {
+          "name": ":@computed_region_tatf_ua23",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'Precinct Boundaries' (tatf-ua23) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        },
+        {
+          "name": ":@computed_region_ur2y_g4cx",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'LA Specific Plans' (ur2y-g4cx) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        },
+        {
+          "name": ":@computed_region_kqwf_mjcx",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'Council Districts' (kqwf-mjcx) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        },
+        {
+          "name": ":@computed_region_2dna_qi2s",
+          "type": "number",
+          "description": "This column was automatically created in order to record in what polygon from the dataset 'Neighborhood Councils (Certified)' (2dna-qi2s) the point in column 'latlng' is located. This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+        }
+      ],
+      "notes": "Current supply/policy snapshot, not historical inventory. Rate ranges and time limits are not complete tariffs/rules.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_updated_at_utc": "2026-10-24T13:30:21+00:00"
+    },
+    {
+      "id": "occupancy",
+      "owner": "LADOT Parking Meters Division - LA ExpressPark",
+      "verified_url": "https://data.lacity.org/d/e7h6-4a3e",
+      "endpoint_url": "https://data.lacity.org/resource/e7h6-4a3e.json",
+      "category": "A direct parking",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "name": "Public Domain"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": {
+        "min_utc_text": "2026-10-10T07:14:42.000",
+        "max_utc_text": "2026-10-25T03:15:44.000"
+      },
+      "retrieved_at_utc": "2026-10-25T03:16:46.251235+00:00",
+      "refresh_cadence": "live/as available",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "spaceid",
+          "type": "text",
+          "description": "Unique metered parking space identifier, as seen on meter body or curb. "
+        },
+        {
+          "name": "eventtime",
+          "type": "calendar_date",
+          "description": "Occupancy transaction timestamp (UTC). "
+        },
+        {
+          "name": "occupancystate",
+          "type": "text",
+          "description": "Last known occupancy state."
+        }
+      ],
+      "notes": "Last-known metered sensor transaction states, not guaranteed present occupancy. Column eventtime documented UTC.",
+      "evidence_type": "occupancy",
+      "downloaded": true,
+      "source_updated_at_utc": "2026-10-25T03:16:15+00:00"
+    },
+    {
+      "id": "history",
+      "owner": "LADOT Parking Meters Division - LA ExpressPark",
+      "verified_url": "https://data.lacity.org/d/cj8s-ivry",
+      "endpoint_url": "https://data.lacity.org/api/views/cj8s-ivry.json",
+      "category": "A direct parking",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "name": "Public Domain"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": {
+        "downloaded_months": [
+          "2025_09",
+          "2026_08"
+        ],
+        "available_months": [
+          "Sensor Transactions_2023_09.csv",
+          "Sensor Transactions_2023_10.csv",
+          "Sensor Transactions_2023_11.csv",
+          "Sensor Transactions_2023_12.csv",
+          "Sensor Transactions_2024_01.csv",
+          "Sensor Transactions_2024_02.csv",
+          "Sensor Transactions_2024_03.csv",
+          "Sensor Transactions_2024_04.csv",
+          "Sensor Transactions_2024_05.csv",
+          "Sensor Transactions_2024_06.csv",
+          "Sensor Transactions_2024_07.csv",
+          "Sensor Transactions_2024_08.csv",
+          "Sensor Transactions_2024_09.csv",
+          "Sensor Transactions_2024_10.csv",
+          "Sensor Transactions_2024_11.csv",
+          "Sensor Transactions_2024_12.csv",
+          "Sensor Transactions_2025_01.csv",
+          "Sensor Transactions_2025_02.csv",
+          "Sensor Transactions_2025_03.csv",
+          "Sensor Transactions_2025_04.csv",
+          "Sensor Transactions_2025_05.csv",
+          "Sensor Transactions_2025_06.csv",
+          "Sensor Transactions_2025_07.csv",
+          "Sensor Transactions_2025_08.csv",
+          "Sensor Transactions_2025_09.csv",
+          "Sensor Transactions_2025_10.csv",
+          "Sensor Transactions_2025_11.csv",
+          "Sensor Transactions_2025_12.csv",
+          "Sensor Transactions_2026_01.csv",
+          "Sensor Transactions_2026_02.csv",
+          "Sensor Transactions_2026_03.csv",
+          "Sensor Transactions_2026_04.csv",
+          "Sensor Transactions_2026_05.csv",
+          "Sensor Transactions_2026_06.csv",
+          "Sensor Transactions_2026_07.csv",
+          "Sensor Transactions_2026_08.csv"
+        ]
+      },
+      "retrieved_at_utc": "2026-10-25T03:16:25.780846+00:00",
+      "refresh_cadence": "monthly attachments",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "Attachment list -> exact monthly asset; 450 MB/file cap",
+      "useful_fields": [
+        {
+          "name": "spaceid",
+          "type": "text",
+          "description": ""
+        },
+        {
+          "name": "eventtime_utc",
+          "type": "text",
+          "description": ""
+        },
+        {
+          "name": "occupancystate",
+          "type": "text",
+          "description": ""
+        }
+      ],
+      "notes": "Monthly attachment dates must be read from content; rowsUpdatedAt is misleading for attachments. Metadata lists 2023_09 through 2026_08.",
+      "evidence_type": "occupancy",
+      "downloaded": true,
+      "source_updated_at_utc": "2019-10-04T00:14:20+00:00"
+    },
+    {
+      "id": "sweeping",
+      "owner": "Bureau of Street Services",
+      "verified_url": "https://data.lacity.org/d/krk7-ayq2",
+      "endpoint_url": "https://data.lacity.org/resource/krk7-ayq2.json",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "stale",
+      "license_terms": {
+        "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+        "logoUrl": "images/licenses/ccZero.png",
+        "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:47.797008+00:00",
+      "refresh_cadence": "provider-dependent; timestamps recorded",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "route_no",
+          "type": "text",
+          "description": null
+        },
+        {
+          "name": "cd",
+          "type": "text",
+          "description": null
+        },
+        {
+          "name": "time_start",
+          "type": "text",
+          "description": null
+        },
+        {
+          "name": "time_end",
+          "type": "text",
+          "description": null
+        },
+        {
+          "name": "boundaries",
+          "type": "text",
+          "description": null
+        }
+      ],
+      "notes": "2014 metadata; route boundaries/time strings do not establish current recurring weekday rules.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_updated_at_utc": "2014-05-28T23:03:43+00:00"
+    },
+    {
+      "id": "permits",
+      "owner": "LADOT",
+      "verified_url": "https://data.lacity.org/d/s3st-6nwi",
+      "endpoint_url": "https://data.lacity.org/resource/s3st-6nwi.json",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "stale",
+      "license_terms": {
+        "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+        "logoUrl": "images/licenses/ccZero.png",
+        "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:48.602119+00:00",
+      "refresh_cadence": "provider-dependent; timestamps recorded",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "the_geom",
+          "type": "multipolygon",
+          "description": null
+        },
+        {
+          "name": "ppdnum",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": "ppdname",
+          "type": "text",
+          "description": null
+        }
+      ],
+      "notes": "2015 polygons; district presence does not establish user eligibility, exemptions or current posted rules.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_updated_at_utc": "2015-08-13T13:17:55+00:00"
+    },
+    {
+      "id": "signs",
+      "owner": "LADOT Parking Meters Division",
+      "verified_url": "https://data.lacity.org/d/jp2s-nfz4",
+      "endpoint_url": "https://data.lacity.org/resource/jp2s-nfz4.json",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "stale",
+      "license_terms": {
+        "name": "Public Domain"
+      },
+      "geographic_coverage": "Published City source extent; meter geometry checked against official city boundary in build",
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:49.844248+00:00",
+      "refresh_cadence": "provider-dependent; timestamps recorded",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "blockface",
+          "type": "text",
+          "description": "Block number and street of sign."
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "description": "Installation status."
+        },
+        {
+          "name": "signcount",
+          "type": "text",
+          "description": "Number of calendar signs on blockface."
+        },
+        {
+          "name": "the_geom",
+          "type": "multipolygon",
+          "description": "Location geometry"
+        }
+      ],
+      "notes": "Calendar sign status/count polygons; not full sign text or arrows/effective rules.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_updated_at_utc": "2019-09-05T22:08:49+00:00"
+    },
+    {
+      "id": "business",
+      "owner": "Office of Finance",
+      "verified_url": "https://data.lacity.org/d/6rrh-rzua",
+      "endpoint_url": "https://data.lacity.org/resource/6rrh-rzua.json",
+      "category": "D activity",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "name": "Creative Commons 1.0 Universal (Public Domain Dedication)",
+        "logoUrl": "images/licenses/ccZero.png",
+        "termsLink": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "See source_updated_at_utc and actual_observation_dates; retrieval is not observation",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:54.991317+00:00",
+      "refresh_cadence": "provider-dependent; timestamps recorded",
+      "access_requirements": "Anonymous public; optional SOCRATA_APP_TOKEN for quotas",
+      "cost": "No fee for these public requests",
+      "pagination": "SODA count + ordered pages, 5000/page; mutable feed has no transaction isolation",
+      "useful_fields": [
+        {
+          "name": "location_account",
+          "type": "text",
+          "description": "The account number of the business location."
+        },
+        {
+          "name": "business_name",
+          "type": "text",
+          "description": "The legal name of the business."
+        },
+        {
+          "name": "dba_name",
+          "type": "text",
+          "description": "Doing Business As (DBA) name. If more than one DBA name exists, then all names are shown as a pipe-separated list."
+        },
+        {
+          "name": "street_address",
+          "type": "text",
+          "description": "Street address of the business location."
+        },
+        {
+          "name": "city",
+          "type": "text",
+          "description": "City of the business location."
+        },
+        {
+          "name": "zip_code",
+          "type": "text",
+          "description": "Zip code of the business location."
+        },
+        {
+          "name": "location_description",
+          "type": "text",
+          "description": "Abbreviated address description of the business location."
+        },
+        {
+          "name": "mailing_address",
+          "type": "text",
+          "description": "Mailing address of the business."
+        },
+        {
+          "name": "mailing_city",
+          "type": "text",
+          "description": "Mailing address city of the business."
+        },
+        {
+          "name": "mailing_zip_code",
+          "type": "text",
+          "description": "Mailing address Zip code of the business."
+        },
+        {
+          "name": "naics",
+          "type": "text",
+          "description": "The self-reported North American Industry Classification System (NAICS) code, which is used in classifying business establishments."
+        },
+        {
+          "name": "primary_naics_description",
+          "type": "text",
+          "description": "Description of the primary NAICS code. Descriptions that are noted as \"(1997 NAICS)\" apply the code and description designated in 1997 as referred to in the New Business Exemption Ordinance."
+        },
+        {
+          "name": "council_district",
+          "type": "number",
+          "description": "The council district # reflects the current council district assignment for that location address. \"0\" means the business location is out of the City."
+        },
+        {
+          "name": "location_start_date",
+          "type": "calendar_date",
+          "description": "The start date of the first business activity registered at this location."
+        },
+        {
+          "name": "location_end_date",
+          "type": "text",
+          "description": "The most recent end date of all business activities at the location."
+        },
+        {
+          "name": "location_1",
+          "type": "location",
+          "description": "Latitude & Longitude, if present, for this business location."
+        },
+        {
+          "name": ":@computed_region_qz3q_ghft",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": ":@computed_region_kqwf_mjcx",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": ":@computed_region_k96s_3jcv",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": ":@computed_region_tatf_ua23",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": ":@computed_region_ur2y_g4cx",
+          "type": "number",
+          "description": null
+        },
+        {
+          "name": ":@computed_region_2dna_qi2s",
+          "type": "number",
+          "description": null
+        }
+      ],
+      "notes": "Registration accounts are not necessarily unique active physical destinations; missing NAICS/geocodes and absent opening hours.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_updated_at_utc": "2026-10-15T18:06:00+00:00"
+    },
+    {
+      "id": "boundary",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/414",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/414/query",
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": "Full published source then City boundary clipping",
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "City Boundary",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:18:02.894589+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "CITY",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "streets",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/341",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/341/query",
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": "Full published source then City boundary clipping",
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Streets (Centerline)",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:30.814416+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "ASSETID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "INT_ID_FROM",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "INT_ID_TO",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "STNUM",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "MAPSHEET",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ADRF",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ADRT",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ZIP_R",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ADLF",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ADLT",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "ZIP_L",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "TDIR",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STNAME",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STSFX",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SFXDIR",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STNAME_A",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STSFX_A",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STATUS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TEMP_",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SECT_ID",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "DEDRQ",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "REMARKS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SV_STATUS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ST_SUBTYPE",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "CRTN_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "LST_MODF_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "SHAPE",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "OLD_STREET_DESIGNATION",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "PLANNING_STREET_STANDARD",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "DEDRQ_DESC",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "BSS_ST_CLASS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Planning_ASSETID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "TYPE",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "MODIFIED",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "Street_Designation",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Street_Designation_WO_Mod",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "AutoID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeInteger"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "curbs",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/324",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/324/query",
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Historic 2017 asset inventory based on 2014 imagery; current maintenance not verified",
+      "actual_observation_dates": {
+        "layer_vintage": "Curbs",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:22:55.456991+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "SHAPE",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "ASSETID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "PIND",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NOTES",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "CURB_ID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "CRTN_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "USER_ID",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "LST_MODF_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "CALC_WIDTH",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "CALC_LENGTH",
+          "type": "esriFieldTypeDouble"
+        }
+      ],
+      "notes": "Physical curb footprints, not legal parking extent. Historic supply prior; polygons are not stalls and metadata edits do not prove newer geometry.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_imagery_year": 2014,
+      "inventory_created_year": 2017
+    },
+    {
+      "id": "driveways",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/325",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/325/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Historic 2017 asset inventory based on 2014 imagery; current maintenance not verified",
+      "actual_observation_dates": {
+        "layer_vintage": "Driveways",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:51.681473+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "SHAPE",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "ASSETID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "PIND",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ISSHAREDDRIVEWAY",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NOTES",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "DRIVEWAY_ID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "CRTN_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "USER_ID",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "LST_MODF_DT",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "CALC_WIDTH",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "CALC_LENGTH",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "CALC_MIN_WIDTH",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "CALC_MAX_WIDTH",
+          "type": "esriFieldTypeDouble"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability. Historic supply prior; polygons are not stalls and metadata edits do not prove newer geometry.",
+      "evidence_type": "context",
+      "downloaded": true,
+      "source_imagery_year": 2014,
+      "inventory_created_year": 2017
+    },
+    {
+      "id": "hydrants",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/107",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/107/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Fire Hydrants (DWP)",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:53.478584+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "HYDRTS_ID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "SIZE_CODE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "MAKE_CODE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "MAKE_DESCRIPTION",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "MAIN_SIZE",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "regulatory_signs",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/177",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/177/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Regulatory Signs",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:54.390959+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "STKNUMBER",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "DESCRIPTIO",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "SIZE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "MATERIAL",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "CLASS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "LegendDesc",
+          "type": "esriFieldTypeString"
+        }
+      ],
+      "notes": "Actual DESCRIPTIO/LegendDesc exists, but observed samples are traffic/speed signs; completeness for parking rules not established.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "bikeways",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/157",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/157/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Bikeways (Existing)",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:54.906749+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "Network",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Bikeway",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Street",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "From_",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "To_",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Shape_Leng",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "Install_Date",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "Region",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Bikeway_Type",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Datasource_DT",
+          "type": "esriFieldTypeDate"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "red_curb",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/431",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/431/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "LADOT Red Curb",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:19:55.245825+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "AREA",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "RCDATE",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "RCDATE2",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "RCDATE3",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "Status",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "Completed",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "DESC1",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        }
+      ],
+      "notes": "Operational area polygons and completion dates; unsuitable as red-painted curb length geometry.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "buildings",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/393",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/393/query",
+      "category": "C built environment",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Building Footprints (2023 LARIAC7)",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:20:26.905037+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "CODE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "BLD_ID",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "ELEV",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "SOURCE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "DATE_",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STATUS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "AREA",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ID",
+          "type": "esriFieldTypeInteger"
+        }
+      ],
+      "notes": "Layer named 2023 LARIAC7; individual features include older source dates; physical form is not housing-unit count.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "zoning",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/75",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/75/query",
+      "category": "C built environment",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "Generalized Zoning",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:20:31.126635+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "ZONE_CMPLT",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ZONE_UNDER",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "JTX_ID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "PAPER_ST",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "ZONE_CLASS",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ZONE_CODE",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "ZONING_DESCRIPTION",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        }
+      ],
+      "notes": "Preserve source IDs and attributes; verify spatial and temporal suitability.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "construction",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/1",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/1/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "BOE Permits Points",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:20:38.341058+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "ID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "GeocodingID",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "Geotype",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "RefNo",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "PermitNo",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "PermitType",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "PermitSubType",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Location",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Active",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "name": "EnterDate",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "StartDate",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "EndDate",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "name": "ContactName",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ContactPhone",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ContactEmail",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "LegendSymbol",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "FilterFld",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        }
+      ],
+      "notes": "Permit points alone do not prove active closure.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "construction_streets",
+      "owner": "City of Los Angeles Bureau of Engineering / NavigateLA",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/212",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/212/query",
+      "category": "B supply/rules",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": {
+        "copyright": "",
+        "terms": "Layer copyright/attribution retained. No explicit reuse license verified; review applicable City/LARIAC terms before redistribution."
+      },
+      "geographic_coverage": [
+        -118.465,
+        34.045,
+        -118.425,
+        34.08
+      ],
+      "temporal_coverage": "Current snapshot; per-feature creation/modification dates do not prove current legal validity",
+      "actual_observation_dates": {
+        "layer_vintage": "TCTMC Streets of Significance (Construction Impacted Streets)",
+        "effective_dates": "unverified"
+      },
+      "retrieved_at_utc": "2026-10-25T03:20:38.744915+00:00",
+      "refresh_cadence": "Unspecified; retain successive immutable snapshots",
+      "access_requirements": "Anonymous ArcGIS REST query; no purchase",
+      "cost": "No fee for requests tested",
+      "pagination": "Return IDs then short range batches <=500; exact ID reconciliation. Server maxRecordCount=20000",
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry"
+        },
+        {
+          "name": "TDIR",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STNAME",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "STSFX",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NAME",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "CONTACT",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "COST_EST",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "name": "START_DATE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "END_DATE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "PHONE",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "ID",
+          "type": "esriFieldTypeSmallInteger"
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString"
+        }
+      ],
+      "notes": "Project date strings require parsing; not every construction project blocks curb parking.",
+      "evidence_type": "context",
+      "downloaded": true
+    },
+    {
+      "id": "lodes",
+      "owner": "US Census Bureau",
+      "verified_url": "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/ca_wac_S000_JT00_2023.csv.gz",
+      "endpoint_url": "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/ca_wac_S000_JT00_2023.csv.gz",
+      "category": "C built environment",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": "US federal public data; apply Census attribution and disclosure notices",
+      "geographic_coverage": "CA file filtered to LA County blocks; LODES8/2020 blocks",
+      "temporal_coverage": "2023 workplace jobs; released file modified 2025-12-03",
+      "actual_observation_dates": {
+        "state_rows": 262357,
+        "la_county_rows": 64682,
+        "year": 2023,
+        "sha256": "f062c82b1dd7b4d4441078c9e8d779c258a6eb71cc0312a10e3bb523c17951b6"
+      },
+      "retrieved_at_utc": "2026-10-25T03:23:00.799143+00:00",
+      "refresh_cadence": "Annual release; do not mix LODES releases",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "w_geocode",
+        "C000",
+        "industry/worker categories"
+      ],
+      "notes": "Source issue/observation dates retained; no occupancy labels implied.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "lax_weather_2025",
+      "owner": "NOAA NCEI / NOAA public archive",
+      "verified_url": "https://noaa-global-hourly-pds.s3.amazonaws.com/2025/72295023174.csv",
+      "endpoint_url": "https://noaa-global-hourly-pds.s3.amazonaws.com/2025/72295023174.csv",
+      "category": "E changing conditions",
+      "priority": 2,
+      "status": "stale",
+      "license_terms": "US government data; NOAA attribution",
+      "geographic_coverage": "LAX station, not Westwood microclimate",
+      "temporal_coverage": "2025 hourly",
+      "actual_observation_dates": {
+        "rows": 9082,
+        "min_date": "2025-01-01T00:00:00",
+        "max_date": "2025-08-27T07:59:00",
+        "sha256": "2b7cce2eb330ba2754ac606644521ccc5fa2c236b209446917f53fc862457103"
+      },
+      "retrieved_at_utc": "2026-10-25T03:25:04.728282+00:00",
+      "refresh_cadence": "Annual/current-year updates",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "DATE",
+        "TMP",
+        "WND",
+        "VIS",
+        "AA1 quality codes"
+      ],
+      "notes": "Actual file ends 2025-08-27; no overlap with acquired September 2025/August 2026 occupancy. Do not impute missing weather as zero.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "lax_weather_2026",
+      "owner": "NOAA NCEI / NOAA public archive",
+      "verified_url": "https://noaa-global-hourly-pds.s3.amazonaws.com/2026/72295023174.csv",
+      "endpoint_url": "https://noaa-global-hourly-pds.s3.amazonaws.com/2026/72295023174.csv",
+      "category": "E changing conditions",
+      "priority": 2,
+      "status": "blocked",
+      "license_terms": "US government data; NOAA attribution",
+      "geographic_coverage": "LAX station, not Westwood microclimate",
+      "temporal_coverage": "2026 available portion",
+      "actual_observation_dates": {},
+      "retrieved_at_utc": "2026-10-25T03:39:22.489474+00:00",
+      "refresh_cadence": "Annual/current-year updates",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "DATE",
+        "TMP",
+        "WND",
+        "VIS",
+        "AA1 quality codes"
+      ],
+      "notes": "404 Client Error: Not Found for url: https://noaa-global-hourly-pds.s3.amazonaws.com/2026/72295023174.csv",
+      "evidence_type": "context"
+    },
+    {
+      "id": "weather_forecast",
+      "owner": "NOAA National Weather Service",
+      "verified_url": "https://api.weather.gov/points/34.0689,-118.4452",
+      "endpoint_url": "https://api.weather.gov/points/34.0689,-118.4452",
+      "category": "E changing conditions",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": "Free public data for any purpose; https://www.weather.gov/documentation/services-web-api",
+      "geographic_coverage": "NWS forecast grid covering UCLA",
+      "temporal_coverage": "Rolling hourly forecast; retain generatedAt and retrieval",
+      "actual_observation_dates": {
+        "periods": 156,
+        "generatedAt": "2026-10-25T03:05:03+00:00",
+        "retrieved_at_utc": "2026-10-25T03:17:26.220330+00:00"
+      },
+      "retrieved_at_utc": "2026-10-25T03:17:25.956620+00:00",
+      "refresh_cadence": "Several updates/day",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "generatedAt",
+        "startTime",
+        "endTime",
+        "temperature",
+        "windSpeed",
+        "probabilityOfPrecipitation"
+      ],
+      "notes": "Source issue/observation dates retained; no occupancy labels implied.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "ucla_calendar",
+      "owner": "UCLA Registrar",
+      "verified_url": "https://registrar.ucla.edu/file/fa0541df-37fc-4e16-9041-f217b8317c22",
+      "endpoint_url": "https://registrar.ucla.edu/file/fa0541df-37fc-4e16-9041-f217b8317c22",
+      "category": "D activity",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": "Public official calendar; no explicit redistribution license verified",
+      "geographic_coverage": "UCLA; professional schools can differ",
+      "temporal_coverage": "2026\u201327 term calendar",
+      "actual_observation_dates": {
+        "events": 190,
+        "sha256": "7625e7216f57e6769c29a418f7bfff7b8c3ef177287405f2ae50d1a1a6c92608"
+      },
+      "retrieved_at_utc": "2026-10-25T03:25:06.533497+00:00",
+      "refresh_cadence": "Annual and revisions",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "UID",
+        "DTSTART",
+        "DTEND",
+        "SUMMARY"
+      ],
+      "notes": "Source issue/observation dates retained; no occupancy labels implied.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "metro_rail_gtfs",
+      "owner": "LA Metro",
+      "verified_url": "https://gitlab.com/LACMTA/gtfs_rail/-/raw/master/gtfs_rail.zip",
+      "endpoint_url": "https://gitlab.com/LACMTA/gtfs_rail/-/raw/master/gtfs_rail.zip",
+      "category": "E changing conditions",
+      "priority": 2,
+      "status": "verified/downloaded",
+      "license_terms": "Metro developer terms referenced by official feed README; review before distribution",
+      "geographic_coverage": "Published Metro rail service; does not cover all local bus operators",
+      "temporal_coverage": "feed_info/calendar validity inspected separately",
+      "actual_observation_dates": {
+        "stops": 463,
+        "feed_info": [
+          {
+            "feed_id": "us_ca_lacmta_rail",
+            "feed_publisher_name": "Los Angeles County Metropolitan Transportation Authority",
+            "feed_publisher_url": "https://www.metro.net",
+            "feed_lang": "en",
+            "feed_version": "",
+            "feed_license": "",
+            "feed_contact_email": "",
+            "feed_contact_url": "http://developer.metro.net",
+            "feed_start_date": "",
+            "feed_end_date": ""
+          }
+        ],
+        "calendar_min": "20261024",
+        "calendar_max": "20261107",
+        "sha256": "d56fab73151dd207b6301c17573331203fb1b7db47e23fa1e884b85f7aef4ff9"
+      },
+      "retrieved_at_utc": "2026-10-25T03:25:07.254340+00:00",
+      "refresh_cadence": "Rail feed generally daily Tue\u2013Sat per official README",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "stop_id",
+        "stop_lat",
+        "stop_lon",
+        "calendar",
+        "trips",
+        "stop_times"
+      ],
+      "notes": "Source issue/observation dates retained; no occupancy labels implied.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "metro_canceled_service",
+      "owner": "LA Metro",
+      "verified_url": "https://api.metro.net/canceled_service/all",
+      "endpoint_url": "https://api.metro.net/canceled_service/all",
+      "category": "E changing conditions",
+      "priority": 2,
+      "status": "blocked",
+      "license_terms": "Metro API terms not independently resolved",
+      "geographic_coverage": "Metro bus cancellations; no guarantee all disruptions covered",
+      "temporal_coverage": "Current response, not historical archive",
+      "actual_observation_dates": {},
+      "retrieved_at_utc": "2026-10-25T03:39:22.489474+00:00",
+      "refresh_cadence": "Every 15 minutes per API home",
+      "access_requirements": "Public anonymous endpoint attempted",
+      "cost": "No fee for requests tested",
+      "pagination": "Bounded single file/response; byte limit enforced",
+      "useful_fields": [
+        "line",
+        "cancellation status"
+      ],
+      "notes": "HTTPSConnectionPool(host='api.metro.net', port=443): Max retries exceeded with url: /canceled_service/all (Caused by ResponseError('too many 500 error responses'))",
+      "evidence_type": "context"
+    },
+    {
+      "id": "acs",
+      "owner": "US Census Bureau",
+      "verified_url": "https://www.census.gov/programs-surveys/acs/data/data-via-api.html",
+      "endpoint_url": "https://api.census.gov/data/2024/acs/acs5",
+      "category": "C built environment",
+      "priority": 2,
+      "status": "blocked",
+      "license_terms": "US federal public data",
+      "geographic_coverage": "LA County tract query; City subset needs geographic join",
+      "temporal_coverage": "2020\u20132024 five-year period estimates",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Anonymous attempted, returned HTML. CENSUS_API_KEY connector implemented; key may be needed. Exact failure cause not established.",
+      "cost": "Free public API/key",
+      "pagination": "Small selected-variable query, one county; include estimate margins of error before inference",
+      "useful_fields": [
+        "B01003 population",
+        "B08201 household vehicle availability",
+        "B08301 commuting",
+        "B11001 households",
+        "B25001 housing units"
+      ],
+      "notes": "ACS API documentation verified. HTML response is not accepted as data. No ACS values fabricated.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "parcels",
+      "owner": "City BOE",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/399",
+      "endpoint_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/399/query",
+      "category": "C built environment",
+      "priority": 2,
+      "status": "verified/not downloaded",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:25.465220+00:00",
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Verified layer/schema/sample; connector requires small bounding box and caches it. No bulk default. APN/assessment attributes may need a separate County Assessor source.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "surveys",
+      "owner": "LADOT / WVIA",
+      "verified_url": "https://planning.lacity.gov/odocument/7f3c2281-70da-42e6-b265-a931f0b0a7d5/CPC_Staff_Report.pdf",
+      "endpoint_url": null,
+      "category": "A direct parking",
+      "priority": 1,
+      "status": "stale",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Official report cites September 2013 Westwood parking study; raw block-face/time observations and license not verified. Aggregate includes visitor parking; not usable contemporary unmetered labels.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "unmetered_partnerships",
+      "owner": "LADOT / UCLA Transportation / WVIA",
+      "verified_url": "https://ladot.lacity.gov/projects/parking-la",
+      "endpoint_url": null,
+      "category": "A direct parking",
+      "priority": 1,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "No verified public unmetered occupancy endpoint found. Request raw anonymized surveys with sampling protocol and rights; no outreach sent.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "parking_sign_rules",
+      "owner": "LADOT / BOE",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/177",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:07.381814+00:00",
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Traffic sign descriptions exist, but a complete authoritative parking sign text/direction/effective-rule feed is unverified. Calendar-sign locations are insufficient.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "loading_zones",
+      "owner": "LADOT",
+      "verified_url": "https://ladot.lacity.gov/projects/parking-la",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Need curb extents, hours, vehicle classes and effective dates; no machine-readable source verified.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "bus_stops",
+      "owner": "LA Metro",
+      "verified_url": "https://api.metro.net/docs",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "verified/not downloaded",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "OpenAPI verified; route/stops paths documented. Rail stops downloaded separately; bus stop clearance extents and other operators still needed.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "permit_eligibility",
+      "owner": "LADOT",
+      "verified_url": "https://ladot.lacity.gov/projects/parking-la",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Old district polygons do not establish eligibility, permit classes, hours or exemptions.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "intersection_exclusions",
+      "owner": "City BOE",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/341",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "verified/not downloaded",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:15:35.459244+00:00",
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Centerline endpoints available; verified curb setbacks/crosswalk extents and applicable current rules still needed. No automatic legal buffer applied.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "temporary_event_rules",
+      "owner": "LADOT / City BOE",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer/1",
+      "endpoint_url": null,
+      "category": "B supply/rules",
+      "priority": 1,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": "2026-10-25T03:16:36.712522+00:00",
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Permit geometry/status is context; no complete real-time curb closure feed established.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "offstreet",
+      "owner": "LADOT / private operators",
+      "verified_url": "https://ladot.lacity.gov/projects/parking-la",
+      "endpoint_url": null,
+      "category": "C built environment",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Public facilities and development studies may identify supply; no complete private-space inventory or occupancy label source verified.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "housing_units",
+      "owner": "Census / County Assessor",
+      "verified_url": "https://www.census.gov/programs-surveys/acs/data/data-via-api.html",
+      "endpoint_url": null,
+      "category": "C built environment",
+      "priority": 2,
+      "status": "blocked",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "ACS connector blocked; building footprints alone are not unit counts. Assess parcel attributes on demand.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "schools_campuses_hospitals_offices",
+      "owner": "City BOE / institutions",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Mapping/NavigateLA/MapServer",
+      "endpoint_url": null,
+      "category": "D activity",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Separate POI inventories and campus boundaries need verification; business registry contains activity categories but omits many institutions and true hours.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "opening_hours",
+      "owner": "Businesses / licensed providers",
+      "verified_url": "https://data.lacity.org/d/6rrh-rzua",
+      "endpoint_url": null,
+      "category": "D activity",
+      "priority": 3,
+      "status": "unsuitable",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Verified City business registry has no opening-hour field. Commercial/map provider storage terms and pricing must be evaluated before use.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "sports_events",
+      "owner": "UCLA Athletics / venue operators",
+      "verified_url": "https://uclabruins.com/",
+      "endpoint_url": null,
+      "category": "D activity",
+      "priority": 2,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Official schedule page is a discovery source, not a verified API. Need stable identifiers, revisions, venue capacities and timezones.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "venue_capacity_attractions",
+      "owner": "Venue operators",
+      "verified_url": "https://uclabruins.com/",
+      "endpoint_url": null,
+      "category": "D activity",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Capacity is not actual attendance; verify each venue, scheduled events and reuse terms.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "holidays",
+      "owner": "US Office of Personnel Management",
+      "verified_url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "endpoint_url": null,
+      "category": "D activity",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Federal holidays alone do not establish LA parking exemptions or local school closures. Verify local calendars separately.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "traffic",
+      "owner": "City / Caltrans PeMS",
+      "verified_url": "https://pems.dot.ca.gov/",
+      "endpoint_url": null,
+      "category": "E changing conditions",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Account/terms likely relevant; street-level congestion coverage and API access unverified. No credential endpoint invented.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "citations",
+      "owner": "LADOT",
+      "verified_url": "https://data.lacity.org/d/wjz9-h9np",
+      "endpoint_url": null,
+      "category": "F weak proxy",
+      "priority": 3,
+      "status": "stale",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "See notes",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "Official catalog identifies archived citations. Enforcement deployment, patrol schedules, policy and geocoding bias dominate exposure; never occupancy labels.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "service_requests",
+      "owner": "City MyLA311",
+      "verified_url": "https://data.lacity.org/",
+      "endpoint_url": null,
+      "category": "F weak proxy",
+      "priority": 3,
+      "status": "candidate/unverified",
+      "license_terms": "Unverified; do not assume public-domain rights from public visibility",
+      "geographic_coverage": "City of Los Angeles relevance; exact coverage unverified",
+      "temporal_coverage": "unverified",
+      "actual_observation_dates": null,
+      "retrieved_at_utc": null,
+      "refresh_cadence": "unverified",
+      "access_requirements": "Public discovery only; exact connector requirements unverified",
+      "cost": "No purchase made; future terms/cost unresolved",
+      "pagination": "unverified",
+      "useful_fields": [],
+      "notes": "No current specific endpoint selected. Reporting and neighborhood participation bias; requests are not observed supply/occupancy.",
+      "evidence_type": "context"
+    },
+    {
+      "id": "starter_curbs",
+      "owner": "City of Los Angeles / source agency",
+      "verified_url": "https://services5.arcgis.com/7nsPwEMP38bSkCjy/arcgis/rest/services/Sidewalks_Mapped_Areas/FeatureServer/3",
+      "status": "verified/imported historic prior",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T04:14:18Z",
+      "notes": "6402 source assets, exact ID/page reconciliation; 84 outside exact requested box retained with a mask. Historic geometry, never stalls or current legal capacity.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID",
+          "sqlType": "sqlTypeOther",
+          "nullable": false,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CURB_ID",
+          "type": "esriFieldTypeInteger",
+          "alias": "Curb ID",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "ASSETID",
+          "type": "esriFieldTypeInteger",
+          "alias": "ASSETID",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "PIND",
+          "type": "esriFieldTypeString",
+          "alias": "PIND",
+          "sqlType": "sqlTypeOther",
+          "length": 14,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CALC_WIDTH",
+          "type": "esriFieldTypeDouble",
+          "alias": "CALC_WIDTH",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CALC_LENGTH",
+          "type": "esriFieldTypeDouble",
+          "alias": "CALC_LENGTH",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "NOTES",
+          "type": "esriFieldTypeString",
+          "alias": "Notes",
+          "sqlType": "sqlTypeOther",
+          "length": 255,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CRTN_DT",
+          "type": "esriFieldTypeDate",
+          "alias": "Create Date",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null,
+          "precision": 1
+        },
+        {
+          "name": "USER_ID",
+          "type": "esriFieldTypeString",
+          "alias": "User ID",
+          "sqlType": "sqlTypeOther",
+          "length": 20,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "LST_MODF_DT",
+          "type": "esriFieldTypeDate",
+          "alias": "Modified Date",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null,
+          "precision": 1
+        },
+        {
+          "name": "Shape__Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape__Area",
+          "sqlType": "sqlTypeDouble",
+          "nullable": true,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "Shape__Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape__Length",
+          "sqlType": "sqlTypeDouble",
+          "nullable": true,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        }
+      ],
+      "geographic_coverage": [
+        -118.456,
+        34.05,
+        -118.435,
+        34.075
+      ],
+      "source_imagery_year": 2014,
+      "inventory_created_year": 2017,
+      "license_terms": "Public query access; package is not a license grant. Verify City terms before redistribution."
+    },
+    {
+      "id": "starter_driveways",
+      "owner": "City of Los Angeles / source agency",
+      "verified_url": "https://services5.arcgis.com/7nsPwEMP38bSkCjy/arcgis/rest/services/Sidewalks_Mapped_Areas/FeatureServer/4",
+      "status": "verified/imported historic prior",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T04:14:30Z",
+      "notes": "1803 source assets, exact ID/page reconciliation; 19 outside exact requested box retained with a mask. Historic geometry, never stalls or current legal capacity.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "useful_fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID",
+          "sqlType": "sqlTypeOther",
+          "nullable": false,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "DRIVEWAY_ID",
+          "type": "esriFieldTypeInteger",
+          "alias": "Driveway ID",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "ASSETID",
+          "type": "esriFieldTypeInteger",
+          "alias": "ASSETID",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "PIND",
+          "type": "esriFieldTypeString",
+          "alias": "PIND",
+          "sqlType": "sqlTypeOther",
+          "length": 14,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "ISSHAREDDRIVEWAY",
+          "type": "esriFieldTypeString",
+          "alias": "Is Shared Driveway",
+          "sqlType": "sqlTypeOther",
+          "length": 3,
+          "nullable": true,
+          "editable": true,
+          "domain": {
+            "type": "codedValue",
+            "name": "YesNo",
+            "mergePolicy": "esriMPTDefaultValue",
+            "splitPolicy": "esriSPTDuplicate",
+            "description": "General Use Flag",
+            "codedValues": [
+              {
+                "name": "No",
+                "code": "No"
+              },
+              {
+                "name": "Yes",
+                "code": "Yes"
+              }
+            ]
+          },
+          "defaultValue": "No"
+        },
+        {
+          "name": "CALC_WIDTH",
+          "type": "esriFieldTypeDouble",
+          "alias": "CALC_WIDTH",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CALC_LENGTH",
+          "type": "esriFieldTypeDouble",
+          "alias": "CALC_LENGTH",
+          "sqlType": "sqlTypeOther",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "NOTES",
+          "type": "esriFieldTypeString",
+          "alias": "Notes",
+          "sqlType": "sqlTypeOther",
+          "length": 255,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "CRTN_DT",
+          "type": "esriFieldTypeDate",
+          "alias": "Create Date",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null,
+          "precision": 1
+        },
+        {
+          "name": "USER_ID",
+          "type": "esriFieldTypeString",
+          "alias": "User ID",
+          "sqlType": "sqlTypeOther",
+          "length": 20,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "LST_MODF_DT",
+          "type": "esriFieldTypeDate",
+          "alias": "Modified Date",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null,
+          "precision": 1
+        },
+        {
+          "name": "Shape__Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape__Area",
+          "sqlType": "sqlTypeDouble",
+          "nullable": true,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "Shape__Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape__Length",
+          "sqlType": "sqlTypeDouble",
+          "nullable": true,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        }
+      ],
+      "geographic_coverage": [
+        -118.456,
+        34.05,
+        -118.435,
+        34.075
+      ],
+      "source_imagery_year": 2014,
+      "inventory_created_year": 2017,
+      "license_terms": "Public query access; package is not a license grant. Verify City terms before redistribution."
+    },
+    {
+      "id": "naip_pinned_2022",
+      "owner": "USGS / USDA",
+      "verified_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/17317/info",
+      "status": "verified/bounded imagery acquired",
+      "category": "Imagery feasibility",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:01:27.519536+00:00",
+      "notes": "Native source pixelSizeX/Y = 0.6 in EPSG:26911 metres, confirmed from raster info. Category 1 primary raster. Date 2022-05-11; time of day unknown. 12 small 360 m tiles for 24-face review, plus included JPEG. No detector metrics measured.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "capture_date": "2022-05-11",
+      "capture_time_utc": null,
+      "capture_time_precision": "date_only",
+      "native_pixel_size_m": [
+        0.6,
+        0.6
+      ],
+      "license_terms": "Public domain NAIP; official USDA catalog rights link verified",
+      "rights_url": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
+      "time_specific_occupancy_truth": false
+    },
+    {
+      "id": "code_the_curb_cds",
+      "owner": "ArcGIS account zackary.d.campos_ladot; agency association inferred",
+      "verified_url": "https://gisserver.dot4la.org/server/rest/services/Sandbox_Environment/Curb_Data_Specification/FeatureServer",
+      "status": "public item verified; API unavailable",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:05:19.383995+00:00",
+      "notes": "Public ArcGIS item owned by zackary.d.campos_ladot; LADOT association inferred from its public metadata. Actual endpoint returns API error 500: No Layers. A program page and catalog item do not establish a functioning current public feed.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "actual_check": {
+        "status": "unavailable",
+        "checked_at_utc": "2026-10-25T05:05:44.988017+00:00",
+        "error": "API error: {'error': {'code': 500, 'message': 'Error handling service request :0x80004005 - No Layer or Table was initialized. in \\'\"esriCarto.GraphicFeatureServer\"\\'', 'details': []}}"
+      },
+      "geographic_coverage": "Not established from usable records"
+    },
+    {
+      "id": "code_the_curb_corridor",
+      "owner": "City of Los Angeles / source agency",
+      "verified_url": "https://services1.arcgis.com/tp9wqSVX1AitKgjd/arcgis/rest/services/Code_the_Curb_Corridor_Analysis/FeatureServer",
+      "status": "verified API; limited DTLA geometry",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:22:33.460727+00:00",
+      "notes": "Query/schema verified. Two records intentionally sampled (exceededTransferLimit=true); not a complete export. Westwood spatial count is zero. April 2024 layer edit, curb lines/BOE links, no complete current sign/permit/time rules or occupancy.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "sample_complete": false,
+      "westwood_query_count": 0,
+      "source_layer_edit_utc": "2024-04-18T20:30:13.809000+00:00",
+      "geographic_coverage": "DTLA SMART corridor study; not citywide or Westwood",
+      "license_terms": "Public query; redistribution/production rights not independently established"
+    },
+    {
+      "id": "venice_2021_survey",
+      "owner": "Los Angeles City Planning / Fehr & Peers",
+      "verified_url": "https://planning.lacity.gov/odocument/23ddbbd5-632b-4b58-a3d0-29846fcc3c84/Fehr_%26_Peers_Parking_Utilization_and_Transpor.pdf",
+      "status": "verified/historic aggregates recovered",
+      "category": "A direct parking (historic aggregate)",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:03:33.755855+00:00",
+      "notes": "Downloaded 206-page November 2021 report. Extracted 48 zone/time-band occupancy cells from PDF page 34, attributed to Fehr & Peers 2019. Values 49\u2013106% preserved. No independent raw repeated block-face table or exact survey timestamps recovered; mixed parking types cannot validate unmetered forecasts.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "publication_date": "2021-11",
+      "table_source_attribution_year": 2019,
+      "source_sha256": "913defea495ace0b396ab8e46a02e481a3846606d1b6260b160d2fe189d5614c",
+      "exact_observation_timestamps_available": false,
+      "full_face_training_ready": false,
+      "license_terms": "Official report accessed for research; source attribution retained. No report redistribution license asserted."
+    },
+    {
+      "id": "permit_legacy_blank",
+      "owner": "City of Los Angeles / source agency",
+      "verified_url": "https://data.lacity.org/d/2ckn-xmjp",
+      "status": "unusable legacy export",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": null,
+      "notes": "Metadata has no data columns. Count reports 155, but JSON rows are empty objects and GeoJSON contains 155 null geometries. This is not usable district coverage. Old ladotparking.org permit paths return 404; official LADOT online services/FAQ remain readable.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "reported_rows": 155,
+      "usable_geometries": 0
+    },
+    {
+      "id": "permit_district_geometry",
+      "owner": "City of Los Angeles / source agency",
+      "verified_url": "https://maps.lacity.org/arcgis/rest/services/Permits/BOE_Permits_Geocoder/MapServer/403",
+      "status": "verified/bounded geometry; rules unknown",
+      "category": "B supply/rules",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:27:24.242500+00:00",
+      "notes": "Six district polygons acquired with exact ID reconciliation in the starter box. PPDNAME and linked plan PDFs are leads; source effective date/currentness and complete curb/stay/vehicle eligibility remain unverified. Nonintersection does not prove unrestricted parking.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "useful_fields": [
+        {
+          "name": "ObjectID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID",
+          "domain": null
+        },
+        {
+          "name": "Id",
+          "type": "esriFieldTypeInteger",
+          "alias": "Id",
+          "domain": null
+        },
+        {
+          "name": "PPDNAME",
+          "type": "esriFieldTypeString",
+          "alias": "PPDNAME",
+          "length": 50,
+          "domain": null
+        },
+        {
+          "name": "Shape",
+          "type": "esriFieldTypeGeometry",
+          "alias": "Shape",
+          "domain": null
+        },
+        {
+          "name": "TOOLTIP",
+          "type": "esriFieldTypeString",
+          "alias": "TOOLTIP",
+          "length": 40,
+          "domain": null
+        },
+        {
+          "name": "NLA_URL",
+          "type": "esriFieldTypeString",
+          "alias": "NLA_URL",
+          "length": 68,
+          "domain": null
+        }
+      ],
+      "features": 6,
+      "geographic_coverage": "Starter Westwood spatial query",
+      "source_geometry_vintage": "unverified"
+    },
+    {
+      "id": "pilot_workplace_geography",
+      "owner": "US Census Bureau / LEHD",
+      "verified_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/10",
+      "status": "verified/joined predictor context",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T05:05:56.528442+00:00",
+      "notes": "187 Census 2020 block geometries acquired by bounded query; 148 join to the acquired 2023 LODES workplace records. The remaining 39 stay missing, not zero. Publication/availability date still needs verification before historical as-of use; no backtest features or labels overwritten.",
+      "access_requirements": "Anonymous public requests tested; no purchases",
+      "cost": "Free requests used",
+      "current_legal_coverage_verified": false,
+      "geometry_vintage": 2020,
+      "workplace_vintage": 2023,
+      "geometry_rows": 187,
+      "matched_rows": 148,
+      "occupancy_labels": false
+    }
+  ]
+}

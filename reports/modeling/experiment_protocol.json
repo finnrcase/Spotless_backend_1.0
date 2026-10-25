@@ -1,0 +1,107 @@
+{
+  "config": {
+    "version": "sensor-panel-v1",
+    "seed": 430,
+    "interval_minutes": 15,
+    "horizons_minutes": [
+      0,
+      15,
+      30,
+      60,
+      120
+    ],
+    "persistence_caps_minutes": [
+      5,
+      15,
+      60
+    ],
+    "primary_persistence_minutes": 15,
+    "minimum_known_sensor_time_fraction": 0.25,
+    "roster_discovery_days": 7,
+    "label_window_minutes": 15,
+    "embargo_minutes": 180,
+    "rolling_origins_local": [
+      "2026-08-09",
+      "2026-08-13"
+    ],
+    "rolling_validation_days": 3,
+    "final_training_end_local": "2026-08-17",
+    "calibration_start_local": "2026-08-18",
+    "calibration_end_local": "2026-08-24",
+    "final_test_start_local": "2026-08-25",
+    "final_test_end_local": "2026-09-01",
+    "spatial_holdout_latitude_gte": 34.0635,
+    "spatial_buffer_m": 150,
+    "prediction_interval_nominal_coverage": 0.9,
+    "context_scales_m": [
+      100,
+      300,
+      600
+    ],
+    "hyperparameters": {
+      "ridge_alpha": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "boosted_max_leaf_nodes": [
+        7,
+        15
+      ]
+    },
+    "strict_historical_feature_families": [
+      "calendar",
+      "causal_sensor_history"
+    ],
+    "retrospective_feature_families": [
+      "current_spatial_context",
+      "current_meter_policy"
+    ],
+    "true_suitable_space_labels": "unavailable",
+    "unmetered_labels": "unavailable"
+  },
+  "design_sha256": "cd32f12f4b895eb327fad566e7b03ae0e132bc74bdfc3784d91a3d5a3b7bc2f3",
+  "model_features": {
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "weekday_sin",
+      "weekday_cos",
+      "weekend",
+      "month_sin",
+      "month_cos",
+      "holiday"
+    ],
+    "history": [
+      "lag_rate_15",
+      "lag_rate_30",
+      "lag_rate_60",
+      "lag_coverage",
+      "arrivals_60",
+      "departures_60",
+      "occupancy_week_ago",
+      "neighbor_rate_300",
+      "neighbor_rate_600",
+      "hour_x_lag"
+    ],
+    "context": [
+      "buildings_100",
+      "buildings_300",
+      "buildings_600",
+      "business_100",
+      "business_300",
+      "business_600",
+      "food_retail_300",
+      "hydrants_100",
+      "driveways_100",
+      "context_x_weekend",
+      "current_price_midpoint",
+      "current_time_limit_hours"
+    ],
+    "count_binary_heads_extra": [
+      "panel_sensor_count"
+    ]
+  },
+  "final_test_tuned_on": false,
+  "implementation_revision": "Count heads use nonnegative count loss and known panel size; rate specification unchanged. One preliminary rate result inspection occurred before this methodological count correction; no split, rate feature or hyperparameter choice changed in response to final scores."
+}

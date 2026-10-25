@@ -1,0 +1,112 @@
+{
+  "$defs": {
+    "Provenance": {
+      "enum": [
+        "observed",
+        "derived",
+        "assumed",
+        "imputed",
+        "unavailable"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "source_version": {
+      "title": "Source Version",
+      "type": "string"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "field_provenance": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "title": "Field Provenance",
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "valid_from_utc": {
+      "format": "date-time",
+      "title": "Valid From Utc",
+      "type": "string"
+    },
+    "valid_to_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Valid To Utc"
+    },
+    "entity_id": {
+      "title": "Entity Id",
+      "type": "string"
+    },
+    "expected_seconds": {
+      "exclusiveMinimum": 0,
+      "title": "Expected Seconds",
+      "type": "number"
+    },
+    "observed_seconds": {
+      "minimum": 0,
+      "title": "Observed Seconds",
+      "type": "number"
+    },
+    "unknown_seconds": {
+      "minimum": 0,
+      "title": "Unknown Seconds",
+      "type": "number"
+    },
+    "max_gap_seconds": {
+      "minimum": 0,
+      "title": "Max Gap Seconds",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_record_id",
+    "source_version",
+    "retrieved_at_utc",
+    "field_provenance",
+    "confidence",
+    "valid_from_utc",
+    "entity_id",
+    "expected_seconds",
+    "observed_seconds",
+    "unknown_seconds",
+    "max_gap_seconds"
+  ],
+  "title": "Coverage",
+  "type": "object"
+}

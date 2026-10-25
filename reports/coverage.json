@@ -1,0 +1,266 @@
+{
+  "generated_at_utc": "2026-10-25T03:32:19.432143+00:00",
+  "pilot_bbox": [
+    -118.465,
+    34.045,
+    -118.425,
+    34.08
+  ],
+  "unmetered_verified_occupancy_labels": 0,
+  "warnings": [
+    "No verified unmetered occupancy labels.",
+    "Current inventory is not historical supply; historical ID matches do not prove unchanged location.",
+    "15-minute persistence is an unvalidated sensitivity policy, not continuous sensor coverage.",
+    "Block-face offsets are approximate except footprints passing documented curb coverage threshold.",
+    "Legal eligible capacity is unavailable until exclusions, permits and full-duration restrictions are verified.",
+    "Live SODA feeds have no transaction isolation; ordered pages and count checks do not detect all concurrent replacements."
+  ],
+  "current_occupancy": {
+    "rows": 3878,
+    "invalid_rows": 0,
+    "duplicates": 0,
+    "oldest_utc": "2026-10-10 07:14:42+00:00",
+    "newest_utc": "2026-10-25 03:15:44+00:00",
+    "stale_over_15_min": 3700,
+    "pilot_rows": 132,
+    "inventory_id_match_fraction": 0.9778236204228984
+  },
+  "history": [
+    {
+      "month": "2025_09",
+      "raw_city_rows": 3586854,
+      "pilot_rows": 245830,
+      "pilot_spaces": 337,
+      "invalid_pilot_rows": 0,
+      "duplicate_pilot_rows": 0,
+      "min_utc": "2025-09-02 07:00:01+00:00",
+      "max_utc": "2025-10-01 02:59:38+00:00"
+    },
+    {
+      "month": "2026_08",
+      "raw_city_rows": 3409053,
+      "pilot_rows": 126313,
+      "pilot_spaces": 140,
+      "invalid_pilot_rows": 0,
+      "duplicate_pilot_rows": 0,
+      "min_utc": "2026-08-01 07:02:12+00:00",
+      "max_utc": "2026-09-01 06:58:59+00:00"
+    }
+  ],
+  "coverage_sensitivity": [
+    {
+      "source_id": "ladot_archive_2025_09",
+      "horizon_minutes": 5,
+      "known_hours": 14113.604444444445,
+      "expected_space_hours": 242640.0,
+      "known_fraction": 0.058166849836978424,
+      "unknown_state_rows": 0,
+      "spaces": 337
+    },
+    {
+      "source_id": "ladot_archive_2025_09",
+      "horizon_minutes": 15,
+      "known_hours": 32163.310555555556,
+      "expected_space_hours": 242640.0,
+      "known_fraction": 0.13255568148514488,
+      "unknown_state_rows": 0,
+      "spaces": 337
+    },
+    {
+      "source_id": "ladot_archive_2025_09",
+      "horizon_minutes": 60,
+      "known_hours": 78443.94361111111,
+      "expected_space_hours": 242640.0,
+      "known_fraction": 0.323293536148661,
+      "unknown_state_rows": 0,
+      "spaces": 337
+    },
+    {
+      "source_id": "ladot_archive_2026_08",
+      "horizon_minutes": 5,
+      "known_hours": 7443.6925,
+      "expected_space_hours": 104160.0,
+      "known_fraction": 0.07146402169738864,
+      "unknown_state_rows": 0,
+      "spaces": 140
+    },
+    {
+      "source_id": "ladot_archive_2026_08",
+      "horizon_minutes": 15,
+      "known_hours": 17109.56611111111,
+      "expected_space_hours": 104160.0,
+      "known_fraction": 0.1642623474569039,
+      "unknown_state_rows": 0,
+      "spaces": 140
+    },
+    {
+      "source_id": "ladot_archive_2026_08",
+      "horizon_minutes": 60,
+      "known_hours": 40788.053611111114,
+      "expected_space_hours": 104160.0,
+      "known_fraction": 0.39159037645075956,
+      "unknown_state_rows": 0,
+      "spaces": 140
+    }
+  ],
+  "geography": {
+    "source_streets": 85190,
+    "city_segments": 81315,
+    "block_faces": 162630,
+    "pilot_segments": 981,
+    "pilot_faces": 1962,
+    "authoritative_curb_faces": 84,
+    "invalid_segments": 0,
+    "invalid_faces": 0,
+    "excluded_segments": 0
+  },
+  "meters": {
+    "raw_rows": 35022,
+    "city_valid_unique_rows": 35005,
+    "quarantine_rows": 10,
+    "pilot_rows": 1584,
+    "pilot_join_status": {
+      "matched": 1562,
+      "ambiguous": 22
+    },
+    "missingness": {
+      "spaceid": 0.0,
+      "blockface": 0.0,
+      "metertype": 0.0,
+      "ratetype": 0.0,
+      "raterange": 0.0,
+      "timelimit": 0.0,
+      "latlng": 0.0,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "within_city": 0.0
+    }
+  },
+  "context_layers": {
+    "curbs": {
+      "features": 20877,
+      "invalid": 3,
+      "empty": 0
+    },
+    "driveways": {
+      "features": 5965,
+      "invalid": 0,
+      "empty": 0
+    },
+    "hydrants": {
+      "features": 763,
+      "invalid": 0,
+      "empty": 0
+    },
+    "regulatory_signs": {
+      "features": 907,
+      "invalid": 0,
+      "empty": 0
+    },
+    "bikeways": {
+      "features": 167,
+      "invalid": 0,
+      "empty": 0
+    },
+    "red_curb": {
+      "features": 12,
+      "invalid": 0,
+      "empty": 0
+    },
+    "buildings": {
+      "features": 10447,
+      "invalid": 0,
+      "empty": 0
+    },
+    "zoning": {
+      "features": 738,
+      "invalid": 0,
+      "empty": 0
+    },
+    "construction": {
+      "features": 3502,
+      "invalid": 0,
+      "empty": 0
+    },
+    "construction_streets": {
+      "features": 18,
+      "invalid": 0,
+      "empty": 0
+    }
+  },
+  "features": {
+    "driveways": {
+      "rows": 5965,
+      "valid_rows": 5965,
+      "unique_matched_source_rows": 5965,
+      "unmatched_segment_buffers": 93
+    },
+    "hydrants": {
+      "rows": 763,
+      "valid_rows": 763,
+      "unique_matched_source_rows": 762,
+      "unmatched_segment_buffers": 3
+    },
+    "buildings": {
+      "rows": 10447,
+      "valid_rows": 10447,
+      "unique_matched_source_rows": 10276,
+      "unmatched_segment_buffers": 0
+    },
+    "regulatory_signs": {
+      "rows": 907,
+      "valid_rows": 907,
+      "unique_matched_source_rows": 907,
+      "unmatched_segment_buffers": 331
+    },
+    "ucla_calendar": {
+      "normalized": 179,
+      "unparsed": [
+        {
+          "uid": "DAC58BFD-DC43-4900-B4C3-4936163C0160",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "DC1EBA9F-9950-45E7-B2C5-1715282EC7E2",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "1F762C38-EE27-4CBE-B3D6-4B0E526631F9",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "696620A2-F683-41B3-B8E6-26E1B581F1D0",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "83CE1AE8-42CD-449D-B2B2-E3C27E8C53FC",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "60068044-0625-4297-8CE7-81857F2CDF94",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "8FD61655-4EC5-429A-8F4E-656BACD248D4",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "99A0F1A7-D5D4-443F-9AEC-BD3A911AF628",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "84496B0B-ED53-4760-87B0-1EE714247634",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "DD576AB1-8211-443B-826C-02632B6A02F8",
+          "error": "Unsupported recurrence/time format"
+        },
+        {
+          "uid": "CBAEFBE5-616B-4EB2-819D-465B1C538DBA",
+          "error": "Unsupported recurrence/time format"
+        }
+      ]
+    }
+  }
+}
