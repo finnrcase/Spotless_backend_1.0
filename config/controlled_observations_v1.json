@@ -1,0 +1,23 @@
+{
+  "version": "controlled-observations-v1",
+  "seed": 453,
+  "horizons_minutes": [15, 30, 60],
+  "variants": ["A_reference", "B_context", "C_recent", "D_combined"],
+  "context_features": ["housing_density", "no_vehicle_fraction", "sweeping_route_candidate_count", "pwrs_reservation_candidate_count", "weather_temperature_c", "listed_events_starting_near_arrival"],
+  "candidates": ["mean", "weekhour", "persistence", "hierarchical", "ridge", "small_tree"],
+  "ridge_alpha": 10,
+  "tree_max_depth": 3,
+  "tree_min_samples_leaf": 5,
+  "minimum_rows": {"train": 40, "validation": 12, "calibration": 12, "test": 12},
+  "minimum_training_blocks": 4,
+  "minimum_unseen_test_blocks": 3,
+  "embargo_minutes": 180,
+  "recent_max_age_minutes": 90,
+  "bootstrap_replicates": 200,
+  "selection": "Regression validation MSE; binary validation Brier separately. Prefer the simplest candidate whose paired block/day 95% loss-difference interval includes zero relative to the best validation candidate. Calibration uses its separate partition. No automatic promotion.",
+  "learning_curves": "Chronological training-session prefixes 25/50/100 percent evaluated only on validation, never repeated final-test tuning",
+  "recent_target_exclusion": "Exclude target observation ID, source-record ID and any declared shared sample-unit ID. Require completed receipt/review before issue.",
+  "serving_incumbent": "Full-face suitable-space incumbent currently abstains; A_reference is the compatible simple training reference, not a relabeling of the meter-panel artifact",
+  "movement": "Validation-only D plus actual observed arrivals/departures, window and coverage indicators. No inferred movements from snapshot differences.",
+  "model_promotion": false
+}

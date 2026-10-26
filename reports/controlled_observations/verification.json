@@ -1,0 +1,8 @@
+{
+  "controlled_tests_passed": 6,
+  "related_product_tests_passed": 21,
+  "real_models_trained": false,
+  "real_test_outcomes_opened": false,
+  "matched_row_and_target_exclusion_tests_passed": true,
+  "real_performance_metrics": "unavailable_pending_direct_reviewed_cohort"
+}

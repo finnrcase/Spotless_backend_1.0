@@ -94,6 +94,7 @@ def reviewed_outcomes(observations,reviews,data_kind='observed'):
             occupancy_rate=o.occupied/o.surveyed_capacity if r.capacity_verified and r.complete_face_visibility_verified and o.complete_face and o.surveyed_capacity else None,
             suitable_count=o.vacant_legal if o.complete_face and r.complete_face_visibility_verified else None,label_available_at_utc=r.reviewed_at_utc.isoformat(),label_scope='direct_reviewed_block_face',
             capacity_reviewed=r.capacity_verified,eligibility_status=r.eligibility_status,official_rule_coverage_verified=r.official_rule_coverage_verified,posted_sign_coverage_verified=r.posted_sign_coverage_verified)
+        row['complete_visibility_reviewed']=r.complete_face_visibility_verified
         output[oid]=row
     if set(by_id)-seen:raise ValueError('Review refers to unknown observation IDs')
     return output,rejected
