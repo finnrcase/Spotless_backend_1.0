@@ -104,7 +104,7 @@ function renderRecords() {
 }
 populateFaces(); showFace(); renderRecords();
 $('version').textContent = `· ${PROTOCOL}`;
-$('support-note').textContent = `${inventory.faces.length.toLocaleString()} pilot faces loaded. ${inventory.support.fresh_faces} had partial fresh metered evidence at the ${formatTime(inventory.support.snapshot_utc)} snapshot; the rest had no fresh observed support. These are historical evidence counts, not current availability. Citywide accuracy remains unvalidated; areas outside this pilot are unsupported.`;
+$('support-note').textContent = `${inventory.faces.length.toLocaleString()} collection faces loaded. ${inventory.support.fresh_faces} original Westwood faces had partial fresh metered evidence at the ${formatTime(inventory.support.snapshot_utc)} snapshot. ${inventory.support.inventory_note} These are historical evidence counts, not current availability. Citywide accuracy remains unvalidated.`;
 $('search').addEventListener('input', () => populateFaces());
 $('face').addEventListener('change', () => { if (started) resetCount(); if (currentLocation?.method === 'confirmed_map_pin') currentLocation = null; $('assignment-id').value='';$('assignment-note').hidden=true; $('side-confirmed').checked = false; showFace(); persistDraft(); });
 $('locate').addEventListener('click', () => {

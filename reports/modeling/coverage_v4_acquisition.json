@@ -1,0 +1,803 @@
+{
+  "built_at_utc": "2026-10-26T04:17:59.146125+00:00",
+  "neighborhoods": {
+    "Downtown": {
+      "candidate_inventory_meters": 4310,
+      "discovery_reporting_candidate_blocks": 293,
+      "selected_blocks": 8,
+      "mapped_inventory_meters_on_full_blocks": 120,
+      "initial_join_status": {
+        "matched": 4209,
+        "ambiguous": 101
+      }
+    },
+    "Hollywood": {
+      "candidate_inventory_meters": 1647,
+      "discovery_reporting_candidate_blocks": 135,
+      "selected_blocks": 8,
+      "mapped_inventory_meters_on_full_blocks": 89,
+      "initial_join_status": {
+        "matched": 1590,
+        "ambiguous": 57
+      }
+    }
+  },
+  "months": {
+    "2025_09": {
+      "archive_sha256": "4933d910881372eac8e1d512246517510e02fb7046ec50ec30f2d4eb56013f3b",
+      "new_download": false,
+      "events": 124011,
+      "rejected": 0,
+      "duplicates": 0,
+      "quality": {
+        "events": 124011,
+        "mapped_roster_sensors": 122,
+        "roster_faces": 21,
+        "all_face_intervals": 46368,
+        "known_sensor_time_fraction": 0.13455858477864893,
+        "complete_panel_points": 1018,
+        "unknown_events": 364,
+        "conflicting_event_rows": 0,
+        "roster_end_utc": "2025-09-08T00:00:00-07:00",
+        "label_start_utc": "2025-09-08T00:00:00-07:00",
+        "label_end_utc": "2025-10-01T00:00:00-07:00"
+      },
+      "unknown_events": 364,
+      "by_region": [
+        {
+          "region": "Downtown",
+          "face_bins": 26496,
+          "supported_rate_bins": 4479,
+          "faces": 12,
+          "blocks": 7
+        },
+        {
+          "region": "Hollywood",
+          "face_bins": 19872,
+          "supported_rate_bins": 5903,
+          "faces": 9,
+          "blocks": 6
+        }
+      ]
+    },
+    "2026_06": {
+      "archive_sha256": "d975e07868048eb64d7008e9f18ee81f836f63babd59a8efb003ce2f7b222c5b",
+      "new_download": false,
+      "events": 116502,
+      "rejected": 0,
+      "duplicates": 0,
+      "quality": {
+        "events": 116502,
+        "mapped_roster_sensors": 115,
+        "roster_faces": 24,
+        "all_face_intervals": 52992,
+        "known_sensor_time_fraction": 0.13202154659385285,
+        "complete_panel_points": 1781,
+        "unknown_events": 530,
+        "conflicting_event_rows": 0,
+        "roster_end_utc": "2026-06-08T00:00:00-07:00",
+        "label_start_utc": "2026-06-08T00:00:00-07:00",
+        "label_end_utc": "2026-07-01T00:00:00-07:00"
+      },
+      "unknown_events": 530,
+      "by_region": [
+        {
+          "region": "Downtown",
+          "face_bins": 26496,
+          "supported_rate_bins": 4780,
+          "faces": 12,
+          "blocks": 8
+        },
+        {
+          "region": "Hollywood",
+          "face_bins": 26496,
+          "supported_rate_bins": 7311,
+          "faces": 12,
+          "blocks": 8
+        }
+      ]
+    },
+    "2026_07": {
+      "archive_sha256": "435ba3773086694623ce45c00fbf3d102ecfa800f5b4601648388ce17faa475b",
+      "new_download": false,
+      "events": 106637,
+      "rejected": 0,
+      "duplicates": 0,
+      "quality": {
+        "events": 106637,
+        "mapped_roster_sensors": 114,
+        "roster_faces": 24,
+        "all_face_intervals": 55296,
+        "known_sensor_time_fraction": 0.12907408676494478,
+        "complete_panel_points": 1985,
+        "unknown_events": 464,
+        "conflicting_event_rows": 0,
+        "roster_end_utc": "2026-07-08T00:00:00-07:00",
+        "label_start_utc": "2026-07-08T00:00:00-07:00",
+        "label_end_utc": "2026-08-01T00:00:00-07:00"
+      },
+      "unknown_events": 464,
+      "by_region": [
+        {
+          "region": "Downtown",
+          "face_bins": 27648,
+          "supported_rate_bins": 5139,
+          "faces": 12,
+          "blocks": 8
+        },
+        {
+          "region": "Hollywood",
+          "face_bins": 27648,
+          "supported_rate_bins": 7373,
+          "faces": 12,
+          "blocks": 8
+        }
+      ]
+    },
+    "2026_08": {
+      "archive_sha256": "8834475a47486ff6c3e8b6662c74f0d6397646adad6f516f245295e78d2acdb3",
+      "new_download": false,
+      "events": 78698,
+      "rejected": 0,
+      "duplicates": 0,
+      "quality": {
+        "events": 78698,
+        "mapped_roster_sensors": 93,
+        "roster_faces": 21,
+        "all_face_intervals": 48384,
+        "known_sensor_time_fraction": 0.13592021667164475,
+        "complete_panel_points": 2512,
+        "unknown_events": 80,
+        "conflicting_event_rows": 0,
+        "roster_end_utc": "2026-08-08T00:00:00-07:00",
+        "label_start_utc": "2026-08-08T00:00:00-07:00",
+        "label_end_utc": "2026-09-01T00:00:00-07:00"
+      },
+      "unknown_events": 80,
+      "by_region": [
+        {
+          "region": "Downtown",
+          "face_bins": 27648,
+          "supported_rate_bins": 5654,
+          "faces": 12,
+          "blocks": 8
+        },
+        {
+          "region": "Hollywood",
+          "face_bins": 20736,
+          "supported_rate_bins": 5891,
+          "faces": 9,
+          "blocks": 7
+        }
+      ]
+    }
+  },
+  "current_sensor_location_checks": {
+    "Downtown": {
+      "rows": 4002,
+      "complete_ids_verified": true,
+      "distance_over_35m": 150,
+      "location_ambiguous": 363,
+      "status_values_requested": false,
+      "historical_install_or_move_dates": "unavailable; current locations do not prove historical sensor location"
+    },
+    "Hollywood": {
+      "rows": 1511,
+      "complete_ids_verified": true,
+      "distance_over_35m": 38,
+      "location_ambiguous": 115,
+      "status_values_requested": false,
+      "historical_install_or_move_dates": "unavailable; current locations do not prove historical sensor location"
+    }
+  },
+  "sensor_status": "Current SENSOR_STATUS values excluded to preserve holdouts; historical UNKNOWN and report gaps remain uncertain, not vacancy.",
+  "census_join": {
+    "blocks": 16,
+    "missing_tracts": 0,
+    "missing_household_features": 0
+  },
+  "new_occupancy_archive_downloads": 0,
+  "fresh_holdouts_opened": false,
+  "unmetered_occupancy_labels": 0,
+  "citywide_accuracy_validated": false,
+  "geometry_vintage": "Current inventory/map; historical mapping and relocations unverified; sensor locations are not stalls or legal supply",
+  "event_reporting_audit": {
+    "2025_09": {
+      "Downtown": {
+        "events": 37870,
+        "sensors": 76,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "VACANT": 18957,
+          "OCCUPIED": 18913
+        },
+        "successive_known_pairs": 37794,
+        "same_state_pairs": 77,
+        "opposite_state_pairs": 37717,
+        "same_state_fraction": 0.0020373604275810975,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.2,
+          "0.25": 1.2,
+          "0.5": 8.283333333333333,
+          "0.75": 36.94166666666667,
+          "0.9": 155.95666666666756,
+          "0.95": 463.74583333333226,
+          "0.99": 1192.6079999999984
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.18333333333333332,
+          "0.75": 0.6333333333333333,
+          "0.9": 30.02333333333344,
+          "0.95": 96.08000000000014,
+          "0.99": 1573.1639999999913
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.2,
+          "0.25": 1.2,
+          "0.5": 8.316666666666666,
+          "0.75": 37.03333333333333,
+          "0.9": 156.31333333333373,
+          "0.95": 464.25999999999965,
+          "0.99": 1191.0099999999745
+        },
+        "gaps_over_3_hours": 3550,
+        "gaps_over_24_hours": 331,
+        "retrospective_roster_sensor_days_without_events": 1739,
+        "events_by_local_hour": {
+          "0": 774,
+          "1": 192,
+          "2": 275,
+          "3": 172,
+          "4": 191,
+          "5": 296,
+          "6": 693,
+          "7": 2001,
+          "8": 2804,
+          "9": 3450,
+          "10": 3357,
+          "11": 3325,
+          "12": 3329,
+          "13": 3090,
+          "14": 3253,
+          "15": 3185,
+          "16": 3503,
+          "17": 3067,
+          "18": 506,
+          "19": 348,
+          "20": 11,
+          "21": 14,
+          "22": 16,
+          "23": 18
+        },
+        "event_timestamp_first": "2025-09-01T07:52:04+00:00",
+        "event_timestamp_last": "2025-10-01T04:51:19+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      },
+      "Hollywood": {
+        "events": 86141,
+        "sensors": 47,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "OCCUPIED": 42892,
+          "VACANT": 42885,
+          "UNKNOWN": 364
+        },
+        "successive_known_pairs": 85367,
+        "same_state_pairs": 18,
+        "opposite_state_pairs": 85349,
+        "same_state_fraction": 0.0002108543113849614,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.1,
+          "0.5": 0.9,
+          "0.75": 8.266666666666667,
+          "0.9": 48.9,
+          "0.95": 112.9,
+          "0.99": 356.54499999999973
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.995,
+          "0.25": 1.725,
+          "0.5": 14.05,
+          "0.75": 69.625,
+          "0.9": 135.8916666666667,
+          "0.95": 202.8299999999998,
+          "0.99": 288.6459999999998
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.1,
+          "0.5": 0.9,
+          "0.75": 8.233333333333333,
+          "0.9": 48.81666666666667,
+          "0.95": 112.8,
+          "0.99": 356.56000000000034
+        },
+        "gaps_over_3_hours": 2729,
+        "gaps_over_24_hours": 36,
+        "retrospective_roster_sensor_days_without_events": 1302,
+        "events_by_local_hour": {
+          "0": 3400,
+          "1": 2623,
+          "2": 2692,
+          "3": 1349,
+          "4": 763,
+          "5": 682,
+          "6": 1470,
+          "7": 2812,
+          "8": 3740,
+          "9": 3411,
+          "10": 3613,
+          "11": 3517,
+          "12": 4011,
+          "13": 4202,
+          "14": 4375,
+          "15": 4607,
+          "16": 3678,
+          "17": 4855,
+          "18": 5431,
+          "19": 5703,
+          "20": 5046,
+          "21": 4927,
+          "22": 4781,
+          "23": 4453
+        },
+        "event_timestamp_first": "2025-09-01T07:00:12+00:00",
+        "event_timestamp_last": "2025-10-01T06:59:15+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      }
+    },
+    "2026_06": {
+      "Downtown": {
+        "events": 36465,
+        "sensors": 65,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "VACANT": 18259,
+          "OCCUPIED": 18206
+        },
+        "successive_known_pairs": 36400,
+        "same_state_pairs": 90,
+        "opposite_state_pairs": 36310,
+        "same_state_fraction": 0.0024725274725274724,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.8833333333333333,
+          "0.5": 7.083333333333333,
+          "0.75": 34.05,
+          "0.9": 125.68500000000004,
+          "0.95": 385.5774999999976,
+          "0.99": 1213.4310000000098
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.18333333333333332,
+          "0.75": 9.3125,
+          "0.9": 140.8366666666677,
+          "0.95": 555.3424999999991,
+          "0.99": 4511.730166666657
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.9,
+          "0.5": 7.1083333333333325,
+          "0.75": 34.1,
+          "0.9": 125.6533333333334,
+          "0.95": 385.5274999999998,
+          "0.99": 1199.451833333332
+        },
+        "gaps_over_3_hours": 2905,
+        "gaps_over_24_hours": 329,
+        "retrospective_roster_sensor_days_without_events": 2037,
+        "events_by_local_hour": {
+          "0": 683,
+          "1": 213,
+          "2": 182,
+          "3": 160,
+          "4": 191,
+          "5": 371,
+          "6": 1030,
+          "7": 2069,
+          "8": 2903,
+          "9": 3413,
+          "10": 3187,
+          "11": 2986,
+          "12": 2966,
+          "13": 3119,
+          "14": 3073,
+          "15": 2946,
+          "16": 3051,
+          "17": 2817,
+          "18": 485,
+          "19": 416,
+          "20": 74,
+          "21": 51,
+          "22": 39,
+          "23": 40
+        },
+        "event_timestamp_first": "2026-06-01T07:00:13+00:00",
+        "event_timestamp_last": "2026-07-01T03:47:10+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      },
+      "Hollywood": {
+        "events": 80037,
+        "sensors": 54,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "OCCUPIED": 39838,
+          "VACANT": 39669,
+          "UNKNOWN": 530
+        },
+        "successive_known_pairs": 78935,
+        "same_state_pairs": 11,
+        "opposite_state_pairs": 78924,
+        "same_state_fraction": 0.00013935516564261735,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.2,
+          "0.5": 1.0166666666666666,
+          "0.75": 10.016666666666667,
+          "0.9": 56.3,
+          "0.95": 127.60500000000005,
+          "0.99": 422.2640000000014
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 1.2,
+          "0.25": 2.0083333333333333,
+          "0.5": 6.8,
+          "0.75": 24.316666666666666,
+          "0.9": 54.36666666666667,
+          "0.95": 185.14166666666668,
+          "0.99": 289.76166666666677
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.2,
+          "0.5": 1.0083333333333333,
+          "0.75": 10.016666666666667,
+          "0.9": 56.3,
+          "0.95": 127.6,
+          "0.99": 422.3080000000016
+        },
+        "gaps_over_3_hours": 3028,
+        "gaps_over_24_hours": 46,
+        "retrospective_roster_sensor_days_without_events": 1164,
+        "events_by_local_hour": {
+          "0": 2868,
+          "1": 2265,
+          "2": 2850,
+          "3": 1325,
+          "4": 808,
+          "5": 814,
+          "6": 1507,
+          "7": 2468,
+          "8": 3544,
+          "9": 3575,
+          "10": 3237,
+          "11": 3383,
+          "12": 3823,
+          "13": 3740,
+          "14": 3514,
+          "15": 3613,
+          "16": 3726,
+          "17": 4657,
+          "18": 5585,
+          "19": 5213,
+          "20": 4624,
+          "21": 4739,
+          "22": 4395,
+          "23": 3764
+        },
+        "event_timestamp_first": "2026-06-01T07:00:41+00:00",
+        "event_timestamp_last": "2026-07-01T06:59:30+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      }
+    },
+    "2026_07": {
+      "Downtown": {
+        "events": 34267,
+        "sensors": 65,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "VACANT": 17148,
+          "OCCUPIED": 17119
+        },
+        "successive_known_pairs": 34202,
+        "same_state_pairs": 81,
+        "opposite_state_pairs": 34121,
+        "same_state_fraction": 0.0023682825565756386,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.2,
+          "0.25": 1.0666666666666667,
+          "0.5": 8.266666666666667,
+          "0.75": 37.579166666666666,
+          "0.9": 151.51666666666668,
+          "0.95": 428.7766666666663,
+          "0.99": 1352.8938333333288
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.16666666666666666,
+          "0.5": 3.033333333333333,
+          "0.75": 34.28333333333333,
+          "0.9": 378.55,
+          "0.95": 998.8666666666667,
+          "0.99": 1584.173333333336
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.2,
+          "0.25": 1.0666666666666667,
+          "0.5": 8.266666666666667,
+          "0.75": 37.61666666666667,
+          "0.9": 151.46666666666667,
+          "0.95": 428.23333333333335,
+          "0.99": 1350.2266666666726
+        },
+        "gaps_over_3_hours": 3093,
+        "gaps_over_24_hours": 330,
+        "retrospective_roster_sensor_days_without_events": 2098,
+        "events_by_local_hour": {
+          "0": 758,
+          "1": 204,
+          "2": 192,
+          "3": 135,
+          "4": 131,
+          "5": 320,
+          "6": 916,
+          "7": 2014,
+          "8": 2783,
+          "9": 3034,
+          "10": 2784,
+          "11": 2969,
+          "12": 2792,
+          "13": 2438,
+          "14": 2771,
+          "15": 2739,
+          "16": 3014,
+          "17": 2844,
+          "18": 626,
+          "19": 456,
+          "20": 109,
+          "21": 98,
+          "22": 80,
+          "23": 60
+        },
+        "event_timestamp_first": "2026-07-01T07:00:07+00:00",
+        "event_timestamp_last": "2026-08-01T06:37:14+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      },
+      "Hollywood": {
+        "events": 72370,
+        "sensors": 54,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "OCCUPIED": 36023,
+          "VACANT": 35883,
+          "UNKNOWN": 464
+        },
+        "successive_known_pairs": 71404,
+        "same_state_pairs": 28,
+        "opposite_state_pairs": 71376,
+        "same_state_fraction": 0.00039213489440367486,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.2,
+          "0.5": 1.2,
+          "0.75": 11.6,
+          "0.9": 62.31166666666674,
+          "0.95": 135.81416666666652,
+          "0.99": 463.107666666667
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 4.300000000000001,
+          "0.25": 190.5875,
+          "0.5": 400.46666666666664,
+          "0.75": 564.9458333333333,
+          "0.9": 877.0633333333333,
+          "0.95": 967.4591666666665,
+          "0.99": 1073.617
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.2,
+          "0.5": 1.2,
+          "0.75": 11.6,
+          "0.9": 62.2,
+          "0.95": 135.0,
+          "0.99": 459.45416666666665
+        },
+        "gaps_over_3_hours": 2865,
+        "gaps_over_24_hours": 97,
+        "retrospective_roster_sensor_days_without_events": 1254,
+        "events_by_local_hour": {
+          "0": 2457,
+          "1": 2218,
+          "2": 2336,
+          "3": 965,
+          "4": 619,
+          "5": 924,
+          "6": 1285,
+          "7": 1878,
+          "8": 2695,
+          "9": 2842,
+          "10": 3115,
+          "11": 3250,
+          "12": 3455,
+          "13": 3296,
+          "14": 3331,
+          "15": 3228,
+          "16": 3428,
+          "17": 4032,
+          "18": 4827,
+          "19": 4880,
+          "20": 4645,
+          "21": 4649,
+          "22": 4317,
+          "23": 3698
+        },
+        "event_timestamp_first": "2026-07-01T07:00:54+00:00",
+        "event_timestamp_last": "2026-08-01T06:59:38+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      }
+    },
+    "2026_08": {
+      "Downtown": {
+        "events": 40384,
+        "sensors": 64,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "VACANT": 20208,
+          "OCCUPIED": 20176
+        },
+        "successive_known_pairs": 40320,
+        "same_state_pairs": 145,
+        "opposite_state_pairs": 40175,
+        "same_state_fraction": 0.0035962301587301585,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.18333333333333332,
+          "0.25": 1.0166666666666666,
+          "0.5": 8.516666666666667,
+          "0.75": 42.34166666666667,
+          "0.9": 156.9866666666666,
+          "0.95": 381.6366666666664,
+          "0.99": 856.3381666666663
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.18333333333333332,
+          "0.5": 3.066666666666667,
+          "0.75": 93.85,
+          "0.9": 408.68666666666644,
+          "0.95": 887.0066666666659,
+          "0.99": 2779.0886666666693
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.2,
+          "0.25": 1.0166666666666666,
+          "0.5": 8.516666666666667,
+          "0.75": 42.25,
+          "0.9": 155.83333333333323,
+          "0.95": 379.7416666666656,
+          "0.99": 853.6933333333337
+        },
+        "gaps_over_3_hours": 3621,
+        "gaps_over_24_hours": 107,
+        "retrospective_roster_sensor_days_without_events": 1900,
+        "events_by_local_hour": {
+          "0": 396,
+          "1": 311,
+          "2": 313,
+          "3": 236,
+          "4": 223,
+          "5": 323,
+          "6": 1107,
+          "7": 1969,
+          "8": 2798,
+          "9": 3229,
+          "10": 2968,
+          "11": 3079,
+          "12": 2945,
+          "13": 2956,
+          "14": 2722,
+          "15": 3046,
+          "16": 3153,
+          "17": 2810,
+          "18": 1976,
+          "19": 1549,
+          "20": 658,
+          "21": 642,
+          "22": 588,
+          "23": 387
+        },
+        "event_timestamp_first": "2026-08-01T07:00:13+00:00",
+        "event_timestamp_last": "2026-09-01T06:59:48+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      },
+      "Hollywood": {
+        "events": 38314,
+        "sensors": 30,
+        "exact_duplicate_rows": 0,
+        "conflicting_state_rows": 0,
+        "states": {
+          "OCCUPIED": 19142,
+          "VACANT": 19092,
+          "UNKNOWN": 80
+        },
+        "successive_known_pairs": 38124,
+        "same_state_pairs": 16,
+        "opposite_state_pairs": 38108,
+        "same_state_fraction": 0.00041968313922988144,
+        "all_pair_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.6458333333333334,
+          "0.5": 2.4,
+          "0.75": 15.004166666666666,
+          "0.9": 77.59000000000015,
+          "0.95": 168.7,
+          "0.99": 535.7016666666651
+        },
+        "same_state_gap_minutes_quantiles": {
+          "0.1": 0.16666666666666666,
+          "0.25": 0.18333333333333332,
+          "0.5": 7.058333333333334,
+          "0.75": 86.2125,
+          "0.9": 253.65833333333336,
+          "0.95": 433.09583333333336,
+          "0.99": 757.2058333333332
+        },
+        "opposite_state_gap_minutes_quantiles": {
+          "0.1": 0.1,
+          "0.25": 0.65,
+          "0.5": 2.4,
+          "0.75": 15.0,
+          "0.9": 77.53333333333333,
+          "0.95": 168.54083333333367,
+          "0.99": 535.3026666666668
+        },
+        "gaps_over_3_hours": 1820,
+        "gaps_over_24_hours": 29,
+        "retrospective_roster_sensor_days_without_events": 1861,
+        "events_by_local_hour": {
+          "0": 999,
+          "1": 810,
+          "2": 1011,
+          "3": 285,
+          "4": 203,
+          "5": 357,
+          "6": 558,
+          "7": 985,
+          "8": 1241,
+          "9": 1299,
+          "10": 1383,
+          "11": 1688,
+          "12": 1736,
+          "13": 1602,
+          "14": 1667,
+          "15": 1625,
+          "16": 1860,
+          "17": 3007,
+          "18": 3616,
+          "19": 3612,
+          "20": 2681,
+          "21": 2497,
+          "22": 2145,
+          "23": 1447
+        },
+        "event_timestamp_first": "2026-08-01T07:00:00+00:00",
+        "event_timestamp_last": "2026-09-01T06:59:59+00:00",
+        "interpretation": "Opposite-state dominance supports change-driven reporting; same-state messages are reaffirmations, not proof of a periodic heartbeat. Silence can be stable occupancy, inactive hours, missing transmission or outage."
+      }
+    }
+  },
+  "location_budget_note": "Downtown first query stopped at 4002 > 2000. Explicit ceiling increased to 4500 location-only features, exact object ID reconciliation; no truncated page accepted."
+}

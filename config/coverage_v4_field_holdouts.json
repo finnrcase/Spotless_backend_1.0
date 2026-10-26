@@ -1,0 +1,31 @@
+{
+  "version": "coverage-v4-field",
+  "unseen_physical_blocks": [
+    "la:boe:asset:172632:oid:90476:part:0",
+    "la:boe:asset:47050:oid:46468:part:0"
+  ],
+  "reserved_session_ids": [
+    "downtown-v4-2026-11-18",
+    "hollywood-v4-2026-11-19"
+  ],
+  "reserved_assignment_ids": [
+    "downtown-v4-2026-11-18-00-0",
+    "downtown-v4-2026-11-18-00-1",
+    "downtown-v4-2026-11-18-15-0",
+    "downtown-v4-2026-11-18-15-1",
+    "downtown-v4-2026-11-18-30-0",
+    "downtown-v4-2026-11-18-30-1",
+    "downtown-v4-2026-11-18-60-0",
+    "downtown-v4-2026-11-18-60-1",
+    "hollywood-v4-2026-11-19-00-0",
+    "hollywood-v4-2026-11-19-00-1",
+    "hollywood-v4-2026-11-19-15-0",
+    "hollywood-v4-2026-11-19-15-1",
+    "hollywood-v4-2026-11-19-30-0",
+    "hollywood-v4-2026-11-19-30-1",
+    "hollywood-v4-2026-11-19-60-0",
+    "hollywood-v4-2026-11-19-60-1"
+  ],
+  "counts_collected": 0,
+  "block_selection": "Short City streets with no inventory meter point within 30m, nearest regional bbox center; absence is a reconnaissance candidate, not verified unmetered status."
+}

@@ -1,0 +1,11 @@
+{
+  "credential": {
+    "loaded": true,
+    "source": "local_env"
+  },
+  "request_attempted": true,
+  "authenticated_request_succeeded": false,
+  "status": "authentication_failed",
+  "http_status": 200,
+  "reason": "Census did not return the expected authenticated JSON data; credential value withheld."
+}

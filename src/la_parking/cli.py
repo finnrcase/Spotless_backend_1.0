@@ -4,6 +4,8 @@ from pathlib import Path
 
 
 def main():
+    from .environment import load_local_env
+    load_local_env()
     p=argparse.ArgumentParser(description='Los Angeles parking data foundation')
     sub=p.add_subparsers(dest='command',required=True)
     sig=sub.add_parser('acquire-signals');sig.add_argument('--refresh',action='store_true')

@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve byte hashes in the registered coverage-v4 protocol on Windows checkouts.
+config/coverage_v4.json text eol=lf

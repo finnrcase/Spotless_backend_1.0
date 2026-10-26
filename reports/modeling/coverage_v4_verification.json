@@ -1,0 +1,13 @@
+{
+  "python_tests_passed": 126,
+  "javascript_tests_passed": 8,
+  "collector_route_imagery_browser_checks_passed": 25,
+  "map_api_browser_checks_passed": 13,
+  "experiment_integrity_checks_passed": true,
+  "credential_value_staged_scan_passed": true,
+  "new_holdouts_opened": false,
+  "unmetered_validation_n": 0,
+  "census_authentication": "failed_invalid_key_response_HTTP200_HTML",
+  "upstream_commit_preserved": "eb1637c6dece112189f29f044df83beb1dea7805",
+  "warnings": "Pandas/NumPy deprecation and empty/all-NA concatenation warnings remain; checks passed."
+}

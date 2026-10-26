@@ -1,0 +1,18 @@
+{
+  "checks_passed": true,
+  "variants_have_identical_targets": true,
+  "new_holdouts_unopened": true,
+  "model_sha256": {
+    "artifacts\\models\\coverage_v4\\any_panel_vacant_additional_census.joblib": "a05bce3b2bd5029c245f2f11a9d4c610895e8e86df9e234eb4829ed98b44bec7",
+    "artifacts\\models\\coverage_v4\\any_panel_vacant_calendar.joblib": "2126b72a53aebbea1c13518d3749313bd7c9ac7606c280ccc881f942a7f0c37d",
+    "artifacts\\models\\coverage_v4\\any_panel_vacant_existing_census.joblib": "629d6cb1c5d79b48317217d90f507a8ac7115a3609f312391ca9445169a8f067",
+    "artifacts\\models\\coverage_v4\\available_count_additional_census.joblib": "af4be5fa9902718521c77fd4e0dd4bf8e3b9b80a7e46f028298385c238e17e1e",
+    "artifacts\\models\\coverage_v4\\available_count_calendar.joblib": "6ca754c76c3c8de9f029d4baf785b9c76875cab6cc877c127dfa8ea9d2acf844",
+    "artifacts\\models\\coverage_v4\\available_count_existing_census.joblib": "3c1dd87cf7beb473e50965cfff7ef1176a7258b25bca26305d0b36887fe8b291",
+    "artifacts\\models\\coverage_v4\\occupancy_rate_additional_census.joblib": "b59b1c2cd50b28ad59796e42ea16b495218483d10ccdf13760e5b5ca379f19a8",
+    "artifacts\\models\\coverage_v4\\occupancy_rate_calendar.joblib": "dce6329eb5dfe4f872a67ef03cb14b99d0582198040783c2609fa63b04dd6360",
+    "artifacts\\models\\coverage_v4\\occupancy_rate_existing_census.joblib": "3bbc282afc8375cdbbc4aef2b492bd06f6ff8831e69545513864509a44a452dc"
+  },
+  "models_promoted": false,
+  "unmetered_validation_n": 0
+}

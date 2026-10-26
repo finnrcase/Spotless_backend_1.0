@@ -1,0 +1,13 @@
+{
+  "registered_at_utc": "2026-10-26T04:23:12.914524+00:00",
+  "config_sha256": "d2592486e2ba91f7c3255d6834bb443a58b486eab15ab635d9fcc88fb4dd645f",
+  "inputs_sha256": {
+    "data\\modeling\\coverage_v4\\design.parquet": "c41758e24582d4165cd9402ba230e017986c6872ac6a07e830d6cf145adc6271",
+    "data\\modeling\\coverage_v4\\tract_features.parquet": "adb12133bc279a9ef6154c979973b956c3c8251a46b6354e4dc619dea3ccb919"
+  },
+  "methods": "Fixed ExtraTrees; calendar / existing ACS / additional ACS. Training-only pooled/weekhour baselines. No own histories or IDs enter transferable models. Known-block temporal-v2 is retained separately.",
+  "regression_selection": "Geographic+chronological validation MSE per target; known-block chronological validation reported separately",
+  "probability_selection": "Separate validation Brier objective; chronological calibration Aug17-21; calibration transfer to unseen geography remains unvalidated",
+  "untouched_holdouts_opened": false,
+  "models_promoted": false
+}

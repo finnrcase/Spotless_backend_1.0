@@ -1,0 +1,56 @@
+{
+  "year": 2023,
+  "survey_period": "2019-2023",
+  "public_release": "2024-12-12",
+  "available_at_utc": "2024-12-13T00:00:00Z",
+  "sources": {
+    "b08201": {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b08201.dat",
+      "sha256": "71e502d0d2b456cb49af97cf9ff2d43fcbd9a7f9c2ee737fdb41721f9ad87a8b",
+      "retrieved_at_utc": "2026-10-25T20:48:50.621316+00:00",
+      "cached_national_bytes": 64905879,
+      "extracted_county_tracts": 2498,
+      "previous_tracts": 53,
+      "common_tracts": 53,
+      "estimate_and_moe_cell_mismatches": 0
+    },
+    "b25001": {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b25001.dat",
+      "sha256": "dc6f4a1cceb6f1f05d8ef61c0805e820c957bf41fb011851850779b693b67eaf",
+      "retrieved_at_utc": "2026-10-25T20:48:55.532840+00:00",
+      "cached_national_bytes": 17781864,
+      "extracted_county_tracts": 2498,
+      "previous_tracts": 53,
+      "common_tracts": 53,
+      "estimate_and_moe_cell_mismatches": 0
+    }
+  },
+  "geometry_source": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/6",
+  "county_geometry_tracts": 2498,
+  "county_tracts_without_matching_2023_table": 0,
+  "previous_context_rows": 981,
+  "existing_vehicle_fraction_pairs": 964,
+  "existing_vehicle_fraction_max_abs_difference": 0.0,
+  "previous_missing_vehicle_rows": 17,
+  "newly_filled_previous_vehicle_rows": 0,
+  "zero_household_tracts": 29,
+  "new_features": [
+    "vehicle_lower_bound_per_household",
+    "one_person_household_fraction"
+  ],
+  "duplicate_predictors_added": false,
+  "moe_handling": "All original estimate and 90% margin-of-error columns retained, including sentinel codes. Derived ratio MOE remains null; numerator/denominator MOEs are not sufficient to assert covariance.",
+  "vehicle_censoring": "4+ vehicle households contribute four to a lower bound, not an exact vehicle count. No-vehicle complement is not added as a duplicate predictor.",
+  "occupancy_labels_created": 0,
+  "api_comparison": {
+    "credential": {
+      "loaded": true,
+      "source": "local_env"
+    },
+    "request_attempted": true,
+    "authenticated_request_succeeded": false,
+    "status": "authentication_failed",
+    "http_status": 200,
+    "reason": "Census did not return the expected authenticated JSON data; credential value withheld."
+  }
+}

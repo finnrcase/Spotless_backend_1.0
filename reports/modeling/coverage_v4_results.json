@@ -1,0 +1,3602 @@
+[
+  {
+    "axis": "unseen_block",
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.15928632846087704,
+    "n": 3705,
+    "r2": 0.09539778409140776,
+    "mae": 0.2763072424234024,
+    "rmse": 0.32413475106087913,
+    "r2_note": null,
+    "macro_block_mse": 0.10683966295446794,
+    "blocks": 5,
+    "faces": 9,
+    "row_sha256": "e687f78ed33a573cd1c0bd5a629b1703464196037614885fb882fb942f8b441a",
+    "r2_block_95pct": [
+      0.08058182559456001,
+      0.10402122435473998
+    ],
+    "mae_block_95pct": [
+      0.2587669904677244,
+      0.2945251918214575
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.17916041979010494,
+    "n": 478,
+    "r2": 0.02834486780428147,
+    "mae": 0.29911984167179745,
+    "rmse": 0.3428778666793321,
+    "r2_note": null,
+    "macro_block_mse": 0.1144506539579296,
+    "blocks": 3,
+    "faces": 4,
+    "row_sha256": "b93601c0ab7c129251bf869fd2f7e71fa7c1c542ccbfb12d9cd6c4a969794b78",
+    "r2_block_95pct": [
+      -0.1847934525144912,
+      0.0770319383193161
+    ],
+    "mae_block_95pct": [
+      0.26984965766928193,
+      0.31305784666794195
+    ],
+    "bootstrap_blocks": 3,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.3294602698650675,
+    "n": 5274,
+    "r2": 0.12409947940382582,
+    "mae": 0.2558006314104624,
+    "rmse": 0.3009541276243123,
+    "r2_note": null,
+    "macro_block_mse": 0.09219433213601536,
+    "blocks": 17,
+    "faces": 24,
+    "row_sha256": "231e3616fa56a9f29540a9bb1fd92fe0712f57dd019be7ff6e2219f7e88cd46e",
+    "r2_block_95pct": [
+      0.09039643740485173,
+      0.1525019585540451
+    ],
+    "mae_block_95pct": [
+      0.23453759037533514,
+      0.2815923110117606
+    ],
+    "bootstrap_blocks": 17,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.20677161419290355,
+    "n": 1655,
+    "r2": -0.1418831599507666,
+    "mae": 0.294656363340873,
+    "rmse": 0.35143121244080705,
+    "r2_note": null,
+    "macro_block_mse": 0.1284296473069202,
+    "blocks": 8,
+    "faces": 12,
+    "row_sha256": "0e605567f8315ea358e20384e9882611d79195a13624e5ebc9235bc3b646dfd5",
+    "r2_block_95pct": [
+      -0.30156250023147113,
+      -0.032942566656387395
+    ],
+    "mae_block_95pct": [
+      0.25973318177470894,
+      0.3489016945637022
+    ],
+    "bootstrap_blocks": 8,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.2753623188405797,
+    "n": 1653,
+    "r2": -0.08213318362947519,
+    "mae": 0.3281650758690126,
+    "rmse": 0.3753926193599648,
+    "r2_note": null,
+    "macro_block_mse": 0.1513979935669969,
+    "blocks": 7,
+    "faces": 9,
+    "row_sha256": "998e6895f8aee7614d4844fc56692c5a5d2a708563fc37aa54bb9aec33dd12c8",
+    "r2_block_95pct": [
+      -0.34853138902968334,
+      -0.004784309064027857
+    ],
+    "mae_block_95pct": [
+      0.291134928829832,
+      0.38083243515096005
+    ],
+    "bootstrap_blocks": 7,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "existing_census",
+    "target": "occupancy_rate",
+    "selected_for_target": true,
+    "candidate_rows": 23260,
+    "coverage": 0.15928632846087704,
+    "n": 3705,
+    "r2": -0.022388597908070906,
+    "mae": 0.2976006640873991,
+    "rmse": 0.3445916662572653,
+    "r2_note": null,
+    "macro_block_mse": 0.12068577517197601,
+    "blocks": 5,
+    "faces": 9,
+    "row_sha256": "e687f78ed33a573cd1c0bd5a629b1703464196037614885fb882fb942f8b441a",
+    "r2_block_95pct": [
+      -0.08883646972295245,
+      0.06262443669290818
+    ],
+    "mae_block_95pct": [
+      0.27705705457784924,
+      0.32288276199000704
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "existing_census",
+    "target": "occupancy_rate",
+    "selected_for_target": true,
+    "candidate_rows": 2668,
+    "coverage": 0.17916041979010494,
+    "n": 478,
+    "r2": 0.0494789833394903,
+    "mae": 0.29617082387775145,
+    "rmse": 0.3391284610467526,
+    "r2_note": null,
+    "macro_block_mse": 0.11209476314389555,
+    "blocks": 3,
+    "faces": 4,
+    "row_sha256": "b93601c0ab7c129251bf869fd2f7e71fa7c1c542ccbfb12d9cd6c4a969794b78",
+    "r2_block_95pct": [
+      -0.1707755425813149,
+      0.10669826991234699
+    ],
+    "mae_block_95pct": [
+      0.26547579621757345,
+      0.3114594958574911
+    ],
+    "bootstrap_blocks": 3,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "existing_census",
+    "target": "occupancy_rate",
+    "selected_for_target": true,
+    "candidate_rows": 16008,
+    "coverage": 0.3294602698650675,
+    "n": 5274,
+    "r2": 0.15155983767796277,
+    "mae": 0.2439103210599443,
+    "rmse": 0.29619895437266586,
+    "r2_note": null,
+    "macro_block_mse": 0.0892541142019674,
+    "blocks": 17,
+    "faces": 24,
+    "row_sha256": "231e3616fa56a9f29540a9bb1fd92fe0712f57dd019be7ff6e2219f7e88cd46e",
+    "r2_block_95pct": [
+      0.07571039507892507,
+      0.2144758810074579
+    ],
+    "mae_block_95pct": [
+      0.22107669401138894,
+      0.26868821835821616
+    ],
+    "bootstrap_blocks": 17,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "existing_census",
+    "target": "occupancy_rate",
+    "selected_for_target": true,
+    "candidate_rows": 8004,
+    "coverage": 0.20677161419290355,
+    "n": 1655,
+    "r2": 0.08597197712694071,
+    "mae": 0.2641265973943324,
+    "rmse": 0.31441934029844537,
+    "r2_note": null,
+    "macro_block_mse": 0.10639143112741886,
+    "blocks": 8,
+    "faces": 12,
+    "row_sha256": "0e605567f8315ea358e20384e9882611d79195a13624e5ebc9235bc3b646dfd5",
+    "r2_block_95pct": [
+      0.004762711273743177,
+      0.1439548168032754
+    ],
+    "mae_block_95pct": [
+      0.23383277207906655,
+      0.30667944012893755
+    ],
+    "bootstrap_blocks": 8,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "existing_census",
+    "target": "occupancy_rate",
+    "selected_for_target": true,
+    "candidate_rows": 6003,
+    "coverage": 0.2753623188405797,
+    "n": 1653,
+    "r2": 0.09653326525845651,
+    "mae": 0.2937172402754477,
+    "rmse": 0.3430057935233383,
+    "r2_note": null,
+    "macro_block_mse": 0.11682283311014487,
+    "blocks": 7,
+    "faces": 9,
+    "row_sha256": "998e6895f8aee7614d4844fc56692c5a5d2a708563fc37aa54bb9aec33dd12c8",
+    "r2_block_95pct": [
+      -0.01505986177946923,
+      0.18809310659505402
+    ],
+    "mae_block_95pct": [
+      0.26019674978457835,
+      0.332868195242701
+    ],
+    "bootstrap_blocks": 7,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "additional_census",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.15928632846087704,
+    "n": 3705,
+    "r2": 0.05189240642571924,
+    "mae": 0.28597907524728,
+    "rmse": 0.3318375924690753,
+    "r2_note": null,
+    "macro_block_mse": 0.1120051776402484,
+    "blocks": 5,
+    "faces": 9,
+    "row_sha256": "e687f78ed33a573cd1c0bd5a629b1703464196037614885fb882fb942f8b441a",
+    "r2_block_95pct": [
+      0.020924054378824972,
+      0.07481023061888592
+    ],
+    "mae_block_95pct": [
+      0.26678629631709094,
+      0.3057821375139601
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "additional_census",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.17916041979010494,
+    "n": 478,
+    "r2": 0.03767197740815742,
+    "mae": 0.2983760283499729,
+    "rmse": 0.3412282221212269,
+    "r2_note": null,
+    "macro_block_mse": 0.11461299834686157,
+    "blocks": 3,
+    "faces": 4,
+    "row_sha256": "b93601c0ab7c129251bf869fd2f7e71fa7c1c542ccbfb12d9cd6c4a969794b78",
+    "r2_block_95pct": [
+      -0.20302025039145843,
+      0.0706789120322876
+    ],
+    "mae_block_95pct": [
+      0.2715571633762067,
+      0.3108763050240359
+    ],
+    "bootstrap_blocks": 3,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "additional_census",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.3294602698650675,
+    "n": 5274,
+    "r2": 0.15207125490038442,
+    "mae": 0.2424793056813579,
+    "rmse": 0.29610967048008324,
+    "r2_note": null,
+    "macro_block_mse": 0.08905319290326487,
+    "blocks": 17,
+    "faces": 24,
+    "row_sha256": "231e3616fa56a9f29540a9bb1fd92fe0712f57dd019be7ff6e2219f7e88cd46e",
+    "r2_block_95pct": [
+      0.07211083694603926,
+      0.22032824274122695
+    ],
+    "mae_block_95pct": [
+      0.21939722733131112,
+      0.2672412399860899
+    ],
+    "bootstrap_blocks": 17,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "additional_census",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.20677161419290355,
+    "n": 1655,
+    "r2": 0.09558183998432168,
+    "mae": 0.2625793199294938,
+    "rmse": 0.31276210956542266,
+    "r2_note": null,
+    "macro_block_mse": 0.10511021965794569,
+    "blocks": 8,
+    "faces": 12,
+    "row_sha256": "0e605567f8315ea358e20384e9882611d79195a13624e5ebc9235bc3b646dfd5",
+    "r2_block_95pct": [
+      0.019356778480587655,
+      0.1527285387930867
+    ],
+    "mae_block_95pct": [
+      0.23232465866783547,
+      0.3051673723572825
+    ],
+    "bootstrap_blocks": 8,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "additional_census",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.2753623188405797,
+    "n": 1653,
+    "r2": 0.11496063734016937,
+    "mae": 0.29046600743436396,
+    "rmse": 0.3394897492898364,
+    "r2_note": null,
+    "macro_block_mse": 0.11390917142502903,
+    "blocks": 7,
+    "faces": 9,
+    "row_sha256": "998e6895f8aee7614d4844fc56692c5a5d2a708563fc37aa54bb9aec33dd12c8",
+    "r2_block_95pct": [
+      0.010509183712860484,
+      0.20423714152283035
+    ],
+    "mae_block_95pct": [
+      0.2574531922572922,
+      0.3287965226924758
+    ],
+    "bootstrap_blocks": 7,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "pooled_mean",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.15928632846087704,
+    "n": 3705,
+    "r2": -0.0004907681299457511,
+    "mae": 0.29577043880755177,
+    "rmse": 0.34088140733169947,
+    "r2_note": null,
+    "macro_block_mse": 0.11795486906491952,
+    "blocks": 5,
+    "faces": 9,
+    "row_sha256": "e687f78ed33a573cd1c0bd5a629b1703464196037614885fb882fb942f8b441a",
+    "r2_block_95pct": [
+      -0.01101271221396637,
+      -3.624997597849733e-05
+    ],
+    "mae_block_95pct": [
+      0.27678784281067564,
+      0.31614785197230977
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "pooled_mean",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.17916041979010494,
+    "n": 478,
+    "r2": -0.011743745808695971,
+    "mae": 0.3055468809046432,
+    "rmse": 0.34987961613128415,
+    "r2_note": null,
+    "macro_block_mse": 0.11526738631494715,
+    "blocks": 3,
+    "faces": 4,
+    "row_sha256": "b93601c0ab7c129251bf869fd2f7e71fa7c1c542ccbfb12d9cd6c4a969794b78",
+    "r2_block_95pct": [
+      -0.04729154211783704,
+      -0.0002145028446136621
+    ],
+    "mae_block_95pct": [
+      0.279614531898387,
+      0.3212446834498746
+    ],
+    "bootstrap_blocks": 3,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "pooled_mean",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.3294602698650675,
+    "n": 5274,
+    "r2": -0.00836525158981849,
+    "mae": 0.2784934777817163,
+    "rmse": 0.3229102624325527,
+    "r2_note": null,
+    "macro_block_mse": 0.10604356899942595,
+    "blocks": 17,
+    "faces": 24,
+    "row_sha256": "231e3616fa56a9f29540a9bb1fd92fe0712f57dd019be7ff6e2219f7e88cd46e",
+    "r2_block_95pct": [
+      -0.03872937184013912,
+      -6.680581255780196e-05
+    ],
+    "mae_block_95pct": [
+      0.25813026979548903,
+      0.30269416458785375
+    ],
+    "bootstrap_blocks": 17,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "pooled_mean",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.20677161419290355,
+    "n": 1655,
+    "r2": -0.11830975952538547,
+    "mae": 0.2942093534556129,
+    "rmse": 0.34778476563216637,
+    "r2_note": null,
+    "macro_block_mse": 0.12576941950116147,
+    "blocks": 8,
+    "faces": 12,
+    "row_sha256": "0e605567f8315ea358e20384e9882611d79195a13624e5ebc9235bc3b646dfd5",
+    "r2_block_95pct": [
+      -0.239258276089646,
+      -0.034527388503931264
+    ],
+    "mae_block_95pct": [
+      0.2577632872423491,
+      0.3446920069258648
+    ],
+    "bootstrap_blocks": 8,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "pooled_mean",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.2753623188405797,
+    "n": 1653,
+    "r2": -0.06724182078568552,
+    "mae": 0.3297273603338986,
+    "rmse": 0.37280076061514655,
+    "r2_note": null,
+    "macro_block_mse": 0.15038394788340081,
+    "blocks": 7,
+    "faces": 9,
+    "row_sha256": "998e6895f8aee7614d4844fc56692c5a5d2a708563fc37aa54bb9aec33dd12c8",
+    "r2_block_95pct": [
+      -0.30835049359821787,
+      -0.0012262100713394146
+    ],
+    "mae_block_95pct": [
+      0.2978852393176197,
+      0.38096466109247556
+    ],
+    "bootstrap_blocks": 7,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "weekhour",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.15928632846087704,
+    "n": 3705,
+    "r2": 0.07588498189965198,
+    "mae": 0.28063349098088686,
+    "rmse": 0.32761198826512694,
+    "r2_note": null,
+    "macro_block_mse": 0.10916490099720648,
+    "blocks": 5,
+    "faces": 9,
+    "row_sha256": "e687f78ed33a573cd1c0bd5a629b1703464196037614885fb882fb942f8b441a",
+    "r2_block_95pct": [
+      0.05817948783269593,
+      0.0879370457404824
+    ],
+    "mae_block_95pct": [
+      0.2626904002636361,
+      0.2988961645816888
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "weekhour",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.17916041979010494,
+    "n": 478,
+    "r2": 0.022207332862232865,
+    "mae": 0.2989303859778335,
+    "rmse": 0.3439590693003035,
+    "r2_note": null,
+    "macro_block_mse": 0.11557694834584309,
+    "blocks": 3,
+    "faces": 4,
+    "row_sha256": "b93601c0ab7c129251bf869fd2f7e71fa7c1c542ccbfb12d9cd6c4a969794b78",
+    "r2_block_95pct": [
+      -0.2336716753067658,
+      0.10845379212776451
+    ],
+    "mae_block_95pct": [
+      0.2659598349887124,
+      0.313391803033142
+    ],
+    "bootstrap_blocks": 3,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "weekhour",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.3294602698650675,
+    "n": 5274,
+    "r2": 0.12033407954286313,
+    "mae": 0.256007262074763,
+    "rmse": 0.3016003182163932,
+    "r2_note": null,
+    "macro_block_mse": 0.0927218287163574,
+    "blocks": 17,
+    "faces": 24,
+    "row_sha256": "231e3616fa56a9f29540a9bb1fd92fe0712f57dd019be7ff6e2219f7e88cd46e",
+    "r2_block_95pct": [
+      0.0856960256181422,
+      0.14805424645508736
+    ],
+    "mae_block_95pct": [
+      0.23442851205704937,
+      0.28161778922989494
+    ],
+    "bootstrap_blocks": 17,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "weekhour",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.20677161419290355,
+    "n": 1655,
+    "r2": -0.1588148652487864,
+    "mae": 0.2968984710828867,
+    "rmse": 0.35402711466253617,
+    "r2_note": null,
+    "macro_block_mse": 0.13016071026588605,
+    "blocks": 8,
+    "faces": 12,
+    "row_sha256": "0e605567f8315ea358e20384e9882611d79195a13624e5ebc9235bc3b646dfd5",
+    "r2_block_95pct": [
+      -0.3183882077255929,
+      -0.04252958443735062
+    ],
+    "mae_block_95pct": [
+      0.2625701469313683,
+      0.35076402764726694
+    ],
+    "bootstrap_blocks": 8,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "weekhour",
+    "target": "occupancy_rate",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.2753623188405797,
+    "n": 1653,
+    "r2": -0.09433446985472327,
+    "mae": 0.33030203731482544,
+    "rmse": 0.37750300385340246,
+    "r2_note": null,
+    "macro_block_mse": 0.1530632706090786,
+    "blocks": 7,
+    "faces": 9,
+    "row_sha256": "998e6895f8aee7614d4844fc56692c5a5d2a708563fc37aa54bb9aec33dd12c8",
+    "r2_block_95pct": [
+      -0.3810799000528696,
+      -0.00014271111673435288
+    ],
+    "mae_block_95pct": [
+      0.2923031558507344,
+      0.38463674038824486
+    ],
+    "bootstrap_blocks": 7,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "calendar",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "r2": 0.3840270333430673,
+    "mae": 0.7548644292800105,
+    "rmse": 1.037413750940171,
+    "r2_note": null,
+    "macro_block_mse": 1.551069707889387,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "5f352dc6787c19c6258dcd5b51f1ef49c79f8dde4c92465a340fefea73093934",
+    "r2_block_95pct": [
+      0.051987076145517605,
+      0.523747685175237
+    ],
+    "mae_block_95pct": [
+      0.5139305055241912,
+      1.0150559976066718
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "calendar",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "r2": -0.06696934329970072,
+    "mae": 0.7056270014016187,
+    "rmse": 0.8282868967125371,
+    "r2_note": null,
+    "macro_block_mse": 0.6246425960164275,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "527a11163d33ba495e78ea7401c23f7d26bac295f12494f66818ffac4dbd7b45",
+    "r2_block_95pct": [
+      -0.0761765127098577,
+      -0.0669693432997005
+    ],
+    "mae_block_95pct": [
+      0.7045048488739784,
+      0.7056270014016186
+    ],
+    "bootstrap_blocks": 2,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "calendar",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "r2": 0.2303617139453148,
+    "mae": 0.5697190418417871,
+    "rmse": 0.6449494607141418,
+    "r2_note": null,
+    "macro_block_mse": 0.8796020529760837,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "0f688fc9306b9b599ad40870e7b9b6cb813fee1e43dd270d274b2cfca638509e",
+    "r2_block_95pct": [
+      0.037140814795920817,
+      0.31938556511404015
+    ],
+    "mae_block_95pct": [
+      0.5172788260503218,
+      0.8050154610832991
+    ],
+    "bootstrap_blocks": 12,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "calendar",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "r2": 0.0609466864174707,
+    "mae": 0.7355439904587865,
+    "rmse": 0.9446655951454872,
+    "r2_note": null,
+    "macro_block_mse": 2.406492046122794,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "f3e90ffaffe154f6094f0a1832d4cc1c70e8ea05bc6cc1d86eed9066d2bf97ef",
+    "r2_block_95pct": [
+      -0.2700843535959952,
+      0.24890158696537618
+    ],
+    "mae_block_95pct": [
+      0.6094929560615944,
+      1.3121499971126118
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "calendar",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "r2": 0.03396067785847667,
+    "mae": 0.511289920066358,
+    "rmse": 0.5355237482891287,
+    "r2_note": null,
+    "macro_block_mse": 0.3014001593551702,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "75c740bbcb84b9f98a2277af17d48fc4d71ea7024e1bad69ab308e5d3c82f247",
+    "r2_block_95pct": [
+      -0.17084058480580736,
+      0.19469892534468672
+    ],
+    "mae_block_95pct": [
+      0.49125434804228546,
+      0.5939889503727556
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "existing_census",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "r2": 0.37253542532619766,
+    "mae": 0.7624375818286502,
+    "rmse": 1.047046042704062,
+    "r2_note": null,
+    "macro_block_mse": 1.589536438422439,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "5f352dc6787c19c6258dcd5b51f1ef49c79f8dde4c92465a340fefea73093934",
+    "r2_block_95pct": [
+      0.04247415495662072,
+      0.511278084014819
+    ],
+    "mae_block_95pct": [
+      0.52639266393485,
+      1.0070871256472531
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "existing_census",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "r2": -0.1254015206575645,
+    "mae": 0.7338024589246305,
+    "rmse": 0.8506650093050429,
+    "r2_note": null,
+    "macro_block_mse": 0.6623733618583216,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "527a11163d33ba495e78ea7401c23f7d26bac295f12494f66818ffac4dbd7b45",
+    "r2_block_95pct": [
+      -0.13481568341364403,
+      -0.12540152065756405
+    ],
+    "mae_block_95pct": [
+      0.7327662549519274,
+      0.7338024589246305
+    ],
+    "bootstrap_blocks": 2,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "existing_census",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "r2": 0.277114991360526,
+    "mae": 0.5382417065466669,
+    "rmse": 0.6250531687905364,
+    "r2_note": null,
+    "macro_block_mse": 0.8932299326747826,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "0f688fc9306b9b599ad40870e7b9b6cb813fee1e43dd270d274b2cfca638509e",
+    "r2_block_95pct": [
+      0.10944184261091043,
+      0.3461912441433272
+    ],
+    "mae_block_95pct": [
+      0.47892948962497184,
+      0.7981631285468169
+    ],
+    "bootstrap_blocks": 12,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "existing_census",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "r2": 0.10529564920990253,
+    "mae": 0.7186000817468168,
+    "rmse": 0.9220888031546028,
+    "r2_note": null,
+    "macro_block_mse": 2.1756883920309895,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "f3e90ffaffe154f6094f0a1832d4cc1c70e8ea05bc6cc1d86eed9066d2bf97ef",
+    "r2_block_95pct": [
+      -0.19176713242303767,
+      0.2833540821571458
+    ],
+    "mae_block_95pct": [
+      0.6091280433538595,
+      1.2200397386660162
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "existing_census",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "r2": 0.12672280511381417,
+    "mae": 0.4682145428785875,
+    "rmse": 0.5091636510425677,
+    "r2_note": null,
+    "macro_block_mse": 0.26049050716192973,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "75c740bbcb84b9f98a2277af17d48fc4d71ea7024e1bad69ab308e5d3c82f247",
+    "r2_block_95pct": [
+      0.018196534003193973,
+      0.262384070469413
+    ],
+    "mae_block_95pct": [
+      0.3875261398775589,
+      0.575334732904855
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "additional_census",
+    "target": "available_count",
+    "selected_for_target": true,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "r2": 0.39010730061568977,
+    "mae": 0.7645851845004733,
+    "rmse": 1.0322808989518137,
+    "r2_note": null,
+    "macro_block_mse": 1.4886802855119075,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "5f352dc6787c19c6258dcd5b51f1ef49c79f8dde4c92465a340fefea73093934",
+    "r2_block_95pct": [
+      0.026111052981631404,
+      0.5423608621409582
+    ],
+    "mae_block_95pct": [
+      0.550031300230898,
+      0.9993604978784772
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "additional_census",
+    "target": "available_count",
+    "selected_for_target": true,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "r2": -0.2421498814632157,
+    "mae": 0.7747060259244201,
+    "rmse": 0.8937001307939265,
+    "r2_note": null,
+    "macro_block_mse": 0.7205293029812707,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "527a11163d33ba495e78ea7401c23f7d26bac295f12494f66818ffac4dbd7b45",
+    "r2_block_95pct": [
+      -0.25343159329862597,
+      -0.24214988146321548
+    ],
+    "mae_block_95pct": [
+      0.7740711206857877,
+      0.7747060259244198
+    ],
+    "bootstrap_blocks": 2,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "additional_census",
+    "target": "available_count",
+    "selected_for_target": true,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "r2": 0.2755706034329457,
+    "mae": 0.5322982452221653,
+    "rmse": 0.6257205014375963,
+    "r2_note": null,
+    "macro_block_mse": 0.9134001756081966,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "0f688fc9306b9b599ad40870e7b9b6cb813fee1e43dd270d274b2cfca638509e",
+    "r2_block_95pct": [
+      0.10729594624047344,
+      0.3456084665572125
+    ],
+    "mae_block_95pct": [
+      0.4727751623722807,
+      0.7911733502524764
+    ],
+    "bootstrap_blocks": 12,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "additional_census",
+    "target": "available_count",
+    "selected_for_target": true,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "r2": 0.1322044402207353,
+    "mae": 0.7149691595082448,
+    "rmse": 0.9081167488503238,
+    "r2_note": null,
+    "macro_block_mse": 1.920630147291907,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "f3e90ffaffe154f6094f0a1832d4cc1c70e8ea05bc6cc1d86eed9066d2bf97ef",
+    "r2_block_95pct": [
+      -0.19114282569072916,
+      0.33934458430952114
+    ],
+    "mae_block_95pct": [
+      0.5899239988007583,
+      1.0961633346591135
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "additional_census",
+    "target": "available_count",
+    "selected_for_target": true,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "r2": 0.12888860247654588,
+    "mae": 0.4661166481088505,
+    "rmse": 0.5085318757755593,
+    "r2_note": null,
+    "macro_block_mse": 0.24688448351138967,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "75c740bbcb84b9f98a2277af17d48fc4d71ea7024e1bad69ab308e5d3c82f247",
+    "r2_block_95pct": [
+      0.026227720600834222,
+      0.2673223714578306
+    ],
+    "mae_block_95pct": [
+      0.385798683988956,
+      0.5643387078304536
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "pooled_mean",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "r2": -0.3838524971058821,
+    "mae": 1.0917637984419248,
+    "rmse": 1.5549487331270833,
+    "r2_note": null,
+    "macro_block_mse": 4.287835081661437,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "5f352dc6787c19c6258dcd5b51f1ef49c79f8dde4c92465a340fefea73093934",
+    "r2_block_95pct": [
+      -0.6853862530876733,
+      -0.19350692815339104
+    ],
+    "mae_block_95pct": [
+      0.7399655480597007,
+      1.7502164330249
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "pooled_mean",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "r2": -0.3517555111869417,
+    "mae": 0.8234097000960906,
+    "rmse": 0.9322961586903398,
+    "r2_note": null,
+    "macro_block_mse": 1.2965305741624933,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "527a11163d33ba495e78ea7401c23f7d26bac295f12494f66818ffac4dbd7b45",
+    "r2_block_95pct": [
+      -0.35175551118694104,
+      -0.3207930605873546
+    ],
+    "mae_block_95pct": [
+      0.8102958579881657,
+      0.8234097000960907
+    ],
+    "bootstrap_blocks": 2,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "pooled_mean",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "r2": -0.05386296833290749,
+    "mae": 0.6590620608122374,
+    "rmse": 0.7547001288196495,
+    "r2_note": null,
+    "macro_block_mse": 1.0224556578126964,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "0f688fc9306b9b599ad40870e7b9b6cb813fee1e43dd270d274b2cfca638509e",
+    "r2_block_95pct": [
+      -0.3040122266611525,
+      -0.0002873860434630742
+    ],
+    "mae_block_95pct": [
+      0.6022959725089063,
+      0.9054145382323343
+    ],
+    "bootstrap_blocks": 12,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "pooled_mean",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "r2": -0.44616218716640277,
+    "mae": 0.9224531848242257,
+    "rmse": 1.1723073145446472,
+    "r2_note": null,
+    "macro_block_mse": 4.873863881131428,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "f3e90ffaffe154f6094f0a1832d4cc1c70e8ea05bc6cc1d86eed9066d2bf97ef",
+    "r2_block_95pct": [
+      -1.5821963463179143,
+      -0.2090706746824232
+    ],
+    "mae_block_95pct": [
+      0.7509189097204356,
+      1.9383665351742256
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "pooled_mean",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "r2": -0.0012943367580993126,
+    "mae": 0.4899685703749565,
+    "rmse": 0.5452079908357124,
+    "r2_note": null,
+    "macro_block_mse": 0.6003297837791977,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "75c740bbcb84b9f98a2277af17d48fc4d71ea7024e1bad69ab308e5d3c82f247",
+    "r2_block_95pct": [
+      -0.08207554478428332,
+      -2.0584727462208485e-05
+    ],
+    "mae_block_95pct": [
+      0.4353813477292152,
+      0.7131360946745563
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "weekhour",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "r2": -0.20108915011905992,
+    "mae": 1.0369761681993366,
+    "rmse": 1.4486344064602963,
+    "r2_note": null,
+    "macro_block_mse": 3.456269350069603,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "5f352dc6787c19c6258dcd5b51f1ef49c79f8dde4c92465a340fefea73093934",
+    "r2_block_95pct": [
+      -0.5358591115494946,
+      0.0379268564097891
+    ],
+    "mae_block_95pct": [
+      0.706780928904864,
+      1.5978534609609538
+    ],
+    "bootstrap_blocks": 5,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "weekhour",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "r2": -0.45723556227966355,
+    "mae": 0.8560894836647015,
+    "rmse": 0.9679873926420454,
+    "r2_note": null,
+    "macro_block_mse": 1.3333930073577613,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "527a11163d33ba495e78ea7401c23f7d26bac295f12494f66818ffac4dbd7b45",
+    "r2_block_95pct": [
+      -0.45723556227966333,
+      -0.4292835656830658
+    ],
+    "mae_block_95pct": [
+      0.8437935731732227,
+      0.8560894836647015
+    ],
+    "bootstrap_blocks": 2,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "weekhour",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "r2": -0.011945659109133588,
+    "mae": 0.6338114484108928,
+    "rmse": 0.7395387722445427,
+    "r2_note": null,
+    "macro_block_mse": 1.0267281595330549,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "0f688fc9306b9b599ad40870e7b9b6cb813fee1e43dd270d274b2cfca638509e",
+    "r2_block_95pct": [
+      -0.24873789548509145,
+      0.03475268331304485
+    ],
+    "mae_block_95pct": [
+      0.572833344084503,
+      0.8944096647210619
+    ],
+    "bootstrap_blocks": 12,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "weekhour",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "r2": -0.47883162244749045,
+    "mae": 0.9317605060168749,
+    "rmse": 1.1854748319236872,
+    "r2_note": null,
+    "macro_block_mse": 4.858197377444153,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "f3e90ffaffe154f6094f0a1832d4cc1c70e8ea05bc6cc1d86eed9066d2bf97ef",
+    "r2_block_95pct": [
+      -1.656672846852125,
+      -0.23646748243847715
+    ],
+    "mae_block_95pct": [
+      0.7587037141986986,
+      1.9610892679378307
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "weekhour",
+    "target": "available_count",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "r2": -0.005537300261655664,
+    "mae": 0.4907092554954648,
+    "rmse": 0.5463619233325328,
+    "r2_note": null,
+    "macro_block_mse": 0.5877929150962322,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "75c740bbcb84b9f98a2277af17d48fc4d71ea7024e1bad69ab308e5d3c82f247",
+    "r2_block_95pct": [
+      -0.10767818167629441,
+      0.021861912290497727
+    ],
+    "mae_block_95pct": [
+      0.4419203137901575,
+      0.6997601912299112
+    ],
+    "bootstrap_blocks": 6,
+    "uncertainty_note": "Physical-block bootstrap conditional on proxy labels; few blocks and geographic dependence limit inference."
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "positive_rate": 0.7988826815642458,
+    "brier_score": 0.1644872705590727,
+    "log_loss": 0.5002906806844973,
+    "ece": 0.09011266873930307,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 23,
+        "mean_probability": 0.5723801746271809,
+        "observed_frequency": 0.6956521739130435
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 68,
+        "mean_probability": 0.6560919604162861,
+        "observed_frequency": 0.7647058823529411
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 63,
+        "mean_probability": 0.7335780033659576,
+        "observed_frequency": 0.8095238095238095
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 6,
+        "mean_probability": 0.8709214746535366,
+        "observed_frequency": 0.8333333333333334
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 19,
+        "mean_probability": 0.9526815582525273,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1425756179391236,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "60496d7f5a7794ad85541c5ab889afcdb8d06b1fd45bcad218348d9a193b7dd2"
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "positive_rate": 0.7435897435897436,
+    "brier_score": 0.20651994391663606,
+    "log_loss": 0.6051191194512423,
+    "ece": 0.16348467776674597,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 11,
+        "mean_probability": 0.5920650656618675,
+        "observed_frequency": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 24,
+        "mean_probability": 0.6249594500255519,
+        "observed_frequency": 0.8333333333333334
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 4,
+        "mean_probability": 0.7219112389492194,
+        "observed_frequency": 0.5
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.13964191659359798,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "b81a562f9c2f271aae376cf43a66238d3db489839baf4a1d3c224db0611bc873"
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "positive_rate": 0.38837920489296635,
+    "brier_score": 0.22981978458533409,
+    "log_loss": 0.6518382947073652,
+    "ece": 0.16840097189750908,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 3,
+        "mean_probability": 0.39750794215228474,
+        "observed_frequency": 0.0
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 295,
+        "mean_probability": 0.4558717590986221,
+        "observed_frequency": 0.2
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 127,
+        "mean_probability": 0.5343588507835716,
+        "observed_frequency": 0.36220472440944884
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 120,
+        "mean_probability": 0.6493852206890846,
+        "observed_frequency": 0.5666666666666667
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 99,
+        "mean_probability": 0.7483957496629475,
+        "observed_frequency": 0.7373737373737373
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 9,
+        "mean_probability": 0.8322265764050637,
+        "observed_frequency": 0.7777777777777778
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 1,
+        "mean_probability": 0.9114760760605455,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2259209188214779,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "e563e869a6cff421799d97a99bb5de796f6d9ff0983f5acdce0db48b12cf56f1"
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "positive_rate": 0.8,
+    "brier_score": 0.1809133833815879,
+    "log_loss": 0.5480118067327766,
+    "ece": 0.14413672360827798,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 17,
+        "mean_probability": 0.5882633303333767,
+        "observed_frequency": 0.7647058823529411
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 46,
+        "mean_probability": 0.6271504634903191,
+        "observed_frequency": 0.782608695652174
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 17,
+        "mean_probability": 0.751785225187406,
+        "observed_frequency": 0.8235294117647058
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 5,
+        "mean_probability": 0.823726345777677,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.11758727964315836,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "98460b1fad1aa5b8c942681c5388835086647231c41c4c4bd1b7e56b4c699cc1"
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "positive_rate": 0.6243567753001715,
+    "brier_score": 0.24775595992226207,
+    "log_loss": 0.6881570923144957,
+    "ece": 0.13009829806560014,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 6,
+        "mean_probability": 0.39805880295692697,
+        "observed_frequency": 0.16666666666666666
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 339,
+        "mean_probability": 0.4559229965630419,
+        "observed_frequency": 0.6283185840707964
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 120,
+        "mean_probability": 0.5430058760252212,
+        "observed_frequency": 0.625
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 97,
+        "mean_probability": 0.6495519436802129,
+        "observed_frequency": 0.5979381443298969
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 19,
+        "mean_probability": 0.7437767317150865,
+        "observed_frequency": 0.7894736842105263
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 2,
+        "mean_probability": 0.8486123609964658,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.20948294860726854,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "e8ab773087fb46cb3f282f5392048ef7b65abe4f6ff069eb828ee81343f77479"
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "existing_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "positive_rate": 0.7988826815642458,
+    "brier_score": 0.17083871847336907,
+    "log_loss": 0.5123667375848332,
+    "ece": 0.10362343620407445,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 39,
+        "mean_probability": 0.5331822281068498,
+        "observed_frequency": 0.7692307692307693
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 41,
+        "mean_probability": 0.6749331916166259,
+        "observed_frequency": 0.7317073170731707
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 70,
+        "mean_probability": 0.7272124195870254,
+        "observed_frequency": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 7,
+        "mean_probability": 0.8437965085267477,
+        "observed_frequency": 0.7142857142857143
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 22,
+        "mean_probability": 0.9539428798007876,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1506013975471693,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "60496d7f5a7794ad85541c5ab889afcdb8d06b1fd45bcad218348d9a193b7dd2"
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "existing_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "positive_rate": 0.7435897435897436,
+    "brier_score": 0.2202022185022615,
+    "log_loss": 0.6321855748000678,
+    "ece": 0.15943372542542913,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 1,
+        "mean_probability": 0.49942946187599235,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 25,
+        "mean_probability": 0.5455687550734926,
+        "observed_frequency": 0.72
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 9,
+        "mean_probability": 0.6377498835016813,
+        "observed_frequency": 0.7777777777777778
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 4,
+        "mean_probability": 0.7259218545449566,
+        "observed_frequency": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1512752419672699,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "b81a562f9c2f271aae376cf43a66238d3db489839baf4a1d3c224db0611bc873"
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "existing_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "positive_rate": 0.38837920489296635,
+    "brier_score": 0.19318432193218804,
+    "log_loss": 0.5726908849973973,
+    "ece": 0.049514163509703266,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 19,
+        "mean_probability": 0.19701342053409324,
+        "observed_frequency": 0.2631578947368421
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 253,
+        "mean_probability": 0.23584765069602676,
+        "observed_frequency": 0.17786561264822134
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 65,
+        "mean_probability": 0.3500423114936252,
+        "observed_frequency": 0.3076923076923077
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 81,
+        "mean_probability": 0.4407972623960564,
+        "observed_frequency": 0.3950617283950617
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 61,
+        "mean_probability": 0.5522159193386899,
+        "observed_frequency": 0.4918032786885246
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 112,
+        "mean_probability": 0.6524758478524701,
+        "observed_frequency": 0.6428571428571429
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 43,
+        "mean_probability": 0.7469978125431365,
+        "observed_frequency": 0.813953488372093
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 18,
+        "mean_probability": 0.8464122349624708,
+        "observed_frequency": 0.7222222222222222
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 2,
+        "mean_probability": 0.9391232654368018,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2071474063364065,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "e563e869a6cff421799d97a99bb5de796f6d9ff0983f5acdce0db48b12cf56f1"
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "existing_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "positive_rate": 0.8,
+    "brier_score": 0.1573571614684679,
+    "log_loss": 0.48894385795788686,
+    "ece": 0.06693404767337578,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 6,
+        "mean_probability": 0.5567110418786625,
+        "observed_frequency": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 11,
+        "mean_probability": 0.64821065890492,
+        "observed_frequency": 0.7272727272727273
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 11,
+        "mean_probability": 0.7658904162786283,
+        "observed_frequency": 0.9090909090909091
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 54,
+        "mean_probability": 0.8491073369278647,
+        "observed_frequency": 0.8148148148148148
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 3,
+        "mean_probability": 0.9109919788077515,
+        "observed_frequency": 0.6666666666666666
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.09572752705737118,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "98460b1fad1aa5b8c942681c5388835086647231c41c4c4bd1b7e56b4c699cc1"
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "existing_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "positive_rate": 0.6243567753001715,
+    "brier_score": 0.21891847911008624,
+    "log_loss": 0.6247015846716876,
+    "ece": 0.05985302126824633,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 15,
+        "mean_probability": 0.1763797740977238,
+        "observed_frequency": 0.13333333333333333
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 5,
+        "mean_probability": 0.2108013598905094,
+        "observed_frequency": 0.2
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 32,
+        "mean_probability": 0.3701286091767856,
+        "observed_frequency": 0.46875
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 107,
+        "mean_probability": 0.4414688620756785,
+        "observed_frequency": 0.5420560747663551
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 165,
+        "mean_probability": 0.5581722907913566,
+        "observed_frequency": 0.5878787878787879
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 140,
+        "mean_probability": 0.6431622395818508,
+        "observed_frequency": 0.6857142857142857
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 28,
+        "mean_probability": 0.738977714564195,
+        "observed_frequency": 0.6071428571428571
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 51,
+        "mean_probability": 0.874648460117904,
+        "observed_frequency": 0.7843137254901961
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 40,
+        "mean_probability": 0.9220353556888419,
+        "observed_frequency": 0.95
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.16959796852378814,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "e8ab773087fb46cb3f282f5392048ef7b65abe4f6ff069eb828ee81343f77479"
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "additional_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": true,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "positive_rate": 0.7988826815642458,
+    "brier_score": 0.18290964213153535,
+    "log_loss": 0.5368229657772204,
+    "ece": 0.14798096072860015,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 37,
+        "mean_probability": 0.4526293395330168,
+        "observed_frequency": 0.7567567567567568
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 3,
+        "mean_probability": 0.5127970942154175,
+        "observed_frequency": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 94,
+        "mean_probability": 0.6680450415337631,
+        "observed_frequency": 0.7978723404255319
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 16,
+        "mean_probability": 0.7354220794674087,
+        "observed_frequency": 0.6875
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 7,
+        "mean_probability": 0.8458712839789168,
+        "observed_frequency": 0.7142857142857143
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 22,
+        "mean_probability": 0.9598795245168148,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.16267229749631387,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "60496d7f5a7794ad85541c5ab889afcdb8d06b1fd45bcad218348d9a193b7dd2"
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "additional_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": true,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "positive_rate": 0.7435897435897436,
+    "brier_score": 0.24614487393323237,
+    "log_loss": 0.6849024586696304,
+    "ece": 0.24769937483716734,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 22,
+        "mean_probability": 0.4586937592791249,
+        "observed_frequency": 0.6818181818181818
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 9,
+        "mean_probability": 0.5349356403508426,
+        "observed_frequency": 0.8888888888888888
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 6,
+        "mean_probability": 0.6467968465710462,
+        "observed_frequency": 0.8333333333333334
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 2,
+        "mean_probability": 0.7233700826870684,
+        "observed_frequency": 0.5
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1784881940955051,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "b81a562f9c2f271aae376cf43a66238d3db489839baf4a1d3c224db0611bc873"
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "additional_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": true,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "positive_rate": 0.38837920489296635,
+    "brier_score": 0.19303617160064604,
+    "log_loss": 0.5719799256780881,
+    "ece": 0.03529352334843919,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 24,
+        "mean_probability": 0.19853985060805848,
+        "observed_frequency": 0.20833333333333334
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 266,
+        "mean_probability": 0.23342142360634704,
+        "observed_frequency": 0.18796992481203006
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 71,
+        "mean_probability": 0.36045158553242246,
+        "observed_frequency": 0.352112676056338
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 66,
+        "mean_probability": 0.443877363317049,
+        "observed_frequency": 0.3939393939393939
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 53,
+        "mean_probability": 0.5606522590758956,
+        "observed_frequency": 0.5283018867924528
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 112,
+        "mean_probability": 0.6429801436992697,
+        "observed_frequency": 0.6339285714285714
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 45,
+        "mean_probability": 0.7487232847237428,
+        "observed_frequency": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 15,
+        "mean_probability": 0.8486277625946738,
+        "observed_frequency": 0.7333333333333333
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 2,
+        "mean_probability": 0.9481804991176354,
+        "observed_frequency": 1.0
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2084196824446841,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "e563e869a6cff421799d97a99bb5de796f6d9ff0983f5acdce0db48b12cf56f1"
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "additional_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": true,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "positive_rate": 0.8,
+    "brier_score": 0.15667494680969424,
+    "log_loss": 0.48335858063228887,
+    "ece": 0.0387733643682568,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 1,
+        "mean_probability": 0.49676260948070405,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 5,
+        "mean_probability": 0.5388191351143314,
+        "observed_frequency": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 12,
+        "mean_probability": 0.6643965570988138,
+        "observed_frequency": 0.75
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 22,
+        "mean_probability": 0.7772426526563314,
+        "observed_frequency": 0.7272727272727273
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 35,
+        "mean_probability": 0.854745736811295,
+        "observed_frequency": 0.8571428571428571
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 10,
+        "mean_probability": 0.927611537149599,
+        "observed_frequency": 0.9
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.09213323153460333,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "98460b1fad1aa5b8c942681c5388835086647231c41c4c4bd1b7e56b4c699cc1"
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "additional_census",
+    "target": "any_panel_vacant",
+    "selected_for_target": true,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "positive_rate": 0.6243567753001715,
+    "brier_score": 0.2163885265919123,
+    "log_loss": 0.6191649404280324,
+    "ece": 0.04081764179004242,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 20,
+        "mean_probability": 0.16036335205665195,
+        "observed_frequency": 0.15
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 21,
+        "mean_probability": 0.3656581836981385,
+        "observed_frequency": 0.38095238095238093
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 78,
+        "mean_probability": 0.4498017557470489,
+        "observed_frequency": 0.5897435897435898
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 176,
+        "mean_probability": 0.5569654952983463,
+        "observed_frequency": 0.5511363636363636
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 155,
+        "mean_probability": 0.6379726294850807,
+        "observed_frequency": 0.6645161290322581
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 43,
+        "mean_probability": 0.7406996385505846,
+        "observed_frequency": 0.6976744186046512
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 52,
+        "mean_probability": 0.8738189862686634,
+        "observed_frequency": 0.7884615384615384
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 38,
+        "mean_probability": 0.9230543267782805,
+        "observed_frequency": 0.9473684210526315
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1673161934652122,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "e8ab773087fb46cb3f282f5392048ef7b65abe4f6ff069eb828ee81343f77479"
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "pooled_mean",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "positive_rate": 0.7988826815642458,
+    "brier_score": 0.22293614478781965,
+    "log_loss": 0.6388506467751196,
+    "ece": 0.24953356913821023,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 179,
+        "mean_probability": 0.5493491124260356,
+        "observed_frequency": 0.7988826815642458
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.22059890564097423,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "60496d7f5a7794ad85541c5ab889afcdb8d06b1fd45bcad218348d9a193b7dd2"
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "pooled_mean",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "positive_rate": 0.7435897435897436,
+    "brier_score": 0.22839345961275861,
+    "log_loss": 0.6498009260612287,
+    "ece": 0.19424063116370804,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 39,
+        "mean_probability": 0.5493491124260356,
+        "observed_frequency": 0.7435897435897436
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.21607283100436925,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "b81a562f9c2f271aae376cf43a66238d3db489839baf4a1d3c224db0611bc873"
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "pooled_mean",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "positive_rate": 0.38837920489296635,
+    "brier_score": 0.2634521092308785,
+    "log_loss": 0.7201472441731834,
+    "ece": 0.16096990753306922,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 654,
+        "mean_probability": 0.5493491124260356,
+        "observed_frequency": 0.38837920489296635
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.24525580931710644,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "e563e869a6cff421799d97a99bb5de796f6d9ff0983f5acdce0db48b12cf56f1"
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "pooled_mean",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "positive_rate": 0.8,
+    "brier_score": 0.22282586744161623,
+    "log_loss": 0.6386293717014624,
+    "ece": 0.2506508875739645,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 85,
+        "mean_probability": 0.5493491124260356,
+        "observed_frequency": 0.8
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2146401813328532,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "98460b1fad1aa5b8c942681c5388835086647231c41c4c4bd1b7e56b4c699cc1"
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "pooled_mean",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "positive_rate": 0.6243567753001715,
+    "brier_score": 0.24016154192678268,
+    "log_loss": 0.6734139650985949,
+    "ece": 0.07500766287413596,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 583,
+        "mean_probability": 0.5493491124260356,
+        "observed_frequency": 0.6243567753001715
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.23881000670398378,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "e8ab773087fb46cb3f282f5392048ef7b65abe4f6ff069eb828ee81343f77479"
+  },
+  {
+    "axis": "unseen_block",
+    "variant": "weekhour",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 23260,
+    "coverage": 0.00769561478933792,
+    "n": 179,
+    "positive_rate": 0.7988826815642458,
+    "brier_score": 0.22122192186046608,
+    "log_loss": 0.6320568381180082,
+    "ece": 0.2576968378332168,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 72,
+        "mean_probability": 0.4745810204218167,
+        "observed_frequency": 0.75
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 74,
+        "mean_probability": 0.537402853993352,
+        "observed_frequency": 0.7702702702702703
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 15,
+        "mean_probability": 0.627577364952872,
+        "observed_frequency": 0.9333333333333333
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 18,
+        "mean_probability": 0.7511644937601263,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.1964762168548843,
+    "blocks": 5,
+    "faces": 7,
+    "row_sha256": "60496d7f5a7794ad85541c5ab889afcdb8d06b1fd45bcad218348d9a193b7dd2"
+  },
+  {
+    "axis": "future_time_unseen",
+    "variant": "weekhour",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 2668,
+    "coverage": 0.01461769115442279,
+    "n": 39,
+    "positive_rate": 0.7435897435897436,
+    "brier_score": 0.24527176726703537,
+    "log_loss": 0.6835361181562132,
+    "ece": 0.22696798336648827,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 18,
+        "mean_probability": 0.47239631357602896,
+        "observed_frequency": 0.7222222222222222
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 18,
+        "mean_probability": 0.5447659970112677,
+        "observed_frequency": 0.7777777777777778
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 3,
+        "mean_probability": 0.6131090193785393,
+        "observed_frequency": 0.6666666666666666
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2371239459326468,
+    "blocks": 2,
+    "faces": 2,
+    "row_sha256": "b81a562f9c2f271aae376cf43a66238d3db489839baf4a1d3c224db0611bc873"
+  },
+  {
+    "axis": "future_time_known",
+    "variant": "weekhour",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 16008,
+    "coverage": 0.04085457271364318,
+    "n": 654,
+    "positive_rate": 0.38837920489296635,
+    "brier_score": 0.2526607196402653,
+    "log_loss": 0.6982399473830432,
+    "ece": 0.16557298106932528,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 139,
+        "mean_probability": 0.47763195919609164,
+        "observed_frequency": 0.2517985611510791
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 396,
+        "mean_probability": 0.5476587138467298,
+        "observed_frequency": 0.3787878787878788
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 111,
+        "mean_probability": 0.6214250701084555,
+        "observed_frequency": 0.5495495495495496
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 8,
+        "mean_probability": 0.7446432717826967,
+        "observed_frequency": 1.0
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2399143060087937,
+    "blocks": 12,
+    "faces": 16,
+    "row_sha256": "e563e869a6cff421799d97a99bb5de796f6d9ff0983f5acdce0db48b12cf56f1"
+  },
+  {
+    "axis": "future_time_Downtown",
+    "variant": "weekhour",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 8004,
+    "coverage": 0.01061969015492254,
+    "n": 85,
+    "positive_rate": 0.8,
+    "brier_score": 0.2240832425189241,
+    "log_loss": 0.6407380269104106,
+    "ece": 0.2622889505273607,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 21,
+        "mean_probability": 0.47445763699297755,
+        "observed_frequency": 0.7142857142857143
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 55,
+        "mean_probability": 0.5480925891082188,
+        "observed_frequency": 0.8363636363636363
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 9,
+        "mean_probability": 0.6218596030410867,
+        "observed_frequency": 0.7777777777777778
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.2088276490565298,
+    "blocks": 6,
+    "faces": 6,
+    "row_sha256": "98460b1fad1aa5b8c942681c5388835086647231c41c4c4bd1b7e56b4c699cc1"
+  },
+  {
+    "axis": "future_time_Hollywood",
+    "variant": "weekhour",
+    "target": "any_panel_vacant",
+    "selected_for_target": false,
+    "candidate_rows": 6003,
+    "coverage": 0.09711810761286023,
+    "n": 583,
+    "positive_rate": 0.6243567753001715,
+    "brier_score": 0.2407894277744158,
+    "log_loss": 0.6746194175712713,
+    "ece": 0.09064226022625976,
+    "reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 173,
+        "mean_probability": 0.4752052418618349,
+        "observed_frequency": 0.5606936416184971
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 329,
+        "mean_probability": 0.5426481697998856,
+        "observed_frequency": 0.6413373860182371
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 72,
+        "mean_probability": 0.6271108809991239,
+        "observed_frequency": 0.6944444444444444
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 9,
+        "mean_probability": 0.7486862055673522,
+        "observed_frequency": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_probability": null,
+        "observed_frequency": null
+      }
+    ],
+    "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+    "macro_block_mse": 0.23268366380355507,
+    "blocks": 6,
+    "faces": 7,
+    "row_sha256": "e8ab773087fb46cb3f282f5392048ef7b65abe4f6ff069eb828ee81343f77479"
+  }
+]

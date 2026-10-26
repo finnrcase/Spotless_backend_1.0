@@ -37,6 +37,15 @@ ok(rd.documentElement.scrollWidth<=route.innerWidth,'route fits 390px viewport')
 const win=get('collector').contentWindow,d=win.document,$=id=>d.getElementById(id);
 ok($('face').value==='__FACE__','route preselects real inventory face');
 ok($('assignment-id').value==='__ASSIGNMENT__'&&$('survey-session').value==='__SESSION__','session and assignment prefilled');
+const regional=[...rd.getElementById('session').options].find(o=>o.value.startsWith('downtown-v4-'));
+if(regional){
+rd.getElementById('session').value=regional.value;rd.getElementById('session').dispatchEvent(new Event('change'));
+ok(rd.getElementById('visits').children.length===8,'regional route shows eight repeated visits');
+const regionalFace=new URLSearchParams(rd.querySelector('#visits a').hash.slice(1)).get('face');
+ok(JSON.parse($('inventory').textContent).faces.some(f=>f.id===regionalFace),'regional route IDs exist in expanded collector');
+ok(rd.getElementById('map').querySelectorAll('circle').length===2,'regional map fits the two selected curb sides');
+rd.getElementById('session').selectedIndex=0;rd.getElementById('session').dispatchEvent(new Event('change'));
+}
 $('observer').value='browser-fixture-only';$('side-confirmed').checked=true;$('use-pin').click();$('parking-type').value='unmetered';
 $('capacity-basis').value='estimated_positions';$('start').click();$('occupied').value='3';$('vacant_legal').value='0';$('unsuitable').value='1';$('surveyed_capacity').value='4';
 $('gap-lengths').value='0';$('obstructed-length').value='0';$('counting-convention').value='synthetic QA positions only';$('save').click();

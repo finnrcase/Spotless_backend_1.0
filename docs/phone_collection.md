@@ -2,7 +2,9 @@
 
 For the smallest useful first batch, open `reports/field_route.html` and tap **Start smallest batch: 8 counts over 1 hour**. It fills two sides of one development block at 0/15/30/60 minutes. Verify actual unmetered status; no linked meter is not proof. Record actual times and skip reasons, export JSONL, then import/review before training. This checks collection quality and changes only, and cannot validate prediction accuracy. See [the temporal experiment and prospective holdout](temporal_v2.md).
 
-The collector is a self-contained local HTML file built from the existing real Westwood/UCLA inventory. It loads 1,962 pilot faces, source-side diagrams and snapshot evidence support. It has no external scripts, analytics, account, fetch calls or automatic uploads. No website has been published.
+The collector is a self-contained local HTML file built from real City inventory. It loads the 1,962 Westwood/UCLA faces and, after the optional coverage-v4 acquisition, 40 additional Downtown/Hollywood collection faces (2,002 total). Source-side diagrams are approximate unless explicitly marked otherwise; Westwood snapshot evidence does not extend to the added faces. It has no external scripts, analytics, account, fetch calls or automatic uploads. No website has been published.
+
+The route selector also includes optional Downtown November 2 and Hollywood November 3 sessions: both sides of one short unmetered-candidate block at 0/15/30/60 minutes, second side four minutes later. November 18/19 sessions use different whole blocks reserved before collection. No nearby meter inventory point is only a reconnaissance cue: verify actual unmetered status, access, signs and capacity. All links prefill stable IDs. These 32 planned regional snapshots contain zero observed labels. The original eight-count Westwood batch remains the first action.
 
 ## Prepare on the computer
 

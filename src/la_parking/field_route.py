@@ -128,6 +128,8 @@ def build(output='reports',dates=('2026-10-27','2026-10-29','2026-11-01'),seed=4
     target=Path('config/field_holdouts.json') if out.resolve()==Path('reports').resolve() else out/'field_holdouts.json'
     if target.exists() and json.loads(target.read_text())!=reservations:raise ValueError('Existing field reservations differ; register a new plan instead of silently replacing holdouts')
     target.write_text(json.dumps(reservations,indent=2)+'\n',encoding='utf8')
+    from .regional_field import prepare
+    plan.update(prepare(out))
     (out/'field_route.json').write_text(json.dumps(plan,indent=2),encoding='utf8')
     template=Path('web/field_route.html').read_text(encoding='utf8')
     (out/'field_route.html').write_text(template.replace('/*__DATA__*/',json.dumps(plan,separators=(',',':')).replace('<','\\u003c')),encoding='utf8')

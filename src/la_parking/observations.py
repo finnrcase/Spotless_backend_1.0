@@ -8,7 +8,7 @@ from .contracts import ManualObservation
 from .spatial import METRIC_CRS
 
 
-def ingest(path, inventory_path='data/processed/pilot_block_faces.parquet', output='data/observations',meter_mapping_path='data/processed/meter_face_mapping.parquet'):
+def ingest(path, inventory_path='data/processed/block_faces.parquet', output='data/observations',meter_mapping_path='data/processed/meter_face_mapping.parquet'):
     faces=gpd.read_parquet(inventory_path).to_crs(METRIC_CRS).set_index('block_face_id')
     target=Path(output); target.mkdir(parents=True,exist_ok=True)
     accepted=[]; rejected=[]
@@ -26,6 +26,9 @@ def ingest(path, inventory_path='data/processed/pilot_block_faces.parquet', outp
             if (r.survey_end_utc-r.survey_start_utc).total_seconds()>900: raise ValueError('Survey exceeds 15-minute snapshot window')
             if r.meter_bays:
                 mapping=pd.read_parquet(meter_mapping_path)
+                expanded=Path('data/modeling/coverage_v4/meter_mapping.parquet')
+                if str(meter_mapping_path)=='data/processed/meter_face_mapping.parquet' and expanded.exists():
+                    mapping=pd.concat([mapping,pd.read_parquet(expanded)],ignore_index=True).drop_duplicates('space_id')
                 allowed=set(mapping.loc[mapping.join_status.eq('matched')&mapping.block_face_id.eq(r.block_face_id),'space_id'])
                 if any(b.space_id not in allowed for b in r.meter_bays):raise ValueError('Meter bay is not uniquely mapped to the declared face; preserve for location review separately')
             record=r.model_dump(mode='json'); record['field_provenance']=json.dumps(record['field_provenance'])

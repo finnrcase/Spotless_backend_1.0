@@ -2970,6 +2970,35 @@
         "layers": null,
         "note": "Metadata only; no current sensor outcomes or feature rows queried."
       }
+    },
+    {
+      "id": "acs_2023_county_coverage_v4",
+      "owner": "US Census Bureau",
+      "verified_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/",
+      "status": "verified/downloaded cached official static files; API authentication failed",
+      "category": "C demand predictor",
+      "priority": 1,
+      "geographic_coverage": "2498 LA County tracts; 16 added regional blocks joined; not occupancy coverage",
+      "temporal_coverage": "2019-2023 ACS5; released 2024-12-12",
+      "available_at_utc": "2024-12-13T00:00:00Z",
+      "notes": "B08201/B25001 cached national extracts, full E/M columns and sentinels; same-vintage common cells match existing extracts. Added one-person fraction and vehicle lower bound. Derived ratio MOE unavailable. No occupancy labels. Authenticated one-tract request returned invalid-key HTML HTTP200; no API data comparison succeeded.",
+      "access_requirements": "Free cached static files; key check failed; no purchase",
+      "cost": "Free",
+      "current_legal_coverage_verified": false
+    },
+    {
+      "id": "regional_sensor_locations_v4",
+      "owner": "City of Los Angeles / LADOT",
+      "verified_url": "https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16",
+      "status": "verified/downloaded bounded location-only snapshots",
+      "category": "A parking source audit",
+      "priority": 1,
+      "geographic_coverage": "4002 Downtown and 1511 Hollywood sensor locations; exact object IDs reconciled",
+      "temporal_coverage": "Current October2026 locations; historical lineage unverified",
+      "notes": "Explicit outFields exclude SENSOR_STATUS, preserving prospective occupancy holds. Nearest-meter distance/ambiguity are QC flags only, not validated identity. Historical cached panel coverage remains sparse; UNKNOWN/outages uncertain.",
+      "access_requirements": "Anonymous public ArcGIS query; max4500features/region, paging/IDs verified",
+      "cost": "Free",
+      "current_legal_coverage_verified": false
     }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "completed_at_utc": "2026-10-26T04:25:06.232373+00:00",
+  "selected": {
+    "occupancy_rate": "existing_census",
+    "available_count": "additional_census",
+    "any_panel_vacant": "additional_census"
+  },
+  "legacy_rows_match_v1_v2": true,
+  "labels_or_expiry_changed": false,
+  "untouched_holdouts_opened": false,
+  "models_promoted": false,
+  "unmetered_labels": 0,
+  "coverage": [
+    {
+      "region": "Downtown",
+      "blocks": 8,
+      "faces": 13,
+      "candidate_rows": 108288,
+      "rate_rows": 20029,
+      "count_rows": 1794
+    },
+    {
+      "region": "Hollywood",
+      "blocks": 8,
+      "faces": 12,
+      "candidate_rows": 94752,
+      "rate_rows": 26443,
+      "count_rows": 5496
+    },
+    {
+      "region": "Westwood",
+      "blocks": 33,
+      "faces": 55,
+      "candidate_rows": 380448,
+      "rate_rows": 96809,
+      "count_rows": 11514
+    }
+  ],
+  "feature_coverage": {
+    "('housing_density', 'count')": {
+      "Westwood": 981,
+      "new_regions": 16
+    },
+    "('housing_density', 'size')": {
+      "Westwood": 981,
+      "new_regions": 16
+    },
+    "('no_vehicle_fraction', 'count')": {
+      "Westwood": 964,
+      "new_regions": 16
+    },
+    "('no_vehicle_fraction', 'size')": {
+      "Westwood": 981,
+      "new_regions": 16
+    },
+    "('vehicle_lower_bound_per_household', 'count')": {
+      "Westwood": 964,
+      "new_regions": 16
+    },
+    "('vehicle_lower_bound_per_household', 'size')": {
+      "Westwood": 981,
+      "new_regions": 16
+    },
+    "('one_person_household_fraction', 'count')": {
+      "Westwood": 964,
+      "new_regions": 16
+    },
+    "('one_person_household_fraction', 'size')": {
+      "Westwood": 981,
+      "new_regions": 16
+    }
+  }
+}

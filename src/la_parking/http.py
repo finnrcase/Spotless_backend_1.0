@@ -1,6 +1,6 @@
 """Bounded, content-addressed raw snapshots and a resumable request cache.
 
-Cache keys include public URL/params; credentials go in headers, never manifests.
+Cache keys include public URL/params; private parameters and auth headers are redacted from request metadata and errors.
 Refresh explicitly to obtain a new snapshot. Raw bytes are never overwritten.
 """
 from datetime import datetime, timezone
@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 import time
+import threading
+from urllib.parse import urlsplit,quote,quote_plus
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -18,10 +20,13 @@ def utcnow():
 
 
 class Store:
+    _host_times={}
+    _rate_lock=threading.Lock()
     def __init__(self, root='data', refresh=False, max_mb=80):
         self.root = Path(root)
         self.refresh = refresh
         self.max_bytes = int(max_mb * 1_000_000)
+        self.last_record=None
         (self.root / 'raw').mkdir(parents=True, exist_ok=True)
         (self.root / 'cache').mkdir(parents=True, exist_ok=True)
         self.session = requests.Session()
@@ -36,16 +41,28 @@ class Store:
             record = json.loads(pointer.read_text())
             path = self.root / record['path']
             if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == record['sha256']:
+                self.last_record=record
                 return path, record
         limit = int(max_mb * 1_000_000) if max_mb else self.max_bytes
         record = {'url': url, 'params': params, 'retrieved_at_utc': utcnow(), 'request_key': key}
+        secrets=[str(v) for v in (secret_params or {}).values() if v]
+        secrets += [str(v) for k,v in (headers or {}).items() if k.lower() in ['authorization','x-app-token'] and v]
+        def redact(value):
+            if isinstance(value,dict):return {k:redact(v) for k,v in value.items()}
+            if isinstance(value,list):return [redact(v) for v in value]
+            if isinstance(value,str):
+                for secret in secrets:
+                    for representation in {secret,quote(secret,safe=''),quote_plus(secret)}:value=value.replace(representation,'REDACTED')
+            return value
         tmp = self.root / 'raw' / f'{key}.partial'
         try:
+            host=urlsplit(url).hostname or '';interval=1.0 if host=='data.lacity.org' else .25
+            with self._rate_lock:
+                delay=interval-(time.monotonic()-self._host_times.get(host,0))
+                if delay>0:time.sleep(delay)
+                self._host_times[host]=time.monotonic()
             with self.session.get(url, params={**(params or {}), **(secret_params or {})}, headers=headers, stream=True, timeout=(15, 90)) as r:
-                public_url=r.url
-                for secret in (secret_params or {}).values():
-                    public_url=public_url.replace(str(secret),'REDACTED')
-                record.update(status=r.status_code, final_url=public_url, headers=dict(r.headers))
+                record.update(status=r.status_code, final_url=redact(r.url), headers=redact(dict(r.headers)))
                 r.raise_for_status()
                 if int(r.headers.get('Content-Length', 0)) > limit:
                     raise ValueError('Advertised response exceeds byte budget')
@@ -73,11 +90,11 @@ class Store:
                 pointer.write_text(json.dumps(record, indent=2), encoding='utf8')
         except Exception as exc:
             tmp.unlink(missing_ok=True)
-            message=str(exc)
-            for secret in (secret_params or {}).values(): message=message.replace(str(secret),'REDACTED')
+            message=redact(str(exc))
             record.update(success=False, error=message)
             raise RuntimeError(message) from None
         finally:
+            self.last_record=record
             with (self.root / 'manifest.jsonl').open('a', encoding='utf8') as f:
                 f.write(json.dumps(record) + '\n')
             time.sleep(0.15)
@@ -87,5 +104,7 @@ class Store:
         path, rec = self.get(url, params, **kwargs)
         obj = json.loads(path.read_bytes())
         if isinstance(obj, dict) and ('error' in obj or obj.get('type') == 'error'):
-            raise ValueError(f'API error: {obj}')
+            message=json.dumps(obj)
+            for secret in (kwargs.get('secret_params') or {}).values():message=message.replace(str(secret),'REDACTED')
+            raise ValueError('API error: '+message)
         return obj, rec

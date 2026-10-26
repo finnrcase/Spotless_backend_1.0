@@ -1,5 +1,7 @@
 # Los Angeles parking data foundation
 
+The [Census/regional continuation](docs/coverage_v4.md) expands cached ACS coverage to 2,498 county tracts, adds bounded Downtown/Hollywood archive panels and phone routes, and reports [controlled Census ablations](reports/modeling/COVERAGE_V4.md). Authentication failed for the locally loaded Census key; public cached files kept the work moving. No unmetered accuracy or citywide validation is claimed.
+
 The [spatial-v3 continuation](docs/spatial_v3.md) adds inner geographic/time validation, vintage-correct employment, independent phone bay checks, blind sensor capture and enforced field holdouts. [Measured transfer results](reports/modeling/SPATIAL_V3.md) retain the negative results and unsupported unmetered status. The root [AGENTS.md](AGENTS.md) records the authorized check → diff → commit → push → remote verification workflow.
 
 The [temporal improvement experiment](docs/temporal_v2.md) audits sensor semantics, adds causal block patterns and consecutive history, and compares models on fixed legacy targets using chronological validation RMSE. The [experiment table](reports/modeling/TEMPORAL_V2.md) separates known/unseen blocks and keeps unmetered accuracy unsupported. New September and prospective manual holdouts are reserved unopened.
@@ -42,7 +44,7 @@ Use `acquire --refresh` deliberately for new snapshots. It retains old raw conte
 
 `finalize.py` verifies raw hashes, builds per-face evidence support, runs tests and executes the notebook. Run tests alone with `.\.venv\Scripts\python.exe -m pytest -q`.
 
-If a Census key becomes available, set `$env:CENSUS_API_KEY` before acquisition. Optional `$env:SOCRATA_APP_TOKEN` improves SODA quotas. `.env.example` documents names; `.env` is **not automatically loaded**. Credentials are excluded from cache keys and manifests. No credentials are required for the sources successfully acquired in this run.
+The CLI and Census connector load only `CENSUS_API_KEY` from the local `.env`; an existing process variable takes precedence. `.env` is hidden locally and Git-ignored. Never paste or commit the value. Run `.\.venv\Scripts\python.exe scripts/verify_census.py` for a small authenticated check that prints only safe status metadata. The latest real request loaded the key but returned Census's invalid-key page (HTTP 200 HTML), so authentication failed; cached public ACS files remain usable. Socrata access defaults to anonymous, with caching, host rate limiting and retry/backoff; no additional key is needed for this work.
 
 ## Inspect results
 

@@ -11,8 +11,14 @@ def build_collector(output='reports/collector.html', root=None):
     faces=gpd.read_parquet(data/'pilot_block_faces.parquet').to_crs(4326)
     segments=gpd.read_parquet(data/'pilot_street_segments.parquet').to_crs(4326).set_index('segment_id')
     mapping=pd.read_parquet(data/'meter_face_mapping.parquet')
+    expanded=root/'data/modeling/coverage_v4'
+    if (expanded/'collector_faces.parquet').exists():
+        faces=gpd.GeoDataFrame(pd.concat([faces,gpd.read_parquet(expanded/'collector_faces.parquet').to_crs(4326)],ignore_index=True),crs=4326).drop_duplicates('block_face_id')
+        extra=gpd.read_parquet(expanded/'collector_streets.parquet').to_crs(4326).set_index('segment_id')
+        segments=pd.concat([segments,extra]);segments=segments.loc[~segments.index.duplicated()]
+        mapping=pd.concat([mapping,pd.read_parquet(expanded/'meter_mapping.parquet')],ignore_index=True).drop_duplicates('space_id')
     meters=mapping.loc[mapping.join_status=='matched'].groupby('block_face_id').size().to_dict()
-    bay_points=pd.read_parquet(data/'pilot_meters.parquet',columns=['spaceid','latitude','longitude'])
+    bay_points=pd.read_parquet(data/'meters.parquet',columns=['spaceid','latitude','longitude'])
     bay_rows=mapping.loc[mapping.join_status.eq('matched')].merge(bay_points,left_on='space_id',right_on='spaceid',validate='one_to_one')
     bays={face:g[['space_id','latitude','longitude']].sort_values('space_id').to_dict('records') for face,g in bay_rows.groupby('block_face_id')}
     support=json.loads((root/'reports/final_validation.json').read_text())
@@ -37,7 +43,7 @@ def build_collector(output='reports/collector.html', root=None):
                         'span':max(line.bounds[2]-line.bounds[0],line.bounds[3]-line.bounds[1],.0015),
                         'paths':paths(face.geometry.simplify(.000005)),'centerline':coords,
                         'endpoints':f'{coords[0][1]:.5f}, {coords[0][0]:.5f} → {coords[-1][1]:.5f}, {coords[-1][0]:.5f}'})
-    payload={'jurisdiction':'City of Los Angeles','faces':sorted(records,key=lambda f:(f['street'],f['code'])),'streets':streets,'support':{'fresh_faces':support['faces_with_fresh_partial_metered_evidence'],'snapshot_utc':source_coverage['generated_at_utc'],'inventory_note':'Snapshot support only; unvalidated geography and accuracy','curb_asset_vintage':'2017 inventory based on 2014 imagery; current maintenance not verified'}}
+    payload={'jurisdiction':'City of Los Angeles','faces':sorted(records,key=lambda f:(f['street'],f['code'])),'streets':streets,'support':{'fresh_faces':support['faces_with_fresh_partial_metered_evidence'],'snapshot_utc':source_coverage['generated_at_utc'],'inventory_note':'Snapshot support covers original Westwood faces only; additional regional faces have no current availability claim. Unvalidated geography and accuracy.','curb_asset_vintage':'2017 inventory based on 2014 imagery; current maintenance not verified'}}
     html=(template/'index.html').read_text(encoding='utf8')
     substitutions={'/*__CSS__*/':(template/'styles.css').read_text(encoding='utf8'),
                    '/*__DATA__*/':json.dumps(payload,separators=(',',':')).replace('<','\\u003c'),
@@ -45,6 +51,6 @@ def build_collector(output='reports/collector.html', root=None):
                    '/*__APP__*/':(template/'app.js').read_text(encoding='utf8')}
     for key,value in substitutions.items(): html=html.replace(key,value)
     target=Path(output); target.parent.mkdir(parents=True,exist_ok=True); target.write_text(html,encoding='utf8')
-    manifest={'faces':len(records),'html_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'bytes':target.stat().st_size,'source':'existing local pilot inventory','self_contained':True,'published':False}
+    manifest={'faces':len(records),'html_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'bytes':target.stat().st_size,'source':'local Westwood and optional bounded regional inventory; approximate faces, restrictions unknown','self_contained':True,'published':False}
     (target.parent/'collector_manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
     return manifest

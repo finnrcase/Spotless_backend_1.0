@@ -11,7 +11,7 @@ def verify_ids(expected, features, oid):
         raise ValueError(f'Incomplete/duplicate ArcGIS IDs: expected {len(expected)}, got {len(got)}')
 
 
-def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=500):
+def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=500,out_fields='*'):
     meta, _ = store.json(layer, {'f':'json'})
     oid = meta.get('objectIdField') or next(f['name'] for f in meta['fields'] if f['type']=='esriFieldTypeOID')
     query = {'f':'json', 'where':where}
@@ -27,7 +27,7 @@ def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=5
         chunk=expected[start:start+min(batch,meta.get('maxRecordCount',batch))]
         # Short range predicates avoid IIS URL-length 404s from long objectIds lists.
         # Retain spatial filter for sparse pilot IDs and reconcile the exact set.
-        obj,_=store.json(layer+'/query', {**query, 'f':'geojson', 'where':f'({where}) AND {oid} >= {chunk[0]} AND {oid} <= {chunk[-1]}', 'outFields':'*', 'outSR':4326, 'returnGeometry':'true', 'resultRecordCount':len(chunk)})
+        obj,_=store.json(layer+'/query', {**query, 'f':'geojson', 'where':f'({where}) AND {oid} >= {chunk[0]} AND {oid} <= {chunk[-1]}', 'outFields':out_fields, 'outSR':4326, 'returnGeometry':'true', 'resultRecordCount':len(chunk)})
         if obj.get('exceededTransferLimit'):
             raise ValueError('ArcGIS transfer limit; reduce batch size')
         verify_ids(chunk,obj['features'],oid)
@@ -36,8 +36,8 @@ def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=5
     return {'type':'FeatureCollection','features':features}, meta, oid
 
 
-def socrata(store, ident, *, where=None, max_rows=60000, page_size=5000):
-    headers = {'X-App-Token':os.environ['SOCRATA_APP_TOKEN']} if os.getenv('SOCRATA_APP_TOKEN') else {}
+def socrata(store, ident, *, where=None, max_rows=60000, page_size=5000,anonymous=True):
+    headers = {'X-App-Token':os.environ['SOCRATA_APP_TOKEN']} if not anonymous and os.getenv('SOCRATA_APP_TOKEN') else {}
     base = f'{SODA}/resource/{ident}.json'
     filt = {'$where':where} if where else {}
     count,_=store.json(base,{**filt,'$select':'count(*)'},headers=headers)
@@ -78,6 +78,8 @@ def parcel_on_demand(store, layer, bbox, max_features=2000):
 
 
 def census_acs(store, year=2024):
+    from .environment import load_local_env
+    load_local_env()
     params={'get':'NAME,B01003_001E,B25001_001E,B08201_002E,B08301_001E,B11001_001E', 'for':'tract:*','in':'state:06 county:037'}
     # Cache/manifests include only public parameters; raw bodies still preserved.
     secret={'key':os.environ['CENSUS_API_KEY']} if os.getenv('CENSUS_API_KEY') else None
