@@ -18,3 +18,7 @@ Checks: 97 tests passed, 16 existing data-dependent tests skipped. Twelve new si
 Raw snapshots stay ignored by Git. Run `la-parking acquire-signals` on the project machine to obtain its local copies. Use `--refresh` explicitly for a new forecast snapshot. No long-running poller or deployment was started.
 
 Feature builder and acquisition are integrated into the CLI. Existing training/production models are unchanged. Evaluate additions only against matched outcomes with snapshots actually available at issue time. See [source research and access steps](../docs/data_access_research.md).
+
+## Local continuation, October 26
+
+Ran `acquire-signals` in Spotless_backend_1.0: 156 NWS hourly periods and 463 Westwood sensor-location assets, with exact source-ID reconciliation. Current sensor status values are explicitly excluded. Optional Ticketmaster/CurbIQ keys were checked privately and are missing; public acquisition continued. A prospective preview joins the grid forecast; an August issue receives null for the later signals. Snapshot hashes verified. No historical outcomes were opened, models retrained or R? gain measured. See `reports/signals_verification.json` for receipt times and safe credential status. Matched prospective comparisons remain gated on direct reviewed labels.

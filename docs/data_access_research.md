@@ -56,7 +56,7 @@ Use the existing locked environment. On Windows:
 .\.venv\Scripts\la-parking.exe acquire-signals --refresh
 ```
 
-On Linux/macOS use `.venv/bin/la-parking`. Raw data stay outside Git; a new clone must run acquisition. Optional keys must be set in the process environment: this change does not add automatic .env loading. Never paste keys into tracked files or command arguments. Only TICKETMASTER_API_KEY and CURBIQ_TOKEN enable the optional connectors; the public sources need no new key. The user's Census key on another computer is not present in this workspace.
+On Linux/macOS use `.venv/bin/la-parking`. Raw data stay outside Git; a new clone must run acquisition. The current connector loads only `TICKETMASTER_API_KEY` and `CURBIQ_TOKEN` from the ignored local `.env`, preserving existing process values. Reports expose loaded/missing status only, never values. The CLI separately loads the Census key. Public weather and sensor-location checks need no key. Sensor-location queries explicitly exclude `SENSOR_STATUS` values to preserve occupancy holdouts; asset status is not verified sensor health.
 
 Sensor exports reconcile all source IDs against paginated geometry. CurbIQ capture is deliberately first-page-only, at most 100 rows, for schema and coverage review; it never auto-applies legal rules. Provider access was not tested without credentials.
 

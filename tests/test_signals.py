@@ -106,6 +106,7 @@ def test_acquisition_handles_missing_keys_and_refuses_oversize_event_export(tmp_
         (store.root/'cache'/'asset.json').write_text(json.dumps(record))
         return {'features':[]},{'name':'sensor assets'},'OBJECTID'
     monkeypatch.setattr(module,'Store',FakeStore)
+    monkeypatch.setattr('la_parking.environment.load_local_env',lambda **kw:{k:{'loaded':bool(__import__('os').environ.get(k)),'source':'test_fixture'} for k in kw['keys']})
     monkeypatch.setattr(module,'arcgis',assets)
     monkeypatch.delenv('TICKETMASTER_API_KEY',raising=False)
     monkeypatch.delenv('CURBIQ_TOKEN',raising=False)

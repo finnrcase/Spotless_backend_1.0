@@ -70,11 +70,13 @@ def normalize_events(rows, received_at, start, end):
 
 
 def acquire_signals(config_path='config/signal_sources.json', refresh=False):
+    from .environment import load_local_env
+    credentials=load_local_env(keys=('TICKETMASTER_API_KEY','CURBIQ_TOKEN'))
     cfg = json.loads(Path(config_path).read_text())
     root = Path(cfg['output_root']); root.mkdir(parents=True, exist_ok=True)
     store = Store(root=str(root/'requests'), refresh=refresh, max_mb=10)
     report = {'sources': {}, 'occupancy_labels_added': 0,
-              'historical_benchmarks_rerun': False, 'models_activated': False}
+              'historical_benchmarks_rerun': False, 'models_activated': False,'credential_status':credentials}
 
     def save(source, fn):
         try:
@@ -102,7 +104,9 @@ def acquire_signals(config_path='config/signal_sources.json', refresh=False):
         return normalize_weather(obj, rec.get('received_at_utc') or datetime.now(timezone.utc).isoformat())
 
     def sensors():
-        obj, meta, oid = arcgis(store, cfg['sensor_layer'], bbox=cfg['pilot_bbox'], max_features=1500, batch=100)
+        obj, meta, oid = arcgis(store, cfg['sensor_layer'], bbox=cfg['pilot_bbox'], max_features=1500, batch=100,
+            out_fields='OBJECTID,SENSOR_UNIQUE_ID,GPSX,GPSY,MTYPE,ADDRESS_SPACE')
+        if any('SENSOR_STATUS' in f['properties'] for f in obj['features']):raise ValueError('Reserved occupancy status values must not be acquired')
         # Cached responses retain their original receipt time.
         receipts = []
         for cache in (store.root/'cache').glob('*.json'):
@@ -112,6 +116,7 @@ def acquire_signals(config_path='config/signal_sources.json', refresh=False):
         return {'source': 'ladot_sensor_assets', 'features': obj['features'],
                 'received_at_utc': max(receipts), 'object_id_field': oid,
                 'source_name': meta.get('name'), 'bbox': cfg['pilot_bbox'],
+                'status_values_requested':False,
                 'occupancy_labels': 0,
                 'note': 'Asset inventory only; status codes are not verified health or historical status.'}
 
