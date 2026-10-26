@@ -25,6 +25,7 @@ def main():
     w=sub.add_parser('acquire-westwood-context');w.add_argument('--refresh',action='store_true')
     q=sub.add_parser('collection');q.add_argument('action',choices=['plan','import','review','effort','audit','metadata']);q.add_argument('--input');q.add_argument('--directory',default='data/observations/captures');q.add_argument('--output',default='reports/collection')
     q=sub.add_parser('controlled-experiment');q.add_argument('action',choices=['readiness','prepare','fit','evaluate']);q.add_argument('--table');q.add_argument('--context');q.add_argument('--manifest');q.add_argument('--reviews');q.add_argument('--release-test',action='store_true');q.add_argument('--artifacts',default='artifacts/models/controlled_observations_v1');q.add_argument('--output')
+    q=sub.add_parser('drone-feasibility');q.add_argument('--config',default='config/drone_feasibility.json');q.add_argument('--output',default='reports/drone_feasibility');q.add_argument('--validate-sdk',action='store_true')
     q=sub.add_parser('evaluate-product');q.add_argument('--manifest',required=True);q.add_argument('--observations',required=True);q.add_argument('--reviews',required=True);q.add_argument('--forecasts',required=True);q.add_argument('--decisions');q.add_argument('--output',default='reports/product/evaluation.json')
     q=sub.add_parser('product-pilot');q.add_argument('action',choices=['prepare','freeze','intake','evaluate']);q.add_argument('--input');q.add_argument('--artifacts',nargs='*');q.add_argument('--freeze-file',default='data/product/pilot_freeze.json');q.add_argument('--output');q.add_argument('--observations');q.add_argument('--reviews')
     s=sub.add_parser('serve');s.add_argument('--port',type=int,default=8765)
@@ -116,6 +117,9 @@ def main():
             r=prepare(a.table,a.reviews,a.manifest,a.output,a.release_test)
         else:r=run(a.action,a.table,a.context,a.manifest,a.artifacts,a.output)
         print(json.dumps(r,indent=2,default=str))
+    elif a.command=='drone-feasibility':
+        from .drone_feasibility import run
+        print(json.dumps(run(a.config,a.output,a.validate_sdk),indent=2))
     elif a.command=='evaluate-product':
         from .product_evaluation import run
         print(json.dumps(run(a.manifest,a.observations,a.reviews,a.forecasts,a.decisions,a.output),indent=2))

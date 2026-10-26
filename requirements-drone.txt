@@ -1,0 +1,3 @@
+# Optional, isolated API validation / future SITL laboratory only.
+# The core app does not import or depend on this package.
+mavsdk==4.0.6

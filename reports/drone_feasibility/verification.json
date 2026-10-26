@@ -1,0 +1,42 @@
+{
+  "data_kind": "offline_simulation_and_api_validation",
+  "checked_at_date": "2026-10-26",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_drone_feasibility.py",
+    "passed": 6
+  },
+  "command": ".venv/Scripts/la-parking.exe drone-feasibility --validate-sdk",
+  "requested_faces": 16,
+  "covered_faces_simulated": 10,
+  "sdk_data_objects_validated": true,
+  "sdk_mission_items": 153,
+  "real_aircraft_connections": 0,
+  "sitl_flights_executed": 0,
+  "runtime_audit": {
+    "px4": false,
+    "gazebo": false,
+    "docker": false,
+    "wsl_launcher_found": true,
+    "wsl_list_quiet_result": "Windows Subsystem for Linux is not installed"
+  },
+  "remaining_blocker": "No usable PX4/Gazebo SITL runtime. Object serialization is not a simulated flight. Modern reviewed imagery and matched manual/ground/drone outcomes are also absent.",
+  "official_metadata": [
+    {
+      "url": "https://pypi.org/pypi/mavsdk/4.0.6/json",
+      "version": "4.0.6",
+      "wheel_bytes": 6553825,
+      "wheel_sha256": "743916a0c7d79af00a1c4068dc88e15d52adb070fae467c78e7ebf58e2d672b7",
+      "published_date": "2026-10-08"
+    },
+    {
+      "url": "https://api.github.com/repos/PX4/PX4-Autopilot/releases/latest",
+      "tag": "v1.17.0",
+      "published_at_utc": "2026-05-13T19:03:26Z",
+      "tag_object_sha": "a5eb12d2ab591251faa009f76b2685b8cc64405d"
+    }
+  ],
+  "raw_runtime_committed": false,
+  "raw_imagery_acquired": 0,
+  "forecast_metrics": null,
+  "unchanged_model_selection_and_label_rules": true
+}

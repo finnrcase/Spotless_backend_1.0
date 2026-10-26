@@ -111,6 +111,12 @@ desktop.ini
 !/reports/controlled_observations/*.md
 !/reports/controlled_observations/readiness.json
 !/reports/controlled_observations/verification.json
+!/reports/drone_feasibility/
+/reports/drone_feasibility/*
+!/reports/drone_feasibility/*.md
+!/reports/drone_feasibility/simulation.json
+!/reports/drone_feasibility/sensitivity.json
+!/reports/drone_feasibility/verification.json
 !/reports/service/
 /reports/service/*
 !/reports/service/*.md
