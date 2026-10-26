@@ -20,3 +20,13 @@ Use training-only causal features and chronological validation. Separate known-b
 Previously inspected tests are legacy benchmarks. Reserve new periods, blocks and sessions before tuning; do not open reserved outcomes during development. Compare versions on identical targets and observations, and report coverage and uncertainty. Do not assume meter models transfer to unmetered streets or imply citywide accuracy from a Westwood sample.
 
 Use bounded, cached free/public acquisition. Keep raw data, credentials, local observations and model binaries excluded from Git. Do not purchase services or publicly deploy.
+
+# Model simplicity and evidence
+
+Do not add datasets, features, model families, services or dependencies merely because they are available. Before acquisition or implementation, state the parking mechanism, the specific evidence gap, and the smallest experiment that could justify the addition. Inventory existing inputs first and avoid duplicating their information.
+
+Keep research acquisition separate from serving and model promotion. For future experiments, eligible candidates must include the incumbent and appropriate simple baselines (training-only mean, calendar/weekhour, and persistence when recent observations exist). Selecting the best of several complex candidates alone does not demonstrate improvement. Prefer the simpler candidate when differences are within validation uncertainty; predeclare the selection rule and intended use before scoring. Do not rewrite completed/frozen experiments.
+
+Promote a feature family only after an identical-row, identical-label ablation on relevant chronological/geographic validation demonstrates useful improvement or an explicitly measured coverage benefit, without a material subgroup regression. Report sample/label coverage, block/day uncertainty, missingness, latency, acquisition cost and maintenance burden alongside scores. Score newly covered populations separately from paired accuracy comparisons. Keep marginal, unreliable or harmful inputs experimental or retire them from the active path; retain provenance and frozen evidence.
+
+Prioritize reviewed unmetered observations, verified legal supply and a reliable recent-observation-to-forecast path over additional contextual variables. Do not expand geography, introduce deep learning, or build autonomous collection infrastructure solely to make the project appear more sophisticated. Model strength means validated predictions and better parking outcomes, not source count, architecture size or a selectively reported R². See docs/model_discipline_review.md for the current evidence and next experiment.
