@@ -57,6 +57,8 @@ Python reusable logic lives in `src/la_parking`. Numbered notebooks explain and 
 
 ## Continue the project
 
+New optional prospective sources are documented in [data access research](docs/data_access_research.md): working NWS hourly forecasts and official sensor-asset downloads, an optional Ticketmaster connector, and an access-gated CurbIQ first-page probe. Run `la-parking acquire-signals`, then `la-parking signal-features --requests <jsonl> --output <jsonl>` for receipt-time-safe predictors. These additions do not create unmetered labels or change reported R². Direct camera-observed LA curb data from Automotus/INRIX and CurbIQ LA are access leads, not datasets already obtained.
+
 The working local API and minimal map are now available. Run `.\.venv\Scripts\la-parking.exe serve` and open **http://127.0.0.1:8765/**. It includes destination/street search, estimated walking routes, full-stay eligibility checks, explicit archive replay, evidence layers, an arrival slider, observation submission/import and refresh monitoring. See [local service instructions](docs/local_service.md) and [refresh/expansion plan](docs/service_refresh.md). OpenAPI is served at `/openapi.json`; no external service or deployment is required.
 
 The time-specific modeling pipeline has been implemented and run. See [training commands](docs/training.md), [measured results](reports/modeling/results_report.md), [model card](docs/model_card.md) and `notebooks/02_time_specific_models.ipynb`. These are metered sensor-panel experiments, with explicit partial coverage and retrospective geometry; user-facing legally suitable parking fields remain unsupported/null.

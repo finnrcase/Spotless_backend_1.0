@@ -68,7 +68,8 @@ class Store:
                     tmp.unlink()
                 else:
                     tmp.rename(path)
-                record.update(path=str(path.relative_to(self.root)), sha256=sha, bytes=size, success=True)
+                record.update(path=str(path.relative_to(self.root)), sha256=sha, bytes=size,
+                              success=True, received_at_utc=utcnow())
                 pointer.write_text(json.dumps(record, indent=2), encoding='utf8')
         except Exception as exc:
             tmp.unlink(missing_ok=True)

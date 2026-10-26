@@ -6,6 +6,8 @@ from pathlib import Path
 def main():
     p=argparse.ArgumentParser(description='Los Angeles parking data foundation')
     sub=p.add_subparsers(dest='command',required=True)
+    sig=sub.add_parser('acquire-signals');sig.add_argument('--refresh',action='store_true')
+    sig=sub.add_parser('signal-features');sig.add_argument('--requests',required=True);sig.add_argument('--output',default='data/signals/features.jsonl')
     a=sub.add_parser('acquire'); a.add_argument('--months',nargs='*',default=['2025_09','2026_08']); a.add_argument('--refresh',action='store_true')
     sub.add_parser('build'); sub.add_parser('schemas')
     o=sub.add_parser('observations'); o.add_argument('jsonl')
@@ -22,7 +24,13 @@ def main():
     u=sub.add_parser('prepare-unmetered');u.add_argument('--reviews',required=True);u.add_argument('--features',required=True);u.add_argument('--output',default='data/modeling/unmetered_reviewed.parquet')
     f=sub.add_parser('forecast');f.add_argument('--face',required=True);f.add_argument('--issued',required=True);f.add_argument('--arrival',required=True);f.add_argument('--stay',type=int,default=60);f.add_argument('--permit',default=None);f.add_argument('--experimental-transfer',action='store_true');f.add_argument('--output',default=None)
     a=p.parse_args()
-    if a.command=='acquire':
+    if a.command=='acquire-signals':
+        from .signals import acquire_signals
+        print(json.dumps(acquire_signals(refresh=a.refresh),indent=2))
+    elif a.command=='signal-features':
+        from .signals import build_signal_features
+        print(json.dumps(build_signal_features(a.requests,a.output),indent=2))
+    elif a.command=='acquire':
         from .acquire import run
         run(a.months,a.refresh)
     elif a.command=='build':

@@ -1,0 +1,12 @@
+{
+  "version": "prospective-signals-v1",
+  "pilot_bbox": [-118.473, 34.038, -118.417, 34.087],
+  "weather_point": [34.063, -118.445],
+  "sensor_layer": "https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16",
+  "ticketmaster_days": 14,
+  "ticketmaster_max_events": 900,
+  "event_feature_radius_m": 1000,
+  "event_feature_window_minutes": 120,
+  "maximum_snapshot_age_hours": 24,
+  "output_root": "data/signals"
+}
