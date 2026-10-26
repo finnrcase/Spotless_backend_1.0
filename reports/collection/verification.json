@@ -1,0 +1,9 @@
+{
+  "capture_unit_tests_passed": 7,
+  "related_product_tests_passed": 21,
+  "browser_checks_passed": 6,
+  "modern_captures_evaluated": 0,
+  "detector_metrics_available": false,
+  "holdouts_opened": false,
+  "raw_media_committed": false
+}

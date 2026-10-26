@@ -100,6 +100,12 @@ desktop.ini
 /reports/westwood_context/*
 !/reports/westwood_context/*.md
 !/reports/westwood_context/coverage.json
+!/reports/collection/
+/reports/collection/*
+!/reports/collection/*.md
+!/reports/collection/audit.json
+!/reports/collection/development_plan.json
+!/reports/collection/verification.json
 !/reports/service/
 /reports/service/*
 !/reports/service/*.md

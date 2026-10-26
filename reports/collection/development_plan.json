@@ -1,0 +1,2409 @@
+{
+  "version": "collection-development-v1",
+  "seed": 452,
+  "physical_blocks": 8,
+  "faces": 16,
+  "planned_snapshots": 64,
+  "observed_snapshots": 0,
+  "protected_blocks_excluded": [
+    "la:boe:asset:1634:oid:1645:part:0",
+    "la:boe:asset:172632:oid:90476:part:0",
+    "la:boe:asset:2952:oid:2756:part:0",
+    "la:boe:asset:47050:oid:46468:part:0",
+    "la:boe:asset:59771:oid:56971:part:0",
+    "la:boe:asset:69613:oid:66411:part:0",
+    "la:boe:asset:72130:oid:84537:part:0"
+  ],
+  "sampling": "Within two inventory meter-link strata: 75% uniform plus 25% evidence-gap weighted sequential draws without replacement; logged probabilities are conditional draws, not marginal inclusion weights.",
+  "uncertainty_target": "Historic geometry confidence only; no held-out outcomes or forecast errors used. Missing rules and absent meters do not establish legal supply/type.",
+  "workload": "One physical block per approximately 65-minute session, both faces four minutes apart; travel/review time must be logged. Choose this bounded plan rather than assuming all earlier routes can also be completed.",
+  "representativeness": "Probability selection within a constrained short-block Westwood frame; purposive dates. Not a representative LA sample.",
+  "faces_detail": [
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:left",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "left",
+      "longitude": -118.42911187345304,
+      "latitude": 34.0633450181461,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:right",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "right",
+      "longitude": -118.4300731203232,
+      "latitude": 34.06465131709382,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:left",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "left",
+      "longitude": -118.43783252611581,
+      "latitude": 34.065478858419425,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:right",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "right",
+      "longitude": -118.43799368564073,
+      "latitude": 34.06542570247764,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:left",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "left",
+      "longitude": -118.4558161785686,
+      "latitude": 34.075701031924126,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:right",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "right",
+      "longitude": -118.45544197995045,
+      "latitude": 34.07580402255449,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:left",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42902469688,
+      "latitude": 34.05387798125258,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:right",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42891431036571,
+      "latitude": 34.05376675125113,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:left",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.45352484358065,
+      "latitude": 34.044957741824,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:right",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.45344372305709,
+      "latitude": 34.044830251516856,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:left",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42673116493607,
+      "latitude": 34.05545459333854,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:right",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42662079385929,
+      "latitude": 34.05534335121836,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:left",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "left",
+      "longitude": -118.46396559070465,
+      "latitude": 34.0470573500692,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:right",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "right",
+      "longitude": -118.46384470670189,
+      "latitude": 34.04695396667378,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:left",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42938446663749,
+      "latitude": 34.05363067661762,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:right",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42982136771596,
+      "latitude": 34.05314323541697,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only"
+    }
+  ],
+  "assignments": [
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:left",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "left",
+      "longitude": -118.42911187345304,
+      "latitude": 34.0633450181461,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-left-0",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T08:00:00-08:00",
+      "planned_utc": "2026-11-01T16:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:left",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "left",
+      "longitude": -118.42911187345304,
+      "latitude": 34.0633450181461,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-left-15",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T08:15:00-08:00",
+      "planned_utc": "2026-11-01T16:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:left",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "left",
+      "longitude": -118.42911187345304,
+      "latitude": 34.0633450181461,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-left-30",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T08:30:00-08:00",
+      "planned_utc": "2026-11-01T16:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:left",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "left",
+      "longitude": -118.42911187345304,
+      "latitude": 34.0633450181461,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-left-60",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T09:00:00-08:00",
+      "planned_utc": "2026-11-01T17:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:right",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "right",
+      "longitude": -118.4300731203232,
+      "latitude": 34.06465131709382,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-right-0",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T08:04:00-08:00",
+      "planned_utc": "2026-11-01T16:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:right",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "right",
+      "longitude": -118.4300731203232,
+      "latitude": 34.06465131709382,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-right-15",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T08:19:00-08:00",
+      "planned_utc": "2026-11-01T16:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:right",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "right",
+      "longitude": -118.4300731203232,
+      "latitude": 34.06465131709382,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-right-30",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T08:34:00-08:00",
+      "planned_utc": "2026-11-01T16:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:8040:oid:7521:part:0:right",
+      "block_id": "la:boe:asset:8040:oid:7521:part:0",
+      "street_name": "S WOODRUFF AVE",
+      "side": "right",
+      "longitude": -118.4300731203232,
+      "latitude": 34.06465131709382,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "W ASHTON AVE",
+        "W WELLWORTH AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:8040:oid:7521:part:0",
+        "meter_linked_prior": false,
+        "draw": 1,
+        "stratum_candidates": 495,
+        "remaining_candidates": 495,
+        "conditional_draw_probability": 0.0020244760724309383,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-00-2026-11-01-right-60",
+      "survey_session_id": "collection-v1-00-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T09:04:00-08:00",
+      "planned_utc": "2026-11-01T17:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:left",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "left",
+      "longitude": -118.43783252611581,
+      "latitude": 34.065478858419425,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-left-0",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T12:00:00-08:00",
+      "planned_utc": "2026-11-01T20:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:left",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "left",
+      "longitude": -118.43783252611581,
+      "latitude": 34.065478858419425,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-left-15",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T12:15:00-08:00",
+      "planned_utc": "2026-11-01T20:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:left",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "left",
+      "longitude": -118.43783252611581,
+      "latitude": 34.065478858419425,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-left-30",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T12:30:00-08:00",
+      "planned_utc": "2026-11-01T20:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:left",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "left",
+      "longitude": -118.43783252611581,
+      "latitude": 34.065478858419425,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-left-60",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T13:00:00-08:00",
+      "planned_utc": "2026-11-01T21:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:right",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "right",
+      "longitude": -118.43799368564073,
+      "latitude": 34.06542570247764,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-right-0",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T12:04:00-08:00",
+      "planned_utc": "2026-11-01T20:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:right",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "right",
+      "longitude": -118.43799368564073,
+      "latitude": 34.06542570247764,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-right-15",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T12:19:00-08:00",
+      "planned_utc": "2026-11-01T20:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:right",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "right",
+      "longitude": -118.43799368564073,
+      "latitude": 34.06542570247764,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-right-30",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T12:34:00-08:00",
+      "planned_utc": "2026-11-01T20:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:12913:oid:10207:part:0:right",
+      "block_id": "la:boe:asset:12913:oid:10207:part:0",
+      "street_name": "S MANNING AVE",
+      "side": "right",
+      "longitude": -118.43799368564073,
+      "latitude": 34.06542570247764,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S MALCOLM AVE",
+        "W LE CONTE AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:12913:oid:10207:part:0",
+        "meter_linked_prior": false,
+        "draw": 2,
+        "stratum_candidates": 495,
+        "remaining_candidates": 494,
+        "conditional_draw_probability": 0.0020285829450898216,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-01-2026-11-01-right-60",
+      "survey_session_id": "collection-v1-01-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T13:04:00-08:00",
+      "planned_utc": "2026-11-01T21:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:left",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "left",
+      "longitude": -118.4558161785686,
+      "latitude": 34.075701031924126,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-left-0",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T17:00:00-08:00",
+      "planned_utc": "2026-11-02T01:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:left",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "left",
+      "longitude": -118.4558161785686,
+      "latitude": 34.075701031924126,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-left-15",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T17:15:00-08:00",
+      "planned_utc": "2026-11-02T01:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:left",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "left",
+      "longitude": -118.4558161785686,
+      "latitude": 34.075701031924126,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-left-30",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T17:30:00-08:00",
+      "planned_utc": "2026-11-02T01:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:left",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "left",
+      "longitude": -118.4558161785686,
+      "latitude": 34.075701031924126,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-left-60",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T18:00:00-08:00",
+      "planned_utc": "2026-11-02T02:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:right",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "right",
+      "longitude": -118.45544197995045,
+      "latitude": 34.07580402255449,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-right-0",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-01T17:04:00-08:00",
+      "planned_utc": "2026-11-02T01:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:right",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "right",
+      "longitude": -118.45544197995045,
+      "latitude": 34.07580402255449,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-right-15",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-01T17:19:00-08:00",
+      "planned_utc": "2026-11-02T01:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:right",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "right",
+      "longitude": -118.45544197995045,
+      "latitude": 34.07580402255449,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-right-30",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-01T17:34:00-08:00",
+      "planned_utc": "2026-11-02T01:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:69033:oid:67720:part:0:right",
+      "block_id": "la:boe:asset:69033:oid:67720:part:0",
+      "street_name": "W SUNSET BLVD",
+      "side": "right",
+      "longitude": -118.45544197995045,
+      "latitude": 34.07580402255449,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S GREENFIELD AVE",
+        "S VETERAN AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:69033:oid:67720:part:0",
+        "meter_linked_prior": false,
+        "draw": 3,
+        "stratum_candidates": 495,
+        "remaining_candidates": 493,
+        "conditional_draw_probability": 0.001954028308195141,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.1
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-02-2026-11-01-right-60",
+      "survey_session_id": "collection-v1-02-2026-11-01",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-01T18:04:00-08:00",
+      "planned_utc": "2026-11-02T02:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:left",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42902469688,
+      "latitude": 34.05387798125258,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-left-0",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T08:00:00-08:00",
+      "planned_utc": "2026-11-02T16:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:left",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42902469688,
+      "latitude": 34.05387798125258,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-left-15",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T08:15:00-08:00",
+      "planned_utc": "2026-11-02T16:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:left",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42902469688,
+      "latitude": 34.05387798125258,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-left-30",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T08:30:00-08:00",
+      "planned_utc": "2026-11-02T16:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:left",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42902469688,
+      "latitude": 34.05387798125258,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-left-60",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T09:00:00-08:00",
+      "planned_utc": "2026-11-02T17:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:right",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42891431036571,
+      "latitude": 34.05376675125113,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-right-0",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T08:04:00-08:00",
+      "planned_utc": "2026-11-02T16:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:right",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42891431036571,
+      "latitude": 34.05376675125113,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-right-15",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T08:19:00-08:00",
+      "planned_utc": "2026-11-02T16:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:right",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42891431036571,
+      "latitude": 34.05376675125113,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-right-30",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T08:34:00-08:00",
+      "planned_utc": "2026-11-02T16:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:51377:oid:50284:part:0:right",
+      "block_id": "la:boe:asset:51377:oid:50284:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42891431036571,
+      "latitude": 34.05376675125113,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S PROSSER AVE",
+        "S WESTHOLME AVE"
+      ],
+      "parking_type": "unmetered_candidate_verify",
+      "selection": {
+        "block_id": "la:boe:asset:51377:oid:50284:part:0",
+        "meter_linked_prior": false,
+        "draw": 4,
+        "stratum_candidates": 495,
+        "remaining_candidates": 492,
+        "conditional_draw_probability": 0.0020366853258696523,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-03-2026-11-02-right-60",
+      "survey_session_id": "collection-v1-03-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T09:04:00-08:00",
+      "planned_utc": "2026-11-02T17:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:left",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.45352484358065,
+      "latitude": 34.044957741824,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-left-0",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T12:00:00-08:00",
+      "planned_utc": "2026-11-02T20:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:left",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.45352484358065,
+      "latitude": 34.044957741824,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-left-15",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T12:15:00-08:00",
+      "planned_utc": "2026-11-02T20:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:left",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.45352484358065,
+      "latitude": 34.044957741824,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-left-30",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T12:30:00-08:00",
+      "planned_utc": "2026-11-02T20:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:left",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.45352484358065,
+      "latitude": 34.044957741824,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-left-60",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T13:00:00-08:00",
+      "planned_utc": "2026-11-02T21:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:right",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.45344372305709,
+      "latitude": 34.044830251516856,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-right-0",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T12:04:00-08:00",
+      "planned_utc": "2026-11-02T20:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:right",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.45344372305709,
+      "latitude": 34.044830251516856,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-right-15",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T12:19:00-08:00",
+      "planned_utc": "2026-11-02T20:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:right",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.45344372305709,
+      "latitude": 34.044830251516856,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-right-30",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T12:34:00-08:00",
+      "planned_utc": "2026-11-02T20:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:67182:oid:63520:part:0:right",
+      "block_id": "la:boe:asset:67182:oid:63520:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.45344372305709,
+      "latitude": 34.044830251516856,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FEDERAL AVE",
+        "S COLBY AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:67182:oid:63520:part:0",
+        "meter_linked_prior": true,
+        "draw": 1,
+        "stratum_candidates": 129,
+        "remaining_candidates": 129,
+        "conditional_draw_probability": 0.007799292523191885,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-04-2026-11-02-right-60",
+      "survey_session_id": "collection-v1-04-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T13:04:00-08:00",
+      "planned_utc": "2026-11-02T21:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:left",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42673116493607,
+      "latitude": 34.05545459333854,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-left-0",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T17:00:00-08:00",
+      "planned_utc": "2026-11-03T01:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:left",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42673116493607,
+      "latitude": 34.05545459333854,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-left-15",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T17:15:00-08:00",
+      "planned_utc": "2026-11-03T01:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:left",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42673116493607,
+      "latitude": 34.05545459333854,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-left-30",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T17:30:00-08:00",
+      "planned_utc": "2026-11-03T01:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:left",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42673116493607,
+      "latitude": 34.05545459333854,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-left-60",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T18:00:00-08:00",
+      "planned_utc": "2026-11-03T02:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:right",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42662079385929,
+      "latitude": 34.05534335121836,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-right-0",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-02T17:04:00-08:00",
+      "planned_utc": "2026-11-03T01:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:right",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42662079385929,
+      "latitude": 34.05534335121836,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-right-15",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-02T17:19:00-08:00",
+      "planned_utc": "2026-11-03T01:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:right",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42662079385929,
+      "latitude": 34.05534335121836,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-right-30",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-02T17:34:00-08:00",
+      "planned_utc": "2026-11-03T01:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:21853:oid:19282:part:0:right",
+      "block_id": "la:boe:asset:21853:oid:19282:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42662079385929,
+      "latitude": 34.05534335121836,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S FAIRBURN AVE",
+        "S THAYER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:21853:oid:19282:part:0",
+        "meter_linked_prior": true,
+        "draw": 2,
+        "stratum_candidates": 129,
+        "remaining_candidates": 128,
+        "conditional_draw_probability": 0.007860606527093595,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-05-2026-11-02-right-60",
+      "survey_session_id": "collection-v1-05-2026-11-02",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-02T18:04:00-08:00",
+      "planned_utc": "2026-11-03T02:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:left",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "left",
+      "longitude": -118.46396559070465,
+      "latitude": 34.0470573500692,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-left-0",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-03T08:00:00-08:00",
+      "planned_utc": "2026-11-03T16:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:left",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "left",
+      "longitude": -118.46396559070465,
+      "latitude": 34.0470573500692,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-left-15",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-03T08:15:00-08:00",
+      "planned_utc": "2026-11-03T16:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:left",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "left",
+      "longitude": -118.46396559070465,
+      "latitude": 34.0470573500692,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-left-30",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-03T08:30:00-08:00",
+      "planned_utc": "2026-11-03T16:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:left",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "left",
+      "longitude": -118.46396559070465,
+      "latitude": 34.0470573500692,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-left-60",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-03T09:00:00-08:00",
+      "planned_utc": "2026-11-03T17:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:right",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "right",
+      "longitude": -118.46384470670189,
+      "latitude": 34.04695396667378,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-right-0",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-03T08:04:00-08:00",
+      "planned_utc": "2026-11-03T16:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:right",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "right",
+      "longitude": -118.46384470670189,
+      "latitude": 34.04695396667378,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-right-15",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-03T08:19:00-08:00",
+      "planned_utc": "2026-11-03T16:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:right",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "right",
+      "longitude": -118.46384470670189,
+      "latitude": 34.04695396667378,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-right-30",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-03T08:34:00-08:00",
+      "planned_utc": "2026-11-03T16:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:24805:oid:24337:part:0:right",
+      "block_id": "la:boe:asset:24805:oid:24337:part:0",
+      "street_name": "W WILSHIRE BLVD",
+      "side": "right",
+      "longitude": -118.46384470670189,
+      "latitude": 34.04695396667378,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "S WESTGATE AVE",
+        "S WESTGATE AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:24805:oid:24337:part:0",
+        "meter_linked_prior": true,
+        "draw": 3,
+        "stratum_candidates": 129,
+        "remaining_candidates": 127,
+        "conditional_draw_probability": 0.00792289232002424,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-06-2026-11-03-right-60",
+      "survey_session_id": "collection-v1-06-2026-11-03",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-03T09:04:00-08:00",
+      "planned_utc": "2026-11-03T17:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:left",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42938446663749,
+      "latitude": 34.05363067661762,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-left-0",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-03T12:00:00-08:00",
+      "planned_utc": "2026-11-03T20:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:left",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42938446663749,
+      "latitude": 34.05363067661762,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-left-15",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-03T12:15:00-08:00",
+      "planned_utc": "2026-11-03T20:15:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:left",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42938446663749,
+      "latitude": 34.05363067661762,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-left-30",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-03T12:30:00-08:00",
+      "planned_utc": "2026-11-03T20:30:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:left",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "left",
+      "longitude": -118.42938446663749,
+      "latitude": 34.05363067661762,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-left-60",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-03T13:00:00-08:00",
+      "planned_utc": "2026-11-03T21:00:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:right",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42982136771596,
+      "latitude": 34.05314323541697,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-right-0",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 0,
+      "planned_local": "2026-11-03T12:04:00-08:00",
+      "planned_utc": "2026-11-03T20:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:right",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42982136771596,
+      "latitude": 34.05314323541697,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-right-15",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 15,
+      "planned_local": "2026-11-03T12:19:00-08:00",
+      "planned_utc": "2026-11-03T20:19:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:right",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42982136771596,
+      "latitude": 34.05314323541697,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-right-30",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 30,
+      "planned_local": "2026-11-03T12:34:00-08:00",
+      "planned_utc": "2026-11-03T20:34:00+00:00",
+      "visit_status": "planned_not_observed"
+    },
+    {
+      "block_face_id": "la:boe:asset:29283:oid:25668:part:0:right",
+      "block_id": "la:boe:asset:29283:oid:25668:part:0",
+      "street_name": "W SANTA MONICA BLVD",
+      "side": "right",
+      "longitude": -118.42982136771596,
+      "latitude": 34.05314323541697,
+      "location_is_reference_pin_not_capture_geotag": true,
+      "cross_streets": [
+        "Intersection not resolved; verify map endpoints",
+        "S PROSSER AVE"
+      ],
+      "parking_type": "metered_or_mixed_candidate",
+      "selection": {
+        "block_id": "la:boe:asset:29283:oid:25668:part:0",
+        "meter_linked_prior": true,
+        "draw": 4,
+        "stratum_candidates": 129,
+        "remaining_candidates": 126,
+        "conditional_draw_probability": 0.007986173192681325,
+        "marginal_inclusion_probability": null,
+        "evidence_gap_priority": 1.3
+      },
+      "evaluation_role": "development_only",
+      "assignment_id": "collection-v1-07-2026-11-03-right-60",
+      "survey_session_id": "collection-v1-07-2026-11-03",
+      "repeat_offset_minutes": 60,
+      "planned_local": "2026-11-03T13:04:00-08:00",
+      "planned_utc": "2026-11-03T21:04:00+00:00",
+      "visit_status": "planned_not_observed"
+    }
+  ]
+}

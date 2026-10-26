@@ -1,0 +1,21 @@
+{
+  "captures": 0,
+  "quarantined": 0,
+  "unique_sample_units": 0,
+  "exact_byte_duplicate_captures": 0,
+  "count_agreement_sample_units": 0,
+  "count_agreement_frame_pairs": 0,
+  "independent_count_mae_equal_weight_per_unit": null,
+  "reviewed_full_face_count_units": 0,
+  "operator_hours_recorded": null,
+  "usable_count_units_per_operator_hour": null,
+  "effort_completeness": "Self-reported travel/capture/count/review intervals; completeness not independently established. No yield claim without recorded effort.",
+  "legal_vacancy_labels_promoted": 0,
+  "detector_count_mae": null,
+  "detection_precision": null,
+  "detection_recall": null,
+  "detector_blocker": "No suitable time-specific supplied imagery with independent reference detections has been evaluated. Existing NAIP is 2022 date-only imagery, not prospective truth.",
+  "status": "review_workflow_ready_metrics_unavailable",
+  "queue_items": 0,
+  "models_changed": false
+}

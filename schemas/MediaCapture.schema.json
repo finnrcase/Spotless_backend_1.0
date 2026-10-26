@@ -1,0 +1,322 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "capture_id": {
+      "title": "Capture Id",
+      "type": "string"
+    },
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    },
+    "visit_id": {
+      "title": "Visit Id",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "manual_count",
+        "walking_camera",
+        "passenger_camera",
+        "future_drone",
+        "historic_aerial"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "media_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Media Path"
+    },
+    "manual_observation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Manual Observation Id"
+    },
+    "capture_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Capture At Utc"
+    },
+    "capture_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Capture Date"
+    },
+    "time_precision": {
+      "default": "unknown",
+      "enum": [
+        "exact_offset",
+        "date_only",
+        "local_without_offset",
+        "unknown"
+      ],
+      "title": "Time Precision",
+      "type": "string"
+    },
+    "latitude": {
+      "anyOf": [
+        {
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Latitude"
+    },
+    "longitude": {
+      "anyOf": [
+        {
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Longitude"
+    },
+    "geolocation_method": {
+      "default": "unknown",
+      "enum": [
+        "exif_gps",
+        "sidecar_gps",
+        "confirmed_map_pin",
+        "unknown"
+      ],
+      "title": "Geolocation Method",
+      "type": "string"
+    },
+    "source_received_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Received At Utc"
+    },
+    "frame_offset_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Frame Offset Seconds"
+    },
+    "visible_fraction": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Visible Fraction"
+    },
+    "occlusion": {
+      "items": {
+        "enum": [
+          "tree",
+          "shadow",
+          "traffic",
+          "other",
+          "unmeasured"
+        ],
+        "type": "string"
+      },
+      "title": "Occlusion",
+      "type": "array"
+    },
+    "occupied_visible": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Occupied Visible"
+    },
+    "physical_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Capacity"
+    },
+    "legal_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Legal Capacity"
+    },
+    "legal_capacity_status": {
+      "default": "unknown",
+      "enum": [
+        "verified",
+        "uncertain",
+        "unknown"
+      ],
+      "title": "Legal Capacity Status",
+      "type": "string"
+    },
+    "vehicle_class": {
+      "default": "standard_passenger",
+      "title": "Vehicle Class",
+      "type": "string"
+    },
+    "permit_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Permit Class"
+    },
+    "intended_duration_minutes": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Intended Duration Minutes"
+    },
+    "restriction_evidence": {
+      "default": "",
+      "title": "Restriction Evidence",
+      "type": "string"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "privacy_reviewed": {
+      "default": false,
+      "title": "Privacy Reviewed",
+      "type": "boolean"
+    },
+    "identifiers_present": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Identifiers Present"
+    },
+    "detector_count_candidate": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Detector Count Candidate"
+    }
+  },
+  "required": [
+    "capture_id",
+    "block_face_id",
+    "session_id",
+    "visit_id",
+    "source"
+  ],
+  "title": "MediaCapture",
+  "type": "object"
+}

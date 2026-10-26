@@ -1,0 +1,166 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "review_id": {
+      "title": "Review Id",
+      "type": "string"
+    },
+    "capture_id": {
+      "title": "Capture Id",
+      "type": "string"
+    },
+    "reviewer_code": {
+      "title": "Reviewer Code",
+      "type": "string"
+    },
+    "reviewed_at_utc": {
+      "format": "date-time",
+      "title": "Reviewed At Utc",
+      "type": "string"
+    },
+    "independent_blind_count": {
+      "default": false,
+      "title": "Independent Blind Count",
+      "type": "boolean"
+    },
+    "human_counted": {
+      "default": false,
+      "title": "Human Counted",
+      "type": "boolean"
+    },
+    "capture_time_verified": {
+      "default": false,
+      "title": "Capture Time Verified",
+      "type": "boolean"
+    },
+    "location_verified": {
+      "default": false,
+      "title": "Location Verified",
+      "type": "boolean"
+    },
+    "occupied_visible": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Occupied Visible"
+    },
+    "visible_fraction": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Visible Fraction"
+    },
+    "full_face_visible": {
+      "default": false,
+      "title": "Full Face Visible",
+      "type": "boolean"
+    },
+    "privacy_verified": {
+      "default": false,
+      "title": "Privacy Verified",
+      "type": "boolean"
+    },
+    "visible_scope_id": {
+      "minLength": 1,
+      "title": "Visible Scope Id",
+      "type": "string"
+    },
+    "masks": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Masks",
+      "type": "array"
+    },
+    "physical_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Capacity"
+    },
+    "legal_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Legal Capacity"
+    },
+    "legal_capacity_status": {
+      "default": "unknown",
+      "enum": [
+        "verified",
+        "uncertain",
+        "unknown"
+      ],
+      "title": "Legal Capacity Status",
+      "type": "string"
+    },
+    "restriction_evidence": {
+      "default": "",
+      "title": "Restriction Evidence",
+      "type": "string"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "adjudicated": {
+      "default": false,
+      "title": "Adjudicated",
+      "type": "boolean"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "review_id",
+    "capture_id",
+    "reviewer_code",
+    "reviewed_at_utc",
+    "visible_scope_id"
+  ],
+  "title": "MediaReview",
+  "type": "object"
+}

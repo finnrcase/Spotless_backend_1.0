@@ -23,6 +23,7 @@ def main():
     sub.add_parser('field-route')
     sub.add_parser('product-readiness')
     w=sub.add_parser('acquire-westwood-context');w.add_argument('--refresh',action='store_true')
+    q=sub.add_parser('collection');q.add_argument('action',choices=['plan','import','review','effort','audit','metadata']);q.add_argument('--input');q.add_argument('--directory',default='data/observations/captures');q.add_argument('--output',default='reports/collection')
     q=sub.add_parser('evaluate-product');q.add_argument('--manifest',required=True);q.add_argument('--observations',required=True);q.add_argument('--reviews',required=True);q.add_argument('--forecasts',required=True);q.add_argument('--decisions');q.add_argument('--output',default='reports/product/evaluation.json')
     q=sub.add_parser('product-pilot');q.add_argument('action',choices=['prepare','freeze','intake','evaluate']);q.add_argument('--input');q.add_argument('--artifacts',nargs='*');q.add_argument('--freeze-file',default='data/product/pilot_freeze.json');q.add_argument('--output');q.add_argument('--observations');q.add_argument('--reviews')
     s=sub.add_parser('serve');s.add_argument('--port',type=int,default=8765)
@@ -47,7 +48,8 @@ def main():
         from .forecasting import ForecastArtifact
         Path('schemas').mkdir(exist_ok=True)
         from .product_contracts import PRODUCT_MODELS
-        for cls in MODELS+[ForecastArtifact]+PRODUCT_MODELS: Path(f'schemas/{cls.__name__}.schema.json').write_text(json.dumps(cls.model_json_schema(),indent=2),encoding='utf8')
+        from .capture_collection import MediaCapture,MediaReview
+        for cls in MODELS+[ForecastArtifact]+PRODUCT_MODELS+[MediaCapture,MediaReview]: Path(f'schemas/{cls.__name__}.schema.json').write_text(json.dumps(cls.model_json_schema(),indent=2),encoding='utf8')
     elif a.command=='collector':
         from .collector import build_collector
         print(json.dumps(build_collector(a.output),indent=2))
@@ -94,6 +96,18 @@ def main():
     elif a.command=='acquire-westwood-context':
         from .westwood_context import acquire
         print(json.dumps(acquire(refresh=a.refresh),indent=2))
+    elif a.command=='collection':
+        from .capture_collection import import_captures,import_reviews,import_effort,audit,metadata_suggestions
+        if a.action=='plan':
+            from .collection_design import plan
+            r=plan(a.output)
+        elif a.action=='audit':r=audit(a.directory,a.output)
+        elif not a.input:raise ValueError('--input is required for collection import/review/effort/metadata')
+        elif a.action=='import':r=import_captures(a.input,a.directory)
+        elif a.action=='review':r=import_reviews(a.input,a.directory)
+        elif a.action=='effort':r=import_effort(a.input,a.directory)
+        else:r=metadata_suggestions(a.input)
+        print(json.dumps(r,indent=2))
     elif a.command=='evaluate-product':
         from .product_evaluation import run
         print(json.dumps(run(a.manifest,a.observations,a.reviews,a.forecasts,a.decisions,a.output),indent=2))
