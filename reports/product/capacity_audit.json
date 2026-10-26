@@ -1,0 +1,14 @@
+{
+  "status": "audited_local_inventory",
+  "occupancy_labels_read": 0,
+  "historic_curb_polygons_are_stalls": false,
+  "faces": 162630,
+  "physical_capacity_known": 0,
+  "eligible_capacity_known": 0,
+  "invalid_capacity_rows": 0,
+  "complete_exclusions": 0,
+  "methods": {
+    "unavailable": 162630
+  },
+  "supply_note": "Surveyed positions are an observation denominator, not automatically physical or time/profile-eligible capacity. Meter roster size is partial instrument coverage, not curb supply. Historic curb polygons and centerline length do not establish legal stalls."
+}

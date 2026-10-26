@@ -1,0 +1,145 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "prediction_id": {
+      "minLength": 1,
+      "title": "Prediction Id",
+      "type": "string"
+    },
+    "observation_id": {
+      "minLength": 1,
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "block_face_id": {
+      "minLength": 1,
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "issued_at_utc": {
+      "format": "date-time",
+      "title": "Issued At Utc",
+      "type": "string"
+    },
+    "arrival_at_utc": {
+      "format": "date-time",
+      "title": "Arrival At Utc",
+      "type": "string"
+    },
+    "feature_available_at_utc": {
+      "format": "date-time",
+      "title": "Feature Available At Utc",
+      "type": "string"
+    },
+    "training_cutoff_utc": {
+      "format": "date-time",
+      "title": "Training Cutoff Utc",
+      "type": "string"
+    },
+    "evidence_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Evidence At Utc"
+    },
+    "vehicle_class": {
+      "default": "standard_passenger",
+      "title": "Vehicle Class",
+      "type": "string"
+    },
+    "permit_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Permit Class"
+    },
+    "intended_duration_minutes": {
+      "exclusiveMinimum": 0,
+      "maximum": 1440,
+      "title": "Intended Duration Minutes",
+      "type": "integer"
+    },
+    "model_version": {
+      "minLength": 1,
+      "title": "Model Version",
+      "type": "string"
+    },
+    "evidence_scope": {
+      "default": "unsupported",
+      "enum": [
+        "direct_suitable_model",
+        "meter_panel_proxy",
+        "unsupported"
+      ],
+      "title": "Evidence Scope",
+      "type": "string"
+    },
+    "probability_suitable": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Probability Suitable"
+    },
+    "predicted_occupancy_rate": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predicted Occupancy Rate"
+    },
+    "predicted_suitable_count": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predicted Suitable Count"
+    }
+  },
+  "required": [
+    "prediction_id",
+    "observation_id",
+    "block_face_id",
+    "issued_at_utc",
+    "arrival_at_utc",
+    "feature_available_at_utc",
+    "training_cutoff_utc",
+    "intended_duration_minutes",
+    "model_version"
+  ],
+  "title": "ProductForecast",
+  "type": "object"
+}

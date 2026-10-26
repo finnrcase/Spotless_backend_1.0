@@ -1,0 +1,271 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "trial_id": {
+      "minLength": 1,
+      "title": "Trial Id",
+      "type": "string"
+    },
+    "data_kind": {
+      "default": "observed",
+      "enum": [
+        "observed",
+        "synthetic_demo"
+      ],
+      "title": "Data Kind",
+      "type": "string"
+    },
+    "assigned_arm": {
+      "enum": [
+        "app",
+        "nearest_eligible"
+      ],
+      "title": "Assigned Arm",
+      "type": "string"
+    },
+    "vehicle_class": {
+      "default": "standard_passenger",
+      "title": "Vehicle Class",
+      "type": "string"
+    },
+    "permit_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Permit Class"
+    },
+    "intended_duration_minutes": {
+      "default": 60,
+      "exclusiveMinimum": 0,
+      "maximum": 1440,
+      "title": "Intended Duration Minutes",
+      "type": "integer"
+    },
+    "received_recommendation_at_utc": {
+      "format": "date-time",
+      "title": "Received Recommendation At Utc",
+      "type": "string"
+    },
+    "search_started_at_utc": {
+      "format": "date-time",
+      "title": "Search Started At Utc",
+      "type": "string"
+    },
+    "search_ended_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Search Ended At Utc"
+    },
+    "parked_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parked At Utc"
+    },
+    "walk_started_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Walk Started At Utc"
+    },
+    "destination_reached_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Destination Reached At Utc"
+    },
+    "arrival_success": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Arrival Success"
+    },
+    "followed_assignment": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Followed Assignment"
+    },
+    "recommended_face_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommended Face Id"
+    },
+    "reached_recommended_face_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reached Recommended Face At Utc"
+    },
+    "suitable_outcome_observation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Suitable Outcome Observation Id"
+    },
+    "predicted_probability_suitable": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predicted Probability Suitable"
+    },
+    "probability_issued_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Probability Issued At Utc"
+    },
+    "probability_model_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Probability Model Version"
+    },
+    "probability_scope": {
+      "default": "unsupported",
+      "enum": [
+        "direct_suitable_model",
+        "unsupported"
+      ],
+      "title": "Probability Scope",
+      "type": "string"
+    },
+    "abandoned": {
+      "default": false,
+      "title": "Abandoned",
+      "type": "boolean"
+    },
+    "verified": {
+      "default": false,
+      "title": "Verified",
+      "type": "boolean"
+    },
+    "reviewed_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed By"
+    },
+    "reviewed_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed At Utc"
+    },
+    "notes": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "trial_id",
+    "assigned_arm",
+    "received_recommendation_at_utc",
+    "search_started_at_utc"
+  ],
+  "title": "PilotTrial",
+  "type": "object"
+}

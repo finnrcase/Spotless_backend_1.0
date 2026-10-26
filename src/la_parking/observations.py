@@ -15,6 +15,7 @@ def ingest(path, inventory_path='data/processed/block_faces.parquet', output='da
     previous=target/'manual_observations.parquet'
     old=pd.read_parquet(previous) if previous.exists() else pd.DataFrame()
     seen=set(old.observation_id) if len(old) else set()
+    history={r['observation_id']:r for r in old.to_dict('records')}
     for number,line in enumerate(Path(path).read_text(encoding='utf8').splitlines(),1):
         try:
             r=ManualObservation.model_validate_json(line)
@@ -35,7 +36,17 @@ def ingest(path, inventory_path='data/processed/block_faces.parquet', output='da
             record['location_review_required']=r.location_method=='confirmed_map_pin'
             record['label_review_required']=not (r.rules_checked and r.complete_face and r.capacity_basis=='marked_spaces')
             record['bay_review_required']=bool(r.meter_bays)
+            record['previous_link_review_required']=False
+            if r.previous_observation_id:
+                prior_record=history.get(r.previous_observation_id)
+                valid=prior_record is not None and prior_record['block_face_id']==r.block_face_id and prior_record.get('survey_session_id')==r.survey_session_id
+                if valid:
+                    age=(pd.Timestamp(r.survey_start_utc)-pd.Timestamp(prior_record['survey_end_utc'])).total_seconds()/60
+                    valid=age>=0
+                record['previous_observation_age_minutes']=age if valid else None
+                record['previous_link_review_required']=not valid
             accepted.append(record); seen.add(r.observation_id)
+            history[r.observation_id]=record
         except Exception as exc: rejected.append({'line':number,'reason':str(exc)})
     if accepted:
         pd.concat([old,pd.DataFrame(accepted)],ignore_index=True).to_parquet(previous,index=False)

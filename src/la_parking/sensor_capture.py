@@ -15,6 +15,9 @@ def reservation_windows(config_path='config/spatial_v3.json'):
     old_path=Path('config/temporal_v2.json')
     if old_path.exists():
         old=json.loads(old_path.read_text());windows.extend(old[k] for k in ['new_archive_holdout','prospective_manual_holdout'])
+    product=Path('config/product_pilot.json')
+    if product.exists():
+        p=json.loads(product.read_text());windows.append({'start_local':p['start_local'],'end_local':p['end_local']})
     return windows
 
 

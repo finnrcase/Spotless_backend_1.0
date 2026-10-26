@@ -21,6 +21,9 @@ def main():
     z=sub.add_parser('imagery-prepare');z.add_argument('--download',action='store_true')
     z=sub.add_parser('imagery-evaluate');z.add_argument('--annotations',required=True);z.add_argument('--predictions');z.add_argument('--output',default='reports/imagery/evaluation.json')
     sub.add_parser('field-route')
+    sub.add_parser('product-readiness')
+    q=sub.add_parser('evaluate-product');q.add_argument('--manifest',required=True);q.add_argument('--observations',required=True);q.add_argument('--reviews',required=True);q.add_argument('--forecasts',required=True);q.add_argument('--decisions');q.add_argument('--output',default='reports/product/evaluation.json')
+    q=sub.add_parser('product-pilot');q.add_argument('action',choices=['prepare','freeze','intake','evaluate']);q.add_argument('--input');q.add_argument('--artifacts',nargs='*');q.add_argument('--freeze-file',default='data/product/pilot_freeze.json');q.add_argument('--output');q.add_argument('--observations');q.add_argument('--reviews')
     s=sub.add_parser('serve');s.add_argument('--port',type=int,default=8765)
     u=sub.add_parser('compare-unmetered');u.add_argument('--table');u.add_argument('--manifest');u.add_argument('--output',default='reports/unmetered')
     u=sub.add_parser('prepare-unmetered');u.add_argument('--reviews',required=True);u.add_argument('--features',required=True);u.add_argument('--output',default='data/modeling/unmetered_reviewed.parquet')
@@ -42,7 +45,8 @@ def main():
         from .contracts import MODELS
         from .forecasting import ForecastArtifact
         Path('schemas').mkdir(exist_ok=True)
-        for cls in MODELS+[ForecastArtifact]: Path(f'schemas/{cls.__name__}.schema.json').write_text(json.dumps(cls.model_json_schema(),indent=2),encoding='utf8')
+        from .product_contracts import PRODUCT_MODELS
+        for cls in MODELS+[ForecastArtifact]+PRODUCT_MODELS: Path(f'schemas/{cls.__name__}.schema.json').write_text(json.dumps(cls.model_json_schema(),indent=2),encoding='utf8')
     elif a.command=='collector':
         from .collector import build_collector
         print(json.dumps(build_collector(a.output),indent=2))
@@ -83,6 +87,20 @@ def main():
     elif a.command=='field-route':
         from .field_route import build
         r=build();print(json.dumps({'faces':r['face_count'],'planned_visits':r['total_observations_planned'],'collected':r['observations_actually_collected']},indent=2))
+    elif a.command=='product-readiness':
+        from .product_pilot import readiness
+        print(json.dumps(readiness(),indent=2))
+    elif a.command=='evaluate-product':
+        from .product_evaluation import run
+        print(json.dumps(run(a.manifest,a.observations,a.reviews,a.forecasts,a.decisions,a.output),indent=2))
+    elif a.command=='product-pilot':
+        from .product_pilot import prepare,freeze,intake,evaluate_trials
+        if a.action=='prepare':r=prepare(a.output or 'reports/product')
+        elif a.action=='freeze':r=freeze(a.artifacts,a.freeze_file)
+        elif not a.input:raise ValueError('--input is required for trial intake/evaluation')
+        elif a.action=='intake':r=intake(a.input,a.output or 'data/product/trials.jsonl')
+        else:r=evaluate_trials(a.input,a.freeze_file,a.output or 'reports/product/trials_evaluation.json',a.observations,a.reviews)
+        print(json.dumps(r,indent=2))
     elif a.command=='prepare-unmetered':
         from .unmetered import prepare
         print(json.dumps(prepare(a.reviews,a.features,a.output),indent=2))

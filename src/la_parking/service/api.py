@@ -194,7 +194,11 @@ def create_app(repository=None,clock=None,observations_dir=None,background=True)
     def collector():return FileResponse(root/'reports/collector.html')
 
     @app.get('/field-route',include_in_schema=False)
+    @app.get('/field_route.html',include_in_schema=False)
     def field_route():return FileResponse(root/'reports/field_route.html')
+
+    @app.get('/pilot',include_in_schema=False)
+    def product_pilot():return FileResponse(root/'reports/product/pilot.html')
 
     @app.get('/imagery',include_in_schema=False)
     def imagery():return RedirectResponse('/imagery/annotator.html')

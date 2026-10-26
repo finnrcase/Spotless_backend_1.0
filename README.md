@@ -1,5 +1,7 @@
 # Los Angeles parking data foundation
 
+The [product evaluation workflow](docs/product_evaluation.md) adds direct suitable-space calibration, matched recommendation comparisons, repeat-count/movement collection and a prospective trip ledger. Product outcome metrics remain unavailable pending reviewed observations; occupancy models are preserved.
+
 The [Census/regional continuation](docs/coverage_v4.md) expands cached ACS coverage to 2,498 county tracts, adds bounded Downtown/Hollywood archive panels and phone routes, and reports [controlled Census ablations](reports/modeling/COVERAGE_V4.md). Authentication failed for the locally loaded Census key; public cached files kept the work moving. No unmetered accuracy or citywide validation is claimed.
 
 The [spatial-v3 continuation](docs/spatial_v3.md) adds inner geographic/time validation, vintage-correct employment, independent phone bay checks, blind sensor capture and enforced field holdouts. [Measured transfer results](reports/modeling/SPATIAL_V3.md) retain the negative results and unsupported unmetered status. The root [AGENTS.md](AGENTS.md) records the authorized check → diff → commit → push → remote verification workflow.

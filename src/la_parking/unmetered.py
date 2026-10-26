@@ -173,6 +173,11 @@ def split_rows(f,axis,split,cfg):
     required={'train_ids','validation_ids','calibration_ids','test_ids'}
     if not required.issubset(split):raise ValueError('Frozen train/validation/calibration/test ID lists required')
     groups={name:set(split[name+'_ids']) for name in ['train','validation','calibration','test']}
+    product=Path('config/product_pilot.json')
+    if product.exists() and 'observed_at_utc' in f:
+        p=json.loads(product.read_text());times=pd.to_datetime(f.observed_at_utc,utc=True)
+        reserved=times.ge(pd.Timestamp(p['start_local'],tz='America/Los_Angeles'))&times.lt(pd.Timestamp(p['end_local'],tz='America/Los_Angeles'))
+        if any(groups[name]&set(f.loc[reserved,'observation_id']) for name in ['train','validation','calibration']):raise ValueError('Prospective product-pilot outcomes cannot enter development')
     for reservation_path in [Path('config/field_holdouts.json'),Path('config/coverage_v4_field_holdouts.json')]:
         if reservation_path.exists():
             reservation=json.loads(reservation_path.read_text());reserved=f.block_id.isin(reservation['unseen_physical_blocks'])

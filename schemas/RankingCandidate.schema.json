@@ -1,0 +1,127 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "block_face_id": {
+      "title": "Block Face Id",
+      "type": "string"
+    },
+    "observation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observation Id"
+    },
+    "prediction_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prediction Id"
+    },
+    "walking_distance_m": {
+      "minimum": 0,
+      "title": "Walking Distance M",
+      "type": "number"
+    },
+    "price_per_hour": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Price Per Hour"
+    },
+    "parking_type": {
+      "default": "unknown",
+      "enum": [
+        "metered",
+        "unmetered",
+        "unknown"
+      ],
+      "title": "Parking Type",
+      "type": "string"
+    },
+    "eligibility_status": {
+      "default": "unknown",
+      "enum": [
+        "allowed",
+        "prohibited",
+        "unknown",
+        "conflict"
+      ],
+      "title": "Eligibility Status",
+      "type": "string"
+    },
+    "eligibility_checked_at_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligibility Checked At Utc"
+    },
+    "rules_valid_from_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rules Valid From Utc"
+    },
+    "rules_valid_to_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rules Valid To Utc"
+    },
+    "official_rule_coverage_verified": {
+      "default": false,
+      "title": "Official Rule Coverage Verified",
+      "type": "boolean"
+    },
+    "posted_sign_coverage_verified": {
+      "default": false,
+      "title": "Posted Sign Coverage Verified",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "block_face_id",
+    "walking_distance_m"
+  ],
+  "title": "RankingCandidate",
+  "type": "object"
+}

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { makeObservation, countValue, jsonl, faceDistance,gapLengths,validateBayChecks } from '../web/collector/model.mjs';
+import { makeObservation, countValue, jsonl, faceDistance,gapLengths,validateBayChecks,repeatStatus } from '../web/collector/model.mjs';
 const now = new Date('2026-10-25T12:05:00Z');
 const face = { id: 'face-1', paths: [[[-118.45,34.06],[-118.44,34.06]]] };
 const draft = () => ({ id: 'test-only', block_face_id: 'face-1', observer: 'fixture', side_confirmed: true,
@@ -39,4 +39,21 @@ test('raw gaps preserve unmeasured, no gaps and lengths without inventing capaci
   for(const bad of ['-1','4,','0,4','NaN'])assert.throws(()=>gapLengths(bad));
   const d={...draft(),gap_lengths:'4.5,9.2',survey_session_id:'fixture-session',assignment_id:'fixture-assignment'};
   const r=makeObservation(d,face,now);assert.deepEqual(r.gap_lengths_m,[4.5,9.2]);assert.equal(r.assignment_id,'fixture-assignment');assert.equal(r.surveyed_capacity,4);
+});
+
+test('repeats keep actual age and observations, and next offset survives reload',()=>{
+  const r=makeObservation({...draft(),repeat_group_id:'synthetic-group',repeat_offset_minutes:0},face,now);
+  const state=repeatStatus([JSON.parse(jsonl([r]))],face.id,null,new Date('2026-10-25T12:20Z'));
+  assert.equal(state.next_offset,15);assert.equal(state.age_minutes,15);assert.equal(state.due_at,'2026-10-25T12:15:00.000Z');
+  const next=makeObservation({...draft(),previous_observation_id:r.observation_id,previous_observed_at_utc:r.survey_end_utc},face,now);
+  assert.equal(next.arrivals_observed,null);assert.equal(next.departures_observed,null);
+});
+
+test('movement counts need a real window and never come from snapshot differences',()=>{
+  assert.throws(()=>makeObservation({...draft(),arrivals:'0'},face,now));
+  assert.throws(()=>makeObservation({...draft(),movement_coverage:'continuous',movement_start:'2026-10-25T12:00Z',movement_end:'2026-10-25T12:03Z'},face,now));
+  const d={...draft(),movement_coverage:'partial',movement_start:'2026-10-25T11:55Z',movement_end:'2026-10-25T12:03Z',arrivals:'2',departures:'0'};
+  const r=makeObservation(d,face,now);assert.equal(r.arrivals_observed,2);assert.equal(r.departures_observed,0);
+  assert.throws(()=>makeObservation({...d,movement_end:'2026-10-25T12:06Z'},face,now));
+  assert.throws(()=>makeObservation({...draft(),physical_capacity:'2',eligible_capacity:'3'},face,now));
 });

@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "product-evaluation-v1",
+      "default": "product-evaluation-v1",
+      "title": "Version",
+      "type": "string"
+    },
+    "data_kind": {
+      "default": "observed",
+      "enum": [
+        "observed",
+        "synthetic_demo"
+      ],
+      "title": "Data Kind",
+      "type": "string"
+    },
+    "phase": {
+      "default": "development",
+      "enum": [
+        "development",
+        "locked_test"
+      ],
+      "title": "Phase",
+      "type": "string"
+    },
+    "axis": {
+      "enum": [
+        "future_time",
+        "unseen_block"
+      ],
+      "title": "Axis",
+      "type": "string"
+    },
+    "train_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Train Ids",
+      "type": "array"
+    },
+    "evaluation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evaluation Ids",
+      "type": "array"
+    },
+    "evaluation_start_utc": {
+      "format": "date-time",
+      "title": "Evaluation Start Utc",
+      "type": "string"
+    },
+    "evaluation_end_utc": {
+      "format": "date-time",
+      "title": "Evaluation End Utc",
+      "type": "string"
+    },
+    "freeze_file": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Freeze File"
+    }
+  },
+  "required": [
+    "axis",
+    "train_ids",
+    "evaluation_ids",
+    "evaluation_start_utc",
+    "evaluation_end_utc"
+  ],
+  "title": "EvaluationManifest",
+  "type": "object"
+}

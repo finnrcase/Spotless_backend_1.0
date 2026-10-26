@@ -1,0 +1,30 @@
+{
+  "status": "awaiting_direct_reviewed_suitability_outcomes_and_frozen_product_model",
+  "observed_suitable_test_rows_scored": 0,
+  "observed_trials_scored": 0,
+  "occupancy_r2": null,
+  "occupancy_mae": null,
+  "suitable_probability_brier": null,
+  "suitable_probability_ece": null,
+  "ranking_top1_success": null,
+  "arrival_success": null,
+  "search_minutes": null,
+  "search_time_reduction": null,
+  "walking_minutes": null,
+  "planned_trials": 24,
+  "planned_snapshots_are_labels": false,
+  "planning_goals_only": {
+    "occupancy_r2_range": [
+      0.5,
+      0.7
+    ],
+    "relative_search_time_reduction_range": [
+      0.2,
+      0.3
+    ]
+  },
+  "planning_goals_are_results_or_thresholds": false,
+  "untouched_outcomes_opened": false,
+  "production_models_changed": false,
+  "reason": "Readiness does not open local observation/trial stores. Use explicit reviewed cohorts and locked prospective release; no suitable-space model or product outcome is validated."
+}

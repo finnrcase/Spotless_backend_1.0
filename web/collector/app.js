@@ -65,6 +65,8 @@ function renderBayChecks() {
   }
 }
 function collectDraft() {
+  const session=$('survey-session').value,offset=$('repeat-offset').value;
+  const repeat=repeatStatus(records,$('face').value,session);
   return { block_face_id: $('face').value, side_confirmed: $('side-confirmed').checked, observer: $('observer').value,
     start: started, id: observationId, location: currentLocation, occupied: $('occupied').value, vacant_legal: $('vacant_legal').value,
     unsuitable: $('unsuitable').value, surveyed_capacity: $('surveyed_capacity').value, complete_face: $('complete').checked,
@@ -73,7 +75,10 @@ function collectDraft() {
     sampling_stratum: $('stratum').value, sampling_method: $('sampling-method').value, observer_confidence: $('observer-confidence').value,
     restrictions_text: $('restrictions-text').value, curb_length: $('curb-length').value, measurement_method: $('measurement-method').value, notes: $('notes').value,
     gap_lengths:$('gap-lengths').value,obstructed_length:$('obstructed-length').value,counting_convention:$('counting-convention').value,exclusions_text:$('exclusions-text').value,
-    survey_session_id:$('survey-session').value,assignment_id:$('assignment-id').value,meter_bays:Object.values(meterDraft) };
+    survey_session_id:session,assignment_id:$('assignment-id').value,meter_bays:Object.values(meterDraft),
+    repeat_offset_minutes:offset,repeat_group_id:offset!==''?`repeat-${selectedFace()?.code}-${session}`:null,previous_observation_id:repeat.previous_id,previous_observed_at_utc:repeat.previous_at,
+    movement_coverage:$('movement-coverage').value,movement_start:$('movement-start').value,movement_end:$('movement-end').value,arrivals:$('arrivals').value,departures:$('departures').value,
+    physical_capacity:$('physical-capacity').value,eligible_capacity:$('eligible-capacity').value };
 }
 function persistDraft() { write(KEYS.draft, collectDraft()); write(KEYS.observer, $('observer').value); reconcile(); }
 function reconcile() {
@@ -85,7 +90,8 @@ function reconcile() {
 function resetCount() {
   started = null; observationId = null;
   meterDraft={};renderBayChecks();
-  for (const k of ['occupied', 'vacant_legal', 'unsuitable', 'surveyed_capacity', 'notes', 'restrictions-text', 'curb-length', 'measurement-method','gap-lengths','obstructed-length','exclusions-text']) $(k).value = '';
+  for (const k of ['occupied', 'vacant_legal', 'unsuitable', 'surveyed_capacity', 'notes', 'restrictions-text', 'curb-length', 'measurement-method','gap-lengths','obstructed-length','exclusions-text','movement-start','movement-end','arrivals','departures','physical-capacity','eligible-capacity']) $(k).value = '';
+  $('movement-coverage').value='not_observed';
   $('side-confirmed').checked = false; $('rules-checked').checked = false;
   $('start').textContent = 'Start observation'; $('timer').textContent = 'Not started'; persistDraft();
 }
@@ -130,6 +136,20 @@ $('start').addEventListener('click', () => {
   if(!$('survey-session').value)$('survey-session').value=`session-${started.slice(0,10)}-${observationId.slice(0,8)}`;
   $('start').textContent = 'Restart clock'; persistDraft(); message('Observation started. Unknown counts stay blank.');
 });
+$('movement-begin').onclick=()=>{$('movement-start').value=new Date().toISOString();$('movement-end').value='';$('movement-coverage').value='partial';persistDraft();};
+$('movement-finish').onclick=()=>{$('movement-end').value=new Date().toISOString();persistDraft();};
+$('repeat-next').onclick=()=>{
+  if(!selectedFace()){message('Choose a face first.',true);return;}
+  const next=repeatStatus(records,$('face').value,$('survey-session').value).next_offset;
+  if(next===null){message('The four repeats are saved. Use a new session for another set.');return;}
+  resetCount();$('repeat-offset').value=String(next);$('sampling-method').value='repeat_visit';persistDraft();
+  message(`Prepared the ${next}-minute repeat. Confirm the side and start a fresh observation when due; counts remain blank.`);
+};
+function showRepeatStatus(){
+  const r=repeatStatus(records,$('face').value,$('survey-session').value);
+  $('repeat-status').textContent=`${r.age_minutes===null?'No previous observation':`Last saved count ${r.age_minutes.toFixed(1)} minutes old — unreviewed, uncertainty retained.`} ${r.due_at?`Next planned repeat ${formatTime(r.due_at)}${Date.parse(r.due_at)<Date.now()?' (due/overdue)':''}.`:''} Use actual times; missed visits remain missing.`;
+}
+setInterval(showRepeatStatus,1000);showRepeatStatus();
 document.querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => { const input = $(button.closest('.counter').dataset.field); input.value = Math.max(0, (Number(input.value) || 0) + Number(button.dataset.step)); persistDraft(); }));
 document.querySelectorAll('input:not([type=file]),select,textarea').forEach(el => el.addEventListener('change', persistDraft));
 document.querySelectorAll('input:not([type=file]),textarea').forEach(el => el.addEventListener('input', persistDraft));
@@ -170,6 +190,7 @@ $('restore').addEventListener('change', async event => {
 });
 const restored = read(KEYS.draft, null);
 if (restored) {
+  for(const [key,id] of Object.entries({repeat_offset_minutes:'repeat-offset',movement_coverage:'movement-coverage',movement_start:'movement-start',movement_end:'movement-end',arrivals:'arrivals',departures:'departures',physical_capacity:'physical-capacity',eligible_capacity:'eligible-capacity'}))if(restored[key]!=null)$(id).value=restored[key];
   meterDraft=Object.fromEntries((restored.meter_bays||[]).map(b=>[b.space_id,{...b,identity_verified:false}]));
   if (facesById.has(restored.block_face_id)) { populateFaces(restored.block_face_id); showFace(); }
   for (const [key, id] of Object.entries({ observer: 'observer', parking_type: 'parking-type', duration: 'duration', permit_class: 'permit', vehicle_class: 'vehicle', capacity_basis: 'capacity-basis', sampling_stratum: 'stratum', sampling_method:'sampling-method',observer_confidence:'observer-confidence',restrictions_text:'restrictions-text',curb_length:'curb-length',measurement_method:'measurement-method',gap_lengths:'gap-lengths',obstructed_length:'obstructed-length',counting_convention:'counting-convention',exclusions_text:'exclusions-text',survey_session_id:'survey-session',assignment_id:'assignment-id',notes: 'notes', occupied: 'occupied', vacant_legal: 'vacant_legal', unsuitable: 'unsuitable', surveyed_capacity: 'surveyed_capacity' })) if (restored[key] !== undefined) $(id).value = restored[key] ?? '';
@@ -184,6 +205,7 @@ function applyRoute(){
   if(started&&$('face').value!==fid){message('A different face has an unfinished draft. Save or finish that observation before following this route link.',true);return;}
   populateFaces(fid);showFace();$('side-confirmed').checked=false;currentLocation=null;
   $('assignment-id').value=(params.get('assignment')||'').slice(0,120);$('survey-session').value=(params.get('session')||'').slice(0,120);
+  const offset=params.get('repeat');if(offset!==null&&['0','15','30','60'].includes(offset))$('repeat-offset').value=offset;
   $('sampling-method').value='repeat_visit';$('stratum').value='planned-field-route';
   $('assignment-note').hidden=false;$('assignment-note').textContent=`Planned visit: ${params.get('planned')||'time not supplied'}. This is a schedule, not an observation; actual start/end times are recorded when you count.`;persistDraft();
 }

@@ -413,6 +413,150 @@
       "default": null,
       "title": "Meter Bays"
     },
+    "repeat_group_id": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Repeat Group Id"
+    },
+    "repeat_offset_minutes": {
+      "anyOf": [
+        {
+          "enum": [
+            0,
+            15,
+            30,
+            60
+          ],
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Repeat Offset Minutes"
+    },
+    "previous_observation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Previous Observation Id"
+    },
+    "previous_observation_age_minutes": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Previous Observation Age Minutes"
+    },
+    "movement_start_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Movement Start Utc"
+    },
+    "movement_end_utc": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Movement End Utc"
+    },
+    "movement_coverage": {
+      "default": "not_observed",
+      "enum": [
+        "not_observed",
+        "partial",
+        "continuous"
+      ],
+      "title": "Movement Coverage",
+      "type": "string"
+    },
+    "arrivals_observed": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Arrivals Observed"
+    },
+    "departures_observed": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Departures Observed"
+    },
+    "physical_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Capacity"
+    },
+    "eligible_capacity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligible Capacity"
+    },
     "latitude": {
       "maximum": 90,
       "minimum": -90,

@@ -184,6 +184,17 @@ class ManualObservation(Record):
     counting_convention: str | None=Field(default=None,max_length=500)
     exclusions_text: str=Field(default='',max_length=2000)
     meter_bays: list[MeterBayObservation] | None=Field(default=None,max_length=100)
+    repeat_group_id: str | None=Field(default=None,max_length=200)
+    repeat_offset_minutes: Literal[0,15,30,60] | None=None
+    previous_observation_id: str | None=None
+    previous_observation_age_minutes: float | None=Field(default=None,ge=0,allow_inf_nan=False)
+    movement_start_utc: AwareDatetime | None=None
+    movement_end_utc: AwareDatetime | None=None
+    movement_coverage: Literal['not_observed','partial','continuous']='not_observed'
+    arrivals_observed: int | None=Field(default=None,ge=0)
+    departures_observed: int | None=Field(default=None,ge=0)
+    physical_capacity: int | None=Field(default=None,ge=0)
+    eligible_capacity: int | None=Field(default=None,ge=0)
     latitude: float=Field(ge=-90,le=90)
     longitude: float=Field(ge=-180,le=180)
     notes: str=''
@@ -195,6 +206,14 @@ class ManualObservation(Record):
         if self.location_method=='confirmed_map_pin' and self.gps_accuracy_m is not None: raise ValueError('A map pin has no measured GPS accuracy')
         if self.survey_end_utc<self.survey_start_utc: raise ValueError('Survey end precedes start')
         if self.survey_end_utc>self.retrieved_at_utc: raise ValueError('Survey cannot be in future')
+        if (self.repeat_offset_minutes is not None) != bool(self.repeat_group_id):raise ValueError('Repeat offset and group must be recorded together')
+        if self.movement_coverage=='not_observed':
+            if any(v is not None for v in [self.movement_start_utc,self.movement_end_utc,self.arrivals_observed,self.departures_observed]):raise ValueError('Unobserved movements must stay null')
+        else:
+            if not self.movement_start_utc or not self.movement_end_utc or not self.movement_start_utc<self.movement_end_utc<=self.survey_end_utc:raise ValueError('Observed movements require an actual ordered window ending by the snapshot end')
+            if self.movement_coverage=='continuous' and (self.arrivals_observed is None or self.departures_observed is None):raise ValueError('Continuous movement observation requires both counts, including observed zeros')
+        if self.physical_capacity is not None and self.eligible_capacity is not None and self.eligible_capacity>self.physical_capacity:raise ValueError('Eligible supply exceeds physical supply')
+        if self.eligible_capacity is not None and self.vacant_legal is not None and self.vacant_legal>self.eligible_capacity:raise ValueError('Suitable vacancies exceed eligible supply')
         if self.meter_bays is not None:
             if len({b.space_id for b in self.meter_bays})!=len(self.meter_bays):raise ValueError('Duplicate independent bay IDs')
             if any(not self.survey_start_utc<=b.observed_at_utc<=self.survey_end_utc for b in self.meter_bays):raise ValueError('Bay timestamp outside the actual survey window')

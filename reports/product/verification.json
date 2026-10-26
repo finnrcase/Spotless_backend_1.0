@@ -1,0 +1,10 @@
+{
+  "python_tests_passed": 147,
+  "javascript_tests_passed": 10,
+  "product_browser_checks": 13,
+  "observed_product_outcomes_scored": 0,
+  "production_models_changed": false,
+  "untouched_outcomes_opened": false,
+  "reports/starter/browser_validation.json": 25,
+  "reports/service/browser_validation.json": 13
+}

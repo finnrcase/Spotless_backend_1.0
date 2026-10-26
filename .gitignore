@@ -89,6 +89,12 @@ desktop.ini
 !/reports/modeling/temporal_v2_audit/*.json
 !/reports/modeling/temporal_v2_audit/*.csv
 /reports/modeling/temporal_v2_tuning.json
+!/reports/product/
+/reports/product/*
+!/reports/product/*.md
+!/reports/product/readiness.json
+!/reports/product/capacity_audit.json
+!/reports/product/verification.json
 !/reports/service/
 /reports/service/*
 !/reports/service/*.md

@@ -1,5 +1,5 @@
 // Pure collection rules shared by the browser and Node tests.
-export const PROTOCOL = 'manual-curb-survey/1.3';
+export const PROTOCOL = 'manual-curb-survey/1.4';
 export function gapLengths(value) {
   if (value == null || value.trim() === '') return null;
   if (value.trim() === '0') return [];
@@ -36,6 +36,10 @@ export function makeObservation(draft, face, now = new Date()) {
   if (!id) throw new Error('Observation ID is missing. Start a new snapshot.');
   if (draft.curb_length !== '' && draft.curb_length != null && (!Number.isFinite(Number(draft.curb_length)) || Number(draft.curb_length) < 0)) throw new Error('Measured curb length must be nonnegative or left blank.');
   const gaps=gapLengths(draft.gap_lengths);
+  const physical=countValue(draft.physical_capacity),eligible=countValue(draft.eligible_capacity);
+  if(physical!==null&&eligible!==null&&eligible>physical)throw Error('Eligible supply cannot exceed physical positions.');
+  if(eligible!==null&&counts[1]!==null&&counts[1]>eligible)throw Error('Suitable vacancies cannot exceed eligible positions.');
+  if(draft.repeat_offset_minutes!=null&&draft.repeat_offset_minutes!==''&&(![0,15,30,60].includes(Number(draft.repeat_offset_minutes))||!draft.repeat_group_id))throw Error('Repeat snapshots require a group and a 0/15/30/60 offset.');
   const obstructed=draft.obstructed_length==null||draft.obstructed_length===''?null:Number(draft.obstructed_length);
   if(obstructed!==null&&(!Number.isFinite(obstructed)||obstructed<0))throw Error('Obstructed length must be nonnegative or blank.');
   const provenance = Object.fromEntries(['occupied', 'vacant_legal', 'unsuitable', 'surveyed_capacity'].map((k, i) => [k, counts[i] === null ? 'unavailable' : 'observed']));
@@ -65,7 +69,27 @@ export function makeObservation(draft, face, now = new Date()) {
     measurement_method: draft.measurement_method?.trim() || null, notes: draft.notes?.trim() || ''
     ,gap_lengths_m:gaps,obstructed_curb_length_m:obstructed,counting_convention:draft.counting_convention?.trim()||null,exclusions_text:draft.exclusions_text?.trim()||''
     ,meter_bays:validateBayChecks(draft.meter_bays,face,start,end)
+    ,...movementFields(draft,end),physical_capacity:countValue(draft.physical_capacity),eligible_capacity:countValue(draft.eligible_capacity)
+    ,repeat_group_id:draft.repeat_group_id||null,repeat_offset_minutes:draft.repeat_offset_minutes==null||draft.repeat_offset_minutes===''?null:Number(draft.repeat_offset_minutes),previous_observation_id:draft.previous_observation_id||null
+    ,previous_observation_age_minutes:draft.previous_observed_at_utc?Math.max(0,(start-new Date(draft.previous_observed_at_utc))/60000):null
   };
+}
+export function movementFields(draft,end){
+  const coverage=draft.movement_coverage||'not_observed',a=countValue(draft.arrivals),d=countValue(draft.departures);
+  if(coverage==='not_observed'){
+    if(draft.movement_start||draft.movement_end||a!==null||d!==null)throw Error('Clear unobserved movements or record their actual watching window.');
+    return {movement_coverage:coverage,movement_start_utc:null,movement_end_utc:null,arrivals_observed:null,departures_observed:null};
+  }
+  const start=new Date(draft.movement_start),finish=new Date(draft.movement_end),aware=v=>typeof v==='string'&&/(Z|[+-]\d\d:\d\d)$/.test(v);
+  if(!['partial','continuous'].includes(coverage)||!aware(draft.movement_start)||!aware(draft.movement_end)||!Number.isFinite(+start)||!Number.isFinite(+finish)||start>=finish||finish>end)throw Error('Movement watching needs actual start/end timestamps with offsets, ending by now.');
+  if(coverage==='continuous'&&(a===null||d===null))throw Error('Continuous watching requires both movement counts; record 0 only after checking.');
+  return {movement_coverage:coverage,movement_start_utc:start.toISOString(),movement_end_utc:finish.toISOString(),arrivals_observed:a,departures_observed:d};
+}
+export function repeatStatus(records,faceId,session,now=new Date()){
+  const same=records.filter(r=>r.block_face_id===faceId&&r.survey_session_id===session),last=same.slice().sort((a,b)=>Date.parse(b.survey_end_utc)-Date.parse(a.survey_end_utc))[0];
+  const anchor=same.find(r=>r.repeat_offset_minutes===0),next=[0,15,30,60].find(n=>!same.some(r=>r.repeat_offset_minutes===n));
+  return {previous_id:last?.observation_id||null,previous_at:last?.survey_end_utc||null,age_minutes:last?Math.max(0,(now-new Date(last.survey_end_utc))/60000):null,next_offset:next??null,
+    due_at:anchor&&next!=null?new Date(Date.parse(anchor.survey_start_utc)+next*60000).toISOString():null};
 }
 export function validateBayChecks(bays,face,start,end){
   if(bays==null||bays.length===0)return null;

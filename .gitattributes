@@ -3,3 +3,4 @@
 
 # Preserve byte hashes in the registered coverage-v4 protocol on Windows checkouts.
 config/coverage_v4.json text eol=lf
+config/product_pilot.json text eol=lf

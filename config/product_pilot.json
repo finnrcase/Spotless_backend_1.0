@@ -1,0 +1,21 @@
+{
+  "version": "product-pilot-v1",
+  "jurisdiction": "City of Los Angeles",
+  "start_local": "2026-11-23",
+  "end_local": "2026-12-07",
+  "arrival_tolerance_minutes": 2,
+  "maximum_label_sweep_minutes": 5,
+  "historical_embargo_minutes": 180,
+  "search_limit_minutes": 20,
+  "allocation_seed": 451,
+  "arms": ["app", "nearest_eligible"],
+  "planned_trip_slots": 24,
+  "target": "At least one directly observed vacant position on the specified block face, suitable for the vehicle/permit profile for the entire intended stay",
+  "primary_product_metrics": ["arrival_success", "restricted_search_minutes_20", "search_time_censoring", "walking_minutes", "suitable_space_brier", "suitable_space_ece"],
+  "planning_goals_only": {"occupancy_r2_range": [0.50, 0.70], "relative_search_time_reduction_range": [0.20, 0.30]},
+  "planning_goals_are_results_or_thresholds": false,
+  "minimum_initial_batch": "8 face snapshots: both sides at 0/15/30/60; quality/workload check, not accuracy validation",
+  "pilot_is_exploratory": true,
+  "model_promotion": false,
+  "prior_holdouts_preserved": true
+}
