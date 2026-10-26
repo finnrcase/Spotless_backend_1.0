@@ -204,7 +204,26 @@ def test_poll_failure_retains_last_valid_snapshot(tmp_path,monkeypatch):
         def reload_snapshots(self):self.revision='after'
     def failure(*args,**kwargs):raise RuntimeError('Isolated test feed unavailable')
     monkeypatch.setattr('la_parking.connectors.socrata',failure)
+    monkeypatch.setattr('la_parking.sensor_capture.protected_period',lambda at:False)
     manager=RefreshManager(Repo(),ForecastCache())
     changed,cleared,status=manager.poll_source()
     assert status['last_poll_error'] and status['last_poll_success'] is None
     assert path.read_bytes()==b'last-valid-snapshot-fixture'
+
+
+def test_model_evidence_keeps_experiments_and_unmetered_support_explicit(integration):
+    _,client=integration;r=client.get('/api/model-evidence')
+    assert r.status_code==200
+    data=r.json();assert not data['citywide_accuracy_validated'] and not data['unseen_blocks']['production_numeric_predictions_enabled']
+    assert data['unmetered']['reviewed_test_n']==0 and data['restrictions']['legal_capacity'] is None
+    assert not data['restrictions']['unknown_rules_mean_unrestricted']
+
+
+def test_holdout_guard_prevents_live_source_poll_and_cache_mutation(integration,monkeypatch):
+    _,client=integration
+    monkeypatch.setattr('la_parking.sensor_capture.protected_period',lambda at:True)
+    def unexpected(*a,**kw):raise AssertionError('Reserved outcomes must not be requested')
+    monkeypatch.setattr('la_parking.connectors.socrata',unexpected)
+    result=client.post('/api/refresh?poll_source=true',json={}).json()
+    assert not result['source_poll_performed'] and not result['changed'] and result['cache_entries_cleared']==0
+    assert 'Reserved evaluation' in result['message']

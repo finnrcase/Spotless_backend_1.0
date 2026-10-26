@@ -45,6 +45,10 @@ class RefreshManager:
         from ..sources import DATASETS
         r=self.repo;now=datetime.now(timezone.utc).isoformat()
         status={'last_poll_attempt':now,'last_poll_success':r.source_state.get('last_poll_success'),'last_poll_error':None}
+        from ..sensor_capture import protected_period
+        if protected_period(now):
+            status.update(holdout_guard=True,source_poll_performed=False,message='Reserved evaluation period: current sensor outcomes were not fetched or applied. Use the separate quarantined capture workflow to preserve a blind snapshot.')
+            return False,0,status
         try:
             store=Store(root=r.root/'data',refresh=True)
             frame=socrata(store,DATASETS['occupancy'],max_rows=20000)

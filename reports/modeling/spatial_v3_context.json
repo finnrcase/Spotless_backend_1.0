@@ -1,0 +1,99 @@
+{
+  "built_at_utc": "2026-10-25T22:02:52.911773+00:00",
+  "occupancy_labels_created": 0,
+  "2022_source": {
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/ca_wac_S000_JT00_2022.csv.gz",
+    "sha256": "68fe96716b8df4a635b90895b358308123b8bc65430bb856a8f103caadafafd0",
+    "bytes": 6194693,
+    "retrieved_at_utc": "2026-10-25T22:02:41.985131+00:00"
+  },
+  "2022_last_modified": "2024-10-03T13:06:44+00:00",
+  "2022_createdate_min": "20240920",
+  "2022_createdate_max": "20240920",
+  "2022_historical_version_consistent": true,
+  "2022_public_release": "2024-11-19",
+  "2022_availability_gate": "2024-11-21T00:00Z",
+  "2023_availability_gate": "2025-12-19T00:00Z",
+  "matches": {
+    "2022": {
+      "matched_census_blocks": 772,
+      "census_blocks": 897
+    },
+    "2023": {
+      "matched_census_blocks": 777,
+      "census_blocks": 897
+    }
+  },
+  "features": {
+    "housing": [
+      "log_population_600",
+      "log_housing_600",
+      "log_acs_housing_density",
+      "acs_no_vehicle_fraction",
+      "log_acs_households_density"
+    ],
+    "employment": [
+      "log_jobs_600",
+      "log_retail_jobs_600",
+      "log_education_jobs_600",
+      "log_healthcare_jobs_600",
+      "log_arts_jobs_600",
+      "log_food_jobs_600",
+      "employment_record_fraction",
+      "employment_vintage_age",
+      "jobs_x_weekday_daytime",
+      "retail_food_x_evening"
+    ],
+    "exploratory_geometry": [
+      "street_length_m",
+      "network_centers_100",
+      "map_x_km",
+      "map_y_km"
+    ]
+  },
+  "coverage": {
+    "employment": {
+      "2022": {
+        "block_id": 981,
+        "employment_year": 981,
+        "available_at_utc": 981,
+        "log_jobs_600": 980,
+        "log_retail_jobs_600": 980,
+        "log_education_jobs_600": 980,
+        "log_healthcare_jobs_600": 980,
+        "log_arts_jobs_600": 980,
+        "log_food_jobs_600": 980,
+        "employment_record_fraction": 980
+      },
+      "2023": {
+        "block_id": 981,
+        "employment_year": 981,
+        "available_at_utc": 981,
+        "log_jobs_600": 980,
+        "log_retail_jobs_600": 980,
+        "log_education_jobs_600": 980,
+        "log_healthcare_jobs_600": 980,
+        "log_arts_jobs_600": 980,
+        "log_food_jobs_600": 980,
+        "employment_record_fraction": 980
+      }
+    },
+    "prospective_business_nonmissing": {
+      "business_100": 981,
+      "business_300": 981,
+      "business_600": 981,
+      "food_retail_300": 981
+    }
+  },
+  "prospective_only": "Active-business snapshot cannot reconstruct historical closures. Categories are available for prospective collection; counts are registration accounts, not verified activity or hours.",
+  "unavailable": {
+    "verified_supply_rules": "No sign-complete versioned capacity or restrictions; null remains null. Historic curb polygons are not stalls.",
+    "events": "No verified pre-issue event archive or attendance/geocode join; event_count remains null.",
+    "business_activity": "Verified operating hours, closures and footfall unavailable."
+  },
+  "geographic_caveat": "Census2020 block polygons approximate the later TIGER geometry used with LODES. Missing workplace blocks stay missing, not zero. LODES is a disclosure-protected statistical predictor, not an occupancy observation.",
+  "sources": [
+    "https://www.census.gov/programs-surveys/ces/news-and-updates/updates/11192024.html",
+    "https://lehd.ces.census.gov/data/lodes/LODES8/LODESTechDoc8.3.pdf"
+  ]
+}

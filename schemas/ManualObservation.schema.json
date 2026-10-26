@@ -1,5 +1,42 @@
 {
   "$defs": {
+    "MeterBayObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "space_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Space Id",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "OCCUPIED",
+            "VACANT",
+            "UNKNOWN"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "observed_at_utc": {
+          "format": "date-time",
+          "title": "Observed At Utc",
+          "type": "string"
+        },
+        "identity_verified": {
+          "default": false,
+          "title": "Identity Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "space_id",
+        "state",
+        "observed_at_utc"
+      ],
+      "title": "MeterBayObservation",
+      "type": "object"
+    },
     "Provenance": {
       "enum": [
         "observed",
@@ -359,6 +396,22 @@
       "maxLength": 2000,
       "title": "Exclusions Text",
       "type": "string"
+    },
+    "meter_bays": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/MeterBayObservation"
+          },
+          "maxItems": 100,
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Meter Bays"
     },
     "latitude": {
       "maximum": 90,

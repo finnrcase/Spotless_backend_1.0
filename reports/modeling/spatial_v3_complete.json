@@ -1,0 +1,9 @@
+{
+  "completed_at_utc": "2026-10-25T22:11:18.873351+00:00",
+  "primary_variant_selected_before_legacy_scoring": "calendar",
+  "new_holdouts_opened": false,
+  "labels_or_expiry_changed": false,
+  "test_rows_match_v1_v2": true,
+  "unmetered_labels": 0,
+  "models_promoted": false
+}

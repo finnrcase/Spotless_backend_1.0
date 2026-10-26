@@ -173,6 +173,13 @@ def split_rows(f,axis,split,cfg):
     required={'train_ids','validation_ids','calibration_ids','test_ids'}
     if not required.issubset(split):raise ValueError('Frozen train/validation/calibration/test ID lists required')
     groups={name:set(split[name+'_ids']) for name in ['train','validation','calibration','test']}
+    reservation_path=Path('config/field_holdouts.json')
+    if reservation_path.exists():
+        reservation=json.loads(reservation_path.read_text());reserved=f.block_id.isin(reservation['unseen_physical_blocks'])
+        if 'survey_session_id' in f:reserved|=f.survey_session_id.isin(reservation['reserved_session_ids'])
+        if 'assignment_id' in f:reserved|=f.assignment_id.isin(reservation['reserved_assignment_ids'])
+        protected=set(f.loc[reserved,'observation_id'])
+        if any(groups[name]&protected for name in ['train','validation','calibration']):raise ValueError('Reserved physical blocks or sessions cannot be used for model development')
     for a,ids in groups.items():
         if len(ids)!=len(split[a+'_ids']) or not ids.issubset(set(f.observation_id)):raise ValueError('Duplicate or unknown split IDs')
         for b,other in groups.items():

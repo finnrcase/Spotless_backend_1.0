@@ -1,0 +1,32 @@
+[
+  {
+    "source": "code_curb",
+    "url": "https://gisserver.dot4la.org/server/rest/services/Sandbox_Environment/Curb_Data_Specification/FeatureServer",
+    "checked_at_utc": "2026-10-25T23:15:20.717583+00:00",
+    "status": "unavailable",
+    "error": "API error: {'error': {'code': 500, 'message': 'Error handling service request :0x80004005 - No Layer or Table was initialized. in \\'\"esriCarto.GraphicFeatureServer\"\\'', 'details': []}}"
+  },
+  {
+    "source": "sensor_roster_metadata",
+    "url": "https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16",
+    "checked_at_utc": "2026-10-25T23:15:20.717901+00:00",
+    "status": "metadata_verified",
+    "name": "Parking Meter Sensors",
+    "fields": [
+      "OBJECTID",
+      "SENSOR_UNIQUE_ID",
+      "GPSX",
+      "GPSY",
+      "MTYPE",
+      "SENSOR_STATUS",
+      "PMZ",
+      "PMZ2",
+      "ADDRESS_SPACE",
+      "Shape",
+      "TOOLTIP",
+      "NLA_URL"
+    ],
+    "layers": null,
+    "note": "Metadata only; no current sensor outcomes or feature rows queried."
+  }
+]

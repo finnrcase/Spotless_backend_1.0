@@ -42,6 +42,8 @@ export function makeObservation(draft, face, now = new Date()) {
   provenance.latitude = provenance.longitude = location.method === 'gps' ? 'observed' : 'assumed';
   provenance.parking_type = draft.parking_type === 'unknown' ? 'unavailable' : 'observed';
   provenance.surveyed_capacity = counts[3] === null ? 'unavailable' : draft.capacity_basis === 'marked_spaces' ? 'observed' : draft.capacity_basis === 'estimated_positions' ? 'assumed' : 'unavailable';
+  provenance['meter_bays.state']=draft.meter_bays?.length?'observed':'unavailable';
+  provenance['meter_bays.identity']=draft.meter_bays?.length?(draft.meter_bays.every(b=>b.identity_verified===true)?'observed':'assumed'):'unavailable';
   return {
     schema_version: '1.0', source_id: 'manual_phone', source_record_id: id,
     source_version: PROTOCOL, retrieved_at_utc: end.toISOString(), field_provenance: provenance,
@@ -62,7 +64,14 @@ export function makeObservation(draft, face, now = new Date()) {
     curb_usable_length_m: draft.curb_length === '' || draft.curb_length == null ? null : Number(draft.curb_length),
     measurement_method: draft.measurement_method?.trim() || null, notes: draft.notes?.trim() || ''
     ,gap_lengths_m:gaps,obstructed_curb_length_m:obstructed,counting_convention:draft.counting_convention?.trim()||null,exclusions_text:draft.exclusions_text?.trim()||''
+    ,meter_bays:validateBayChecks(draft.meter_bays,face,start,end)
   };
+}
+export function validateBayChecks(bays,face,start,end){
+  if(bays==null||bays.length===0)return null;
+  if(!Array.isArray(bays)||bays.length>100)throw Error('At most 100 bay observations per snapshot.');
+  const allowed=new Set((face.meter_bays||[]).map(b=>b.space_id)),seen=new Set();
+  return bays.map(b=>{const at=new Date(b.observed_at_utc);if(!allowed.has(b.space_id)||seen.has(b.space_id))throw Error('Unknown, incorrectly mapped or duplicate meter bay.');if(!['OCCUPIED','VACANT','UNKNOWN'].includes(b.state)||!Number.isFinite(+at)||at<start||at>end)throw Error('Bay state/time is invalid or outside this snapshot.');seen.add(b.space_id);return {space_id:b.space_id,state:b.state,observed_at_utc:at.toISOString(),identity_verified:b.identity_verified===true};});
 }
 export function jsonl(records) { return records.map(r => JSON.stringify(r)).join('\n') + (records.length ? '\n' : ''); }
 export function distanceMeters(a, b) {

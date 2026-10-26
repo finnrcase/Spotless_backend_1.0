@@ -1,0 +1,13 @@
+{
+  "poll_id": "72262aa0-f46a-44d7-a7f8-28de8024da11",
+  "checked_at_utc": "2026-10-25T22:21:50.648056+00:00",
+  "status": "quarantined",
+  "rows": 3866,
+  "new_provider_transactions": null,
+  "unchanged_poll_rows": null,
+  "quarantined_outcomes": true,
+  "sha256": "080351b845bcfb9e4199e94d3cf0f67f2c9f3edf868ed5675fa4acdefa2f220d",
+  "error": null,
+  "interpretation": "A poll is not a sensor heartbeat. Unchanged poll rows do not refresh occupancy event age. Failure is a source-poll failure, not proof of individual sensor outages.",
+  "source_poll_started_at_utc": "2026-10-25T22:21:48.528969+00:00"
+}

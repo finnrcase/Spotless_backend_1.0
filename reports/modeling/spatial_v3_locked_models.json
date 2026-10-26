@@ -1,0 +1,23 @@
+{
+  "locked_at_utc": "2026-10-25T23:14:26.210869+00:00",
+  "checks_passed": true,
+  "new_holdouts_unopened": true,
+  "configuration_sha256": "6d8432f9b29fd36013b9bee9ec4bc0b715ec1caa760ed0f9852e9973d52bbbdb",
+  "models_sha256": {
+    "artifacts\\models\\spatial_v3\\h60_any_panel_vacant_calendar.joblib": "16b141f57cdd44d5a0400e0d24204475be78ea5a3597f1c9a92a51f161c5acc7",
+    "artifacts\\models\\spatial_v3\\h60_available_count_calendar.joblib": "5d0bb5508d1ecc690b30c97d6c603a7dfc5c148c014860e1a0cfa19c6950a2ce",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_calendar.joblib": "f91fac7e4b5315534a4212d6c49fdf17482445c673fb942ebcec5bf6d2a1a676",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_minus_housing.joblib": "a6dc72c5592143ca843af8c01fab94e3ef973b4c6501fc1d0a34ccea0ed8f72f",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_minus_neighbors.joblib": "74ac5660328274949767899e34ed66a231f65235faed7a419d61b70033bf4532",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_minus_workplaces.joblib": "87ef2ee5293812cdf1f10e98b4c748ad8dd00fc549c8507fd51f7f84dce573e2",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_plus_geometry.joblib": "598c6e95682650f48c3b8dc4b847b5498b564655b58e3bf1f2295b190b7c9ee0",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_plus_housing.joblib": "d84a497233b38a3933191e2fe11ae03c486b924fc799181805e5580660047d68",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_plus_neighbors.joblib": "790b670c1366391eb27b314fe00a85a61f009af8816688eaa89ff6acd23c2753",
+    "artifacts\\models\\spatial_v3\\h60_occupancy_rate_plus_workplaces.joblib": "780ae5ea7b7f52216001a042e0d7ba13402e41fefd72754ee88c1f2467c183dd"
+  },
+  "legacy_inputs_unchanged": true,
+  "identical_targets_and_observations": true,
+  "saved_inference_reproduced": true,
+  "result_rows": 20,
+  "unmetered_test_n": 0
+}

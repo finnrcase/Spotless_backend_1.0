@@ -1,0 +1,283 @@
+[
+  {
+    "variant": "calendar",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.13150397218771315,
+      "mae": 0.2422895792034774,
+      "rmse": 0.29549894803387394,
+      "r2_note": null,
+      "macro_block_mse": 0.09049270354201536
+    }
+  },
+  {
+    "variant": "plus_neighbors",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.12651696841786542,
+      "mae": 0.24354153014268537,
+      "rmse": 0.29634612804365845,
+      "r2_note": null,
+      "macro_block_mse": 0.09112066066815361
+    }
+  },
+  {
+    "variant": "plus_housing",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.11697086659970568,
+      "mae": 0.2444703209264389,
+      "rmse": 0.29796107814387596,
+      "r2_note": null,
+      "macro_block_mse": 0.09200226486150492
+    }
+  },
+  {
+    "variant": "plus_workplaces",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.12275884016475858,
+      "mae": 0.2446741542327072,
+      "rmse": 0.2969829528965159,
+      "r2_note": null,
+      "macro_block_mse": 0.09082152920061237
+    }
+  },
+  {
+    "variant": "plus_geometry",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.12679923146425243,
+      "mae": 0.24401505042063673,
+      "rmse": 0.2962982425573012,
+      "r2_note": null,
+      "macro_block_mse": 0.09082617662788368
+    }
+  },
+  {
+    "variant": "minus_neighbors",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.12291681915669384,
+      "mae": 0.24370854214034385,
+      "rmse": 0.29695621043267717,
+      "r2_note": null,
+      "macro_block_mse": 0.09122113849247959
+    }
+  },
+  {
+    "variant": "minus_housing",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.12060278366490729,
+      "mae": 0.24447424306558266,
+      "rmse": 0.2973476867366224,
+      "r2_note": null,
+      "macro_block_mse": 0.09144374934971643
+    }
+  },
+  {
+    "variant": "minus_workplaces",
+    "target": "occupancy_rate",
+    "choice": [
+      "extra_trees",
+      {
+        "n_estimators": 100,
+        "max_depth": 7,
+        "min_samples_leaf": 80,
+        "max_features": 0.8
+      }
+    ],
+    "validation": {
+      "n": 4405,
+      "r2": 0.1257731898794232,
+      "mae": 0.24299017981034204,
+      "rmse": 0.2964722718727125,
+      "r2_note": null,
+      "macro_block_mse": 0.09124614493966565
+    }
+  },
+  {
+    "variant": "calendar",
+    "target": "available_count",
+    "choice": [
+      "ridge",
+      {
+        "alpha": 1000
+      }
+    ],
+    "validation": {
+      "n": 545,
+      "r2": 0.2580234590275784,
+      "mae": 0.4898564146474325,
+      "rmse": 0.567741531765223,
+      "r2_note": null,
+      "macro_block_mse": 0.7419655752935315
+    }
+  },
+  {
+    "variant": "calendar",
+    "target": "any_panel_vacant",
+    "choice": [
+      "boosted",
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 140,
+        "learning_rate": 0.04,
+        "l2_regularization": 30,
+        "min_samples_leaf": 100
+      }
+    ],
+    "validation": {
+      "n": 545,
+      "positive_rate": 0.3706422018348624,
+      "brier_score": 0.19273365258667083,
+      "log_loss": 0.5732834766261605,
+      "ece": 0.09626295326121476,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "mean_probability": null,
+          "observed_frequency": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "observed_frequency": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 93,
+          "mean_probability": 0.2834055878931369,
+          "observed_frequency": 0.12903225806451613
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 193,
+          "mean_probability": 0.3354338562929269,
+          "observed_frequency": 0.20725388601036268
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 74,
+          "mean_probability": 0.464955630273497,
+          "observed_frequency": 0.40540540540540543
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 77,
+          "mean_probability": 0.5515957679034007,
+          "observed_frequency": 0.5714285714285714
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 16,
+          "mean_probability": 0.6436485346650265,
+          "observed_frequency": 0.4375
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 69,
+          "mean_probability": 0.7507776947757995,
+          "observed_frequency": 0.7101449275362319
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 23,
+          "mean_probability": 0.8116532355253081,
+          "observed_frequency": 0.8695652173913043
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "observed_frequency": null
+        }
+      ],
+      "calibration_note": "Reliability is descriptive at this sample size; Brier/log loss also measure discrimination.",
+      "macro_block_mse": 0.21421928687336877
+    }
+  }
+]

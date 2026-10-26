@@ -1,5 +1,7 @@
 # Los Angeles parking data foundation
 
+The [spatial-v3 continuation](docs/spatial_v3.md) adds inner geographic/time validation, vintage-correct employment, independent phone bay checks, blind sensor capture and enforced field holdouts. [Measured transfer results](reports/modeling/SPATIAL_V3.md) retain the negative results and unsupported unmetered status. The root [AGENTS.md](AGENTS.md) records the authorized check → diff → commit → push → remote verification workflow.
+
 The [temporal improvement experiment](docs/temporal_v2.md) audits sensor semantics, adds causal block patterns and consecutive history, and compares models on fixed legacy targets using chronological validation RMSE. The [experiment table](reports/modeling/TEMPORAL_V2.md) separates known/unseen blocks and keeps unmetered accuracy unsupported. New September and prospective manual holdouts are reserved unopened.
 
 Project repository: [finnrcase/Spotless_backend_1.0](https://github.com/finnrcase/Spotless_backend_1.0). This folder is the Git root. See [repository layout and local-data exclusions](docs/repository.md).

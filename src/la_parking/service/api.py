@@ -133,6 +133,11 @@ def create_app(repository=None,clock=None,observations_dir=None,background=True)
             'replay_issue_time':s.repo.config['replay_issue_utc'],'server_now':s.clock().isoformat(),'horizons':[0,15,30,60,120],
             'source_poll_enabled':s.repo.config['source_poll_enabled'],'client_refresh_seconds':60}
 
+    @app.get('/api/model-evidence')
+    def model_evidence():
+        from ..model_evidence import summary
+        return summary(root)
+
     @app.get('/api/destinations')
     def destinations(q:str=Query(min_length=2,max_length=100)):return {'matches':service().repo.search(q)}
 
@@ -180,6 +185,7 @@ def create_app(repository=None,clock=None,observations_dir=None,background=True)
         s=service()
         if poll_source:
             changed,cleared,status=s.refresh.poll_source();message='Official source poll attempted; evidence timestamps and feature support remain independent'
+            if status.get('holdout_guard'):message=status['message'];poll_source=False
         else:changed,cleared=s.refresh.check(force=True);message='Local snapshots checked; no network poll or training performed'
         return RefreshResponse(checked_at=s.clock(),changed=changed,data_revision=s.repo.revision,cache_entries_cleared=cleared,source_poll_performed=poll_source,message=message)
 

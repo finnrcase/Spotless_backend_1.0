@@ -1,0 +1,137 @@
+{
+  "registered_at_utc": "2026-10-25T22:07:38.565023+00:00",
+  "config": {
+    "version": "spatial-v3",
+    "seed": 431,
+    "primary_horizon_minutes": 60,
+    "target": "unchanged v1/v2 metered sensor-time occupancy rate; 15-minute expiry and 25% coverage; no row filtering by error or feature completeness",
+    "selection_objective": "pooled rolling chronological AND inner-geographic validation mean squared error",
+    "secondary_metrics": [
+      "rmse",
+      "mae",
+      "r2",
+      "macro_block_mse",
+      "block_bootstrap_uncertainty"
+    ],
+    "inner_geographic_clusters": 3,
+    "cluster_basis": "KMeans on street center coordinates of development blocks, fixed seed, no target values; hold out both sides of every physical block",
+    "rolling_origins_local": [
+      "2026-08-09",
+      "2026-08-13"
+    ],
+    "validation_days": 3,
+    "training_end_local": "2026-08-17",
+    "embargo_minutes": 180,
+    "label_window_minutes": 15,
+    "calibration_start_local": "2026-08-18",
+    "calibration_end_local": "2026-08-24",
+    "calibration_status": "Later-time calibration in development geography; independently unseen geographic calibration unavailable",
+    "auxiliary_heads": "Count and binary panel-vacancy heads use the validation-selected regression feature family, with their own MSE/Brier parameter selection; no probability derived from rate",
+    "count_binary_panel_size": "Known discovery-roster size only; never interpreted as full-curb capacity",
+    "training_archive_months": [
+      "2025_09",
+      "2026_06",
+      "2026_07",
+      "2026_08"
+    ],
+    "maximum_new_sensor_archives": 0,
+    "new_untouched_archive_holdout": {
+      "start_local": "2026-10-25",
+      "end_local": "2026-11-01",
+      "status": "reserved before tuning, outcomes not requested or opened"
+    },
+    "new_untouched_manual_holdout": {
+      "start_local": "2026-11-15",
+      "end_local": "2026-11-22",
+      "status": "reserved before tuning; whole blocks and sessions; no observations collected"
+    },
+    "prior_holdouts": "Keep September 21-30 and November 7-14 reservations unopened; no later outcomes used for selection",
+    "legacy_benchmarks": "Existing north area and August 25-31 have been inspected; diagnostics only after validation choices are saved",
+    "neighbor_radii_m": [
+      300,
+      600
+    ],
+    "heldout_observations_allowed_as_neighbor_sources": false,
+    "own_block_history_allowed": false,
+    "block_or_face_identity_as_model_feature": false,
+    "feature_variants": [
+      "calendar",
+      "plus_neighbors",
+      "plus_housing",
+      "plus_workplaces",
+      "plus_geometry",
+      "minus_neighbors",
+      "minus_housing",
+      "minus_workplaces"
+    ],
+    "ridge_alpha": [
+      10,
+      100,
+      1000
+    ],
+    "boosted_candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 140,
+        "learning_rate": 0.04,
+        "l2_regularization": 30,
+        "min_samples_leaf": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "max_iter": 140,
+        "learning_rate": 0.04,
+        "l2_regularization": 50,
+        "min_samples_leaf": 100
+      }
+    ],
+    "extra_trees": {
+      "n_estimators": 100,
+      "max_depth": 7,
+      "min_samples_leaf": 80,
+      "max_features": 0.8
+    },
+    "employment_vintages": {
+      "2022_available_at_utc": "2024-11-21T00:00:00Z",
+      "2023_available_at_utc": "2025-12-19T00:00:00Z"
+    },
+    "business_and_event_snapshots": "prospective only; never backfilled into historical validation",
+    "street_geometry_tier": "October 2026 mapping; retrospective exploratory feature tier, not verified historical supply or legal capacity",
+    "unknown_supply_and_rules": "retain null; historic curb polygons are not stalls",
+    "sensor_availability": "event-time replay assumes immediate delivery; new poll recorder will retain actual first-seen timestamps prospectively",
+    "bootstrap_replicates": 300,
+    "unmetered_labels": "direct reviewed labels required; none acquired",
+    "automatic_service_promotion": false,
+    "synthetic_labels_allowed": false
+  },
+  "config_sha256": "6d8432f9b29fd36013b9bee9ec4bc0b715ec1caa760ed0f9852e9973d52bbbdb",
+  "inner_geographic_blocks": {
+    "la:boe:asset:17306:oid:17941:part:0": 0,
+    "la:boe:asset:20627:oid:20950:part:0": 0,
+    "la:boe:asset:25660:oid:24387:part:0": 2,
+    "la:boe:asset:28037:oid:27161:part:0": 0,
+    "la:boe:asset:30571:oid:30802:part:0": 0,
+    "la:boe:asset:30596:oid:30826:part:0": 2,
+    "la:boe:asset:3165:oid:3123:part:0": 1,
+    "la:boe:asset:37938:oid:36624:part:0": 1,
+    "la:boe:asset:47726:oid:45759:part:0": 1,
+    "la:boe:asset:50096:oid:48781:part:0": 1,
+    "la:boe:asset:52549:oid:54714:part:0": 1,
+    "la:boe:asset:59210:oid:58097:part:0": 0,
+    "la:boe:asset:62463:oid:61393:part:0": 1,
+    "la:boe:asset:66454:oid:63888:part:0": 0,
+    "la:boe:asset:68552:oid:65600:part:0": 0,
+    "la:boe:asset:71091:oid:69052:part:0": 0,
+    "la:boe:asset:73634:oid:72445:part:0": 2,
+    "la:boe:asset:74935:oid:71112:part:0": 0,
+    "la:boe:asset:74959:oid:71133:part:0": 2,
+    "la:boe:asset:76100:oid:75704:part:0": 2
+  },
+  "source_sha256": "bfe168185a67fcad76cee8ded7003454d14ec32e2dce01519254d418f91d616d",
+  "inputs_sha256": {
+    "data\\modeling\\design.parquet": "cd32f12f4b895eb327fad566e7b03ae0e132bc74bdfc3784d91a3d5a3b7bc2f3",
+    "config\\temporal_v2.json": "11705e1ebc2b48980b5bf08879fc229e5991a06219fdaf237d5505ec35fcf391",
+    "data\\modeling\\spatial_v3\\employment_context.parquet": "aa8cd9c564469cde537f29a2d8ce5c79a1950b66bedfdb2b024f304536242593"
+  },
+  "reserved_outcomes_opened": false
+}

@@ -101,6 +101,33 @@ def build(output='reports',dates=('2026-10-27','2026-10-29','2026-11-01'),seed=4
         'parking_type':'Must verify unmetered/public access in person; no meter links is not proof.',
         'holdout_status':'Development only; preserve reserved physical blocks and November 7-14 prospective sessions untouched.',
         'assignment_ids':[a['assignment_id'] for a in assignments if a['survey_session_id']==first_session]}
+    # Materialize existing whole-block reservations; no occupancy outcomes choose IDs.
+    known={r['block_id'] for r in route if r['evaluation_role']=='development' and r['reconnaissance_stratum']=='unmetered_candidate_verify'}
+    reserved=[]
+    for day in ['2026-11-17','2026-11-21']:
+        for window,hour in [('morning',9),('afternoon',14),('evening',18)]:
+            session=f'holdout-v3-{day}-{window}'
+            subset=[r for r in route if r['block_id'] in held|known]
+            for i,face in enumerate(subset):
+                stamp=local_slot(day,hour)+pd.Timedelta(minutes=5*i)
+                reserved.append({**face,'evaluation_role':'unseen_block_holdout' if face['block_id'] in held else 'known_block_future_holdout','survey_session_id':session,
+                    'assignment_id':f'{session}-{i+1:02d}','scheduled_local':stamp.isoformat(),'scheduled_utc':stamp.tz_convert('UTC').isoformat(),
+                    'sampling_method':'repeat_visit','visit_status':'planned_not_observed','repeat_offset_minutes':None})
+    sensor=[];meter_block=next(r['block_id'] for r in route if r['reconnaissance_stratum']=='metered_or_mixed_candidate_verify')
+    for delta in [0,15,30,60]:
+        for i,face in enumerate(r for r in route if r['block_id']==meter_block):
+            stamp=local_slot('2026-10-28',12)+pd.Timedelta(minutes=delta+i*4);session='sensor-audit-2026-10-28'
+            sensor.append({**face,'evaluation_role':'independent_sensor_validation','survey_session_id':session,'assignment_id':f'{session}-{delta:02d}-{i}',
+                'scheduled_local':stamp.isoformat(),'scheduled_utc':stamp.tz_convert('UTC').isoformat(),'sampling_method':'repeat_visit','visit_status':'planned_not_observed','repeat_offset_minutes':delta})
+    plan['reserved_evaluation_assignments']=reserved;plan['optional_sensor_assignments']=sensor
+    pd.DataFrame(reserved).to_csv(out/'field_holdout_assignments.csv',index=False)
+    reservations={'version':'field-holdouts-v1','unseen_physical_blocks':sorted(held),'known_future_physical_blocks':sorted(known),
+        'reserved_session_ids':sorted({r['survey_session_id'] for r in reserved}),'reserved_assignment_ids':[r['assignment_id'] for r in reserved],
+        'period_start_local':'2026-11-15','period_end_local':'2026-11-22','block_selection':'Existing seed-430 unmetered candidate reservations, chosen without occupancy labels; verify parking type in person.',
+        'counts_collected':0,'purpose':'Never use reserved physical blocks or sessions for train/validation/calibration. Planned rows are not labels.'}
+    target=Path('config/field_holdouts.json') if out.resolve()==Path('reports').resolve() else out/'field_holdouts.json'
+    if target.exists() and json.loads(target.read_text())!=reservations:raise ValueError('Existing field reservations differ; register a new plan instead of silently replacing holdouts')
+    target.write_text(json.dumps(reservations,indent=2)+'\n',encoding='utf8')
     (out/'field_route.json').write_text(json.dumps(plan,indent=2),encoding='utf8')
     template=Path('web/field_route.html').read_text(encoding='utf8')
     (out/'field_route.html').write_text(template.replace('/*__DATA__*/',json.dumps(plan,separators=(',',':')).replace('<','\\u003c')),encoding='utf8')

@@ -4,6 +4,7 @@ const $ = id => document.getElementById(id);
 const facesById = new Map(inventory.faces.map(f => [f.id, f]));
 const KEYS = { records: 'spotless-field-records-v1', draft: 'spotless-field-draft-v1', observer: 'spotless-field-observer-v1' };
 let records = [], currentLocation = null, started = null, observationId = null, nearby = false, storageOkay = true;
+let meterDraft = {};
 const formatTime = iso => new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(new Date(iso));
 function message(text, error = false) { $('message').textContent = text; $('message').classList.toggle('error', error); $('message').hidden = false; }
 function write(key, value) {
@@ -46,6 +47,22 @@ function showFace() {
     $('face-evidence').textContent = `${face.method === 'authoritative_curb' ? 'Associated physical curb footprint' : 'Approximate centerline offset'}. Any linked curb assets are a historic supply prior: ${inventory.support.curb_asset_vintage}. They are not parking stalls. Street designation: ${face.street_designation}. ${face.meter_links} linked meter(s) in the inventory; verify parking type and public access in person. Endpoints: ${face.endpoints}.`;
     renderMap(face);
   }
+  renderBayChecks();
+}
+function renderBayChecks() {
+  const face=selectedFace(),container=$('meter-bays');container.replaceChildren();
+  if(!face?.meter_bays?.length){container.textContent='No uniquely linked bay IDs on this face. This does not establish unmetered status or unrestricted parking.';return;}
+  for(const bay of face.meter_bays){
+    const row=document.createElement('div'),label=document.createElement('label'),select=document.createElement('select'),checkLabel=document.createElement('label'),check=document.createElement('input'),stamp=document.createElement('small');
+    label.textContent=`${bay.space_id} · ${Number(bay.latitude).toFixed(5)}, ${Number(bay.longitude).toFixed(5)}`;
+    select.setAttribute('aria-label',`Human state for bay ${bay.space_id}`);select.dataset.bayId=bay.space_id;
+    for(const [value,text] of [['','Not observed'],['OCCUPIED','Occupied'],['VACANT','Vacant (rules separate)'],['UNKNOWN','Unknown / not visible']])select.add(new Option(text,value));
+    select.value=meterDraft[bay.space_id]?.state||'';stamp.textContent=meterDraft[bay.space_id]?.observed_at_utc?formatTime(meterDraft[bay.space_id].observed_at_utc):'';
+    check.type='checkbox';check.checked=meterDraft[bay.space_id]?.identity_verified||false;checkLabel.className='check';checkLabel.append(check,document.createTextNode('I matched this physical bay to the inventory ID/map position.'));
+    select.onchange=()=>{if(!started){select.value='';message('Start the observation clock before checking a bay.',true);return;}if(select.value){meterDraft[bay.space_id]={space_id:bay.space_id,state:select.value,observed_at_utc:new Date().toISOString(),identity_verified:check.checked};stamp.textContent=formatTime(meterDraft[bay.space_id].observed_at_utc);}else{delete meterDraft[bay.space_id];stamp.textContent='';}persistDraft();};
+    check.onchange=()=>{if(meterDraft[bay.space_id])meterDraft[bay.space_id].identity_verified=check.checked;persistDraft();};
+    row.append(label,select,checkLabel,stamp);container.append(row);
+  }
 }
 function collectDraft() {
   return { block_face_id: $('face').value, side_confirmed: $('side-confirmed').checked, observer: $('observer').value,
@@ -56,7 +73,7 @@ function collectDraft() {
     sampling_stratum: $('stratum').value, sampling_method: $('sampling-method').value, observer_confidence: $('observer-confidence').value,
     restrictions_text: $('restrictions-text').value, curb_length: $('curb-length').value, measurement_method: $('measurement-method').value, notes: $('notes').value,
     gap_lengths:$('gap-lengths').value,obstructed_length:$('obstructed-length').value,counting_convention:$('counting-convention').value,exclusions_text:$('exclusions-text').value,
-    survey_session_id:$('survey-session').value,assignment_id:$('assignment-id').value };
+    survey_session_id:$('survey-session').value,assignment_id:$('assignment-id').value,meter_bays:Object.values(meterDraft) };
 }
 function persistDraft() { write(KEYS.draft, collectDraft()); write(KEYS.observer, $('observer').value); reconcile(); }
 function reconcile() {
@@ -67,6 +84,7 @@ function reconcile() {
 }
 function resetCount() {
   started = null; observationId = null;
+  meterDraft={};renderBayChecks();
   for (const k of ['occupied', 'vacant_legal', 'unsuitable', 'surveyed_capacity', 'notes', 'restrictions-text', 'curb-length', 'measurement-method','gap-lengths','obstructed-length','exclusions-text']) $(k).value = '';
   $('side-confirmed').checked = false; $('rules-checked').checked = false;
   $('start').textContent = 'Start observation'; $('timer').textContent = 'Not started'; persistDraft();
@@ -108,6 +126,7 @@ $('start').addEventListener('click', () => {
   if (!selectedFace() || !$('side-confirmed').checked) { message('Choose and confirm the street side first.', true); return; }
   if (started && !window.confirm('Restart the observation clock? Keep the counts only if they are a fresh snapshot.')) return;
   started = new Date().toISOString(); observationId = globalThis.crypto?.randomUUID?.() || `manual-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  meterDraft={};renderBayChecks();
   if(!$('survey-session').value)$('survey-session').value=`session-${started.slice(0,10)}-${observationId.slice(0,8)}`;
   $('start').textContent = 'Restart clock'; persistDraft(); message('Observation started. Unknown counts stay blank.');
 });
@@ -151,6 +170,7 @@ $('restore').addEventListener('change', async event => {
 });
 const restored = read(KEYS.draft, null);
 if (restored) {
+  meterDraft=Object.fromEntries((restored.meter_bays||[]).map(b=>[b.space_id,{...b,identity_verified:false}]));
   if (facesById.has(restored.block_face_id)) { populateFaces(restored.block_face_id); showFace(); }
   for (const [key, id] of Object.entries({ observer: 'observer', parking_type: 'parking-type', duration: 'duration', permit_class: 'permit', vehicle_class: 'vehicle', capacity_basis: 'capacity-basis', sampling_stratum: 'stratum', sampling_method:'sampling-method',observer_confidence:'observer-confidence',restrictions_text:'restrictions-text',curb_length:'curb-length',measurement_method:'measurement-method',gap_lengths:'gap-lengths',obstructed_length:'obstructed-length',counting_convention:'counting-convention',exclusions_text:'exclusions-text',survey_session_id:'survey-session',assignment_id:'assignment-id',notes: 'notes', occupied: 'occupied', vacant_legal: 'vacant_legal', unsuitable: 'unsuitable', surveyed_capacity: 'surveyed_capacity' })) if (restored[key] !== undefined) $(id).value = restored[key] ?? '';
   $('complete').checked = restored.complete_face ?? true; $('rules-checked').checked = restored.rules_checked ?? false;
@@ -170,3 +190,4 @@ function applyRoute(){
 addEventListener('hashchange',applyRoute);applyRoute();
 setInterval(() => { if (started) { const seconds = Math.floor((Date.now() - new Date(started).getTime()) / 1000); $('timer').textContent = seconds > 900 ? 'Expired · start a fresh snapshot' : `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')} elapsed`; } }, 1000);
 reconcile();
+renderBayChecks();

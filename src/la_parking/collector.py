@@ -12,6 +12,9 @@ def build_collector(output='reports/collector.html', root=None):
     segments=gpd.read_parquet(data/'pilot_street_segments.parquet').to_crs(4326).set_index('segment_id')
     mapping=pd.read_parquet(data/'meter_face_mapping.parquet')
     meters=mapping.loc[mapping.join_status=='matched'].groupby('block_face_id').size().to_dict()
+    bay_points=pd.read_parquet(data/'pilot_meters.parquet',columns=['spaceid','latitude','longitude'])
+    bay_rows=mapping.loc[mapping.join_status.eq('matched')].merge(bay_points,left_on='space_id',right_on='spaceid',validate='one_to_one')
+    bays={face:g[['space_id','latitude','longitude']].sort_values('space_id').to_dict('records') for face,g in bay_rows.groupby('block_face_id')}
     support=json.loads((root/'reports/final_validation.json').read_text())
     source_coverage=json.loads((root/'reports/coverage.json').read_text())
     def paths(geom):
@@ -30,7 +33,7 @@ def build_collector(output='reports/collector.html', root=None):
         direction=('north' if ny>=0 else 'south') if abs(ny)>=abs(nx) else ('east' if nx>=0 else 'west')
         records.append({'id':face.block_face_id,'street':seg.street_name,'code':hashlib.sha256(face.block_face_id.encode()).hexdigest()[:7].upper(),
                         'side_label':direction+' side (verify)','canonical_side':face.side,'method':face.geometry_method,
-                        'meter_links':int(meters.get(face.block_face_id,0)),'street_designation':seg.street_designation,'center':[round(point.x,7),round(point.y,7)],
+                        'meter_links':int(meters.get(face.block_face_id,0)),'meter_bays':bays.get(face.block_face_id,[]),'street_designation':seg.street_designation,'center':[round(point.x,7),round(point.y,7)],
                         'span':max(line.bounds[2]-line.bounds[0],line.bounds[3]-line.bounds[1],.0015),
                         'paths':paths(face.geometry.simplify(.000005)),'centerline':coords,
                         'endpoints':f'{coords[0][1]:.5f}, {coords[0][0]:.5f} → {coords[-1][1]:.5f}, {coords[-1][0]:.5f}'})

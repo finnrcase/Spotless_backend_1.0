@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-25T20:59:06.115416+00:00",
+  "generated_at_utc": "2026-10-26T02:44:53.824213+00:00",
   "sources": [
     {
       "id": "meters",
@@ -2881,6 +2881,95 @@
       "cost": "Free public archives",
       "retrieved_at_utc": "2026-10-25T20:59:06.115416+00:00",
       "notes": "Two cached files: 407667493 bytes total; 239087 pilot events, no local/UTC mismatches or rejects. Current meter mapping is retrospective. Event-time replay assumes immediate delivery; archive publication lags two months and does not establish actual historical delivery. Reserved September outcomes not requested."
+    },
+    {
+      "id": "lodes2022_historical_workplaces",
+      "owner": "US Census Bureau / LEHD",
+      "verified_url": "https://lehd.ces.census.gov/data/lodes/LODES8/ca/wac/ca_wac_S000_JT00_2022.csv.gz",
+      "status": "verified/acquired and joined",
+      "category": "C demand predictor",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-25T22:02:41.985131+00:00",
+      "public_release_date": "2024-11-19",
+      "feature_available_at_utc": "2024-11-21T00:00:00Z",
+      "sha256": "68fe96716b8df4a635b90895b358308123b8bc65430bb856a8f103caadafafd0",
+      "bytes": 6194693,
+      "cost": "Free; no credentials",
+      "occupancy_labels": false,
+      "notes": "772 of 897 queried Census blocks match. Earlier vintage fills September 2025 without using 2023 employment before release. Missing blocks remain missing, not zero. Retail/education/health/arts/food counts are predictors."
+    },
+    {
+      "id": "spatial_v3_prospective_business",
+      "owner": "City of Los Angeles",
+      "verified_url": "https://data.lacity.org/resource/6rrh-rzua.json",
+      "status": "previous snapshot joined; prospective only",
+      "category": "C demand predictor",
+      "priority": 1,
+      "feature_available_at_utc": "2026-10-25T22:02:52.911773+00:00",
+      "occupancy_labels": false,
+      "cost": "Existing free cached data",
+      "notes": "Active registration-account counts and food/retail categories. Does not reconstruct historical closures, actual operating hours or footfall. Never backfilled into the August benchmark."
+    },
+    {
+      "id": "sensor_delivery_capture",
+      "owner": "LADOT",
+      "verified_url": "https://data.lacity.org/resource/e7h6-4a3e.json",
+      "status": "bounded blind capture working",
+      "category": "A direct parking",
+      "priority": 1,
+      "retrieved_at_utc": "2026-10-26T02:44:53.824213+00:00",
+      "cost": "Free public poll; max 10000 rows and 4 MB",
+      "notes": "One 3866-row snapshot quarantined; no reserved states parsed into features. Provider transaction time, actual first-seen delivery and polling remain distinct. UNKNOWN/conflicts not vacancy. Independent reviewed bay observations still zero."
+    },
+    {
+      "id": "spatial_v3_code_curb",
+      "owner": "City of Los Angeles / LADOT",
+      "verified_url": "https://gisserver.dot4la.org/server/rest/services/Sandbox_Environment/Curb_Data_Specification/FeatureServer",
+      "status": "unavailable",
+      "category": "A direct parking metadata",
+      "priority": 1,
+      "cost": "Free metadata request",
+      "occupancy_labels": false,
+      "notes": {
+        "source": "code_curb",
+        "url": "https://gisserver.dot4la.org/server/rest/services/Sandbox_Environment/Curb_Data_Specification/FeatureServer",
+        "checked_at_utc": "2026-10-25T23:15:20.717583+00:00",
+        "status": "unavailable",
+        "error": "API error: {'error': {'code': 500, 'message': 'Error handling service request :0x80004005 - No Layer or Table was initialized. in \\'\"esriCarto.GraphicFeatureServer\"\\'', 'details': []}}"
+      }
+    },
+    {
+      "id": "spatial_v3_sensor_roster_metadata",
+      "owner": "City of Los Angeles / LADOT",
+      "verified_url": "https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16",
+      "status": "metadata_verified",
+      "category": "A direct parking metadata",
+      "priority": 1,
+      "cost": "Free metadata request",
+      "occupancy_labels": false,
+      "notes": {
+        "source": "sensor_roster_metadata",
+        "url": "https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16",
+        "checked_at_utc": "2026-10-25T23:15:20.717901+00:00",
+        "status": "metadata_verified",
+        "name": "Parking Meter Sensors",
+        "fields": [
+          "OBJECTID",
+          "SENSOR_UNIQUE_ID",
+          "GPSX",
+          "GPSY",
+          "MTYPE",
+          "SENSOR_STATUS",
+          "PMZ",
+          "PMZ2",
+          "ADDRESS_SPACE",
+          "Shape",
+          "TOOLTIP",
+          "NLA_URL"
+        ],
+        "layers": null,
+        "note": "Metadata only; no current sensor outcomes or feature rows queried."
+      }
     }
   ]
 }

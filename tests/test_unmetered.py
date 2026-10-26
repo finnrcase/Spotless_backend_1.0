@@ -15,6 +15,16 @@ def test_regression_selection_prefers_squared_error_over_lower_mae():
     assert u.validation_objective({'brier_score':.2},'at_least_one')==.2
 
 
+def test_reserved_physical_blocks_cannot_enter_unmetered_development():
+    from pathlib import Path
+    p=Path('config/field_holdouts.json')
+    if not p.exists():pytest.skip('Field holdout configuration absent')
+    block=json.loads(p.read_text())['unseen_physical_blocks'][0]
+    f=pd.DataFrame({'observation_id':['fixture'], 'block_id':[block]})
+    split={name+'_ids':(['fixture'] if name=='train' else []) for name in ['train','validation','calibration','test']}
+    with pytest.raises(ValueError,match='Reserved physical'):u.split_rows(f,'future_time',split,u.config())
+
+
 def experiment():
     rows=[];ids={}
     for partition,n,day in [('train',40,1),('validation',10,3),('calibration',10,5),('future',12,7),('unseen',12,7)]:

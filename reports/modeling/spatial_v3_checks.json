@@ -1,0 +1,28 @@
+{
+  "python_tests": 101,
+  "python_passed": true,
+  "javascript_tests": 8,
+  "javascript_passed": true,
+  "phone_browser_checks": 22,
+  "map_api_browser_checks": 13,
+  "browser_passed": true,
+  "real_observation_store_modified_by_qa": false,
+  "capture_status": {
+    "polls": [
+      [
+        "quarantined",
+        1
+      ]
+    ],
+    "last_poll": [
+      "2026-10-25T22:21:50.648056+00:00",
+      "quarantined",
+      null
+    ],
+    "parsed_provider_transactions": 0,
+    "quarantined_rows_used_for_features": false
+  },
+  "new_holdout_states_used_for_features": false,
+  "unmetered_test_labels": 0,
+  "model_checks_file": "spatial_v3_locked_models.json"
+}

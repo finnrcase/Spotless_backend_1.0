@@ -45,6 +45,14 @@ ok(records.length===1&&records[0].vacant_legal===0,'count saved with observed ze
 ok(Array.isArray(records[0].gap_lengths_m)&&records[0].gap_lengths_m.length===0,'checked absence of gaps differs from unmeasured');
 ok(records[0].assignment_id==='__ASSIGNMENT__'&&records[0].survey_session_id==='__SESSION__','route metadata survives collection');
 ok(d.documentElement.scrollWidth<=win.innerWidth,'expanded collector fits 390px viewport');
+const meterFace=JSON.parse($('inventory').textContent).faces.find(f=>f.meter_bays?.length);
+ok(!!meterFace,'real uniquely mapped meter-bay inventory loaded');
+win.populateFaces(meterFace.id);$('face').dispatchEvent(new win.Event('change'));$('side-confirmed').checked=true;$('use-pin').click();$('parking-type').value='metered';$('complete').checked=false;$('start').click();
+const baySelect=d.querySelector('[data-bay-id]');baySelect.value='VACANT';baySelect.dispatchEvent(new win.Event('change'));baySelect.parentElement.querySelector('input[type=checkbox]').click();$('save').click();
+const bayRecord=JSON.parse(win.localStorage.getItem('spotless-field-records-v1')).at(-1);
+ok(bayRecord.meter_bays?.length===1&&bayRecord.meter_bays[0].identity_verified,'timestamped human bay state saved with verified identity');
+ok(bayRecord.occupied===null&&bayRecord.vacant_legal===null&&bayRecord.surveyed_capacity===null,'bay vacancy does not fabricate full-face counts or legal supply');
+ok(d.documentElement.scrollWidth<=win.innerWidth,'meter-bay workflow fits 390px viewport');
 const iw=get('imagery').contentWindow,doc=iw.document,i$=id=>doc.getElementById(id),canvas=i$('image');
 await new Promise(r=>setTimeout(r,250));ok(i$('task').options.length===24,'24 real imagery tasks loaded');
 ok(canvas.width===600&&canvas.getContext('2d').getImageData(100,100,1,1).data[3]>0,'real historic image rendered');
@@ -63,7 +71,7 @@ ok(exported&&JSON.parse(await exported.text())[0].image_sha256===review.image_sh
 i$('task').selectedIndex=1;i$('task').dispatchEvent(new iw.Event('change'));i$('task').selectedIndex=0;i$('task').dispatchEvent(new iw.Event('change'));
 ok(i$('shape-count').textContent.startsWith('2 shapes'),'annotations persist across task switches');
 ok(doc.documentElement.scrollWidth<=iw.innerWidth,'annotation workflow fits 390px viewport');
-document.getElementById('result').textContent=JSON.stringify({passed:true,checks,collector_record:records[0],annotation:review});
+document.getElementById('result').textContent=JSON.stringify({passed:true,checks,collector_record:records[0],bay_record:bayRecord,annotation:review});
 }catch(e){document.getElementById('result').textContent=JSON.stringify({passed:false,error:e.message,checks});}
 };</script></body></html>'''
 values={'__ROUTE__':(root/'reports/field_route.html').as_uri(),'__COLLECTOR__':(root/'reports/collector.html').as_uri()+'#'+fragment,
@@ -83,6 +91,9 @@ with tempfile.TemporaryDirectory(dir=qa) as temp:
     record=Path(temp)/'synthetic-only.jsonl';record.write_text(json.dumps(payload.pop('collector_record')),encoding='utf8')
     accepted=ingest(record,output=Path(temp)/'synthetic-intake')
     if accepted['accepted']!=1:raise AssertionError(accepted)
+    bay=Path(temp)/'synthetic-bay-only.jsonl';bay.write_text(json.dumps(payload.pop('bay_record')),encoding='utf8')
+    accepted_bay=ingest(bay,output=Path(temp)/'synthetic-intake')
+    if accepted_bay['accepted']!=1:raise AssertionError(accepted_bay)
     annotation=payload.pop('annotation');(Path(temp)/'synthetic-annotation.json').write_text(json.dumps(annotation))
 payload['python_intake_accepted_test_record']=True;payload['real_observation_store_modified']=False
 Path('reports/starter/browser_validation.json').write_text(json.dumps(payload,indent=2),encoding='utf8');print(json.dumps(payload,indent=2))

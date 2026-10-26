@@ -139,6 +139,18 @@ class Event(EffectiveRecord):
     status: Literal['scheduled','cancelled','postponed','completed','unknown']
 
 
+class MeterBayObservation(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    space_id: str=Field(min_length=1,max_length=100)
+    state: Literal['OCCUPIED','VACANT','UNKNOWN']
+    observed_at_utc: AwareDatetime
+    identity_verified: bool=False
+    @model_validator(mode='after')
+    def utc(self):
+        self.observed_at_utc=self.observed_at_utc.astimezone(timezone.utc)
+        return self
+
+
 class ManualObservation(Record):
     observation_id: str
     block_face_id: str
@@ -171,6 +183,7 @@ class ManualObservation(Record):
     obstructed_curb_length_m: float | None=Field(default=None,ge=0,allow_inf_nan=False)
     counting_convention: str | None=Field(default=None,max_length=500)
     exclusions_text: str=Field(default='',max_length=2000)
+    meter_bays: list[MeterBayObservation] | None=Field(default=None,max_length=100)
     latitude: float=Field(ge=-90,le=90)
     longitude: float=Field(ge=-180,le=180)
     notes: str=''
@@ -182,6 +195,9 @@ class ManualObservation(Record):
         if self.location_method=='confirmed_map_pin' and self.gps_accuracy_m is not None: raise ValueError('A map pin has no measured GPS accuracy')
         if self.survey_end_utc<self.survey_start_utc: raise ValueError('Survey end precedes start')
         if self.survey_end_utc>self.retrieved_at_utc: raise ValueError('Survey cannot be in future')
+        if self.meter_bays is not None:
+            if len({b.space_id for b in self.meter_bays})!=len(self.meter_bays):raise ValueError('Duplicate independent bay IDs')
+            if any(not self.survey_start_utc<=b.observed_at_utc<=self.survey_end_utc for b in self.meter_bays):raise ValueError('Bay timestamp outside the actual survey window')
         if self.complete_face:
             vals=[self.occupied,self.vacant_legal,self.unsuitable,self.surveyed_capacity]
             if any(v is None for v in vals) or sum(vals[:3])!=vals[3]: raise ValueError('Complete-face counts must reconcile')

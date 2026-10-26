@@ -26,3 +26,4 @@ $('zoom-in').onclick=()=>{mapSpan=Math.max(.002,mapSpan*.7);draw();};$('zoom-out
 setInterval(()=>{if($('auto-refresh').checked&&!document.hidden)predict();},60000);
 async function boot(){try{config=await api('/api/config');const health=await api('/api/health');$('health').textContent=health.status.replaceAll('_',' ');setMode();await loadStreets();}catch(e){notice(e.message,true);}}
 boot();
+api('/api/model-evidence').then(e=>{const box=$('validation-evidence');if(box)box.textContent=`Evidence coverage: ${e.geographic_coverage} Known-block results are a previously inspected archive benchmark. New-block forecasts remain experimental. Unmetered reviewed test observations: ${e.unmetered.reviewed_test_n}. Verify posted rules for the whole stay.`;}).catch(()=>{const box=$('validation-evidence');if(box)box.textContent='Validation summary unavailable. Unmetered and citywide accuracy remain unvalidated; verify posted rules for the whole stay.';});
