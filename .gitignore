@@ -72,6 +72,7 @@ desktop.ini
 /reports/*
 !/reports/*.md
 !/reports/coverage.json
+!/reports/signals_verification.json
 !/reports/feature_quality.json
 !/reports/evaluation_readiness.json
 !/reports/final_validation.json

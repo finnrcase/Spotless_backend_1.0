@@ -1,0 +1,78 @@
+{
+  "sources": {
+    "nws_hourly": {
+      "status": "downloaded",
+      "snapshot": "data\\signals\\snapshots\\nws_hourly\\6565c4b2e2f20cd1374979e9eca9e4fd9afcd0246303a45e307fae614158491f.json",
+      "sha256": "6565c4b2e2f20cd1374979e9eca9e4fd9afcd0246303a45e307fae614158491f",
+      "received_at_utc": "2026-10-26T16:28:41.992890+00:00",
+      "rows": 156
+    },
+    "ladot_sensor_assets": {
+      "status": "downloaded",
+      "snapshot": "data\\signals\\snapshots\\ladot_sensor_assets\\04e4e95b1796bbaf0934e1bdc00d29ad3b2af4f4972492fd710ba0595a2927a0.json",
+      "sha256": "04e4e95b1796bbaf0934e1bdc00d29ad3b2af4f4972492fd710ba0595a2927a0",
+      "received_at_utc": "2026-10-26T16:28:44.397060+00:00",
+      "rows": 463
+    },
+    "ticketmaster": {
+      "status": "missing_credentials",
+      "required_variable": "TICKETMASTER_API_KEY"
+    },
+    "curbiq_zones": {
+      "status": "access_request_required",
+      "required_variable": "CURBIQ_TOKEN"
+    }
+  },
+  "occupancy_labels_added": 0,
+  "historical_benchmarks_rerun": false,
+  "models_activated": false,
+  "credential_status": {
+    "TICKETMASTER_API_KEY": {
+      "loaded": false,
+      "source": "missing"
+    },
+    "CURBIQ_TOKEN": {
+      "loaded": false,
+      "source": "missing"
+    }
+  },
+  "feature_checks": [
+    {
+      "request_id": "prospective-feature-check",
+      "issued_at_utc": "2026-10-26T16:30:21.941890+00:00",
+      "arrival_time_utc": "2026-10-26T17:30:21.941890+00:00",
+      "latitude": 34.063,
+      "longitude": -118.445,
+      "weather_temperature_c": 21.11111111111111,
+      "weather_precipitation_probability_percent": 0,
+      "listed_events_starting_near_arrival": null,
+      "weather_status": "forecast_known_at_issue",
+      "events_status": "unavailable_at_issue_or_outside_coverage",
+      "feature_available_at_utc": "2026-10-26T16:28:41.992890+00:00"
+    },
+    {
+      "request_id": "historical-no-backfill-check",
+      "issued_at_utc": "2026-08-25T12:00:00Z",
+      "arrival_time_utc": "2026-08-25T13:00:00Z",
+      "latitude": 34.063,
+      "longitude": -118.445,
+      "weather_temperature_c": null,
+      "weather_precipitation_probability_percent": null,
+      "listed_events_starting_near_arrival": null,
+      "weather_status": "unavailable_at_issue_or_outside_coverage",
+      "events_status": "unavailable_at_issue_or_outside_coverage",
+      "feature_available_at_utc": null
+    }
+  ],
+  "untouched_outcomes_opened": false,
+  "prospective_comparison": {
+    "variants": [
+      "incumbent_and_simple_baselines",
+      "verified_context"
+    ],
+    "paired_targets_required": true,
+    "asof_receipt_gate": true,
+    "measured_r2_gain": null,
+    "label_gap": "No reviewed prospective unmetered outcomes"
+  }
+}
