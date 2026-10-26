@@ -1,6 +1,5 @@
 """Synthetic geometry only; these tests are not flight or detector evidence."""
 import json
-from copy import deepcopy
 from pathlib import Path
 import pytest
 from la_parking.drone_feasibility import validate,camera_geometry,segment_coverage,simulate,mission_preview,build_sdk_plan

@@ -1,5 +1,7 @@
 # Modeling gate
 
+This foundation-era gate is retained for historical context. [Current status](current_status.md) identifies later source investigations, implemented experiments and remaining evidence gaps; [model discipline](model_discipline_review.md) governs the next experiment. The candidate architectures and source blockers below are not current implementation instructions.
+
 The confirmed reporting and split requirements are implemented in `src/la_parking/evaluation.py` and documented in [evaluation_protocol.md](evaluation_protocol.md). The new executed pipeline and [measured report](../reports/modeling/results_report.md) now contain metered **sensor-panel proxy** scores, separate chronological/spatial/combined tests, trained baselines/statistical/boosted models, calibration and uncertainty. No unmetered or full-curb suitability scores exist. No fixed R² target applies; earlier rough ranges were speculative.
 
 The foundation supports acquisition, spatial/temporal inspection, collection design and **experimental metered-only** label construction. It is not ready for a validated citywide suitability model.

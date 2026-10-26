@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-10-26",
+  "python_suite": {
+    "passed": 172,
+    "failed": 0,
+    "existing_dependency_deprecation_warnings": true
+  },
+  "javascript_tests_passed": 10,
+  "browser_checks": {
+    "reports/starter/browser_validation.json": 25,
+    "reports/service/browser_validation.json": 13,
+    "reports/product/browser_validation.json": 13,
+    "reports/collection/browser_validation.json": 6
+  },
+  "browser_permissions": "Initial sandbox Chrome graphics subprocess failed; rerun with normal local permissions passed using isolated profiles and temporary intake stores.",
+  "local_document_links_checked": true,
+  "removed_document": {
+    "path": "docs/implementation_plan.md",
+    "reason": "Completed foundation checklist duplicates preserved architectural/history evidence; no references found across tracked code/docs/notebooks.",
+    "scientific_reports_removed": 0
+  },
+  "simplifications": [
+    "Removed unused numpy import from service/repository.py; non-import AST identical.",
+    "Removed unused deepcopy test import.",
+    "Consolidated navigation/status; historical progress retained and marked archival."
+  ],
+  "frozen_v1_v2_inputs_verified": true,
+  "frozen_v4_inputs_and_model_hashes_verified": true,
+  "production_models_changed": false,
+  "models_retrained": 0,
+  "reserved_outcomes_opened": false,
+  "label_and_selection_rules_changed": false,
+  "token_reduction_measured": false,
+  "remaining_evidence_gaps": [
+    "No reviewed unmetered direct experiment outcomes.",
+    "No modern independently reviewed imagery or measured detector results.",
+    "No configured PX4/Gazebo SITL runtime."
+  ],
+  "modeling_issue_preserved": "Coverage-v4 chooses among configured feature variants; baseline-inclusive future selection is required. Frozen experiment unchanged."
+}

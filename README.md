@@ -1,12 +1,6 @@
 # Los Angeles parking data foundation
 
-The [product evaluation workflow](docs/product_evaluation.md) adds direct suitable-space calibration, matched recommendation comparisons, repeat-count/movement collection and a prospective trip ledger. Product outcome metrics remain unavailable pending reviewed observations; occupancy models are preserved.
-
-The [Census/regional continuation](docs/coverage_v4.md) expands cached ACS coverage to 2,498 county tracts, adds bounded Downtown/Hollywood archive panels and phone routes, and reports [controlled Census ablations](reports/modeling/COVERAGE_V4.md). Authentication failed for the locally loaded Census key; public cached files kept the work moving. No unmetered accuracy or citywide validation is claimed.
-
-The [spatial-v3 continuation](docs/spatial_v3.md) adds inner geographic/time validation, vintage-correct employment, independent phone bay checks, blind sensor capture and enforced field holdouts. [Measured transfer results](reports/modeling/SPATIAL_V3.md) retain the negative results and unsupported unmetered status. The root [AGENTS.md](AGENTS.md) records the authorized check → diff → commit → push → remote verification workflow.
-
-The [temporal improvement experiment](docs/temporal_v2.md) audits sensor semantics, adds causal block patterns and consecutive history, and compares models on fixed legacy targets using chronological validation RMSE. The [experiment table](reports/modeling/TEMPORAL_V2.md) separates known/unseen blocks and keeps unmetered accuracy unsupported. New September and prospective manual holdouts are reserved unopened.
+Start with [current supported behavior and evidence](docs/current_status.md), then [the project map](docs/project_map.md) for application paths, data/collection workflows, frozen experiments and relevant checks. These are the maintained entry points; detailed reports remain authoritative. Root [AGENTS.md](AGENTS.md) records the authorized check → diff → commit → push → remote verification workflow.
 
 Project repository: [finnrcase/Spotless_backend_1.0](https://github.com/finnrcase/Spotless_backend_1.0). This folder is the Git root. See [repository layout and local-data exclusions](docs/repository.md).
 
@@ -71,7 +65,7 @@ The first phone-friendly collector is available locally: run `.\.venv\Scripts\la
 
 Confirmed modeling commitments are in [the evaluation protocol](docs/evaluation_protocol.md): held-out R² and MAE with training-only baselines, probability calibration, separate future-time/unseen-block tests and separate metered/unmetered results. There is no fixed R² target; earlier rough ranges were speculative. Experimental metered sensor-panel results are now measured; no unmetered or citywide accuracy is claimed.
 
-Read `docs/progress.md`, `docs/spotless_audit.md`, `docs/architecture.md`, `docs/observation_workflow.md` and `docs/modeling_readiness.md`. Exported contracts are in `schemas/`. Start field collection with:
+Use [the project map](docs/project_map.md) to select task-relevant code and reports. [Historical progress](docs/progress.md) is archival; exported contracts are in `schemas/`. Start field collection with:
 
 ```powershell
 .\.venv\Scripts\la-parking.exe observations path\to\surveys.jsonl

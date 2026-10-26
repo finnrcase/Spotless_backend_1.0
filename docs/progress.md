@@ -1,4 +1,6 @@
-# Continuation log
+# Historical implementation notes
+
+Archived implementation history, not the current-status entry point. Some statements, counts and plans below describe earlier stages. Use [current_status.md](current_status.md) and [project_map.md](project_map.md) first; keep the original evidence below and do not append new session transcripts.
 
 ## Starter-package continuation
 

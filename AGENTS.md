@@ -1,32 +1,33 @@
-# Project workflow
+# Start here
+
+This Git root is **Spotless_backend_1.0**, the real app. Leave the separate `Spotless/` reference checkout untouched. Read [docs/current_status.md](docs/current_status.md) and [docs/project_map.md](docs/project_map.md) first, then inspect only task-relevant code, instructions and authoritative reports. Update those two documents when behavior or evidence changes; do not append session transcripts or duplicate reports. Preserve frozen experiment versions and reproducibility.
+
+# Authorized workflow
 
 After every task that changes project files:
 
-1. Run the relevant checks. Fix failures where possible; otherwise report the blocker and do not claim completion.
-2. Inspect the diff, including the exact files to be committed.
-3. Commit this task's changes with a descriptive message. Do not create empty commits.
-4. Push to the configured upstream branch.
-5. Verify that the remote branch contains the commit.
-6. Report the commit SHA, checks, and any blockers.
+1. Run relevant checks; fix failures where possible, otherwise report the blocker without claiming completion.
+2. Inspect the complete diff and exact files to commit.
+3. Commit only this task's changes with a descriptive message; no empty commits.
+4. Push to the configured upstream branch without force.
+5. Verify the remote contains the commit; report SHA, checks and blockers.
 
-The user gives standing authorization for normal commits and pushes. Do not force-push, commit credentials or large raw datasets, or include unrelated changes. Preserve existing work, reconcile differing histories safely, and leave unrelated work untouched. This authorization does not authorize purchases or public deployment.
+Normal commits/pushes have standing user authorization. Preserve existing/unrelated work and reconcile differing histories safely. Never commit credentials, local observations, raw data or model binaries; keep them ignored. Use bounded, cached free/public acquisition. No purchases or public deployment are authorized.
 
 # Parking evidence and evaluation
 
-The jurisdiction is the City of Los Angeles. Metered and unmetered parking are core targets. Additional datasets are predictors, not occupancy labels. Preserve unknown rules, uncertain sensor intervals, historic source vintages, geographic gaps and unsupported predictions explicitly. Curb asset polygons are not parking stalls.
+City of Los Angeles is the jurisdiction; metered and unmetered parking are core targets. Additional datasets are predictors, not occupancy labels. Preserve unknown rules, uncertain sensor intervals, source vintages, geographic gaps and unsupported predictions. Curb polygons are not stalls. Evaluate rules for the entire stay separately from model confidence.
 
-Use training-only causal features and chronological validation. Separate known-block forecasting, unseen-block transfer, metered results and unmetered results. Select regression models on validation squared error/RMSE; report R² and MAE. Select and calibrate probability heads separately. Never change label rules or reporting populations merely to raise R².
+Use training-only causal features and chronological validation. Separate known-block forecasting, unseen-block transfer, metered and unmetered results. Select regression on validation squared error/RMSE; report R² and MAE. Select/calibrate probability heads separately. Never change labels or reporting populations merely to raise R².
 
-Previously inspected tests are legacy benchmarks. Reserve new periods, blocks and sessions before tuning; do not open reserved outcomes during development. Compare versions on identical targets and observations, and report coverage and uncertainty. Do not assume meter models transfer to unmetered streets or imply citywide accuracy from a Westwood sample.
-
-Use bounded, cached free/public acquisition. Keep raw data, credentials, local observations and model binaries excluded from Git. Do not purchase services or publicly deploy.
+Inspected tests are legacy benchmarks. Reserve new periods, physical blocks and sessions before tuning; keep reserved outcomes closed during development. Compare identical targets/observations and report coverage/uncertainty. Do not assume meter-to-unmetered transfer or citywide accuracy from Westwood.
 
 # Model simplicity and evidence
 
-Do not add datasets, features, model families, services or dependencies merely because they are available. Before acquisition or implementation, state the parking mechanism, the specific evidence gap, and the smallest experiment that could justify the addition. Inventory existing inputs first and avoid duplicating their information.
+Before acquisition/implementation, inventory inputs and state the parking mechanism, evidence gap and smallest justifying experiment. Do not duplicate information or add datasets, features, model families, services or dependencies merely because they are available.
 
-Keep research acquisition separate from serving and model promotion. For future experiments, eligible candidates must include the incumbent and appropriate simple baselines (training-only mean, calendar/weekhour, and persistence when recent observations exist). Selecting the best of several complex candidates alone does not demonstrate improvement. Prefer the simpler candidate when differences are within validation uncertainty; predeclare the selection rule and intended use before scoring. Do not rewrite completed/frozen experiments.
+Keep research acquisition separate from serving/promotion. New experiments must include the incumbent and appropriate training-only mean, calendar/weekhour and recent-observation persistence baselines; selecting among complex candidates alone is insufficient. Predeclare selection/intended use; prefer simplicity within validation uncertainty and allow no promotion. Do not rewrite completed/frozen experiments.
 
-Promote a feature family only after an identical-row, identical-label ablation on relevant chronological/geographic validation demonstrates useful improvement or an explicitly measured coverage benefit, without a material subgroup regression. Report sample/label coverage, block/day uncertainty, missingness, latency, acquisition cost and maintenance burden alongside scores. Score newly covered populations separately from paired accuracy comparisons. Keep marginal, unreliable or harmful inputs experimental or retire them from the active path; retain provenance and frozen evidence.
+Promote a feature family only after identical-row/label ablation on relevant chronological/geographic validation shows useful improvement or measured coverage benefit without material subgroup harm. Report sample/label coverage, block/day uncertainty, missingness, latency, acquisition cost and maintenance burden. Score newly covered populations separately from paired accuracy. Keep marginal, unreliable or harmful inputs experimental or retire them from the active path, preserving provenance/frozen evidence.
 
-Prioritize reviewed unmetered observations, verified legal supply and a reliable recent-observation-to-forecast path over additional contextual variables. Do not expand geography, introduce deep learning, or build autonomous collection infrastructure solely to make the project appear more sophisticated. Model strength means validated predictions and better parking outcomes, not source count, architecture size or a selectively reported R². See docs/model_discipline_review.md for the current evidence and next experiment.
+Prioritize reviewed unmetered observations, verified legal supply and reliable recent-observation forecasts over more context. Do not expand geography, introduce deep learning or build autonomous collection merely for sophistication. Strength means validated predictions and parking outcomes, not source count, architecture size or selective R². See [model discipline review](docs/model_discipline_review.md) for frozen evidence and the selection limitation.
