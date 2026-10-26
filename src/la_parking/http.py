@@ -34,13 +34,15 @@ class Store:
         self.session.mount('https://', HTTPAdapter(max_retries=retry))
         self.session.headers.update({'User-Agent': 'LA-parking-foundation/0.1 public-data-research'})
 
-    def get(self, url, params=None, *, headers=None, max_mb=None, secret_params=None):
+    def get(self, url, params=None, *, headers=None, max_mb=None, secret_params=None, allow_html=False):
         key = hashlib.sha256(json.dumps([url, params], sort_keys=True).encode()).hexdigest()
         pointer = self.root / 'cache' / f'{key}.json'
         if pointer.exists() and not self.refresh:
             record = json.loads(pointer.read_text())
             path = self.root / record['path']
             if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == record['sha256']:
+                content_type=next((v for k,v in record.get('headers',{}).items() if k.lower()=='content-type'),'')
+                if 'text/html' in content_type and not allow_html:raise ValueError('Cached HTML is not a usable data API response')
                 self.last_record=record
                 return path, record
         limit = int(max_mb * 1_000_000) if max_mb else self.max_bytes
@@ -66,7 +68,7 @@ class Store:
                 r.raise_for_status()
                 if int(r.headers.get('Content-Length', 0)) > limit:
                     raise ValueError('Advertised response exceeds byte budget')
-                if 'text/html' in r.headers.get('Content-Type', ''):
+                if 'text/html' in r.headers.get('Content-Type', '') and not allow_html:
                     raise ValueError('HTML is not a usable data API response')
                 digest, size = hashlib.sha256(), 0
                 with tmp.open('wb') as out:

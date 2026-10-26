@@ -67,3 +67,5 @@ Machine-readable source details: `config/source_registry.json`. Supplemental che
 ## Coverage-v4 source continuation
 
 [Official ACS 2023 static tables](https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/) now supply all 2,498 LA County tracts, preserving estimates, 90% MOEs, GEOIDs and release vintage. The loaded local Census key failed the real authenticated check; no API values were returned. [LADOT sensor locations](https://maps.lacity.org/lahub/rest/services/LADOT/MapServer/16) were queried without current status values for bounded Downtown/Hollywood identity/location checks. These features are predictors/audit metadata, never independent unmetered truth. See [coverage-v4 evidence](../reports/modeling/COVERAGE_V4.md).
+
+The [Westwood context continuation](westwood_context.md) verifies actual UCLA/Village event responses, the current City sweeping application layer, PWRS reservations and a separate Westwood historic report. Exact-time and legal-rule blockers remain explicit; no source is an occupancy label.

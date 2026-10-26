@@ -11,7 +11,7 @@ def verify_ids(expected, features, oid):
         raise ValueError(f'Incomplete/duplicate ArcGIS IDs: expected {len(expected)}, got {len(got)}')
 
 
-def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=500,out_fields='*'):
+def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=500,out_fields='*',query_by_ids=False):
     meta, _ = store.json(layer, {'f':'json'})
     oid = meta.get('objectIdField') or next(f['name'] for f in meta['fields'] if f['type']=='esriFieldTypeOID')
     query = {'f':'json', 'where':where}
@@ -27,7 +27,8 @@ def arcgis(store, layer, *, bbox=None, where='1=1', max_features=100000, batch=5
         chunk=expected[start:start+min(batch,meta.get('maxRecordCount',batch))]
         # Short range predicates avoid IIS URL-length 404s from long objectIds lists.
         # Retain spatial filter for sparse pilot IDs and reconcile the exact set.
-        obj,_=store.json(layer+'/query', {**query, 'f':'geojson', 'where':f'({where}) AND {oid} >= {chunk[0]} AND {oid} <= {chunk[-1]}', 'outFields':out_fields, 'outSR':4326, 'returnGeometry':'true', 'resultRecordCount':len(chunk)})
+        selector={'objectIds':','.join(map(str,chunk))} if query_by_ids else {'where':f'({where}) AND {oid} >= {chunk[0]} AND {oid} <= {chunk[-1]}'}
+        obj,_=store.json(layer+'/query', {**query, 'f':'geojson', **selector, 'outFields':out_fields, 'outSR':4326, 'returnGeometry':'true', 'resultRecordCount':len(chunk)})
         if obj.get('exceededTransferLimit'):
             raise ValueError('ArcGIS transfer limit; reduce batch size')
         verify_ids(chunk,obj['features'],oid)

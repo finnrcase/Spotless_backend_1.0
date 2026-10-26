@@ -96,6 +96,10 @@ desktop.ini
 !/reports/product/readiness.json
 !/reports/product/capacity_audit.json
 !/reports/product/verification.json
+!/reports/westwood_context/
+/reports/westwood_context/*
+!/reports/westwood_context/*.md
+!/reports/westwood_context/coverage.json
 !/reports/service/
 /reports/service/*
 !/reports/service/*.md

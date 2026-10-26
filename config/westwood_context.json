@@ -1,0 +1,17 @@
+{
+  "version": "westwood-context-v1",
+  "bbox": [-118.473, 34.038, -118.417, 34.087],
+  "maximum_event_pages": 4,
+  "maximum_events": 100,
+  "maximum_ucla_details": 12,
+  "ucla_home": "https://community.ucla.edu/",
+  "westwood_events": "https://thewestwoodvillage.com/wp-json/vibemap/v1/events-data",
+  "sweeping_layer": "https://services1.arcgis.com/PTh9WC0Sf2WS7AAq/arcgis/rest/services/Posted_Street_Sweeping_Routes_Update/FeatureServer/0",
+  "pwrs_root": "https://maps.lacity.org/lahub/rest/services/Public_Way_Reservations/MapServer",
+  "maximum_rule_features": 2000,
+  "historic_westwood_report": "https://planning.lacity.gov/odocument/7f3c2281-70da-42e6-b265-a931f0b0a7d5/CPC_Staff_Report.pdf",
+  "maximum_historic_pdf_mb": 32,
+  "automatic_legal_rule_updates": false,
+  "historical_backfill": false,
+  "promotion": false
+}

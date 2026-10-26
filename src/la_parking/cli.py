@@ -22,6 +22,7 @@ def main():
     z=sub.add_parser('imagery-evaluate');z.add_argument('--annotations',required=True);z.add_argument('--predictions');z.add_argument('--output',default='reports/imagery/evaluation.json')
     sub.add_parser('field-route')
     sub.add_parser('product-readiness')
+    w=sub.add_parser('acquire-westwood-context');w.add_argument('--refresh',action='store_true')
     q=sub.add_parser('evaluate-product');q.add_argument('--manifest',required=True);q.add_argument('--observations',required=True);q.add_argument('--reviews',required=True);q.add_argument('--forecasts',required=True);q.add_argument('--decisions');q.add_argument('--output',default='reports/product/evaluation.json')
     q=sub.add_parser('product-pilot');q.add_argument('action',choices=['prepare','freeze','intake','evaluate']);q.add_argument('--input');q.add_argument('--artifacts',nargs='*');q.add_argument('--freeze-file',default='data/product/pilot_freeze.json');q.add_argument('--output');q.add_argument('--observations');q.add_argument('--reviews')
     s=sub.add_parser('serve');s.add_argument('--port',type=int,default=8765)
@@ -90,6 +91,9 @@ def main():
     elif a.command=='product-readiness':
         from .product_pilot import readiness
         print(json.dumps(readiness(),indent=2))
+    elif a.command=='acquire-westwood-context':
+        from .westwood_context import acquire
+        print(json.dumps(acquire(refresh=a.refresh),indent=2))
     elif a.command=='evaluate-product':
         from .product_evaluation import run
         print(json.dumps(run(a.manifest,a.observations,a.reviews,a.forecasts,a.decisions,a.output),indent=2))
